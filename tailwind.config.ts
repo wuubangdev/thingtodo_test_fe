@@ -11,13 +11,13 @@ const config: Config = {
       colors: {
         'primary': '#fa4616',
         'primary-trans': '#FDC6B7',
+        'secondary': '#BC3511'
       },
       fontSize: {
         'custom-xl': '1.125rem',
         'custom-heading': '6.75rem',
         'custom-content': '1.75rem',
         'custom-phone': '3.375rem',
-
       },
       container: {
         center: true,
@@ -25,7 +25,7 @@ const config: Config = {
           DEFAULT: '1rem',
           md: '3rem'
         }
-      }
+      },
     },
   },
   plugins: [],

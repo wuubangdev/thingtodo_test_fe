@@ -22,7 +22,6 @@ body {
 
 .text-underline {
   display: inline-block;
-  /* Cần thiết để animation hoạt động */
   position: relative;
 }
 
@@ -31,22 +30,23 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  /* Vị trí của gạch chân */
   height: 2px;
-  /* Độ dày của gạch chân */
   width: 100%;
-  /* Chiều dài gạch chân */
   background: currentColor;
-  /* Màu sắc gạch chân */
   transform: scaleX(0);
-  /* Bắt đầu từ 0 */
   transform-origin: left;
-  /* Điểm gốc từ bên trái */
   transition: transform .5s;
-  /* Thời gian cho hiệu ứng */
 }
 
 .text-underline:hover::after {
   transform: scaleX(1);
-  /* Kích hoạt hiệu ứng khi hover */
+}
+
+/* Border gradient */
+.gradient-border {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 28px;
+  border-image-source: linear-gradient(180deg, rgba(250, 70, 22, 0) 0%, #FA4616 100%);
+  border-image-slice: 1;
 }
