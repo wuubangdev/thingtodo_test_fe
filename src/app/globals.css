@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Text decoration effect */
+/* Underline */
 @keyframes draw {
   from {
     transform: scaleX(0);
@@ -42,9 +42,7 @@ body {
   /* Bắt đầu từ 0 */
   transform-origin: left;
   /* Điểm gốc từ bên trái */
-  animation: draw 0.5s forwards;
-  /* Thay đổi thời gian ở đây */
-  transition: transform 0.5s;
+  transition: transform .5s;
   /* Thời gian cho hiệu ứng */
 }
 
