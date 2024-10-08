@@ -1,27 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Text decoration effect */
+@keyframes draw {
+  from {
+    transform: scaleX(0);
   }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.text-underline {
+  display: inline-block;
+  /* Cần thiết để animation hoạt động */
+  position: relative;
+}
+
+.text-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* Vị trí của gạch chân */
+  height: 2px;
+  /* Độ dày của gạch chân */
+  width: 100%;
+  /* Chiều dài gạch chân */
+  background: currentColor;
+  /* Màu sắc gạch chân */
+  transform: scaleX(0);
+  /* Bắt đầu từ 0 */
+  transform-origin: left;
+  /* Điểm gốc từ bên trái */
+  animation: draw 0.5s forwards;
+  /* Thay đổi thời gian ở đây */
+  transition: transform 0.5s;
+  /* Thời gian cho hiệu ứng */
+}
+
+.text-underline:hover::after {
+  transform: scaleX(1);
+  /* Kích hoạt hiệu ứng khi hover */
 }

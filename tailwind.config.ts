@@ -9,9 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'primary': '#fa4616'
       },
+      fontSize: {
+        'custom-xl': '1.125rem',
+        'custom-heading': '6.75rem',
+        'custom-content': '1.75rem',
+        'custom-phone': '3.375rem',
+
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          md: '3rem'
+        }
+      }
     },
   },
   plugins: [],
