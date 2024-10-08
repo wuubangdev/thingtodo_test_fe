@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary': '#fa4616'
+        'primary': '#fa4616',
+        'primary-trans': '#FDC6B7',
       },
       fontSize: {
         'custom-xl': '1.125rem',
