@@ -1,8 +1,8 @@
-import React from 'react'
-import Menu from './Menu'
-import Image from 'next/image'
-import Link from 'next/link'
-import MobileMenu from './MobileMenu'
+import React from 'react';
+import Menu from './Menu';
+import Image from 'next/image';
+import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
     return (
@@ -10,13 +10,13 @@ const Navbar = () => {
             {/* Desktop */}
             <div className='hidden md:grid grid-cols-2 text-primary text-custom-xl py-4 px-6'>
                 <div className='flex items-center gap-6'>
-                    <Link href={'/'} className='md:w-[16%]'>
+                    <Link href={'/'} className='md:w-[16%] h-auto'>
                         <Image
-                            alt=''
+                            alt='nav-logo'
                             src={'/logo/Logo.png'}
                             width={78}
                             height={32}
-                            className='w-full h-auto'
+                            style={{ width: '100%', height: 'auto' }}
                         />
                     </Link>
                     <div>
