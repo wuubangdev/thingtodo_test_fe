@@ -10,23 +10,23 @@ interface IMobileMenu {
 
 const menuItems: IMobileMenu[] = [
     {
-        link: '/',
+        link: '#',
         title: 'Home',
     },
     {
-        link: '/about-us',
+        link: '#',
         title: 'About us',
     },
     {
-        link: '/work',
+        link: '#',
         title: 'Work',
     },
     {
-        link: '/service',
+        link: '#',
         title: 'Service',
     },
     {
-        link: '/contact',
+        link: '#',
         title: 'Contact',
     },
 ]
@@ -89,7 +89,11 @@ const MobileMenu = () => {
                                     <ul className='flex flex-col gap-4'>
                                         {menuItems && menuItems.map((item, index) => (
                                             <li key={index} className='pb-3 border-b-[0.5px] border-white text-4xl'>
-                                                <a href={item.link}>{item.title}</a>
+                                                <a
+                                                    href={item.link}
+                                                    className='block cursor-pointer'
+                                                    onClick={() => setIsVisible(false)}
+                                                >{item.title}</a>
                                             </li>
                                         ))}
 
@@ -109,21 +113,36 @@ const MobileMenu = () => {
                             </div>
                             {/* Social */}
                             <div className='flex gap-4 px-4'>
-                                <button
+                                <Link
+                                    href={'#'}
+                                    target='_blank'
+                                    onClick={() => {
+                                        setIsVisible(false);
+                                    }}
                                     className='rounded-3xl border-[1px] border-white py-1 px-4 cursor-pointer text-custom-xl'
                                 >
                                     Tiktok
-                                </button>
-                                <button
+                                </Link>
+                                <Link
+                                    href={'#'}
+                                    target='_blank'
+                                    onClick={() => {
+                                        setIsVisible(false);
+                                    }}
                                     className='rounded-3xl border-[1px] border-white py-1 px-4 cursor-pointer text-custom-xl'
                                 >
                                     Instagram
-                                </button>
-                                <button
+                                </Link>
+                                <Link
+                                    href={'#'}
+                                    target='_blank'
+                                    onClick={() => {
+                                        setIsVisible(false);
+                                    }}
                                     className='rounded-3xl border-[1px] border-white py-1 px-4 cursor-pointer text-custom-xl'
                                 >
                                     Facebook
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </motion.div>
