@@ -11,7 +11,9 @@ const config: Config = {
       colors: {
         'primary': '#fa4616',
         'primary-trans': '#FDC6B7',
-        'secondary': '#BC3511'
+        'secondary': '#BC3511',
+        'black': '#131E29',
+        'black-blur': '#666D74'
       },
       fontSize: {
         'custom-xl': '1.125rem',

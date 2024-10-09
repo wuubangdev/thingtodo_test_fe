@@ -50,3 +50,19 @@ body {
   border-image-source: linear-gradient(180deg, rgba(250, 70, 22, 0) 0%, #FA4616 100%);
   /* border-image-slice: 1; */
 }
+
+/* Rotate */
+.rotate-infinite {
+  animation: rotate 15s linear infinite;
+  animation-delay: 5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
