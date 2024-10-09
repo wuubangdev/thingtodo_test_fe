@@ -25,8 +25,10 @@ const Navbar = () => {
                 </div>
                 <div className='flex justify-between'>
                     <Menu />
-                    <div className='text-underline cursor-pointer'>
-                        Start a project
+                    <div>
+                        <a href='#' className='text-underline cursor-pointer'>
+                            Start a project
+                        </a>
                     </div>
                 </div>
             </div>

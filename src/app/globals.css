@@ -48,5 +48,5 @@ body {
   border-style: solid;
   border-radius: 28px;
   border-image-source: linear-gradient(180deg, rgba(250, 70, 22, 0) 0%, #FA4616 100%);
-  border-image-slice: 1;
+  /* border-image-slice: 1; */
 }
