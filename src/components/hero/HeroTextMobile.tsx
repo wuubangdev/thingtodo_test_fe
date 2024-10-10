@@ -6,8 +6,8 @@ const HeroTextMobile = () => {
     return (
         <>
             <div className='pt-12 pb-8'>
-                <div className='relative px-2'>
-                    <div className=' text-[#FEE3DC] text-7xl leading-[72px]'>
+                <div className='relative px-4'>
+                    <div className=' text-[#FEE3DC] text-[68px] leading-[68px] font-sans font-bold'>
                         <div className='flex flex-wrap gap-x-6 items-center justify-start'>
                             <p>
                                 CREATE
@@ -37,10 +37,10 @@ const HeroTextMobile = () => {
                         </div>
                     </div>
                     <div className=' text-white mt-44 px-2 flex  gap-10 items-start'>
-                        <p className='text-custom-xl'>
+                        <p className='text-custom-xl text-[#FDC6B7]'>
                             Provide innovative, high-quality visual advertising solutions with quick times.
                         </p>
-                        <p className='text-custom-xl'>
+                        <p className='text-custom-xl text-[#FDC6B7]'>
                             (SCROLL)
                         </p>
                     </div>

@@ -1,12 +1,81 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Body */
+.body-2-medium {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #131E29;
+}
+
+.body-3-regular {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+  text-align: left;
+  color: #3F3F3F;
+}
+
+.body-3-medium {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.1px;
+  text-align: left;
+}
+
+.body-4-regular {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #3F3F3F;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.8px;
+  text-align: left;
+}
+
+.body-4-medium {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 13.8px;
+  text-align: left;
+  color: #131E29;
+}
+
+
+/* Subtitle */
+.subtitle-3-semibold {
+  font-family: 'Archia', 'sans-serif';
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: -0.05em;
+  text-align: left;
+}
+
+/* Title */
+.title-1-medium {
+  font-family: 'Archia', 'sans-serif';
+  font-size: 69px;
+  font-weight: 500;
+  line-height: 69px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  background: #131E29;
 }
 
 /* Underline */
@@ -56,6 +125,9 @@ body {
   animation: rotate 15s linear infinite;
   animation-delay: 5s;
 }
+
+
+
 
 @keyframes rotate {
   0% {

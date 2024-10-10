@@ -33,14 +33,14 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                             />
                         }
                     </Link>
-                    <div>
+                    <div className='font-Jakarta-sans font-normal'>
                         (Creative Agency)
                     </div>
                 </div>
                 <div className='flex justify-between'>
                     <Menu isPrimary={isPrimary} />
                     <div>
-                        <a href='#' className='text-underline cursor-pointer'>
+                        <a href='#' className='text-underline cursor-pointer font-Jakarta-sans font-medium'>
                             Start a project
                         </a>
                     </div>

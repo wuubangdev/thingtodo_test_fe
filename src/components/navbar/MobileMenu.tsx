@@ -38,7 +38,7 @@ const MobileMenu = () => {
     return (
         <>
             <div
-                className='rounded-3xl bg-primary-trans py-1 px-4 cursor-pointer'
+                className='rounded-3xl bg-primary-trans py-1 px-4 cursor-pointer text-[#FEE3DC]'
                 onClick={() => {
                     setIsVisible(true);
                 }}
@@ -91,7 +91,7 @@ const MobileMenu = () => {
                                             <li key={index} className='pb-3 border-b-[0.5px] border-white text-4xl'>
                                                 <a
                                                     href={item.link}
-                                                    className='block cursor-pointer'
+                                                    className='block cursor-pointer font-Archia font-medium text-[#FEE3DC]'
                                                     onClick={() => setIsVisible(false)}
                                                 >{item.title}</a>
                                             </li>
@@ -103,23 +103,23 @@ const MobileMenu = () => {
                             {/* Contact */}
                             <div className='flex flex-col gap-6'>
                                 <div className='px-4 gap-1'>
-                                    <h5 className='text-sm'>Phone number</h5>
-                                    <Link href={'tel:+84 966 080 411'} className='text-3xl'>+84 966 080 411</Link>
+                                    <h5 className='text-sm text-[#FDC6B7]'>Phone number</h5>
+                                    <Link href={'tel:+84 966 080 411'} className='text-3xl font-Archia font-medium  text-[#FEE3DC]'>+84 966 080 411</Link>
                                 </div>
                                 <div className='px-4 gap-1'>
-                                    <h5 className='text-sm'>Email</h5>
-                                    <Link href={'mailto:contact@thingtodo.vn'} className='text-3xl'>contact@thingtodo.vn</Link>
+                                    <h5 className='text-sm text-[#FDC6B7]'>Email</h5>
+                                    <Link href={'mailto:contact@thingtodo.vn'} className='text-3xl font-Archia font-medium text-[#FEE3DC]'>contact@thingtodo.vn</Link>
                                 </div>
                             </div>
                             {/* Social */}
-                            <div className='flex gap-4 px-4'>
+                            <div className='flex gap-4 px-4 text-[#FEE3DC]'>
                                 <Link
                                     href={'#'}
                                     target='_blank'
                                     onClick={() => {
                                         setIsVisible(false);
                                     }}
-                                    className='rounded-3xl border-[1px] border-white py-1 px-4 cursor-pointer text-custom-xl'
+                                    className='rounded-3xl border-[1px] border-[#FEE3DC] py-1 px-4 cursor-pointer text-custom-xl'
                                 >
                                     Tiktok
                                 </Link>
@@ -129,7 +129,7 @@ const MobileMenu = () => {
                                     onClick={() => {
                                         setIsVisible(false);
                                     }}
-                                    className='rounded-3xl border-[1px] border-white py-1 px-4 cursor-pointer text-custom-xl'
+                                    className='rounded-3xl border-[1px] border-[#FEE3DC] py-1 px-4 cursor-pointer text-custom-xl'
                                 >
                                     Instagram
                                 </Link>
@@ -139,7 +139,7 @@ const MobileMenu = () => {
                                     onClick={() => {
                                         setIsVisible(false);
                                     }}
-                                    className='rounded-3xl border-[1px] border-white py-1 px-4 cursor-pointer text-custom-xl'
+                                    className='rounded-3xl border-[1px] border-[#FEE3DC] py-1 px-4 cursor-pointer text-custom-xl'
                                 >
                                     Facebook
                                 </Link>

@@ -80,7 +80,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                         {/* Info */}
                         <div className='text-white p-4 absolute bottom-0'>
                             <div className='flex flex-col gap-2'>
-                                <h3 className='text-[12px]'>Overview</h3>
+                                <h3 className='text-[12px] font-medium'>Overview</h3>
                                 <p className='text-sm line-clamp-5'>Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.</p>
                             </div>
 

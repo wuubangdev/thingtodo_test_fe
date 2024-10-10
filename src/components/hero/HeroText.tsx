@@ -22,7 +22,7 @@ const HeroText = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className=' text-primary text-[9rem] leading-[9rem]'>
+                    <div className=' text-primary text-[9rem] leading-[9rem] font-semibold font-sans'>
                         <div className='flex flex-wrap gap-x-6 items-center justify-start'>
                             <div>
                                 AWESOME
@@ -55,7 +55,7 @@ const HeroText = () => {
                         <div className='text-custom-xl mt-12'>
                             (SCROLL)
                         </div>
-                        <div className='text-custom-content mt-36'>
+                        <div className='text-custom-content mt-36 font-medium'>
                             Provide innovative, high-quality <br /> visual advertising solutions with <br /> quick times.
                         </div>
                     </div>

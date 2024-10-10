@@ -28,6 +28,11 @@ const config: Config = {
           md: '3rem',
         }
       },
+      fontFamily: {
+        'Archia': ['Archia', 'sans-serif'],
+        'Jakarta': ['Plus Jakarta Sans', 'Helvetica', 'Arial', 'sans-serif']
+      },
+
     },
   },
   plugins: [],

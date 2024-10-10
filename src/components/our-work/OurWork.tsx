@@ -39,8 +39,8 @@ const OurWork = () => {
     return (
         <div className='mx-6 flex flex-col gap-20 pt-4 pb-40'>
             <div className='md:px-5 p-4 flex md:gap-6 items-end flex-wrap'>
-                <h1 className='md:text-custom-heading text-custom-phone tracking-[-0.05em] md:leading-[108px]'>OUR WORK</h1>
-                <h3 className='text-[#666D74] text-custom-content'>Selected projects 2022-2024</h3>
+                <h1 className='md:text-custom-heading text-custom-phone tracking-[-0.05em] md:leading-[108px] font-Archia font-medium'>OUR WORK</h1>
+                <h3 className='text-[#666D74] text-custom-content tracking-[-0.05em] font-Archia font-medium'>Selected projects 2022-2024</h3>
             </div>
             <div className='md:grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-20 hidden '>
                 {projects && projects.map((project, index) => (
@@ -68,7 +68,7 @@ const OurWork = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="md:size-10">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
-                    <span className='text-custom-phone'>See all projects</span>
+                    <span className='text-custom-phone font-Archia font-medium'>See all projects</span>
                 </div>
             </div>
         </div>
