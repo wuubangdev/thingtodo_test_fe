@@ -39,8 +39,8 @@ const OurWork = () => {
     return (
         <div className='mx-6 flex flex-col gap-20 pt-4 pb-40'>
             <div className='flex gap-6 items-end flex-wrap pt-6 md:pt-0'>
-                <h1 className='md:block hidden headline-4'>OUR WORK</h1>
-                <h1 className='md:hidden block title-2-medium'>OUR WORK</h1>
+                <h1 className='md:block hidden headline-4'>OUR WORKS</h1>
+                <h1 className='md:hidden block title-2-medium'>OUR WORKS</h1>
                 <h3 className='subtitle-2-medium text-[#666D74]'>Selected projects <br /> 2022-2024</h3>
             </div>
             <div className='md:grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-20 hidden '>

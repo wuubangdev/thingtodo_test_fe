@@ -42,7 +42,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
         <div className='w-full'>
             <div
                 ref={cardRef}
-                className={`group w-full overflow-hidden relative cursor-pointer ${isHovered ? 'bg-black/30' : ''}`}
+                className={`mb-2 group w-full overflow-hidden relative cursor-pointer ${isHovered ? 'bg-black/30' : ''}`}
             >
                 <Image
                     alt='project-image'
@@ -89,8 +89,8 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                 </div>
             </div>
             <div className='flex gap-4 w-full'>
-                <h2 className='body-1-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
-                <p className='body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
+                <h2 className='body-2-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
+                <p className='body-2-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
             </div>
         </div>
     );

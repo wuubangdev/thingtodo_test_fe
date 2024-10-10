@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const ProjectInfo = () => {
     return (
-        <div className='pt-16'>
+        <div className='pt-16 md:h-screen md:sticky md:top-5'>
             <div className='md:hidden block pb-16'>
                 <Link
                     href={'/projects'}
@@ -25,7 +25,7 @@ const ProjectInfo = () => {
             </div>
             <div className='flex flex-col gap-6'>
                 {/* Top */}
-                <h1 className='title-1-medium md:hidden block pb-10'>Project details from 8 to 10 characters</h1>
+                <h1 className='title-2-medium md:hidden block pb-10'>Project details 8-10 characters</h1>
                 <div className='flex flex-col gap-6'>
                     <div className='flex flex-col gap-3'>
                         <h1 className='body-4-medium text-black'>Overview</h1>

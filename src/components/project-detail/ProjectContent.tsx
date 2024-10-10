@@ -6,10 +6,10 @@ const ProjectContent = () => {
     return (
         <div className='flex flex-col gap-16 pt-10'>
             {/* Back */}
-            <div className='md:block hidden'>
+            <div className='md:block hidden sticky top-0 h-auto bg-white'>
                 <Link
                     href={'/projects'}
-                    className='py-3 flex gap-3 body-2-medium'
+                    className='flex py-2 gap-3 body-2-medium'
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

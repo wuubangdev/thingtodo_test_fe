@@ -37,10 +37,10 @@ const HeroTextMobile = () => {
                         </div>
                     </div>
                     <div className=' text-white mt-44 px-2 flex  gap-10 items-start'>
-                        <p className='text-custom-xl text-[#FDC6B7]'>
+                        <p className='body-2-medium text-[#FDC6B7]'>
                             Provide innovative, high-quality visual advertising solutions with quick times.
                         </p>
-                        <p className='text-custom-xl text-[#FDC6B7]'>
+                        <p className='body-3-regular text-[#FDC6B7]'>
                             (SCROLL)
                         </p>
                     </div>
