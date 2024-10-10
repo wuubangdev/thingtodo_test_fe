@@ -34,7 +34,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                         }
                     </Link>
                     <div className='font-Jakarta-sans font-normal'>
-                        (Creative Agency)
+                        {isPrimary ? '(Creative Agency)' : ''}
                     </div>
                 </div>
                 <div className='flex justify-between'>

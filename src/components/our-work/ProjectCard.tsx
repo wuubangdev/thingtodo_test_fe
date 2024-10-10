@@ -83,8 +83,8 @@ const ProjectCard = (props: IProjectCard) => {
                     </div>
                 </div>
                 <div className='flex gap-4 w-full'>
-                    <h2 className='text-xl text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
-                    <p className='text-xl text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
+                    <h2 className='body-1-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
+                    <p className='body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
                 </div>
             </div>
         </Link>

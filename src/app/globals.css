@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 body {
   margin: 0;
@@ -14,6 +14,31 @@ body {
 }
 
 /* Body */
+.body-1-medium {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+}
+
+.body-1-regular {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+
+.body-2-regular {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20.7px;
+  text-align: left;
+  color: #3F3F3F;
+}
+
 .body-2-medium {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
@@ -58,10 +83,29 @@ body {
 
 
 /* Subtitle */
+.subtitle-1-medium {
+  font-family: 'Archia', 'sans-serif';
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: -0.05em;
+  text-align: left;
+
+}
+
 .subtitle-3-semibold {
   font-family: 'Archia', 'sans-serif';
   font-size: 23px;
   font-weight: 600;
+  line-height: 23px;
+  letter-spacing: -0.05em;
+  text-align: left;
+}
+
+.subtitle-3-regular {
+  font-family: 'Archia', 'sans-serif';
+  font-size: 23px;
+  font-weight: 400;
   line-height: 23px;
   letter-spacing: -0.05em;
   text-align: left;
@@ -75,7 +119,17 @@ body {
   line-height: 69px;
   letter-spacing: -0.05em;
   text-align: left;
-  background: #131E29;
+  color: #131E29;
+}
+
+.title-2-medium {
+  font-family: 'Archia', 'sans-serif';
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: -0.07em;
+  text-align: left;
+
 }
 
 /* Underline */

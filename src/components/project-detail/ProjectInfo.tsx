@@ -1,12 +1,31 @@
 import React from 'react';
 import CategoryButton from '../category/CategoryButton';
+import Link from 'next/link';
 
 
 const ProjectInfo = () => {
     return (
-        <div className='pt-32'>
+        <div className='pt-16'>
+            <div className='md:hidden block pb-16'>
+                <Link
+                    href={'/projects'}
+                    className='py-3 flex gap-3 body-2-medium'
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="size-6"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                    </svg>
+                    BACK
+                </Link>
+            </div>
             <div className='flex flex-col gap-6'>
                 {/* Top */}
+                <h1 className='title-1-medium md:hidden block pb-10'>Project details from 8 to 10 characters</h1>
                 <div className='flex flex-col gap-6'>
                     <div className='flex flex-col gap-3'>
                         <h1 className='body-4-medium'>Overview</h1>
