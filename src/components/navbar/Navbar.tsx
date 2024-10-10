@@ -38,7 +38,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                     </div>
                 </div>
                 <div className='flex justify-between'>
-                    <Menu />
+                    <Menu isPrimary={isPrimary} />
                     <div>
                         <a href='#' className='text-underline cursor-pointer'>
                             Start a project
