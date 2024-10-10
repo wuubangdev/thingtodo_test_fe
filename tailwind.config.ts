@@ -13,6 +13,7 @@ const config: Config = {
         'primary-trans': '#FDC6B7',
         'secondary': '#BC3511',
         'black': '#131E29',
+        't-back-blur': '#3F3F3F',
         'black-blur': '#666D74'
       },
       fontSize: {
@@ -29,8 +30,7 @@ const config: Config = {
         }
       },
       fontFamily: {
-        'Archia': ['Archia', 'sans-serif'],
-        'Jakarta': ['Plus Jakarta Sans', 'Helvetica', 'Arial', 'sans-serif']
+        'archia': ['Archia', 'sans-serif'],
       },
 
     },

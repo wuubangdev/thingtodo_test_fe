@@ -28,17 +28,17 @@ const ProjectInfo = () => {
                 <h1 className='title-1-medium md:hidden block pb-10'>Project details from 8 to 10 characters</h1>
                 <div className='flex flex-col gap-6'>
                     <div className='flex flex-col gap-3'>
-                        <h1 className='body-4-medium'>Overview</h1>
-                        <p className='body-3-regular'>Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.</p>
+                        <h1 className='body-4-medium text-black'>Overview</h1>
+                        <p className='body-3-regular text-t-back-blur'>Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.</p>
                     </div>
                     <div className='grid grid-cols-2'>
                         <div className='flex flex-col gap-3'>
-                            <h1 className='body-4-medium'>Client</h1>
-                            <p className='text-sm'>Vinamilk</p>
+                            <h1 className='body-4-medium text-black'>Client</h1>
+                            <p className='text-sm text-t-back-blur'>Vinamilk</p>
                         </div>
                         <div className='flex flex-col gap-3'>
                             <h1 className='body-4-medium'>Year</h1>
-                            <p className='text-sm'>2024</p>
+                            <p className='text-sm text-t-back-blur'>2024</p>
                         </div>
                     </div>
                     <div className='flex flex-col gap-3'>
@@ -60,15 +60,15 @@ const ProjectInfo = () => {
                     <h5 className='body-4-medium'>Results</h5>
                     <div className='flex justify-between items-center gap-2 pb-3 border-b-[1px] border-[#959A9F] border-dotted'>
                         <p className='subtitle-3-semibold'>23+</p>
-                        <span className='body-4-regular justify-end'>Customer Segments</span>
+                        <span className='body-4-regular justify-end text-t-back-blur'>Customer Segments</span>
                     </div>
                     <div className='flex justify-between items-center gap-2 pb-3 border-b-[1px] border-[#959A9F] border-dotted'>
                         <p className='subtitle-3-semibold'>55+</p>
-                        <span className='body-4-regular justify-end'>Automation flow</span>
+                        <span className='body-4-regular justify-end text-t-back-blur'>Automation flow</span>
                     </div>
                     <div className='flex justify-between items-center gap-2 pb-3 border-b-[1px] border-[#959A9F] border-dotted'>
                         <p className='subtitle-3-semibold'>400%</p>
-                        <span className='body-4-regular justify-end'>Increase quantity of sampling broadcast</span>
+                        <span className='body-4-regular justify-end text-t-back-blur text-right'>Increase quantity of sampling broadcast</span>
                     </div>
                 </div>
             </div>

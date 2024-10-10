@@ -17,7 +17,7 @@ const CategoryButton = (props: ICategoryButton) => {
                 border: variant === 'FMCG' ? '1px solid #FDC6B7' : '1px solid #CEBAF9'
             }}
         >
-            <span>
+            <span className='body-3-medium'>
                 {title}
             </span>
             {variant === 'Packaging' &&

@@ -6,8 +6,8 @@ const Footer = () => {
         <>
             <div className='bg-primary text-white md:flex hidden flex-col gap-60 px-6 pb-6'>
                 {/* Heading */}
-                <div className='border-b-[0.5px] border-white flex items-center gap-10'>
-                    <h4 className='text-custom-heading font-Archia font-medium'>LET'S COLLAB</h4>
+                <div className='border-b-[0.5px] border-white flex items-center gap-10 py-4'>
+                    <h4 className='headline-4'>LET'S COLLAB</h4>
                     <div>
                         <Image
                             alt=''
@@ -21,9 +21,9 @@ const Footer = () => {
                 {/* Content */}
                 <div className='flex flex-col gap-28'>
                     <div className='grid grid-cols-1 md:grid-cols-3'>
-                        <div className='text-custom-content font-Archia font-medium'>Visit us on <br /> Behance</div>
-                        <div className='text-custom-content font-Archia font-medium'>Connect us</div>
-                        <div className='text-custom-phone font-Archia font-medium'>+84 966 080 411</div>
+                        <div className='subtitle-2-medium'>Visit us on <br /> Behance</div>
+                        <div className='subtitle-2-medium'>Connect us</div>
+                        <div className='title-2-medium'>+84 966 080 411</div>
                     </div>
                     {/*  */}
                     <div className='flex flex-col gap-6'>
