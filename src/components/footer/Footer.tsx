@@ -39,25 +39,25 @@ const Footer = () => {
                             </div>
                             <div className='col-span-2 grid grid-cols-7 gap-16 '>
                                 <div className='flex flex-col gap-3 col-span-3'>
-                                    <h5 className='text-custom-xl font-semibold'>Office</h5>
-                                    <p className='text-sm'>Block 3, Building TSA, 169/1 Võ Thị Sáu, Võ Thị Sáu, District 3, HCMC</p>
+                                    <h5 className='body-2-semibold'>Office</h5>
+                                    <p className='body-3-regular'>Block 3, Building TSA, 169/1 Võ Thị Sáu, Võ Thị Sáu, District 3, HCMC</p>
                                 </div>
                                 <div className='flex flex-col gap-3 col-span-2'>
-                                    <h5 className='text-custom-xl font-semibold'>Email</h5>
-                                    <a href='mailto: contact@thingtodo.vn' className='text-sm'>contact@thingtodo.vn</a>
+                                    <h5 className='body-2-semibold'>Email</h5>
+                                    <a href='mailto: contact@thingtodo.vn' className='body-3-regular'>contact@thingtodo.vn</a>
                                 </div>
                                 <div className='flex flex-col gap-3 col-span-2'>
-                                    <h5 className='text-custom-xl font-semibold'>Social</h5>
+                                    <h5 className='body-2-semibold'>Social</h5>
                                     <ul className='text-custom-xl'>
-                                        <li className='text-sm'>Instagram</li>
-                                        <li className='text-sm'>Facebook</li>
-                                        <li className='text-sm'>Tiktok</li>
+                                        <li className='body-3-regular'>Instagram</li>
+                                        <li className='body-3-regular'>Facebook</li>
+                                        <li className='body-3-regular'>Tiktok</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         {/* Copyright */}
-                        <div className='text-sm'>
+                        <div className='body-3-regular'>
                             © 2024 Thingtodo Agency
                         </div>
                     </div>

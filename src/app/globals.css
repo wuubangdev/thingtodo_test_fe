@@ -45,6 +45,14 @@ body {
   font-size: 18px;
 }
 
+.body-2-semibold {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20.7px;
+  text-align: left;
+}
+
 .body-3-regular {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 14px;
@@ -86,7 +94,6 @@ body {
   line-height: 35px;
   letter-spacing: -0.05em;
   text-align: left;
-
 }
 
 .subtitle-2-medium {

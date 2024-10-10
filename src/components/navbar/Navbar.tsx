@@ -40,7 +40,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                 <div className='flex justify-between'>
                     <Menu isPrimary={isPrimary} />
                     <div>
-                        <a href='#' className='text-underline cursor-pointer font-Jakarta-sans font-medium'>
+                        <a href='#' className='text-underline cursor-pointer body-2-medium'>
                             Start a project
                         </a>
                     </div>
