@@ -4,20 +4,34 @@ import Image from 'next/image';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
 
-const Navbar = () => {
+interface IStyleNav {
+    isPrimary: boolean;
+}
+
+const Navbar = ({ isPrimary }: IStyleNav) => {
     return (
         <div>
             {/* Desktop */}
-            <div className='hidden md:grid grid-cols-2 text-primary text-custom-xl py-4 px-6'>
+            <div className={`hidden md:grid grid-cols-2 ${isPrimary ? 'text-primary' : 'text-black'}  text-custom-xl py-4 px-6`}>
                 <div className='flex items-center gap-6'>
                     <Link href={'/'} className='md:w-[16%] h-auto'>
-                        <Image
-                            alt='nav-logo'
-                            src={'/logo/Logo.png'}
-                            width={78}
-                            height={32}
-                            style={{ width: '100%', height: 'auto' }}
-                        />
+                        {isPrimary ?
+                            <Image
+                                alt='nav-logo'
+                                src={'/logo/Logo.png'}
+                                width={78}
+                                height={32}
+                                style={{ width: '100%', height: 'auto' }}
+                            />
+                            :
+                            <Image
+                                alt='nav-logo'
+                                src={'/logo/THINGTODO-BLACK.svg'}
+                                width={78}
+                                height={32}
+                                style={{ width: '100%', height: 'auto' }}
+                            />
+                        }
                     </Link>
                     <div>
                         (Creative Agency)
@@ -33,7 +47,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Mobile */}
-            <div className='grid md:hidden grid-cols-2 bg-primary p-4'>
+            <div className={`grid md:hidden grid-cols-2 bg-primary ${isPrimary ? 'text-white' : 'text-black'} p-4`}>
                 <div className='flex items-center gap-6'>
                     <Link href={'/'} className='md:w-[16%]'>
                         <Image
