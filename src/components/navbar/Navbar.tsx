@@ -47,16 +47,26 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                 </div>
             </div>
             {/* Mobile */}
-            <div className={`grid md:hidden grid-cols-2 bg-primary ${isPrimary ? 'text-white' : 'text-black'} p-4`}>
+            <div className={`grid md:hidden grid-cols-2  ${isPrimary ? 'text-white bg-primary' : 'text-black bg-white'} p-4`}>
                 <div className='flex items-center gap-6'>
-                    <Link href={'/'} className='md:w-[16%]'>
-                        <Image
-                            alt=''
-                            src={'/logo/logo_footer.png'}
-                            width={78}
-                            height={32}
-                            className='w-full h-auto'
-                        />
+                    <Link href={'/'} className='h-full'>
+                        {isPrimary ?
+                            <Image
+                                alt=''
+                                src={'/logo/logo_footer.png'}
+                                width={78}
+                                height={32}
+                                className='w-full h-auto'
+                            />
+                            :
+                            <Image
+                                alt='nav-logo'
+                                src={'/logo/THINGTODO-BLACK.svg'}
+                                width={78}
+                                height={32}
+                                style={{ width: 'auto', height: '100%' }}
+                            />
+                        }
                     </Link>
                 </div>
                 <div className='flex justify-end'>
