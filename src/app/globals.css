@@ -96,6 +96,15 @@ body {
   text-align: left;
 }
 
+.subtitle-2-regular {
+  font-family: 'Archia', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.05em;
+  /* text-align: left; */
+}
+
 .subtitle-2-medium {
   font-family: 'Archia', sans-serif;
   font-size: 28px;

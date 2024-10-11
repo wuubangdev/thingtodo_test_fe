@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import { IProjectCard } from './ProjectCardMobile';
 
-export interface IProjectCard {
-    image: string,
-    title: string,
-    description: string,
-}
+//Category: All, Brand strategy, Logo, Brand identity, Packaging, Website, Print Design, Motion, Campaign,
+//Sectors: All, Other, Beauty, Industrial, Construction, Communication, Education
+
 
 const ProjectCard = (props: IProjectCard) => {
     const { image, description, title } = props;
