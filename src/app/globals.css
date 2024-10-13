@@ -231,8 +231,6 @@ body {
 }
 
 
-
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -240,5 +238,25 @@ body {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Move to top */
+.move-top-infinite {
+  animation: move-top 2s linear infinite;
+}
+
+
+@keyframes move-top {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }

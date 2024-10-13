@@ -36,7 +36,7 @@ const HeroText = () => {
                         </div>
                         <div className='flex justify-start items-center'>
                             <div>T</div>
-                            <div className='h-full'>
+                            <div className='h-full move-top-infinite'>
                                 <Image
                                     alt='shaking'
                                     src={'/hero/Shaking.svg'}

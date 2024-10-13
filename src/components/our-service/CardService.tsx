@@ -70,7 +70,7 @@ const CardService = (props: IService) => {
                         <p className='body-3-regular'>{description}</p>
                         <ul>
                             {subService && subService.map((item, index) => (
-                                <li className='border-b-[1px] py-4 flex items-center gap-2 '>
+                                <li key={index} className='border-b-[1px] py-4 flex items-center gap-2 '>
                                     <p className='subtitle-3-medium text-[#959A9F]'>0{index + 1}</p>
                                     <p className='subtitle-2-medium'>{item}</p>
                                 </li>
@@ -83,4 +83,4 @@ const CardService = (props: IService) => {
     )
 }
 
-export default CardService
+export default CardService;
