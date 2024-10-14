@@ -17,7 +17,7 @@ const Hero = () => {
                 style={{ height: 'auto' }}
             >
                 <HeroText />
-                <div className='flex flex-col justify-end items-end sticky bottom-0 gap-4 rounded-l-[20%]'>
+                <div className='flex flex-col justify-end items-end sticky bottom-0 gap-4'>
                     <motion.video
                         className='sticky bottom-0 right-0 z-20 px-4'
                         autoPlay
@@ -26,7 +26,7 @@ const Hero = () => {
                         style={{
                             width: videoWidth,
                             height: 'auto',
-                            // borderRadius: videoRadius,
+                            borderRadius: videoRadius,
                         }}
                     >
                         <source src="/hero/video-hero.mp4" type="video/mp4" />
