@@ -52,10 +52,10 @@ const HeroText = () => {
                         </div>
                     </div>
                     <div className=' text-primary'>
-                        <div className='text-custom-xl mt-12'>
+                        <div className='text-custom-xl mt-6'>
                             (SCROLL)
                         </div>
-                        <div className='text-custom-content mt-36 font-medium'>
+                        <div className='text-custom-content mt-24 font-medium'>
                             Provide innovative, high-quality <br /> visual advertising solutions with <br /> quick times.
                         </div>
                     </div>

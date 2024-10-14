@@ -18,7 +18,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                         {isPrimary ?
                             <Image
                                 alt='nav-logo'
-                                src={'/logo/Logo.png'}
+                                src={'/logo/THINGTODO-TANGERINE.svg'}
                                 width={78}
                                 height={32}
                                 style={{ width: '100%', height: 'auto' }}

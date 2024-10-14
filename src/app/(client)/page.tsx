@@ -10,7 +10,6 @@ export default function Home() {
       <Navbar isPrimary={true} />
       {/* Hero section */}
       <Hero />
-      <Feature />
       {/* Our lasted work */}
       <OurWork />
       {/* How can we help you */}
