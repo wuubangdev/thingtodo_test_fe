@@ -8,7 +8,7 @@ const Footer = () => {
                 {/* Heading */}
                 <div className='border-b-[0.5px] border-white flex items-center gap-10 py-4'>
                     <h4 className='headline-4'>LET'S COLLAB</h4>
-                    <div>
+                    <div className='pt-4'>
                         <Image
                             alt=''
                             src={'/logo/arrow.png'}

@@ -19,7 +19,7 @@ const Feature = () => {
             pauseOnHover={true}
             style={{ cursor: 'pointer' }}
         >
-            <div key={1} className='md:bg-primary bg-primary-trans md:text-white text-primary flex gap-2 justify-between'>
+            <div key={1} className='md:bg-primary border-none bg-primary-trans md:text-white text-primary flex gap-2 justify-between'>
                 {items && items.map((item, index) => (
                     <div key={`left-${index}`} className='flex gap-2 text-2xl items-center justify-evenly'>
                         <p className='text-nowrap'>{item}</p>
@@ -50,7 +50,7 @@ const Feature = () => {
                     </div>
                 ))}
             </div>
-            <div key={2} className='md:bg-primary bg-primary-trans md:text-white text-primary flex gap-2 justify-between'>
+            <div key={2} className='md:bg-primary border-none bg-primary-trans md:text-white text-primary flex gap-2 justify-between'>
                 {items && items.map((item, index) => (
                     <div key={`left-${index}`} className='flex gap-2 text-2xl items-center justify-evenly'>
                         <p className='text-nowrap'>{item}</p>
@@ -81,7 +81,7 @@ const Feature = () => {
                     </div>
                 ))}
             </div>
-            <div key={3} className='md:bg-primary bg-primary-trans md:text-white text-primary flex gap-2 justify-between'>
+            <div key={3} className='md:bg-primary border-none bg-primary-trans md:text-white text-primary flex gap-2 justify-between'>
                 {items && items.map((item, index) => (
                     <div key={index} className='flex gap-2 text-2xl items-center justify-evenly'>
                         <p className='text-nowrap'>{item}</p>
