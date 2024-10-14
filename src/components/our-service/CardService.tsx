@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import MovingImage from './MovingImage';
 
 export interface IService {
     id: number;
@@ -15,7 +16,7 @@ const CardService = (props: IService) => {
         <div>
             {/* Desktop */}
             <div
-                className='px-6 md:block hidden'
+                className='px-6 md:block hidden relative'
             >
                 <div className='grid grid-cols-1 md:grid-cols-2 pt-3 pb-6 gap-6 border-t-[1px] '>
                     <div className='title-3-medium'>
@@ -49,6 +50,14 @@ const CardService = (props: IService) => {
                                 </li>
                             ))}
                         </ul>
+                    </div>
+                </div>
+                <div className='absolute w-full h-full top-0'>
+                    <div className='grid grid-cols-2 h-full gap-6'>
+                        <div>
+                            <MovingImage />
+                        </div>
+                        <div></div>
                     </div>
                 </div>
             </div>
