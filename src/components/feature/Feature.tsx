@@ -21,7 +21,7 @@ const Feature = () => {
             loop={0} // Số lần lặp lại. Sử dụng `0` để lặp vô hạn.
             style={{ cursor: 'pointer' }}
         >
-            <div className='md:bg-primary border-none bg-primary-trans md:text-white text-primary flex gap-2 justify-between'>
+            <div className='md:bg-primary border-none bg-primary-trans md:text-white text-primary'>
                 {duplicatedItems.map((item, index) => (
                     <div key={index} className='flex gap-2 text-2xl items-center justify-evenly'>
                         <p className='text-nowrap'>{item}</p>
