@@ -9,12 +9,12 @@ export interface IClient {
 }
 
 const ClientCard = (props: IClient) => {
-    const { logoLight } = props;
+    const { logoDark } = props;
     return (
         <div className='w-full flex justify-center items-center'>
             <Image
                 alt='client-logo-frame'
-                src={logoLight}
+                src={logoDark}
                 width={198}
                 height={117}
                 style={{

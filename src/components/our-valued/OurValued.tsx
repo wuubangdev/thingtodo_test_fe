@@ -30,8 +30,8 @@ const OurValued = () => {
                         key={client.id}
                         id={client.id}
                         title={client.title}
-                        logoLight={client.logoDark}
-                        logoDark={client.logoLight}
+                        logoLight={client.logoLight}
+                        logoDark={client.logoDark}
                     />
                 ))}
             </div>
