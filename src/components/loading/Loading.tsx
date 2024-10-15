@@ -5,7 +5,7 @@ const Loading = () => {
     const [percent, setPercent] = useState<number>(10);
 
     useEffect(() => {
-
+        setPercent(1);
 
     }, [])
 
