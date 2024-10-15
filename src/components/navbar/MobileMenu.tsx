@@ -14,19 +14,19 @@ const menuItems: IMobileMenu[] = [
         title: 'Home',
     },
     {
-        link: '#',
+        link: '#footer',
         title: 'About us',
     },
     {
-        link: '#',
+        link: '#work',
         title: 'Work',
     },
     {
-        link: '#',
+        link: '#service',
         title: 'Service',
     },
     {
-        link: '#',
+        link: '#contact',
         title: 'Contact',
     },
 ]
@@ -62,11 +62,11 @@ const MobileMenu = () => {
                             <div className='flex flex-col gap-4'>
                                 {/* Header */}
                                 <div className='p-4 flex items-center justify-end gap-4'>
-                                    <button
+                                    <Link href={'/projects'}
                                         className='rounded-3xl border-[1px] border-white py-1 px-4 cursor-pointer body-2-medium'
                                     >
                                         Start a project
-                                    </button>
+                                    </Link>
                                     <button
                                         className='rounded-3xl bg-primary-trans py-1 px-2 cursor-pointer'
                                         onClick={() => {
