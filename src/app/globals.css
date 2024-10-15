@@ -4,6 +4,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+html {
+  scroll-behavior: smooth;
+  will-change: transform, opacity;
+}
+
 body {
   margin: 0;
   padding: 0;

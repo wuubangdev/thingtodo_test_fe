@@ -4,7 +4,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <>
-            <div className='bg-primary text-white md:flex hidden flex-col gap-60 px-6 pb-6'>
+            <div id='footer' className='bg-primary text-white md:flex hidden flex-col gap-60 px-6 pb-6'>
                 {/* Heading */}
                 <div className='border-b-[0.5px] border-white flex items-center gap-10 py-4'>
                     <h4 className='headline-4'>LET&apos;S COLLAB</h4>

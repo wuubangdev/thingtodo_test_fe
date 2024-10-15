@@ -10,7 +10,7 @@ interface IMobileMenu {
 
 const menuItems: IMobileMenu[] = [
     {
-        link: '#',
+        link: '/',
         title: 'Home',
     },
     {

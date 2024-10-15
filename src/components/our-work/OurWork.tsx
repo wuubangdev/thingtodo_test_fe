@@ -38,7 +38,7 @@ const projects: IProjectCard[] = [
 
 const OurWork = () => {
     return (
-        <div className='mx-6 flex flex-col gap-20 pt-4 pb-40'>
+        <div id='work' className='mx-6 flex flex-col gap-20 pt-4 pb-40'>
             <div className='flex gap-6 items-end flex-wrap pt-6 md:pt-[53px]'>
                 <h1 className='md:block hidden headline-4'>OUR WORKS</h1>
                 <h1 className='md:hidden block title-2-medium'>OUR WORKS</h1>
