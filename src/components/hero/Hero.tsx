@@ -12,7 +12,6 @@ const Hero = () => {
     const padding = useTransform(scrollYProgress, [0, 0.05], ['16px', '0px']);
     const translateY = useTransform(scrollYProgress, [0, 0.05], ['0%', '50%']);
     const videoTranslateY = useTransform(scrollYProgress, [0, 0.05], ['0px', '53px']);
-    // const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
     return (
         <>
@@ -50,7 +49,6 @@ const Hero = () => {
                         className='w-full'
                         style={{
                             translateY: videoTranslateY,
-                            // opacity: opacity,
                         }}
                     >
                         <Feature />
