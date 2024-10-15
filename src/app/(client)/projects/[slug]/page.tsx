@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 
 const ProjectDetailPage = () => {
     return (
-        <>
+        <div
+        >
             <div className='flex flex-col gap-20 pb-20'>
                 <div className='grid grid-cols-1 md:grid-cols-3 md:gap-28 px-6'>
                     <div className='md:col-span-1'>
@@ -67,7 +68,7 @@ const ProjectDetailPage = () => {
                 </div>
             </div>
             <ProjectRelease />
-        </>
+        </div>
     )
 }
 

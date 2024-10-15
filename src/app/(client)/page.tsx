@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div
-    // className="overflow-hidden"
     >
       <Navbar isPrimary={true} />
       {/* Hero section */}
