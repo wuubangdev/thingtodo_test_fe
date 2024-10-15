@@ -1,7 +1,7 @@
 import React from 'react'
-import ProjectCard, { IProjectCard } from '../our-work/ProjectCard'
-import ProjectCardMobile from '../our-work/ProjectCardMobile'
+import ProjectCardMobile, { IProjectCard } from '../our-work/ProjectCardMobile'
 import Link from 'next/link'
+import ProjectCard from '../our-work/ProjectCard'
 
 const projects: IProjectCard[] = [
     {
