@@ -23,7 +23,7 @@ const Feature = () => {
         >
             <div className='md:bg-primary border-none bg-primary-trans md:text-white text-primary flex gap-2 justify-between'>
                 {duplicatedItems.map((item, index) => (
-                    <div key={item} className='flex gap-2 text-2xl items-center justify-evenly'>
+                    <div key={index} className='flex gap-2 text-2xl items-center justify-evenly'>
                         <p className='text-nowrap'>{item}</p>
                         <div className='h-1/2 md:block hidden'>
                             <Image
