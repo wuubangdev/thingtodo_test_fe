@@ -1,4 +1,3 @@
-import { li } from 'framer-motion/client'
 import Image from 'next/image'
 import React from 'react'
 import Marquee from 'react-fast-marquee'

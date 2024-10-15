@@ -22,9 +22,9 @@ const FeedbackCard = (props: IFeedback) => {
                 <div className='flex flex-1 flex-col gap-28 pb-6 border-b-[1px] border-[#666D74]'>
                     <div className='pr-[352px]'>
                         <p className='title-1-regular line-clamp-6'>
-                            "{topLetter}
+                            &quot;{topLetter}
                             <span className='title-1-medium'>Thing To Do Agency </span>
-                            {botLetter}"
+                            {botLetter}&quot;
                         </p>
                     </div>
                     <div className='w-full flex justify-between items-center'>
@@ -76,9 +76,9 @@ const FeedbackCard = (props: IFeedback) => {
                 <div className='flex flex-1 flex-col gap-28 pb-6 border-b-[1px] border-[#666D74] border-dashed'>
                     <div className=''>
                         <p className='subtitle-1-regular line-clamp-[10]'>
-                            "{topLetter}
+                            &quot;{topLetter}
                             <span className='subtitle-1-regular'> Thing To Do Agency </span>
-                            {botLetter}"
+                            {botLetter}&quot;
                         </p>
                     </div>
                     <div className='flex justify-between items-center'>

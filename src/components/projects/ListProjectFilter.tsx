@@ -89,7 +89,6 @@ const ListProjectFilter = (props: IProps) => {
 
     useEffect(() => {
         setListProject(FilterProjects(categoryValue, sectorValue));
-        console.log(listProject);
     }, [categoryValue, sectorValue]);
 
     return (

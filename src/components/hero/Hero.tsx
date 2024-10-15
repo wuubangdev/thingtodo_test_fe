@@ -1,5 +1,4 @@
 'use client'
-import React, { useEffect, useState } from 'react';
 import HeroText from './HeroText';
 import HeroTextMobile from './HeroTextMobile';
 import { useScroll, useTransform, motion } from 'framer-motion';
@@ -10,7 +9,6 @@ const Hero = () => {
     const videoWidth = useTransform(scrollYProgress, [0, 0.05], ['40%', '100%']);
     const videoRadius = useTransform(scrollYProgress, [0, 0.05], ['240px', '0px']);
     const padding = useTransform(scrollYProgress, [0, 0.05], ['16px', '0px']);
-    const translateY = useTransform(scrollYProgress, [0, 0.05], ['0%', '50%']);
     const videoTranslateY = useTransform(scrollYProgress, [0, 0.05], ['0px', '53px']);
 
     return (

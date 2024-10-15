@@ -7,7 +7,7 @@ const Footer = () => {
             <div className='bg-primary text-white md:flex hidden flex-col gap-60 px-6 pb-6'>
                 {/* Heading */}
                 <div className='border-b-[0.5px] border-white flex items-center gap-10 py-4'>
-                    <h4 className='headline-4'>LET'S COLLAB</h4>
+                    <h4 className='headline-4'>LET&apos;S COLLAB</h4>
                     <div className='pt-4'>
                         <Image
                             alt=''
@@ -67,7 +67,7 @@ const Footer = () => {
             <div className='bg-primary text-white flex md:hidden flex-col gap-28 px-4 pb-6'>
                 {/* Heading */}
                 <div className='border-b-[0.5px] pt-12 pb-6  border-white flex items-end gap-6'>
-                    <h4 className='title-2-medium'>LET'S COLLAB</h4>
+                    <h4 className='title-2-medium'>LET&apos;S COLLAB</h4>
                     <div>
                         <Image
                             alt=''

@@ -1,5 +1,4 @@
 import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
-import Feature from "@/components/feature/Feature";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import OurService from "@/components/our-service/OurService";

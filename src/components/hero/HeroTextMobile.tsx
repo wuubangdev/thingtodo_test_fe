@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-const list: string[] = ['Create', 'Make', 'Build', 'Design',]
 
 const HeroTextMobile = () => {
     return (

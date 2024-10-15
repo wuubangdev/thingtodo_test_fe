@@ -31,9 +31,9 @@ const sectors: ISector[] = [
 
 interface IProps {
     categoryValue: string,
-    setCategoryValue: (v: any) => void,
+    setCategoryValue: React.Dispatch<React.SetStateAction<string>>,
     sectorValue: string,
-    setSectorValue: (v: any) => void,
+    setSectorValue: React.Dispatch<React.SetStateAction<string>>,
 }
 
 const ModalFilterProject = (props: IProps) => {
