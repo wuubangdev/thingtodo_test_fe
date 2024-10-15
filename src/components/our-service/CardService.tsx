@@ -6,12 +6,13 @@ export interface IService {
     id: number;
     title: string;
     icon: string;
+    image: string;
     description: string;
     subService: string[];
 }
 
 const CardService = (props: IService) => {
-    const { id, title, icon, description, subService } = props;
+    const { id, title, icon, image, description, subService } = props;
     return (
         <div>
             {/* Desktop */}
@@ -52,10 +53,10 @@ const CardService = (props: IService) => {
                         </ul>
                     </div>
                 </div>
-                <div className='absolute w-full h-full top-0'>
-                    <div className='grid grid-cols-2 h-full gap-6'>
+                <div className='absolute w-full h-full top-0 left-0 right-0'>
+                    <div className='grid grid-cols-2 h-full'>
                         <div>
-                            <MovingImage />
+                            <MovingImage image={image} />
                         </div>
                         <div></div>
                     </div>
@@ -73,6 +74,17 @@ const CardService = (props: IService) => {
                 </div>
                 <div className='grid grid-cols-1 pb-20 gap-20'>
                     <div>
+                        <Image
+                            alt='icon-service'
+                            src={image}
+                            width={240}
+                            height={240}
+                            style={{
+                                height: 'auto',
+                                width: '100%'
+                            }}
+                            className='md:hidden block'
+                        />
                     </div>
                     <div className='flex flex-col gap-3 pb-[120px]'>
                         <p className='body-3-regular'>{description}</p>

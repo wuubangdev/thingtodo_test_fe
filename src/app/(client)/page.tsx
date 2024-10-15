@@ -8,7 +8,9 @@ import OurWork from "@/components/our-work/OurWork";
 
 export default function Home() {
   return (
-    <div>
+    <div
+    // className="overflow-hidden"
+    >
       <Navbar isPrimary={true} />
       {/* Hero section */}
       <Hero />

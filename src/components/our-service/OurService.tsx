@@ -6,6 +6,7 @@ const services: IService[] = [
         id: 1,
         title: 'Digital Asset',
         icon: '/service/icon1.svg',
+        image: "/service/service_media.svg",
         description: 'Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.',
         subService: ['Social Media Asset', 'E-commerce Visual', 'Website Asset']
     },
@@ -13,6 +14,7 @@ const services: IService[] = [
         id: 2,
         title: 'Video Production',
         icon: '/service/icon2.svg',
+        image: "/project/media_content4.svg",
         description: 'Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.',
         subService: ['Commercial videos', 'Documentary videos', 'Corporate videos']
     },
@@ -20,6 +22,7 @@ const services: IService[] = [
         id: 3,
         title: 'Packaging',
         icon: '/service/icon3.svg',
+        image: "/project/media_content5.svg",
         description: 'Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.',
         subService: ['Structural design', 'Branding integration', 'Sustainability solutions']
     },
@@ -27,6 +30,7 @@ const services: IService[] = [
         id: 4,
         title: 'CGI, VFX',
         icon: '/service/icon4.svg',
+        image: "/project/media_content1.svg",
         description: 'Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.',
         subService: ['Character animation', 'Environmental effects', 'Product visualization']
     },
@@ -61,6 +65,7 @@ const OurService = () => {
                     id={service.id}
                     title={service.title}
                     icon={service.icon}
+                    image={service.image}
                     description={service.description}
                     subService={service.subService}
                 />

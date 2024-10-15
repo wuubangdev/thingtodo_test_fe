@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 
-const MovingImage = () => {
+const MovingImage = ({ image }: { image: string }) => {
     const hoverAreaRef = useRef<HTMLDivElement | null>(null);
     const [position, setPosition] = useState({ x: 0, y: 0 }); // Lưu trữ vị trí hình ảnh
     const [isHovered, setIsHovered] = useState(false); // Kiểm tra trạng thái hover
@@ -33,23 +33,33 @@ const MovingImage = () => {
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            style={{ position: 'relative', border: '2px solid #000', width: '100%', height: '100%' }}
+            style={{
+                position: 'relative',
+                // border: '2px solid #000', 
+                width: '100%',
+                height: '100%',
+                cursor: 'pointer'
+            }}
         >
             {isHovered && (
                 <motion.img
-                    src="/project/media_content1.svg" // Thay đường dẫn hình ảnh
+                    src={image} // Thay đường dẫn hình ảnh
                     alt="Moving Image"
                     style={{
                         position: 'absolute',
-                        width: '250px',
-                        height: '250px',
+                        width: '240px',
+                        height: '240px',
                         pointerEvents: 'none',
                         translate: `${position.x}px ${position.y}px`, // Di chuyển theo tọa độ
                         zIndex: 999,
                     }}
-                    initial={{ opacity: 0 }} // Bắt đầu ẩn
-                    animate={{ opacity: 1 }} // Hiện ra khi hover
-                    exit={{ opacity: 0 }} // Biến mất khi không hover
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                        duration: 1.5, // Thời gian cho toàn bộ chuyển động (1.5 giây)
+                        ease: "easeInOut" // Thêm kiểu easing nếu muốn
+                    }}
                 />
             )}
         </div>
