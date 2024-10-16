@@ -11,7 +11,7 @@ const ProjectCard = (props: IProjectCard) => {
     return (
         <Link href="/projects/abc">
             <div className='w-full'>
-                <div className='group w-full overflow-hidden relative cursor-pointer'>
+                <div className='group w-full overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
                     <Image
                         alt='project-image'
                         src={image}
@@ -21,14 +21,14 @@ const ProjectCard = (props: IProjectCard) => {
                             width: '100%',
                             height: 'auto'
                         }}
-                        className='group-hover:scale-105 duration-500'
+                        className='group-hover:scale-105 duration-500 rounded'
                     />
-                    <div className='absolute bg-black/30 top-0 bottom-0 left-0 right-0 group-hover:opacity-100 opacity-0 duration-500'>
+                    <div className='absolute bg-[#131E29]/60 top-0 bottom-0 left-0 right-0 group-hover:opacity-100 opacity-0 duration-500 rounded'>
                         <div className='flex flex-col'>
                             <div
                                 className='absolute  bg-primary p-1 rounded-full  w-1/6 
-                            scale-0 group-hover:scale-100 duration-700 
-                            top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
+                                scale-0 group-hover:scale-100 duration-700 
+                                top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
                             >
                                 <Image
                                     alt='project-image'
@@ -44,10 +44,16 @@ const ProjectCard = (props: IProjectCard) => {
                                 <div
                                     className='text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
                                 >
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                                    </svg>
-
+                                    <Image
+                                        alt='project-image'
+                                        src={'/ourwork/arrow_icon.svg'}
+                                        width={32}
+                                        height={32}
+                                        style={{
+                                            width: '100%',
+                                            height: 'auto'
+                                        }}
+                                    />
                                 </div>
                             </div>
                             {/* Info */}

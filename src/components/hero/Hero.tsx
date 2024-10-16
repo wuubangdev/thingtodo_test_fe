@@ -6,10 +6,10 @@ import Feature from '../feature/Feature';
 
 const Hero = () => {
     const { scrollYProgress } = useScroll();
-    const videoWidth = useTransform(scrollYProgress, [0, 0.05], ['40%', '100%']);
+    const videoWidth = useTransform(scrollYProgress, [0, 0.05], ['50%', '100%']);
     const videoRadius = useTransform(scrollYProgress, [0, 0.05], ['240px', '0px']);
     const padding = useTransform(scrollYProgress, [0, 0.05], ['16px', '0px']);
-    const videoTranslateY = useTransform(scrollYProgress, [0, 0.05], ['0px', '53px']);
+    const videoTranslateY = useTransform(scrollYProgress, [0, 0.05], ['0px', '43px']);
 
 
     return (
@@ -23,7 +23,6 @@ const Hero = () => {
                 <div className='flex flex-col justify-end items-end sticky bottom-0'
                 >
                     <div className='relative flex justify-end'>
-
                         <motion.video
                             className='z-20'
                             autoPlay
@@ -54,11 +53,6 @@ const Hero = () => {
                             </svg>
                             <span className='hidden group-hover:block' >View this showcase</span>
                         </motion.div>
-                        <div
-
-                        >
-
-                        </div>
                     </div>
                     <motion.div
                         className='w-full'

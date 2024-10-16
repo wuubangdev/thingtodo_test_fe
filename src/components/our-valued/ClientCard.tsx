@@ -9,9 +9,9 @@ export interface IClient {
 }
 
 const ClientCard = (props: IClient) => {
-    const { logoDark } = props;
+    const { logoDark, logoLight } = props;
     return (
-        <div className='w-full flex justify-center items-center'>
+        <div className='w-full flex justify-center items-center relative group cursor-pointer'>
             <Image
                 alt='client-logo-frame'
                 src={logoDark}
@@ -21,7 +21,20 @@ const ClientCard = (props: IClient) => {
                     width: '100%',
                     height: 'auto'
                 }}
+                className='group-hover:opacity-0 duration-500'
             />
+            <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center group-hover:opacity-100 opacity-0 duration-500'>
+                <Image
+                    alt='client-logo-frame'
+                    src={logoLight}
+                    width={198}
+                    height={117}
+                    style={{
+                        width: '100%',
+                        height: 'auto'
+                    }}
+                />
+            </div>
         </div>
     )
 }

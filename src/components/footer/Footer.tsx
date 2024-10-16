@@ -6,7 +6,7 @@ const Footer = () => {
         <>
             <div id='footer' className='bg-primary text-white md:flex hidden flex-col gap-60 px-6 pb-6'>
                 {/* Heading */}
-                <div className='border-b-[0.5px] border-white flex items-center gap-10 py-4'>
+                <div className='border-b-[0.5px] border-white flex items-center gap-10 py-4 group cursor-pointer'>
                     <h4 className='headline-4'>LET&apos;S COLLAB</h4>
                     <div className='pt-4'>
                         <Image
@@ -14,7 +14,7 @@ const Footer = () => {
                             src={'/logo/arrow.png'}
                             width={196}
                             height={82}
-                            className='w-full h-auto cursor-pointer hover:scale-x-150 origin-left duration-500'
+                            className='w-full h-auto  group-hover:scale-x-150 origin-left duration-500'
                         />
                     </div>
                 </div>

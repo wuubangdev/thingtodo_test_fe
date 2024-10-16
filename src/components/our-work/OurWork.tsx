@@ -66,24 +66,27 @@ const OurWork = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div></div>
-                <Link
-                    href={'/projects'}
-                >
-                    <div className='flex gap-4 items-center cursor-pointer'>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                className="md:size-10 size-8">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
+                <div className='flex'>
+                    <Link
+                        href={'/projects'}
+                        className='text-underline pb-1'
+                    >
+                        <div className='flex gap-4 items-center cursor-pointer'>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="md:size-10 size-8">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                            </div>
+                            <span className='md:block hidden title-2-medium pb-3'>See all projects</span>
+                            <span className='md:hidden block subtitle-1-medium flex-1 pb-2'>See all projects</span>
                         </div>
-                        <span className='md:block hidden title-2-medium pb-3'>See all projects</span>
-                        <span className='md:hidden block subtitle-1-medium flex-1 pb-2'>See all projects</span>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
             </div>
         </div>
     )
