@@ -28,7 +28,12 @@ const ButtonScrollToTop = () => {
     return (
         <>
             {isVisible &&
-                <div className='fixed bottom-6 right-6 z-40'>
+                <div className='fixed bottom-6 right-6'
+                    style={{
+                        zIndex: 9999,
+                        position: 'fixed',
+                    }}
+                >
                     <div
                         className='rounded-[50%] bg-black text-white p-3 hover:text-primary cursor-pointer duration-500 bg-black/70'
                         onClick={() => { scrollToTop() }}

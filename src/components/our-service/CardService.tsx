@@ -11,23 +11,36 @@ export interface IService {
     subService: string[];
 }
 
-const CardService = (props: IService) => {
-    const { id, title, icon, image, description, subService } = props;
+interface IProps {
+    service: IService;
+    index: number;
+    total: number
+}
+
+const CardService = (props: IProps) => {
+    const { index, service, total } = props;
     return (
-        <div>
+        <div
+            className={`sticky bg-white`}
+            style={{
+                top: `calc(20vh + ${5.25 * index}rem)`,
+                marginBottom: `${5.25 * total - 5.25 * index - 5.25}rem`,
+                zIndex: index,
+            }}
+        >
             {/* Desktop */}
             <div
-                className='px-6 md:block hidden relative'
+                className={`px-6 md:block hidden relative`}
             >
                 <div className='grid grid-cols-1 md:grid-cols-2 pt-3 pb-6 gap-6 border-t-[1px] '>
                     <div className='title-3-medium'>
-                        (0{id})
+                        (0{index + 1})
                     </div>
                     <div className='flex items-center justify-between'>
-                        <h2 className='title-3-medium'>{title}</h2>
+                        <h2 className='title-3-medium'>{service.title}</h2>
                         <Image
                             alt='icon-service'
-                            src={icon}
+                            src={service.icon}
                             width={28}
                             height={28}
                             style={{
@@ -42,9 +55,9 @@ const CardService = (props: IService) => {
                     <div>
                     </div>
                     <div className='flex flex-col gap-3 pb-[120px]'>
-                        <p className='body-2-regular'>{description}</p>
+                        <p className='body-2-regular'>{service.description}</p>
                         <ul>
-                            {subService && subService.map((item, index) => (
+                            {service.subService && service.subService.map((item, index) => (
                                 <li key={index} className='border-b-[1px] py-4 flex items-center gap-2 '>
                                     <p className='subtitle-3-medium text-[#959A9F]'>0{index + 1}</p>
                                     <p className='subtitle-2-medium'>{item}</p>
@@ -56,7 +69,7 @@ const CardService = (props: IService) => {
                 <div className='absolute w-full h-full top-0 left-0 right-0'>
                     <div className='grid grid-cols-2 h-full'>
                         <div>
-                            <MovingImage image={image} />
+                            <MovingImage image={service.image} />
                         </div>
                         <div></div>
                     </div>
@@ -68,15 +81,15 @@ const CardService = (props: IService) => {
             >
                 <div className='flex pt-3 pb-6 gap-2 border-t-[1px]'>
                     <div className='subtitle-1-medium'>
-                        (0{id})
+                        (0{index})
                     </div>
-                    <h2 className='subtitle-1-medium'>{title}</h2>
+                    <h2 className='subtitle-1-medium'>{service.title}</h2>
                 </div>
                 <div className='grid grid-cols-1 pb-20 gap-20'>
                     <div>
                         <Image
                             alt='icon-service'
-                            src={image}
+                            src={service.image}
                             width={240}
                             height={240}
                             style={{
@@ -87,9 +100,9 @@ const CardService = (props: IService) => {
                         />
                     </div>
                     <div className='flex flex-col gap-3 pb-[120px]'>
-                        <p className='body-3-regular'>{description}</p>
+                        <p className='body-3-regular'>{service.description}</p>
                         <ul>
-                            {subService && subService.map((item, index) => (
+                            {service.subService && service.subService.map((item, index) => (
                                 <li key={index} className='border-b-[1px] py-4 flex items-center gap-2 '>
                                     <p className='subtitle-3-medium text-[#959A9F]'>0{index + 1}</p>
                                     <p className='subtitle-2-medium'>{item}</p>

@@ -3,7 +3,7 @@ import CardService, { IService } from './CardService';
 
 const services: IService[] = [
     {
-        id: 1,
+        id: 0,
         title: 'Digital Asset',
         icon: '/service/icon1.svg',
         image: "/service/service_media.svg",
@@ -11,7 +11,7 @@ const services: IService[] = [
         subService: ['Social Media Asset', 'E-commerce Visual', 'Website Asset']
     },
     {
-        id: 2,
+        id: 1,
         title: 'Video Production',
         icon: '/service/icon2.svg',
         image: "/project/media_content4.svg",
@@ -19,7 +19,7 @@ const services: IService[] = [
         subService: ['Commercial videos', 'Documentary videos', 'Corporate videos']
     },
     {
-        id: 3,
+        id: 2,
         title: 'Packaging',
         icon: '/service/icon3.svg',
         image: "/project/media_content5.svg",
@@ -27,7 +27,7 @@ const services: IService[] = [
         subService: ['Structural design', 'Branding integration', 'Sustainability solutions']
     },
     {
-        id: 4,
+        id: 3,
         title: 'CGI, VFX',
         icon: '/service/icon4.svg',
         image: "/project/media_content1.svg",
@@ -38,7 +38,7 @@ const services: IService[] = [
 
 const OurService = () => {
     return (
-        <div id='service'>
+        <div id='service' className=''>
             <div className='md:pb-28 pb-20'>
                 {/* Desktop */}
                 <div className='hidden md:grid grid-cols-2 pt-3 pb-4 px-6 items-end gap-6'>
@@ -62,12 +62,9 @@ const OurService = () => {
             {services && services.map((service, index) => (
                 <CardService
                     key={index}
-                    id={service.id}
-                    title={service.title}
-                    icon={service.icon}
-                    image={service.image}
-                    description={service.description}
-                    subService={service.subService}
+                    service={service}
+                    total={services.length}
+                    index={index}
                 />
             ))}
         </div>
