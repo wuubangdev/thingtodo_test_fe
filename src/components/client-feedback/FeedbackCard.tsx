@@ -75,7 +75,7 @@ const FeedbackCard = (props: IFeedback) => {
             <div className='md:hidden flex flex-col  text-[#FCFCFC] mx-2'>
                 <div className='flex flex-1 flex-col gap-28 pb-6 border-b-[1px] border-[#666D74] border-dashed'>
                     <div className=''>
-                        <p className='subtitle-1-regular line-clamp-[10]'>
+                        <p className='subtitle-1-regular'>
                             &quot;{topLetter}
                             <span className='subtitle-1-regular'> Thing To Do Agency </span>
                             {botLetter}&quot;

@@ -6,17 +6,34 @@ const Footer = () => {
         <>
             <div id='footer' className='bg-primary text-white md:flex hidden flex-col gap-60 px-6 pb-6'>
                 {/* Heading */}
-                <div className='border-b-[0.5px] border-white flex items-center gap-10 py-4 group cursor-pointer'>
+                <div className='border-b-[0.5px] border-white flex items-center gap-6 py-5 group cursor-pointer'>
                     <h4 className='headline-4'>LET&apos;S COLLAB</h4>
                     <div className='pt-4'>
-                        <Image
+                        {/* <Image
                             alt=''
-                            src={'/logo/arrow.png'}
+                            src={'/logo/short_arrow.svg'}
                             width={196}
                             height={82}
-                            className='w-full h-auto  group-hover:scale-x-150 origin-left duration-500'
-                        />
+                            className='w-full h-auto group-hover:hidden duration-500'
+                        /> */}
+                        <svg
+                            className='group-hover:hidden'
+                            width="196" height="82" viewBox="0 0 196 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M154.909 0.671809L150.044 5.48535L186.4 41.4619L191.264 36.6484L154.909 0.671809Z"
+                                fill="#FCFCFC" />
+                            <path
+                                d="M191.041 36.4277L190.978 36.4902L0 36.4916L3.8147e-06 43.8682L187.314 43.8668L187.219 47.5239H179.828L149.948 77.0928L154.907 82.0001L196 41.335L191.041 36.4277Z"
+                                fill="#FCFCFC" />
+                        </svg>
+                        <svg
+                            className='group-hover:block hidden'
+                            width="456" height="82" viewBox="0 0 456 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M414.909 0.671809L410.044 5.48535L446.4 41.4619L451.264 36.6484L414.909 0.671809Z" fill="#FCFCFC" />
+                            <path d="M451.041 36.4277L450.978 36.4902L-3.58782e-06 36.4916L0 43.8682L447.314 43.8668L447.219 47.5239H439.828L409.948 77.0928L414.907 82.0001L456 41.335L451.041 36.4277Z" fill="#FCFCFC" />
+                        </svg>
+
                     </div>
+
                 </div>
                 {/* Content */}
                 <div className='flex flex-col gap-28'>
