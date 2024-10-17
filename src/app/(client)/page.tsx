@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div
-    >
+    <>
       <Navbar isPrimary={true} />
       {/* Hero section */}
       <Hero />
@@ -35,6 +34,6 @@ export default function Home() {
         <OurValued />
         <ClientFeedBack />
       </div>
-    </div>
+    </>
   );
 }

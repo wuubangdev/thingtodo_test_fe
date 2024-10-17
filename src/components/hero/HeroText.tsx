@@ -85,4 +85,4 @@ const HeroText = () => {
     )
 }
 
-export default HeroText
+export default HeroText;
