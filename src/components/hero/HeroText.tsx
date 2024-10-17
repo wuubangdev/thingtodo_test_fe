@@ -26,27 +26,32 @@ const HeroText = () => {
                     </div>
                     <div className=' text-primary text-[9rem] leading-[9rem] font-semibold'>
                         <div className='flex flex-wrap gap-x-6 items-center justify-start'>
-                            <div className='flex gap-8 justify-between'>
-                                <Image
-                                    alt='shaking'
-                                    src={'/hero/awesomes.svg'}
-                                    width={124}
-                                    height={124}
-                                    style={{
-                                        width: "100%",
-                                        height: "auto"
-                                    }}
-                                />
-                                <Image
-                                    alt='shaking'
-                                    src={'/hero/stuffs.svg'}
-                                    width={124}
-                                    height={124}
-                                    style={{
-                                        width: "100%",
-                                        height: "auto"
-                                    }}
-                                />
+                            <div className='flex flex-wrap gap-8 justify-between'>
+                                <div>
+                                    <Image
+                                        alt='shaking'
+                                        src={'/hero/awesomes.svg'}
+                                        width={124}
+                                        height={124}
+                                        style={{
+                                            width: "100%",
+                                            height: "auto"
+                                        }}
+                                    />
+                                </div>
+                                <div>
+                                    <Image
+                                        alt='shaking'
+                                        src={'/hero/stuffs.svg'}
+                                        width={124}
+                                        height={124}
+                                        style={{
+                                            width: "100%",
+                                            height: "auto"
+                                        }}
+                                    />
+                                </div>
+
                             </div>
                         </div>
                         <div className='flex justify-start items-center'>
