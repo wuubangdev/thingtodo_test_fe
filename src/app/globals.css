@@ -340,4 +340,12 @@ body {
   opacity: 1;
 }
 
+.custom-text-wrap {
+  white-space: normal;
+  /* Cho phép xuống dòng */
+  word-wrap: break-word;
+  /* Cho phép ngắt từ khi cần */
+}
+
+
 /* globals.css */
