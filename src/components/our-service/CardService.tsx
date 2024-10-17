@@ -21,7 +21,6 @@ interface IProps {
 const CardService = (props: IProps) => {
     const { index, service, total } = props;
 
-
     return (
         <>
             <div

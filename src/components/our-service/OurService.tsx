@@ -30,7 +30,7 @@ const services: IService[] = [
         id: 3,
         title: 'CGI, VFX',
         icon: '/service/icon4.svg',
-        image: "/project/media_content1.svg",
+        image: "/service/service_media.svg",
         description: 'Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.',
         subService: ['Character animation', 'Environmental effects', 'Product visualization']
     },
