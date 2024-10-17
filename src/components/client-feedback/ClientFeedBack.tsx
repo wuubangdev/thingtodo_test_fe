@@ -1,5 +1,6 @@
-'use client';
-import React, { useRef, useState } from 'react';
+
+'use client'
+import { useRef, useState } from 'react';
 import Slider, { Settings } from "react-slick";
 import FeedbackCard, { IFeedback } from './FeedbackCard';
 import Image from 'next/image';
@@ -7,20 +8,17 @@ import Image from 'next/image';
 const feedbacks: IFeedback[] = [
     {
         id: '1',
-        topLetter: 'Working with',
-        botLetter: 'has been a perfect experience. Their team is expertise and attention to detail have resulted in packaging that truly represents our brand.',
+        title: 'Working with Thing to do has been a perfect experience. Their team is expertise and attention to detail have resulted in packaging that truly represents our brand.',
         clientLogo: '/feedback/LogoVNM.svg',
         client: {
             clientAvatar: '/feedback/NDA_Avatar.svg',
             clientName: 'Ngo Duc Anh',
             clientDescription: 'Brand Manager',
         }
-
     },
     {
         id: '2',
-        topLetter: 'The packaging design created by ',
-        botLetter: 'perfectly captures our brand essence and has exceeded our expectations. It is the perfect match for our target audience.',
+        title: 'The packaging design created by Thing to do perfectly captures our brand essence and has exceeded our expectations. It is the perfect match for our target audience.',
         clientLogo: '/feedback/Logohuggues.svg',
         client: {
             clientAvatar: '/feedback/HAD_Avatar.svg',
@@ -28,21 +26,26 @@ const feedbacks: IFeedback[] = [
             clientDescription: 'Marketing Director',
         }
     }
-]
+];
 
 const ClientFeedBack: React.FC = () => {
     const [currentPage, setCurrentPage] = useState<number>(1);
+    // const [fade, setFade] = useState<boolean>(true); // Thêm trạng thái fade
     const sliderRef = useRef<Slider | null>(null);
 
     const settings: Settings = {
         infinite: true,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 7000,
-        speed: 2000,
+        autoplaySpeed: 6000,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        afterChange: (current: number) => setCurrentPage(current + 1),
+        // beforeChange: () => setFade(false), // Khi bắt đầu chuyển đổi, đặt fade về false
+        afterChange: (current: number) => {
+            setCurrentPage(current + 1);
+            // setFade(true); // Khi kết thúc chuyển đổi, đặt fade về true
+        },
     };
 
     return (
@@ -80,15 +83,16 @@ const ClientFeedBack: React.FC = () => {
             </div>
             <div>
                 <Slider ref={sliderRef} {...settings} className='flex duration-500'>
-                    {feedbacks && feedbacks.map((feedback) => (
+                    {feedbacks.map((feedback) => (
+                        // <div key={feedback.id} className={`slide ${fade ? 'fade-in' : 'fade-out'}`}>
                         <FeedbackCard
                             key={feedback.id}
                             id={feedback.id}
-                            topLetter={feedback.topLetter}
-                            botLetter={feedback.botLetter}
+                            title={feedback.title}
                             clientLogo={feedback.clientLogo}
                             client={feedback.client}
                         />
+                        // </div>
                     ))}
                 </Slider>
             </div>

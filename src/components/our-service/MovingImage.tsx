@@ -38,7 +38,7 @@ const MovingImage = ({ image }: { image: string }) => {
                 // border: '2px solid #000', 
                 width: '100%',
                 height: '100%',
-                cursor: 'pointer'
+                cursor: 'pointer',
             }}
         >
             {isHovered && (

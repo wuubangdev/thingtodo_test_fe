@@ -20,46 +20,11 @@ interface IProps {
 
 const CardService = (props: IProps) => {
     const { index, service, total } = props;
-    const [isSticky, setIsSticky] = useState(false);
-    const [isFixed, setIsFixed] = useState(false);
-    const stickyRef = useRef<HTMLDivElement | null>(null);
-    const lastTopRef = useRef(0);
 
-    const handleScroll = () => {
-        if (stickyRef.current) {
-            const stickyTop = stickyRef.current.getBoundingClientRect().top;
-
-            // Kiểm tra nếu phần tử đã đạt trạng thái sticky
-            if (stickyTop <= 0) {
-                setIsSticky(true);
-                // Kiểm tra nếu top không thay đổi trong quá trình cuộn (cố định vị trí)
-                if (lastTopRef.current === stickyTop) {
-                    setIsFixed(true);
-                } else {
-                    setIsFixed(false);
-                }
-            } else {
-                setIsSticky(false);
-                setIsFixed(false);
-            }
-
-            // Lưu lại vị trí top của phần tử ở mỗi lần cuộn
-            lastTopRef.current = stickyTop;
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     return (
         <>
             <div
-                ref={stickyRef}
                 className={`sticky bg-white md:block hidden`}
                 style={{
                     top: `calc(20vh + ${5.25 * index}rem)`,
@@ -69,7 +34,7 @@ const CardService = (props: IProps) => {
             >
                 {/* Desktop */}
                 <div
-                    className={`px-6  relative`}
+                    className={`px-6 relative`}
                 >
                     <div className='grid grid-cols-1 md:grid-cols-2 pt-3 pb-6 gap-6 border-t-[1px] '>
                         <div className='title-3-medium'>
@@ -108,11 +73,7 @@ const CardService = (props: IProps) => {
                     <div className='absolute w-full h-full top-0 left-0 right-0'>
                         <div className='grid grid-cols-2 h-full'>
                             <div>
-                                {isSticky
-                                    ? isFixed ?
-                                        ""
-                                        : <MovingImage image={service.image} /> : <MovingImage image={service.image} />
-                                }
+                                <MovingImage image={service.image} />
                             </div>
                             <div></div>
                         </div>

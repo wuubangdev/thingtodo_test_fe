@@ -331,4 +331,14 @@ body {
   }
 }
 
+
+.slide {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.slick-active .slide {
+  opacity: 1;
+}
+
 /* globals.css */
