@@ -12,7 +12,7 @@ const clients: IClient[] = [
     { id: '6', title: 'Huggies', logoDark: '/valued/Huggies.svg', logoLight: '/valued/C_Huggies.svg' },
     { id: '7', title: 'Senka', logoDark: '/valued/SENKA.svg', logoLight: '/valued/C_SENKA.svg' },
     { id: '8', title: 'Nestle', logoDark: '/valued/Nestle.svg', logoLight: '/valued/C_Nestle.svg' },
-    { id: '9', title: 'Tiktok', logoDark: '/valued/Toptop.svg', logoLight: '/valued/C_Tiktok.svg' },
+    { id: '9', title: 'Tiktok', logoDark: '/valued/Toptop.svg', logoLight: '/valued/C_Toptop.svg' },
     { id: '10', title: 'Tam thai tu', logoDark: '/valued/TTT.svg', logoLight: '/valued/C_TTT.svg' },
     { id: '11', title: 'Xmen', logoDark: '/valued/Xmen.svg', logoLight: '/valued/C_Xmen.svg' },
     { id: '12', title: 'Kotex', logoDark: '/valued/Kotex.svg', logoLight: '/valued/C_Kotex.svg' },
