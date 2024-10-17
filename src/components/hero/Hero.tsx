@@ -6,11 +6,11 @@ import Feature from '../feature/Feature';
 
 const Hero = () => {
     const { scrollYProgress } = useScroll();
-    const videoWidth = useTransform(scrollYProgress, [0, 0.05], ['50%', '100%']);
-    const videoRadius = useTransform(scrollYProgress, [0, 0.05], ['240px', '0px']);
-    const padding = useTransform(scrollYProgress, [0, 0.05], ['16px', '0px']);
-    const videoTranslateY = useTransform(scrollYProgress, [0, 0.05], ['0px', '43px']);
-
+    const videoWidth = useTransform(scrollYProgress, [0, 0.08], ['49%', '100%']);
+    const videoHeight = useTransform(scrollYProgress, [0, 0.08], ['50%', '100%']);
+    const videoRadius = useTransform(scrollYProgress, [0, 0.08], ['240px', '0px']);
+    const padding = useTransform(scrollYProgress, [0, 0.08], ['16px', '0px']);
+    const videoTranslateY = useTransform(scrollYProgress, [0, 0.08], ['0px', '43px']);
 
     return (
         <>
@@ -30,7 +30,7 @@ const Hero = () => {
                             loop
                             style={{
                                 width: videoWidth,
-                                height: 'auto',
+                                height: videoHeight,
                                 borderRadius: videoRadius,
                                 objectFit: 'cover',
                                 padding: padding,
