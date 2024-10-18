@@ -31,7 +31,7 @@ const ProjectDetailPage = () => {
                             <div>
                                 <Link
                                     href={'/projects'}
-                                    className='py-3  items-center gap-4 title-2-medium hidden md:flex'
+                                    className='py-3  items-center gap-4 title-2-medium hidden md:flex text-underline'
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -42,22 +42,24 @@ const ProjectDetailPage = () => {
                                     >
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                                     </svg>
-                                    Next Project
+                                    <span className='pb-1'>Next Project</span>
                                 </Link>
                                 <Link
                                     href={'/projects'}
-                                    className='py-3 flex items-center gap-4 md:hidden subtitle-1-medium'
+                                    className='py-3 flex items-center gap-4 md:hidden subtitle-1-medium text-underline'
                                 >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24"
-                                        strokeWidth="1.5"
-                                        stroke="currentColor"
-                                        className="size-12 rotate-180"
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-                                    </svg>
-                                    Next Project
+                                    <div>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24"
+                                            strokeWidth="1.5"
+                                            stroke="currentColor"
+                                            className="size-12 rotate-180"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                                        </svg>
+                                        Next Project
+                                    </div>
                                 </Link>
                             </div>
                             <div className='subtitle-3-regular md:py-3 pl-16 md:pl-0 text-[#666D74]'>
