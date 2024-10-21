@@ -1,5 +1,6 @@
 import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
 import Footer from "@/components/footer/Footer";
+import HeroSection from "@/components/hero-section/HeroSection";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import OurService from "@/components/our-service/OurService";
@@ -17,8 +18,8 @@ export default function Home() {
     <div className="bg-white">
       <Navbar isPrimary={true} />
       {/* Hero section */}
-      <Hero />
-      {/* Our lasted work */}
+      {/* <Hero /> */}
+      <HeroSection />
       <OurWork />
       {/* How can we help you */}
       <OurService />

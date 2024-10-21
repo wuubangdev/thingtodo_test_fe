@@ -19,7 +19,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
         >
             {/* Desktop */}
             <div
-                className={`hidden md:grid grid-cols-2 ${isPrimary ? 'text-primary' : 'text-black'} bg-white  text-custom-xl py-4 px-6`}
+                className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-primary' : 'text-black'} bg-[#fcfcfc]  text-custom-xl py-4 px-6 gap-6`}
 
             >
                 <div className='flex items-center gap-6'>
@@ -48,11 +48,11 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                         {isPrimary ? '(Creative Agency)' : ''}
                     </div>
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between items-center'>
                     <Menu isPrimary={isPrimary} />
                     <div>
                         <Link href='/projects' className='text-underline cursor-pointer body-2-medium'>
-                            Start a project
+                            <div className='pt-3 pb-3'> Start a project</div>
                         </Link>
                     </div>
                 </div>

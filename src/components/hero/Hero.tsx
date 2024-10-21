@@ -7,50 +7,65 @@ import Feature from '../feature/Feature';
 
 const Hero = () => {
     const { scrollYProgress } = useScroll();
-    const videoWidth = useTransform(scrollYProgress, [0, 0.08], ['49%', '100%']);
+    const videoWidth = useTransform(scrollYProgress, [0, 0.09], ['50%', '100%']);
+    const videoWidthXl = useTransform(scrollYProgress, [0, 0.08], ['40%', '100%']);
+
     const videoWidthTab = useTransform(scrollYProgress, [0, 0.04], ['49%', '100%']);
 
-    const videoHeight = useTransform(scrollYProgress, [0, 0.08], ['50%', '100%']);
     const videoRadius = useTransform(scrollYProgress, [0, 0.08], ['240px', '0px']);
+    const videoRadiusXl = useTransform(scrollYProgress, [0, 0.08], ['220px', '0px']);
+
     const padding = useTransform(scrollYProgress, [0, 0.08], ['16px', '0px']);
     const videoTranslateY = useTransform(scrollYProgress, [0, 0.08], ['0px', '43px']);
-
-    // const videoRef = useRef<HTMLVideoElement | null>(null);
-    // const [isVisible, setIsVisible] = useState(false);
-
-    // useEffect(() => {
-    //     const observer = new IntersectionObserver((entries) => {
-    //         entries.forEach((entry) => {
-    //             if (entry.isIntersecting) {
-    //                 setIsVisible(true);
-    //                 observer.unobserve(entry.target); // Dừng quan sát sau khi video đã tải
-    //             }
-    //         });
-    //     });
-
-    //     if (videoRef.current) {
-    //         observer.observe(videoRef.current);
-    //     }
-
-    //     return () => {
-    //         if (videoRef.current) {
-    //             observer.unobserve(videoRef.current);
-    //         }
-    //     };
-    // }, []);
 
     return (
         <>
             {/* Desktop */}
             <div
-                className='hidden md:block py-6 w-full relative'
+                className='hidden md:block py-6 w-full relative bg-[#fcfcfc]'
                 style={{ height: 'auto' }}
             >
                 <HeroText />
                 <div className='flex flex-col justify-end items-end sticky bottom-0'
                 >
+                    {/* lager screen */}
+                    <div className='relative 2xl:flex lg:hidden md:hidden sm:hidden xl:hidden justify-end'
+                    >
+                        <motion.video
+                            className='z-20'
+                            autoPlay
+                            muted
+                            loop
+                            style={{
+                                width: videoWidthXl,
+                                // height: 300,
+                                borderRadius: videoRadiusXl,
+                                objectFit: 'cover',
+                                padding: padding,
+                                translateY: videoTranslateY
+                            }}
+                        >
+                            <source src="/hero/16x9.mp4" type="video/mp4" />
+                        </motion.video>
+                        <motion.div
+                            className='absolute bottom-4 right-6 flex items-center rounded-[41px]
+                            p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
+                             hover:bg-black hover:w-[220px] w-auto duration-500 transition-all'
+                            style={{
+                                translateY: videoTranslateY,
+                            }}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                            <span className='hidden group-hover:block' >View this showcase</span>
+                        </motion.div>
+                    </div>
+
                     {/* Desktop */}
-                    <div className='relative lg:flex md:hidden sm:hidden justify-end'>
+                    <div className='relative lg:flex md:hidden sm:hidden 2xl:hidden justify-end'
+
+                    >
                         <motion.video
                             className='z-20'
                             autoPlay
@@ -58,7 +73,7 @@ const Hero = () => {
                             loop
                             style={{
                                 width: videoWidth,
-                                height: videoHeight,
+                                // height: 300,
                                 borderRadius: videoRadius,
                                 objectFit: 'cover',
                                 padding: padding,
@@ -66,7 +81,6 @@ const Hero = () => {
                             }}
                         >
                             <source src="/hero/16x9.mp4" type="video/mp4" />
-
                         </motion.video>
                         <motion.div
                             className='absolute bottom-4 right-6 flex items-center rounded-[41px]
@@ -83,7 +97,7 @@ const Hero = () => {
                         </motion.div>
                     </div>
                     {/* Tablet */}
-                    <div className='relative lg:hidden md:flex sm:hidden justify-end'>
+                    <div className='relative lg:hidden md:flex sm:hidden 2xl:hidden justify-end'>
                         <motion.video
                             className='z-20'
                             autoPlay
@@ -91,11 +105,10 @@ const Hero = () => {
                             loop
                             style={{
                                 width: videoWidthTab,
-                                height: videoHeight,
                                 borderRadius: videoRadius,
                                 objectFit: 'cover',
                                 padding: padding,
-                                translateY: videoTranslateY
+                                translateY: videoTranslateY,
                             }}
                         >
                             <source src="/hero/1x1.mp4" type="video/mp4" />
@@ -124,7 +137,6 @@ const Hero = () => {
                         <Feature />
                     </motion.div>
                 </div>
-
             </div>
             {/* Mobile */}
             <div className='block md:hidden bg-primary'>
