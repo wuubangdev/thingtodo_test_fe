@@ -59,6 +59,7 @@ const Footer = () => {
                                     width={143}
                                     height={60}
                                     className='w-1/4 h-auto'
+                                    loading="lazy"
                                 />
                             </div>
                             <div className='col-span-2 grid grid-cols-7 gap-16 '>
@@ -99,6 +100,7 @@ const Footer = () => {
                             width={196}
                             height={82}
                             className='w-full h-auto cursor-pointer hover:scale-x-150 origin-left duration-500'
+                            loading="lazy"
                         />
                     </div>
                 </div>
@@ -113,6 +115,7 @@ const Footer = () => {
                                 width={143}
                                 height={60}
                                 className='w-1/4 h-auto'
+                                loading="lazy"
                             />
                         </div>
                         <div className='grid grid-cols-1 gap-8'>

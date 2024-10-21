@@ -36,6 +36,7 @@ const Feature = () => {
                                     width: "17px",
                                     height: "17px"
                                 }}
+                                loading="lazy"
                             />
                         </div>
                         <div className='md:hidden flex'>
@@ -48,6 +49,7 @@ const Feature = () => {
                                     width: "100%",
                                     height: "auto"
                                 }}
+                                loading="lazy"
                             />
                         </div>
                     </div>

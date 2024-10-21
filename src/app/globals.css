@@ -347,5 +347,9 @@ body {
   /* Cho phép ngắt từ khi cần */
 }
 
+.motion-div {
+  will-change: opacity, transform;
+}
+
 
 /* globals.css */

@@ -22,6 +22,7 @@ const ClientCard = (props: IClient) => {
                     height: 'auto'
                 }}
                 className='group-hover:opacity-0 duration-500'
+                loading="lazy"
             />
             <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center group-hover:opacity-100 opacity-0 duration-500'>
                 <Image
@@ -33,6 +34,7 @@ const ClientCard = (props: IClient) => {
                         width: '100%',
                         height: 'auto'
                     }}
+                    loading="lazy"
                 />
             </div>
         </div>

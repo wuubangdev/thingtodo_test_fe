@@ -35,6 +35,7 @@ const FeedbackCard = (props: IFeedback) => {
                                     width={143}
                                     height={60}
                                     className='h-full w-auto'
+                                    loading="lazy"
                                 />
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
@@ -47,6 +48,7 @@ const FeedbackCard = (props: IFeedback) => {
                                     width={143}
                                     height={60}
                                     className='w-full h-auto'
+                                    loading="lazy"
                                 />
                             </div>
                         </div>
@@ -59,6 +61,7 @@ const FeedbackCard = (props: IFeedback) => {
                                     width={48}
                                     height={48}
                                     className='w-auto h-full rounded-[40px] scale-120'
+                                    loading="lazy"
                                 />
                             </div>
                             <div className='flex flex-col gap-1'>
@@ -87,6 +90,7 @@ const FeedbackCard = (props: IFeedback) => {
                                 width={143}
                                 height={60}
                                 className='h-full w-auto'
+                                loading="lazy"
                             />
                         </div>
                         {/* Client info */}
@@ -98,6 +102,7 @@ const FeedbackCard = (props: IFeedback) => {
                                     width={48}
                                     height={48}
                                     className='w-auto h-full rounded-[40px] scale-120'
+                                    loading="lazy"
                                 />
                             </div>
                             <div className='flex flex-col gap-1'>

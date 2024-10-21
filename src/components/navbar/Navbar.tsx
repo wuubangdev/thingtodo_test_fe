@@ -10,9 +10,18 @@ interface IStyleNav {
 
 const Navbar = ({ isPrimary }: IStyleNav) => {
     return (
-        <div>
+        <div
+            style={{
+                position: isPrimary ? 'sticky' : 'unset',
+                zIndex: 99999,
+                top: 0,
+            }}
+        >
             {/* Desktop */}
-            <div className={`hidden md:grid grid-cols-2 ${isPrimary ? 'text-primary' : 'text-black'}  text-custom-xl py-4 px-6`}>
+            <div
+                className={`hidden md:grid grid-cols-2 ${isPrimary ? 'text-primary' : 'text-black'} bg-white  text-custom-xl py-4 px-6`}
+
+            >
                 <div className='flex items-center gap-6'>
                     <Link href={'/'} className='md:w-[16%] h-auto'>
                         {isPrimary ?
@@ -22,6 +31,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                 width={78}
                                 height={32}
                                 style={{ width: '100%', height: 'auto' }}
+                                loading="lazy"
                             />
                             :
                             <Image
@@ -30,6 +40,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                 width={78}
                                 height={32}
                                 style={{ width: '100%', height: 'auto' }}
+                                loading="lazy"
                             />
                         }
                     </Link>
@@ -57,6 +68,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                 width={78}
                                 height={32}
                                 className='w-full h-auto'
+                                loading="lazy"
                             />
                             :
                             <Image
@@ -65,6 +77,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                 width={78}
                                 height={32}
                                 style={{ width: 'auto', height: '100%' }}
+                                loading="lazy"
                             />
                         }
                     </Link>

@@ -3,6 +3,7 @@ import HeroText from './HeroText';
 import HeroTextMobile from './HeroTextMobile';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Feature from '../feature/Feature';
+// import { useEffect, useRef, useState } from 'react';
 
 const Hero = () => {
     const { scrollYProgress } = useScroll();
@@ -11,6 +12,30 @@ const Hero = () => {
     const videoRadius = useTransform(scrollYProgress, [0, 0.08], ['240px', '0px']);
     const padding = useTransform(scrollYProgress, [0, 0.08], ['16px', '0px']);
     const videoTranslateY = useTransform(scrollYProgress, [0, 0.08], ['0px', '43px']);
+
+    // const videoRef = useRef<HTMLVideoElement | null>(null);
+    // const [isVisible, setIsVisible] = useState(false);
+
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver((entries) => {
+    //         entries.forEach((entry) => {
+    //             if (entry.isIntersecting) {
+    //                 setIsVisible(true);
+    //                 observer.unobserve(entry.target); // Dừng quan sát sau khi video đã tải
+    //             }
+    //         });
+    //     });
+
+    //     if (videoRef.current) {
+    //         observer.observe(videoRef.current);
+    //     }
+
+    //     return () => {
+    //         if (videoRef.current) {
+    //             observer.unobserve(videoRef.current);
+    //         }
+    //     };
+    // }, []);
 
     return (
         <>

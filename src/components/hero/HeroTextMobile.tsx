@@ -29,6 +29,7 @@ const HeroTextMobile = () => {
                                             width: "100%",
                                             height: "auto"
                                         }}
+                                        loading="lazy"
                                     />
                                 </div>
                                 <p>GETHER</p>

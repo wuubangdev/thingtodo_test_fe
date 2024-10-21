@@ -70,6 +70,7 @@ const ClientFeedBack: React.FC = () => {
                         height={20}
                         className='h-full w-auto rotate-180 translate-x-full cursor-pointer hover:scale-x-150 origin-left duration-500'
                         onClick={() => sliderRef.current?.slickPrev()}
+                        loading="lazy"
                     />
                     <Image
                         alt='feedback-arrow-left'
@@ -78,6 +79,7 @@ const ClientFeedBack: React.FC = () => {
                         height={20}
                         className='h-full w-auto cursor-pointer hover:scale-x-150 origin-left duration-500'
                         onClick={() => sliderRef.current?.slickNext()}
+                        loading="lazy"
                     />
                 </div>
             </div>

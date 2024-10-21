@@ -22,6 +22,7 @@ const ProjectCard = (props: IProjectCard) => {
                             height: 'auto'
                         }}
                         className='group-hover:scale-105 duration-500 rounded'
+                        loading="lazy"
                     />
                     <div className='absolute bg-[#131E29]/60 top-0 bottom-0 left-0 right-0 group-hover:opacity-100 opacity-0 duration-500 rounded'>
                         <div className='flex flex-col'>
@@ -40,6 +41,7 @@ const ProjectCard = (props: IProjectCard) => {
                                         height: 'auto'
                                     }}
                                     className='rotate-infinite'
+                                    loading="lazy"
                                 />
                                 <div
                                     className='text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
@@ -53,6 +55,7 @@ const ProjectCard = (props: IProjectCard) => {
                                             width: '100%',
                                             height: 'auto'
                                         }}
+                                        loading="lazy"
                                     />
                                 </div>
                             </div>

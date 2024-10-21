@@ -50,6 +50,7 @@ const CardService = (props: IProps) => {
                                     width: 'auto'
                                 }}
                                 className='md:block hidden'
+                                loading="lazy"
                             />
                         </div>
                     </div>
@@ -100,6 +101,7 @@ const CardService = (props: IProps) => {
                                 width: '100%'
                             }}
                             className='md:hidden block'
+                            loading="lazy"
                         />
                     </div>
                     <div className='flex flex-col gap-3 pb-[120px]'>

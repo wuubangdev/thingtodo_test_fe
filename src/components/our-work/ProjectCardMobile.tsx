@@ -56,6 +56,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                             height: 'auto'
                         }}
                         className={`transition-transform duration-500 ${isHovered ? 'scale-105' : ''}`}
+                        loading="lazy"
                     />
                     <div className={`absolute top-0 bottom-0 left-0 right-0 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
                         <div className='flex flex-col'>
@@ -72,6 +73,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                                         height: 'auto'
                                     }}
                                     className='rotate-infinite'
+                                    loading="lazy"
                                 />
                                 <div className='text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

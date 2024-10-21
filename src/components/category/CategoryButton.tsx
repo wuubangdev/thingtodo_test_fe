@@ -27,6 +27,7 @@ const CategoryButton = (props: ICategoryButton) => {
                     width={16}
                     height={16}
                     style={{ height: '80%', width: 'auto' }}
+                    loading="lazy"
                 />
             }
         </div>

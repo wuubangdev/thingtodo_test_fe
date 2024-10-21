@@ -37,6 +37,7 @@ const HeroText = () => {
                                             width: "100%",
                                             height: "auto"
                                         }}
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div>
@@ -49,6 +50,7 @@ const HeroText = () => {
                                             width: "100%",
                                             height: "auto"
                                         }}
+                                        loading="lazy"
                                     />
                                 </div>
 
@@ -66,6 +68,7 @@ const HeroText = () => {
                                         width: "100%",
                                         height: "auto"
                                     }}
+                                    loading="lazy"
                                 />
                             </div>
                             <div>GETHER</div>

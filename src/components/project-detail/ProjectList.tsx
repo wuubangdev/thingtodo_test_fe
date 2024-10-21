@@ -37,6 +37,7 @@ const ProjectList = () => {
                                     width: '100%',
                                     height: 'auto'
                                 }}
+                                loading="lazy"
                             />
                         </div>
                         <div>
@@ -50,6 +51,7 @@ const ProjectList = () => {
                                     width: '100%',
                                     height: 'auto'
                                 }}
+                                loading="lazy"
                             />
                         </div>
                     </div>
@@ -65,6 +67,7 @@ const ProjectList = () => {
                                 width: '100%',
                                 height: 'auto'
                             }}
+                            loading="lazy"
                         />
                     </div>
                     {/* Description 1 */}
@@ -84,6 +87,7 @@ const ProjectList = () => {
                                 width: '100%',
                                 height: 'auto'
                             }}
+                            loading="lazy"
                         />
                     </div>
                     {/* Product 5 */}
@@ -98,6 +102,7 @@ const ProjectList = () => {
                                 width: '100%',
                                 height: 'auto'
                             }}
+                            loading="lazy"
                         />
                     </div>
                     {/* Description 2 */}
