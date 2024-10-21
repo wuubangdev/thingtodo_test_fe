@@ -64,10 +64,11 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                         {isPrimary ?
                             <Image
                                 alt=''
-                                src={'/logo/logo_footer.png'}
+                                src={'/logo/THINGTODO-WHITE.svg'}
                                 width={78}
                                 height={32}
-                                className='w-full h-auto'
+                                style={{ width: 'auto', height: '100%' }}
+
                                 loading="lazy"
                             />
                             :

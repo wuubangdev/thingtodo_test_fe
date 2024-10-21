@@ -6,7 +6,7 @@ const HeroText = () => {
     return (
         <>
             <div className='py-3'>
-                <div className='relative px-6'>
+                <div className='relative px-6 lg:pb-6'>
                     <div className='absolute left-0 right-0 -top-4'>
                         <ul className='flex justify-between w-full px-4 '>
                             {list && list.map((item, index) => (
@@ -25,53 +25,31 @@ const HeroText = () => {
                         </ul>
                     </div>
                     <div className=' text-primary text-[9rem] leading-[9rem] font-semibold'>
-                        <div className='flex flex-wrap gap-x-6 items-center justify-start'>
-                            <div className='flex flex-wrap gap-8 justify-between'>
-                                <div>
-                                    <Image
-                                        alt='shaking'
-                                        src={'/hero/awesomes.svg'}
-                                        width={124}
-                                        height={124}
-                                        style={{
-                                            width: "100%",
-                                            height: "auto"
-                                        }}
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div>
-                                    <Image
-                                        alt='shaking'
-                                        src={'/hero/stuffs.svg'}
-                                        width={124}
-                                        height={124}
-                                        style={{
-                                            width: "100%",
-                                            height: "auto"
-                                        }}
-                                        loading="lazy"
-                                    />
-                                </div>
-
-                            </div>
+                        <div className='w-full lg:block md:hidden'>
+                            <Image
+                                alt='shaking'
+                                src={'/hero/herotext_desk_or.svg'}
+                                width={124}
+                                height={124}
+                                style={{
+                                    width: "100%",
+                                    height: "auto"
+                                }}
+                                loading="lazy"
+                            />
                         </div>
-                        <div className='flex justify-start items-center'>
-                            <div>T</div>
-                            <div className='h-full move-top-infinite'>
-                                <Image
-                                    alt='shaking'
-                                    src={'/hero/Shaking.svg'}
-                                    width={124}
-                                    height={124}
-                                    style={{
-                                        width: "100%",
-                                        height: "auto"
-                                    }}
-                                    loading="lazy"
-                                />
-                            </div>
-                            <div>GETHER</div>
+                        <div className='w-full lg:hidden md:block'>
+                            <Image
+                                alt='shaking'
+                                src={'/hero/herotext_tab_or.svg'}
+                                width={124}
+                                height={124}
+                                style={{
+                                    width: "100%",
+                                    height: "auto"
+                                }}
+                                loading="lazy"
+                            />
                         </div>
                     </div>
                     <div className=' text-primary'>

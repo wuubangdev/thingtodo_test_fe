@@ -111,7 +111,7 @@ const Footer = () => {
                         <div className='w-full col-span-1'>
                             <Image
                                 alt='footer-logo'
-                                src={'/logo/logo_footer.png'}
+                                src={'/logo/THINGTODO-WHITE.svg'}
                                 width={143}
                                 height={60}
                                 className='w-1/4 h-auto'
