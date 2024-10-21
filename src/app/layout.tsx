@@ -2,47 +2,63 @@
 import "./globals.css";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useEffect, useState } from "react";
-import Spinner from "@/components/loading/Spinner";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from 'framer-motion';
-
+import { useEffect, useState } from "react";
+import LoadingState from "@/components/loading/LoadingState";
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
-  const [loading, setLoading] = useState(false);
   const pathname = usePathname();
+  const [isLoading, setIsLoading] = useState(true);
+  const [percent, setPercent] = useState(0);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2200);
 
-    window.addEventListener('load', handleLoad);
-
+    const interval = setInterval(() => {
+      setPercent((prev) => {
+        if (prev < 100) {
+          return prev + 1;
+        }
+        return prev;
+      });
+    }, 20);
     return () => {
-      window.removeEventListener('load', handleLoad);
+      clearTimeout(timer);
+      clearInterval(interval);
     };
   }, []);
+
   return (
     <html lang="en">
-      <body>
-
+      <body className="relative">
         <AnimatePresence
-          // mode="wait" 
-          initial={false}>
-          <motion.div
-            key={pathname}
-            initial={{ opacity: 1, y: 1000 }}
-            animate={{ opacity: 1, y: 0 }}
-            // exit={{ opacity: 0, y: -800 }}
-            transition={{ duration: 2 }}
-          >
-            {
-              loading ? <Spinner />
-                :
-                children
-            }
-          </motion.div>
+          // mode="wait"
+          initial={false}
+        >
+          {isLoading ?
+            (<motion.div
+              key={isLoading ? 'loading' : pathname}
+              initial={{ opacity: 1, y: 1000 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 1, y: -1000 }}
+              transition={{ duration: 2 }}
+            >
+              <LoadingState percent={percent} />
+            </motion.div>)
+            :
+            (<motion.div
+              key={isLoading ? 'loading' : pathname}
+              initial={{ opacity: 1, y: 1000 }}
+              animate={{ opacity: 1, y: 0 }}
+              // exit={{ opacity: 1, y: -1000 }}
+              transition={{ duration: 2 }}
+              style={{ position: 'absolute', top: 0, left: 0, right: 0 }}
+            >
+              {children}
+            </motion.div>)}
         </AnimatePresence>
       </body>
     </html>

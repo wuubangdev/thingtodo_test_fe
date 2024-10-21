@@ -22,7 +22,7 @@ const Feature = () => {
             style={{ cursor: 'pointer' }}
             className='md:bg-primary pt-2 pb-2 px-4'
         >
-            <div className='md:bg-primary bg-primary-trans md:text-white text-primary flex gap-2'>
+            <div className='md:bg-primary bg-primary-trans md:text-white text-primary flex gap-2 pr-2'>
                 {duplicatedItems.map((item, index) => (
                     <div key={index} className='flex gap-2 subtitle-3-medium items-center'>
                         <p className='text-nowrap pb-1'>{item}</p>

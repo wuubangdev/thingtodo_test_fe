@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
@@ -5,6 +6,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <div>
       <Navbar isPrimary={false} />
       {children}
+      <Footer />
     </div>
   );
 }

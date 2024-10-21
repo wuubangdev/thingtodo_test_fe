@@ -1,4 +1,5 @@
 import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
+import Footer from "@/components/footer/Footer";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import OurService from "@/components/our-service/OurService";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white">
       <Navbar isPrimary={true} />
       {/* Hero section */}
       <Hero />
@@ -34,6 +35,7 @@ export default function Home() {
         <OurValued />
         <ClientFeedBack />
       </div>
+      <Footer />
     </div>
   );
 }
