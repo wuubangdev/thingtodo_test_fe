@@ -51,8 +51,23 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                 <div className='flex justify-between items-center'>
                     <Menu isPrimary={isPrimary} />
                     <div>
-                        <Link href='/projects' className='text-underline cursor-pointer body-2-medium'>
-                            <div className='pt-3 pb-3'> Start a project</div>
+                        <Link href='/projects' >
+                            <div className='text-underline cursor-pointer group'>
+                                <div className='pt-3 pb-3 body-2-medium flex flex-nowrap gap-2 items-center'>
+                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500'>Start a project</span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="1.5"
+                                        stroke="currentColor"
+                                        className="size-5 group-hover:scale-100 scale-0 duration-500 rotate-180"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                                    </svg>
+                                </div>
+
+                            </div>
                         </Link>
                     </div>
                 </div>

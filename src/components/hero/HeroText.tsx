@@ -7,13 +7,13 @@ const HeroText = () => {
         <>
             <div className='py-3'>
                 <div className='relative px-6 lg:pb-6 h-[84vh] flex flex-col'>
-                    <div className='absolute left-0 right-0 -top-4'>
+                    <div className='absolute left-0 right-0 -top-6'>
                         <ul className='flex justify-between w-full px-4 '>
                             {list && list.map((item, index) => (
                                 <li
                                     key={index}
                                     className='border-gradient cursor-pointer text-secondary 
-                                    subtitle-2-medium hover:-rotate-6 duration-300
+                                    subtitle-2-medium ring-button
                                     '
                                     style={{
                                         background: '#FFEEEA99',

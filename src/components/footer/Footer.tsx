@@ -101,15 +101,37 @@ const Footer = () => {
                 {/* Heading */}
                 <div className='border-b-[0.5px] pt-12 pb-6  border-white flex items-end gap-6'>
                     <h4 className='title-2-medium'>LET&apos;S COLLAB</h4>
-                    <div>
-                        <Image
-                            alt=''
-                            src={'/logo/arrow.png'}
-                            width={196}
-                            height={82}
-                            className='w-full h-auto cursor-pointer hover:scale-x-150 origin-left duration-500'
-                            loading="lazy"
-                        />
+                    <div className='min-w-[296px]'>
+                        <div className='pt-4 flex items-center relative'>
+                            <svg
+                                className=''
+                                width="200"
+                                height="107"
+                                viewBox="0 0 200 10"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0.335938H200V8.33594H0V0.335938Z" fill="#FCFCFC" />
+                            </svg>
+                            <div className='absolute group-hover:translate-x-24 duration-500'>
+                                <div className='flex items-center relative'>
+                                    <svg
+                                        className=''
+                                        width="200"
+                                        height="10"
+                                        viewBox="0 0 200 10"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0.335938H200V8.33594H0V0.335938Z" fill="#FCFCFC" />
+                                    </svg>
+                                    <svg
+                                        className='absolute -right-2'
+                                        width="47" height="82" viewBox="0 0 47 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.96077 0.671875L0.0965576 5.48542L36.4518 41.462L41.316 36.6484L4.96077 0.671875Z" fill="#FCFCFC" />
+                                        <path d="M41.0931 36.4278L41.0299 36.4903L36.4518 36.4917L36.4518 43.8683L37.366 43.8669L37.2712 47.524H29.8802L0 77.0929L4.95895 82.0002L46.0521 41.3351L41.0931 36.4278Z" fill="#FCFCFC" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {/* Content */}

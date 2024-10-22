@@ -8,11 +8,11 @@ const HeroSection = () => {
     const { scrollYProgress } = useScroll();
     const videoWidth = useTransform(scrollYProgress, [0, 0.05], ['50%', '100%']);
     const videoRadius = useTransform(scrollYProgress, [0, 0.05], ['240px', '0px']);
-    const videoHeight = useTransform(scrollYProgress, [0, 0.05], ['100%', '205%']);
+    const videoHeight = useTransform(scrollYProgress, [0, 0.05], ['100%', '200%']);
     const translateY = useTransform(scrollYProgress, [0, 0.05], ['0%', '70%']);
     const videoPadding = useTransform(scrollYProgress, [0, 0.05], [16, 0]);
 
-    const translateYF = useTransform(scrollYProgress, [0, 0.05], ['0vh', '60vh']);
+    const translateYF = useTransform(scrollYProgress, [0, 0.05], ['0', '60vh']);
     const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
     const featureHeight = useTransform(scrollYProgress, [0, 0.05], [43, 0]);
 
