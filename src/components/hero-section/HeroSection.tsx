@@ -8,18 +8,23 @@ const HeroSection = () => {
     const { scrollYProgress } = useScroll();
     const videoWidth = useTransform(scrollYProgress, [0, 0.05], ['50%', '100%']);
     const videoRadius = useTransform(scrollYProgress, [0, 0.05], ['240px', '0px']);
-    const videoHeight = useTransform(scrollYProgress, [0, 0.05], ['100%', '220%']);
+    const videoHeight = useTransform(scrollYProgress, [0, 0.05], ['100%', '205%']);
     const translateY = useTransform(scrollYProgress, [0, 0.05], ['0%', '70%']);
+    const videoPadding = useTransform(scrollYProgress, [0, 0.05], [16, 0]);
+
+    const translateYF = useTransform(scrollYProgress, [0, 0.05], ['0vh', '60vh']);
+    const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
+    const featureHeight = useTransform(scrollYProgress, [0, 0.05], [43, 0]);
 
     return (
         <>
-            {/* Desktop */}
+            {/* Large Desktop */}
             <div
-                className='hidden md:flex flex-col pt-6 w-full bg-[#fcfcfc] h-[calc(100vh-83px)] mb-[60vh]'
+                className='hidden xl:flex flex-col pt-6 w-full bg-[#fcfcfc] h-[calc(100vh-83px)] mb-[60vh]'
             >
                 <HeroText />
                 <div className='grid grid-cols-2 px-6 pb-6 gap-6 flex-1 relative'>
-                    <div className='absolute w-full h-full bg-slate-500'>
+                    <div className='absolute w-full h-full'>
                         <motion.video
                             autoPlay
                             muted
@@ -31,13 +36,14 @@ const HeroSection = () => {
                                 right: 0,
                                 width: videoWidth,
                                 height: videoHeight,
-                                padding: 16,
+                                padding: videoPadding,
                                 borderRadius: videoRadius,
                                 translateY: translateY,
                             }}
                         >
                             <source src="/hero/16x9.mp4" type="video/mp4" />
                         </motion.video>
+
                     </div>
                     <div className='flex flex-col justify-between text-primary'>
                         <div className='body-2-regular'>
@@ -56,7 +62,15 @@ const HeroSection = () => {
                         </div>
                     </div>
                 </div>
-                <Feature />
+                <motion.div
+                    style={{
+                        translateY: translateYF,
+                        opacity: opacity,
+                        height: featureHeight,
+                    }}
+                >
+                    <Feature />
+                </motion.div>
             </div>
         </>
     );

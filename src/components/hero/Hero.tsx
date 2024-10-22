@@ -22,7 +22,7 @@ const Hero = () => {
         <>
             {/* Desktop */}
             <div
-                className='hidden md:block py-6 w-full relative bg-[#fcfcfc]'
+                className='hidden xl:hidden md:block py-6 w-full relative bg-[#fcfcfc]'
                 style={{ height: 'auto' }}
             >
                 <HeroText />

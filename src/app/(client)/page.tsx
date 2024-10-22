@@ -1,4 +1,5 @@
 import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
+import Feature from "@/components/feature/Feature";
 import Footer from "@/components/footer/Footer";
 import HeroSection from "@/components/hero-section/HeroSection";
 import Hero from "@/components/hero/Hero";
@@ -18,8 +19,11 @@ export default function Home() {
     <div className="bg-white">
       <Navbar isPrimary={true} />
       {/* Hero section */}
-      {/* <Hero /> */}
+      <Hero />
       <HeroSection />
+      <div className="xl:block hidden">
+        <Feature />
+      </div>
       <OurWork />
       {/* How can we help you */}
       <OurService />
