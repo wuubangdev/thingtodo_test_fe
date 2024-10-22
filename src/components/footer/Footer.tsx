@@ -46,7 +46,7 @@ const Footer = () => {
                 {/* Content */}
                 <div className='flex flex-col gap-28'>
                     <div className='grid grid-cols-1 md:grid-cols-3'>
-                        <div className='subtitle-2-medium'>Visit us on <br /> Behance</div>
+                        <div className='subtitle-2-medium'>Visit us on <br />Behance</div>
                         <div className='subtitle-2-medium'>Connect us</div>
                         <div className='title-2-medium'><a href="tel:+84 966 080 411">+84 966 080 411</a></div>
                     </div>
@@ -77,7 +77,7 @@ const Footer = () => {
                                 </div>
                                 <div className='flex flex-col gap-3 col-span-2'>
                                     <h5 className='body-2-semibold'>Email</h5>
-                                    <a href='mailto: contact@thingtodo.vn' className='body-3-regular'>contact@thingtodo.vn</a>
+                                    <a href='mailto:contact@thingtodo.vn' className='body-3-regular'>contact@thingtodo.vn</a>
                                 </div>
                                 <div className='flex flex-col gap-3 col-span-2'>
                                     <h5 className='body-2-semibold'>Social</h5>
@@ -133,7 +133,7 @@ const Footer = () => {
                             </div>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Email</h5>
-                                <a href='mailto: contact@thingtodo.vn' className='text-sm ml-8'>contact@thingtodo.vn</a>
+                                <a href='mailto:contact@thingtodo.vn' className='text-sm ml-8'>contact@thingtodo.vn</a>
                             </div>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Social</h5>
