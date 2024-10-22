@@ -25,7 +25,7 @@ const CardService = (props: IProps) => {
             <div
                 className={`sticky bg-white md:block hidden`}
                 style={{
-                    top: `calc(20vh + ${5.25 * index}rem)`,
+                    top: `calc(0vh + ${5.25 * index + 5.25}rem)`,
                     marginBottom: `${5.25 * total - 5.25 * index - 5.25}rem`,
                     zIndex: 1,
                 }}

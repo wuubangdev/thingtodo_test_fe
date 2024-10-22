@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -53,19 +54,26 @@ const Footer = () => {
                     <div className='flex flex-col gap-6'>
                         <div className='grid grid-cols-3'>
                             <div className='w-full col-span-1'>
-                                <Image
-                                    alt='footer-logo'
-                                    src={'/logo/THINGTODO-WHITE.svg'}
-                                    width={143}
-                                    height={60}
-                                    className='w-1/4 h-auto'
-                                    loading="lazy"
-                                />
+                                <Link href="/">
+                                    <Image
+                                        alt='footer-logo'
+                                        src={'/logo/THINGTODO-WHITE.svg'}
+                                        width={143}
+                                        height={60}
+                                        className='w-1/4 h-auto'
+                                        loading="lazy"
+                                    />
+                                </Link>
                             </div>
                             <div className='col-span-2 grid grid-cols-7 gap-16 '>
                                 <div className='flex flex-col gap-3 col-span-3'>
                                     <h5 className='body-2-semibold'>Office</h5>
-                                    <p className='body-3-regular'>Block 3, Building TSA, 169/1 Võ Thị Sáu, Võ Thị Sáu, District 3, HCMC</p>
+                                    <p className='body-3-regular'>
+                                        <a href="https://maps.app.goo.gl/decEqRHp8WZq5zqp8"
+                                            target='_blank'>
+                                            Block 3, Building TSA, 169/1 Võ Thị Sáu, Võ Thị Sáu, District 3, HCMC
+                                        </a>
+                                    </p>
                                 </div>
                                 <div className='flex flex-col gap-3 col-span-2'>
                                     <h5 className='body-2-semibold'>Email</h5>
@@ -74,9 +82,9 @@ const Footer = () => {
                                 <div className='flex flex-col gap-3 col-span-2'>
                                     <h5 className='body-2-semibold'>Social</h5>
                                     <ul className='text-custom-xl'>
-                                        <li className='body-3-regular'>Instagram</li>
-                                        <li className='body-3-regular'>Facebook</li>
-                                        <li className='body-3-regular'>Tiktok</li>
+                                        <li className='body-3-regular'><a target='_blank' href="https://www.instagram.com/thingtodo.agency/">Instagram</a></li>
+                                        <li className='body-3-regular'><a target='_blank' href="https://www.facebook.com/profile.php?id=61562599131360">Facebook</a></li>
+                                        <li className='body-3-regular'><a target='_blank' href="https://www.tiktok.com/@tutudzui">Tiktok</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -121,7 +129,7 @@ const Footer = () => {
                         <div className='grid grid-cols-1 gap-8'>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Office</h5>
-                                <p className='text-sm ml-8'>Block 3, Building TSA, 169/1 Võ Thị Sáu, Võ Thị Sáu, District 3, HCMC</p>
+                                <p className='text-sm ml-8'> <a href="https://maps.app.goo.gl/decEqRHp8WZq5zqp8" target='_blank'>Block 3, Building TSA, 169/1 Võ Thị Sáu, Võ Thị Sáu, District 3, HCMC</a> </p>
                             </div>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Email</h5>
@@ -130,9 +138,9 @@ const Footer = () => {
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Social</h5>
                                 <ul className='body-3-regular'>
-                                    <li className='ml-8'>Instagram</li>
-                                    <li className='ml-8'>Facebook</li>
-                                    <li className='ml-8'>Tiktok</li>
+                                    <li className='ml-8 cursor-pointer'><a target='_blank' href="https://www.instagram.com/thingtodo.agency/">Instagram</a></li>
+                                    <li className='ml-8 cursor-pointer'><a target='_blank' href="https://www.facebook.com/profile.php?id=61562599131360">Facebook</a></li>
+                                    <li className='ml-8 cursor-pointer'><a target='_blank' href="https://www.tiktok.com/@tutudzui">Tiktok</a></li>
                                 </ul>
                             </div>
                         </div>
