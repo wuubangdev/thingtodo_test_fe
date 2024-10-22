@@ -3,7 +3,6 @@
 import { useRef, useState } from 'react';
 import Slider, { Settings } from "react-slick";
 import FeedbackCard, { IFeedback } from './FeedbackCard';
-import Image from 'next/image';
 
 const feedbacks: IFeedback[] = [
     {
