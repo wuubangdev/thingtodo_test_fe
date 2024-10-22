@@ -53,7 +53,6 @@ const HeroText = () => {
                             />
                         </div>
                     </div>
-
                 </div>
             </div>
         </>
