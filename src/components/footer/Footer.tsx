@@ -48,7 +48,7 @@ const Footer = () => {
                     <div className='grid grid-cols-1 md:grid-cols-3'>
                         <div className='subtitle-2-medium'>Visit us on <br /> Behance</div>
                         <div className='subtitle-2-medium'>Connect us</div>
-                        <div className='title-2-medium'>+84 966 080 411</div>
+                        <div className='title-2-medium'><a href="tel:+84 966 080 411">+84 966 080 411</a></div>
                     </div>
                     {/*  */}
                     <div className='flex flex-col gap-6'>
@@ -146,7 +146,7 @@ const Footer = () => {
                         </div>
                         <div className='flex flex-col gap-2'>
                             <div className='subtitle-3-medium'>Connect us</div>
-                            <div className='title-3-medium'>+84 966 080 411</div>
+                            <div className='title-3-medium'><a target='_blank' href="tel:+84 966 080 411">+84 966 080 411</a></div>
                         </div>
                         <div className='text-sm'>
                             © 2024 Thingtodo Agency
