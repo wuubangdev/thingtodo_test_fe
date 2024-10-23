@@ -294,6 +294,91 @@ body {
   /* Delay để đường gạch di chuyển trước khi biến mất */
 }
 
+/* Underline 2 */
+@keyframes draw2 {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes drawReverse2 {
+  from {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  to {
+    transform: scaleX(0);
+    transform-origin: right;
+    /* Giữ nguyên điểm gốc ở bên phải */
+  }
+}
+
+.text-underline2 {
+  position: relative;
+  display: inline-block;
+  /* Giúp cho line gạch được căn giữa */
+}
+
+.text-underline2::after,
+.text-underline2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.text-underline2::after {
+  width: 80%;
+  left: 24px;
+}
+
+.text-underline2::before {
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Hiệu ứng ban đầu: gạch chân ẩn đi */
+.text-underline2::before {
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.text-underline2:hover::after {
+  animation: drawReverse2 0.5s forwards;
+  /* Đường gạch đầu tiên chạy từ trái sang phải và biến mất */
+}
+
+.text-underline2:hover::before {
+  opacity: 1;
+  animation: draw2 0.5s forwards 0.5s;
+  /* Đường gạch mới xuất hiện từ trái sang phải sau khi hover */
+}
+
+/* Khi không hover: gạch chân ban đầu hiện lại */
+.text-underline2:not(:hover)::after {
+  animation: draw2 0.5s forwards;
+  /* Hiển thị gạch chân trở lại khi không hover */
+}
+
+.text-underline2:not(:hover)::before {
+  opacity: 0;
+  transform: scaleX(0);
+  /* Ẩn gạch chân mới khi không hover */
+}
+
 
 /* Border gradient */
 .border-gradient {

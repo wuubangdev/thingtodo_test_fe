@@ -19,7 +19,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
         >
             {/* Desktop */}
             <div
-                className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-primary' : 'text-black'} bg-[#fcfcfc]  text-custom-xl py-4 px-6 gap-6`}
+                className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-primary' : 'text-black'} bg-bg-fc/70  text-custom-xl py-4 px-6 gap-6`}
 
             >
                 <div className='flex items-center gap-6'>
@@ -51,10 +51,10 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                 <div className='flex justify-between items-center'>
                     <Menu isPrimary={isPrimary} />
                     <div>
-                        <Link href='/projects' >
-                            <div className='text-underline cursor-pointer group'>
-                                <div className='pt-3 pb-3 body-2-medium flex flex-nowrap gap-2 items-center'>
-                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500'>Start a project</span>
+                        <Link href='#' >
+                            <div className='cursor-pointer group  text-underline2'>
+                                <div className='pb-2 pt-2 body-2-medium flex flex-nowrap gap-2 items-center'>
+                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500 '>Let&apos;s collab</span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -66,7 +66,6 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                                     </svg>
                                 </div>
-
                             </div>
                         </Link>
                     </div>

@@ -14,7 +14,8 @@ const config: Config = {
         'secondary': '#BC3511',
         'black': '#131E29',
         't-back-blur': '#3F3F3F',
-        'black-blur': '#666D74'
+        'black-blur': '#666D74',
+        'bg-fc': '#fcfcfc'
       },
       fontSize: {
         'custom-xl': '1.125rem',
