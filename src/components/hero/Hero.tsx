@@ -140,7 +140,6 @@ const Hero = () => {
                                 borderRadius: videoRadius,
                                 objectFit: 'cover',
                                 padding: padding,
-                                translateY: videoTranslateY,
                             }}
                         >
                             <source src="/hero/16x9.mp4" type="video/mp4" />
@@ -152,7 +151,6 @@ const Hero = () => {
                              hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
                             style={{
                                 translateY: videoTranslateY,
-                                // background: 'black',
                             }}
                         >
                             <div>
@@ -163,14 +161,7 @@ const Hero = () => {
                             <span className='group-hover:scale-100 scale-0 duration-500 origin-right text-white text-nowrap' >View this showcase</span>
                         </motion.div>
                     </div>
-                    <motion.div
-                        className='w-full'
-                        style={{
-                            translateY: videoTranslateY,
-                        }}
-                    >
-                        <Feature />
-                    </motion.div>
+                    <Feature />
                 </div>
             </div>
         </>
