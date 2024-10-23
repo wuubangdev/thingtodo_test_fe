@@ -33,6 +33,9 @@ const config: Config = {
       fontFamily: {
         'archia': ['Archia', 'sans-serif'],
       },
+      scale: {
+        '300': '3.0', // giá trị tùy chỉnh
+      },
     },
   },
   plugins: [],

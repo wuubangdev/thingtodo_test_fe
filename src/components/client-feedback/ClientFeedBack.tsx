@@ -61,12 +61,12 @@ const ClientFeedBack: React.FC = () => {
                         </span>
                     </div>
                 </div>
-                <div className='flex gap-2 items-center'>
+                <div className='flex gap-6 items-center'>
                     <div
                         className='flex items-center group h-full cursor-pointer rotate-180 relative'
                         onClick={() => sliderRef.current?.slickPrev()}
                     >
-                        <div className='absolute right-0 -translate-x-1 scale-x-150'>
+                        <div className='absolute right-0 -translate-x-1 scale-x-300'>
                             <svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_2060_990)">
                                     <path
@@ -80,7 +80,7 @@ const ClientFeedBack: React.FC = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className='group-hover:translate-x-4 translate-x-2 duration-500'>
+                        <div className='group-hover:translate-x-6 translate-x-2 duration-500'>
                             <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_2060_996)">
                                     <path
@@ -95,11 +95,12 @@ const ClientFeedBack: React.FC = () => {
                             </svg>
                         </div>
                     </div>
+
                     <div
                         className='flex items-center group h-full cursor-pointer relative'
                         onClick={() => sliderRef.current?.slickNext()}
                     >
-                        <div className='absolute left-0 group-hover:scale-x-150 origin-right duration-500'>
+                        <div className='absolute left-0 group-hover:scale-x-300 scale-x-150 origin-right duration-500'>
                             <svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_2060_990)">
                                     <path
