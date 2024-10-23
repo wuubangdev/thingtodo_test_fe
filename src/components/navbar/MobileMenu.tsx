@@ -50,11 +50,11 @@ const MobileMenu = () => {
             <AnimatePresence>
                 {isVisible &&
                     <motion.div
-                        initial={{ opacity: 1, y: '100vh' }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 1, y: '100vh' }}
+                        initial={{ opacity: 1, x: '100vw' }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 1, x: '100vw' }}
                         transition={{ duration: 0.6 }}
-                        className='fixed top-0 left-0 right-0 bottom-0 bg-primary z-50 pb-6'
+                        className='fixed top-0 left-0 right-0 bottom-0 bg-primary z-50 pb-6 w-screen h-screen'
                     >
 
                         <div className='text-white flex flex-col justify-between w-full h-full'>

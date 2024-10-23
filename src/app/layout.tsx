@@ -13,22 +13,25 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   const [percent, setPercent] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2200);
+    if (pathname === '/') {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 2200);
 
-    const interval = setInterval(() => {
-      setPercent((prev) => {
-        if (prev < 100) {
-          return prev + 1;
-        }
-        return prev;
-      });
-    }, 20);
-    return () => {
-      clearTimeout(timer);
-      clearInterval(interval);
-    };
+      const interval = setInterval(() => {
+        setPercent((prev) => {
+          if (prev < 100) {
+            return prev + 1;
+          }
+          return prev;
+        });
+      }, 20);
+      return () => {
+        clearTimeout(timer);
+        clearInterval(interval);
+      };
+    }
+    setIsLoading(false);
   }, []);
 
   return (

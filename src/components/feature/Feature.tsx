@@ -20,7 +20,7 @@ const Feature = () => {
             pauseOnHover={true}
             loop={0} // Số lần lặp lại. Sử dụng `0` để lặp vô hạn.
             style={{ cursor: 'pointer' }}
-            className='md:bg-primary pt-2 pb-2 px-4'
+            className='md:bg-primary bg-primary-trans pt-2 pb-2 px-4'
         >
             <div className='md:bg-primary bg-primary-trans md:text-white text-primary flex gap-2 pr-2'>
                 {duplicatedItems.map((item, index) => (
