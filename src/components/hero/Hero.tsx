@@ -8,12 +8,10 @@ import Feature from '../feature/Feature';
 const Hero = () => {
     const { scrollYProgress } = useScroll();
     const videoWidth = useTransform(scrollYProgress, [0, 0.09], ['50%', '100%']);
-    const videoWidthXl = useTransform(scrollYProgress, [0, 0.08], ['40%', '100%']);
 
     const videoWidthTab = useTransform(scrollYProgress, [0, 0.04], ['49%', '100%']);
 
     const videoRadius = useTransform(scrollYProgress, [0, 0.08], ['240px', '0px']);
-    const videoRadiusXl = useTransform(scrollYProgress, [0, 0.08], ['220px', '0px']);
 
     const padding = useTransform(scrollYProgress, [0, 0.08], ['16px', '0px']);
     const videoTranslateY = useTransform(scrollYProgress, [0, 0.08], ['0px', '43px']);
@@ -22,7 +20,7 @@ const Hero = () => {
         <>
             {/* Desktop */}
             <div
-                className='hidden xl:hidden md:block py-6 w-full relative bg-[#fcfcfc]'
+                className='hidden xl:hidden md:block pt-6 pb-[43px] w-full relative bg-[#fcfcfc]'
                 style={{ height: 'auto' }}
             >
                 <HeroText />

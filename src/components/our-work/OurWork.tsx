@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const projects: IProjectCard[] = [
     {
-        image: '/ourwork/media_content.svg',
+        image: '/ourwork/media_content_6.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies'
     },
@@ -15,7 +15,7 @@ const projects: IProjectCard[] = [
         title: 'Huggies'
     },
     {
-        image: '/ourwork/media_content_3.svg',
+        image: '/ourwork/media_content.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies'
     },
@@ -38,7 +38,19 @@ const projects: IProjectCard[] = [
 
 const OurWork = () => {
     return (
-        <div id='work' className='mx-6 flex flex-col gap-20 pt-4 pb-40'>
+        <div
+            id='work'
+            className='px-6 flex flex-col gap-20 pt-4 pb-40'
+            style={{
+                backgroundImage: "url(/ourwork/noise.png)",
+                backgroundColor: '#fcfcfc',
+                // backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                // backgroundRepeat: 'no-repeat',
+                backdropFilter: 'blur(30px)',
+                boxShadow: "0px 1px 2px 0px #FFFFFF80 inset",
+            }}
+        >
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 items-end flex-wrap pt-6 md:pt-[53px]'>
                 <h1 className='md:block hidden headline-4'>OUR WORKS</h1>
                 <h1 className='md:hidden block title-2-medium'>OUR WORKS</h1>

@@ -19,7 +19,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
         >
             {/* Desktop */}
             <div
-                className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-primary' : 'text-black'} bg-bg-fc/70  text-custom-xl py-4 px-6 gap-6`}
+                className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-primary' : 'text-black'} bg-bg-fc/70  text-custom-xl py-5 px-6 gap-6`}
 
             >
                 <div className='flex items-center gap-6'>
