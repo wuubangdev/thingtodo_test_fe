@@ -44,9 +44,7 @@ const OurWork = () => {
             style={{
                 backgroundImage: "url(/ourwork/noise.png)",
                 backgroundColor: '#fcfcfc',
-                // backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                // backgroundRepeat: 'no-repeat',
                 backdropFilter: 'blur(30px)',
                 boxShadow: "0px 1px 2px 0px #FFFFFF80 inset",
             }}
@@ -60,9 +58,7 @@ const OurWork = () => {
                 {projects && projects.map((project, index) => (
                     <ProjectCard
                         key={index}
-                        image={project.image}
-                        description={project.description}
-                        title={project.title}
+                        project={project}
                     />
                 ))}
             </div>

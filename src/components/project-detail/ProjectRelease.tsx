@@ -33,9 +33,8 @@ const ProjectRelease = () => {
                         {projects && projects.map((project, index) => (
                             <ProjectCard
                                 key={index}
-                                image={project.image}
-                                description={project.description}
-                                title={project.title}
+                                project={project}
+                                isRelease={true}
                             />
                         ))}
                     </div>

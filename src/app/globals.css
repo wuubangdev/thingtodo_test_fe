@@ -264,7 +264,7 @@ body {
 
 .text-underline {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   /* Giúp cho line gạch được căn giữa */
 }
 

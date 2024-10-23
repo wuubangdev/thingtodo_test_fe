@@ -13,7 +13,7 @@ export interface IProjectCard {
 
 const projects: IProjectCard[] = [
     {
-        image: '/ourwork/media_content.svg',
+        image: '/ourwork/media_content_6.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies',
         category: ['ALL'],
@@ -27,7 +27,7 @@ const projects: IProjectCard[] = [
         sector: ['BEAUTY'],
     },
     {
-        image: '/ourwork/media_content_3.svg',
+        image: '/ourwork/media_content.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies',
         category: ['LOGO'],
@@ -97,9 +97,7 @@ const ListProjectFilter = (props: IProps) => {
                 {listProject && listProject.map((project, index) => (
                     <ProjectCard
                         key={index}
-                        image={project.image}
-                        description={project.description}
-                        title={project.title}
+                        project={project}
                     />
                 ))}
             </div>
