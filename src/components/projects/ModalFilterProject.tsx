@@ -1,5 +1,4 @@
 'use client'
-import { span } from 'framer-motion/client';
 import React, { useState } from 'react';
 export interface ICategory {
     value: string;
