@@ -42,8 +42,7 @@ const OurWork = () => {
             id='work'
             className='px-6 flex flex-col gap-20 pt-4 pb-40'
             style={{
-                backgroundImage: "url(/ourwork/noise.png)",
-                backgroundColor: '#fcfcfc',
+                background: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url(/ourwork/noise.png)",
                 backgroundPosition: 'center',
                 backdropFilter: 'blur(30px)',
                 boxShadow: "0px 1px 2px 0px #FFFFFF80 inset",

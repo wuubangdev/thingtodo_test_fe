@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-[#fcfcfc]">
       <Navbar isPrimary={true} />
       {/* Hero section */}
       <Hero />

@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useState } from 'react';
 import Menu from './Menu';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,18 +10,44 @@ interface IStyleNav {
 }
 
 const Navbar = ({ isPrimary }: IStyleNav) => {
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const navbarHeight = 40; // Đặt chiều cao của navbar, có thể tùy chỉnh
+
+    const controlNavbar = () => {
+        const currentScrollY = window.scrollY;
+
+        if (Math.abs(currentScrollY - lastScrollY) >= navbarHeight) {
+            if (currentScrollY > lastScrollY) {
+                setShowNavbar(false); // Cuộn xuống, ẩn navbar
+            } else {
+                setShowNavbar(true); // Cuộn lên, hiện navbar
+            }
+            setLastScrollY(currentScrollY); // Cập nhật lại vị trí cuộn cuối
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar);
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        };
+    }, [lastScrollY]);
     return (
         <div
             style={{
                 position: isPrimary ? 'sticky' : 'unset',
                 zIndex: 99999,
-                top: 0,
+                top: `${showNavbar ? "0" : "-83px"}`,
+                transition: "top 1s ease"
             }}
         >
             {/* Desktop */}
             <div
                 className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-primary' : 'text-black'} bg-bg-fc/70  text-custom-xl py-5 px-6 gap-6`}
-
+                style={{
+                    backdropFilter: 'blur(5px)'
+                }}
             >
                 <div className='flex items-center gap-6'>
                     <Link href={'/'} className='md:w-[16%] h-auto'>
@@ -30,7 +57,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                 src={'/logo/THINGTODO-TANGERINE.svg'}
                                 width={78}
                                 height={32}
-                                style={{ width: '100%', height: 'auto' }}
+                                style={{ width: '80%', height: 'auto' }}
                                 loading="lazy"
                             />
                             :
