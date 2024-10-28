@@ -50,14 +50,14 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                 }}
             >
                 <div className='flex items-center gap-6'>
-                    <Link href={'/'} className='md:w-[16%] h-auto'>
+                    <Link href={'/'} className='md:w-[16%] lg:w-[12%] xl 2xl:w-[10%] h-full'>
                         {isPrimary ?
                             <Image
                                 alt='nav-logo'
                                 src={'/logo/THINGTODO-TANGERINE.svg'}
                                 width={78}
                                 height={32}
-                                style={{ width: '80%', height: 'auto' }}
+                                style={{ width: '100%', height: '100%' }}
                                 loading="lazy"
                             />
                             :
@@ -71,7 +71,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                             />
                         }
                     </Link>
-                    <div className='font-Jakarta-sans font-normal'>
+                    <div className='font-Jakarta-sans font-normal xl:text-xl 2xl:text-2xl'>
                         {isPrimary ? '(Creative Agency)' : ''}
                     </div>
                 </div>
@@ -81,7 +81,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                         <Link href='#' >
                             <div className='cursor-pointer group  text-underline2'>
                                 <div className='pb-2 pt-2 body-2-medium flex flex-nowrap gap-2 items-center'>
-                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500 '>Let&apos;s collab</span>
+                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500 2xl:text-2xl xl:text-xl'>Let&apos;s collab</span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"

@@ -11,21 +11,32 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   const pathname = usePathname();
   const [isLoading, setIsLoading] = useState(true);
   const [percent, setPercent] = useState(0);
+  const [percentNumber, setPercentNumber] = useState(0);
+
 
   useEffect(() => {
     if (pathname === '/') {
       const timer = setTimeout(() => {
         setIsLoading(false);
-      }, 2200);
-
+      }, 3500);
+      let prev = 0; // Initialize prev
       const interval = setInterval(() => {
-        setPercent((prev) => {
-          if (prev < 100) {
-            return prev + 1;
-          }
-          return prev;
-        });
-      }, 20);
+        if (prev < 100) {
+          prev++; // Increment prev by 1
+          // setPercent(prev)
+        }
+
+        // If prev reaches 100, clear the interval
+        if (prev === 100) {
+          clearInterval(interval);
+        }
+
+        // Optional: handle special cases
+        if (prev === 19 || prev === 29 || prev === 59 || prev === 99 || prev === 100) {
+          setPercentNumber(prev);
+          setPercent(prev)
+        }
+      }, 30);
       return () => {
         clearTimeout(timer);
         clearInterval(interval);
@@ -49,7 +60,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
               exit={{ opacity: 1, y: -1000 }}
               transition={{ duration: 1 }}
             >
-              <LoadingState percent={percent} />
+              <LoadingState percent={percent} percentNumber={percentNumber} />
             </motion.div>)
             :
             (<motion.div

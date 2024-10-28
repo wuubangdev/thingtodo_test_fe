@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LoadingState = ({ percent }: { percent: number }) => {
+const LoadingState = ({ percent, percentNumber }: { percent: number; percentNumber: number }) => {
     return (
         <div className='flex w-screen h-screen items-center justify-center'>
             <div
@@ -13,7 +13,7 @@ const LoadingState = ({ percent }: { percent: number }) => {
                 }}
             >
                 <div className='title-1-medium flex items-center justify-center text-white'>
-                    {percent}
+                    {percentNumber}
                     <span className='title-3-medium'>%</span>
                 </div>
             </div>

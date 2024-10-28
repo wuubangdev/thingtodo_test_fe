@@ -44,6 +44,7 @@ const OurWork = () => {
             style={{
                 background: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url(/ourwork/noise.png)",
                 backgroundPosition: 'center',
+                backgroundColor: '#fcfcfc',
                 backdropFilter: 'blur(30px)',
                 boxShadow: "0px 1px 2px 0px #FFFFFF80 inset",
             }}
