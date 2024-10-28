@@ -36,6 +36,9 @@ const config: Config = {
       scale: {
         '300': '3.0', // giá trị tùy chỉnh
       },
+      screens: {
+        '3xl': '1800px', // Thêm breakpoint 3xl cho màn hình 1800px
+      },
     },
   },
   plugins: [],

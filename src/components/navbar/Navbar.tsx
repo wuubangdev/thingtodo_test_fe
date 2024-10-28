@@ -50,7 +50,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                 }}
             >
                 <div className='flex items-center gap-6'>
-                    <Link href={'/'} className='md:w-[16%] lg:w-[12%] xl 2xl:w-[10%] h-full'>
+                    <Link href={'/'} className='w-[115px] 2xl:w-[105] h-full'>
                         {isPrimary ?
                             <Image
                                 alt='nav-logo'
