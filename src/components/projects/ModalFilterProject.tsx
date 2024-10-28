@@ -1,4 +1,5 @@
 'use client'
+import { span } from 'framer-motion/client';
 import React, { useState } from 'react';
 export interface ICategory {
     value: string;
@@ -8,25 +9,22 @@ export interface ISector {
     value: string;
     title: string;
 }
-//Category: All, Brand strategy, Logo, Brand identity, Packaging, Website, Print Design, Motion, Campaign,
-//Sectors: All, Other, Beauty, Industrial, Construction, Communication, Education
 const categories: ICategory[] = [
     { value: 'ALL', title: 'All' },
-    { value: 'BRAND-STRATEGY', title: 'Brand strategy' },
-    { value: 'LOGO', title: 'Logo' },
-    { value: 'BRAND-IDENTITY', title: 'Brand identity' },
+    { value: 'DIGITAL-ASSET', title: 'Digital Asset' },
+    { value: 'PRODUCTION', title: 'Production' },
     { value: 'PACKAGING', title: 'Packaging' },
-    { value: 'WEBSITE', title: 'Website' },
-    { value: 'MOTION', title: 'Motion' },
-    { value: 'CAMPAIGN', title: 'Campaign' },
+    { value: 'CGI-VFX', title: 'CGI, VFX' },
+    { value: 'PRIVACY-AND-DELICATED', title: 'Privacy and Delicated' },
 ]
 const sectors: ISector[] = [
     { value: 'ALL', title: 'All' },
-    { value: 'OTHER', title: 'Other' },
-    { value: 'BEAUTY', title: 'Beauty' },
-    { value: 'INDUSTRIAL', title: 'Industrial' },
-    { value: 'CONSTRUCTION', title: 'Construction' },
-    { value: 'EDUCATION', title: 'Education' },
+    { value: 'FOOT-BEVERAGE', title: 'Food & Beverage' },
+    { value: 'FMCG', title: 'FMCG' },
+    { value: 'HOSPITALITY', title: 'Hospitality' },
+    { value: 'ENTERTAINMENT', title: 'Entertainment' },
+    { value: 'E-COMMERCE', title: 'E-commerce' },
+    { value: 'TECHNOLOGY', title: 'Technology' },
 ]
 
 interface IProps {
@@ -59,13 +57,31 @@ const ModalFilterProject = (props: IProps) => {
         return 'All';
     }
 
+    const handleMouseEnterCate = () => {
+        setIsShowCategorySelect(true); // Đặt trạng thái hover là true
+    };
+
+    const handleMouseLeaveCate = () => {
+        setIsShowCategorySelect(false); // Đặt trạng thái hover là false
+    };
+
+    const handleMouseEnterSector = () => {
+        setIsShowSectorSelect(true); // Đặt trạng thái hover là true
+    };
+
+    const handleMouseLeaveSector = () => {
+        setIsShowSectorSelect(false); // Đặt trạng thái hover là false
+    };
+
     return (
-        <div className='px-6 '>
-            <div className='relative grid grid-cols-1 md:grid-cols-2 gap-6  border-b-[1px] border-solid border-[#b8b8b8] pt-2 pb-4'>
+        <div className='px-6 sticky top-0 w-full bg-bg-fc z-20'>
+            <div className='relative grid grid-cols-1 md:grid-cols-2 md:gap-6 gap-2 border-b-[1px] border-solid border-[#b8b8b8]'>
                 {/* Desktop */}
                 <div
-                    className='hidden gap-2 md:flex cursor-pointer select-none'
+                    className='hidden gap-2 md:flex cursor-pointer select-none pt-2 pb-4 '
                     onClick={() => setIsShowCategorySelect(!isShowCategorySelect)}
+                    onMouseEnter={handleMouseEnterCate}
+                    onMouseLeave={handleMouseLeaveCate}
                 >
                     <div className='subtitle-2-regular'>
                         Category
@@ -81,12 +97,28 @@ const ModalFilterProject = (props: IProps) => {
                         </svg>
                     </div>
                     {isShowCategorySelect &&
-                        <div className='absolute top-14 flex flex-col items-start z-10 subtitle-2-regular bg-primary-trans p-4'>
+                        <div className='absolute top-12 flex flex-col items-start z-10 subtitle-3-regular'
+                            style={{
+                                borderBottomRightRadius: 4,
+                                borderBottomLeftRadius: 4,
+                                overflow: 'hidden',
+                                boxShadow: "0px 5px 5.3px 0px #0000000D",
+                                minWidth: "280px",
+                            }}
+                        >
                             {categories && categories.map((item, index) => (
                                 <button
                                     key={index}
-                                    className='px-4 pb-2 pt-2 border-b-[1px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer hover:opacity-70'
+                                    className='px-2 pb-4 pt-2 border-b-[0.5px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer'
                                     onClick={() => setCategoryValue(item.value)}
+                                    style={{
+                                        background: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(/ourwork/noise.png)",
+                                        backgroundPosition: 'center',
+                                        backgroundColor: 'rgba(252, 252, 252, 0.6)',
+                                        backdropFilter: 'blur(20px)',
+                                        boxShadow: "0px 5px 5.3px 0px #0000000D",
+                                        fontWeight: categoryValue === item.value ? "500" : "400",
+                                    }}
                                 >
                                     {item.title}
                                 </button>
@@ -96,29 +128,35 @@ const ModalFilterProject = (props: IProps) => {
                 </div>
                 {/* Mobile */}
                 <div
-                    className='flex md:hidden gap-2'
+                    className='flex flex-col md:hidden gap-2'
                     onClick={() => setIsShowCategorySelect(!isShowCategorySelect)}
                 >
-                    <div className='body-1-regular'>
-                        Category
-                    </div>
-                    <div className='body-1-medium'>
-                        ({getCategogyTitle(categoryValue)})
-                    </div>
-                    <div className='subtitle-2-medium flex items-center mt-1'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                        </svg>
+                    <div className='flex gap-3 pt-2 pb-3 border-b-[1px] border-primary'>
+                        <div className='body-1-regular text-primary'>
+                            Category
+                        </div>
+                        <div className='body-1-medium text-primary'>
+                            ({getCategogyTitle(categoryValue)})
+                        </div>
+                        <div className='subtitle-2-medium flex items-center mt-1 text-primary'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
                     </div>
                     {isShowCategorySelect &&
-                        <div className='absolute top-14 flex flex-col items-start z-10 body-1-regular bg-primary-trans p-4'>
+                        <div className='top-14 flex flex-col items-start z-10 body-1-regular'
+                        >
                             {categories && categories.map((item, index) => (
                                 <button
                                     key={index}
-                                    className='px-4 pb-2 pt-2 border-b-[1px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer hover:opacity-70'
+                                    className='px-4 pb-2 pt-3 border-b-[1px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer hover:opacity-70'
                                     onClick={() => setCategoryValue(item.value)}
+                                    style={{
+                                        color: categoryValue === item.value ? "#80868B" : ""
+                                    }}
                                 >
-                                    {item.title}
+                                    {categoryValue === item.value ? <><span>(</span>{item.title}<span>)</span></> : item.title}
                                 </button>
                             ))}
                         </div>
@@ -126,8 +164,10 @@ const ModalFilterProject = (props: IProps) => {
                 </div>
                 {/* Desktop */}
                 <div
-                    className='hidden md:flex gap-2 select-none cursor-pointer'
+                    className='hidden md:flex gap-2 select-none pt-2 pb-4 cursor-pointer'
                     onClick={() => setIsShowSectorSelect(!isShowSectorSelect)}
+                    onMouseEnter={handleMouseEnterSector}
+                    onMouseLeave={handleMouseLeaveSector}
                 >
                     <div className='subtitle-2-regular'>
                         Sectors
@@ -135,18 +175,36 @@ const ModalFilterProject = (props: IProps) => {
                     <div className='subtitle-2-medium'>
                         ({getSectorTitle(sectorValue)})
                     </div>
-                    <div className='subtitle-2-medium flex items-center mt-1'>
+                    <div
+                        className={`subtitle-2-medium flex items-center mt-1 ${isShowSectorSelect ? 'rotate-180' : ''} duration-500`}
+                    >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                         </svg>
                     </div>
                     {isShowSectorSelect &&
-                        <div className='absolute top-14 flex flex-col items-start z-10 subtitle-2-regular bg-primary-trans p-4'>
+                        <div className='absolute top-12 flex flex-col items-start z-10 subtitle-3-regular'
+                            style={{
+                                borderBottomRightRadius: 4,
+                                borderBottomLeftRadius: 4,
+                                overflow: 'hidden',
+                                boxShadow: "0px 5px 5.3px 0px #0000000D",
+                                minWidth: "280px",
+                            }}
+                        >
                             {sectors && sectors.map((item, index) => (
                                 <button
                                     key={index}
-                                    className='px-4 pb-2 pt-2 border-b-[1px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer hover:opacity-70'
+                                    className='px-2 pb-2 pt-4 border-b-[1px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer'
                                     onClick={() => setSectorValue(item.value)}
+                                    style={{
+                                        background: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(/ourwork/noise.png)",
+                                        backgroundPosition: 'center',
+                                        backgroundColor: 'rgba(252, 252, 252, 0.6)',
+                                        backdropFilter: 'blur(20px)',
+                                        boxShadow: "0px 5px 5.3px 0px #0000000D",
+                                        fontWeight: sectorValue === item.value ? "500" : "400",
+                                    }}
                                 >
                                     {item.title}
                                 </button>
@@ -156,29 +214,35 @@ const ModalFilterProject = (props: IProps) => {
                 </div>
                 {/* Mobile */}
                 <div
-                    className='flex md:hidden gap-2'
+                    className='flex flex-col md:hidden gap-2'
                     onClick={() => setIsShowSectorSelect(!isShowSectorSelect)}
                 >
-                    <div className='body-1-regular'>
-                        Sectors
-                    </div>
-                    <div className='body-1-medium'>
-                        ({getSectorTitle(sectorValue)})
-                    </div>
-                    <div className='subtitle-2-medium flex items-center mt-1'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                        </svg>
+                    <div className='flex gap-3 border-b-[1px] border-[#b8b8b8] pt-2 pb-3'>
+                        <div className='body-1-regular'>
+                            Sectors
+                        </div>
+                        <div className='body-1-medium'>
+                            ({getSectorTitle(sectorValue)})
+                        </div>
+                        <div className='subtitle-2-medium flex items-center mt-1'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
                     </div>
                     {isShowSectorSelect &&
-                        <div className='absolute top-14 flex flex-col items-start z-10 body-1-regular bg-primary-trans p-4'>
+                        <div className='flex flex-col items-start z-10 body-2-regular'
+                        >
                             {sectors && sectors.map((item, index) => (
                                 <button
                                     key={index}
-                                    className='px-4 pb-2 pt-2 border-b-[1px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer hover:opacity-70'
+                                    className='px-4 pb-3 pt-2 border-b-[1px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer hover:opacity-70'
                                     onClick={() => setSectorValue(item.value)}
+                                    style={{
+                                        color: sectorValue === item.value ? "#80868B" : ""
+                                    }}
                                 >
-                                    {item.title}
+                                    {sectorValue === item.value ? <><span>(</span>{item.title}<span>)</span></> : item.title}
                                 </button>
                             ))}
                         </div>

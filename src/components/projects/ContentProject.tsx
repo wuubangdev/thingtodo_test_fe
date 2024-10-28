@@ -10,7 +10,7 @@ const ContentProject = () => {
     console.log(categoryValue, sectorValue)
 
     return (
-        <div className='flex flex-col md:gap-28 gap-10'>
+        <div className='flex flex-col md:gap-28 gap-10 '>
             <ModalFilterProject
                 categoryValue={categoryValue}
                 sectorValue={sectorValue}
