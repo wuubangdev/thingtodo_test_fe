@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useMobileMenuContext } from '../context/MobileMenuContext';
 
 interface IMobileMenu {
     link: string;
@@ -32,15 +31,18 @@ const menuItems: IMobileMenu[] = [
     },
 ]
 
+interface IProps {
+    isVisible: boolean;
+    setIsVisible: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-
-const MobileMenu = () => {
-    const { isOpen, setIsOpen } = useMobileMenuContext();
+const ContactModal = (props: IProps) => {
+    const { isVisible, setIsVisible } = props;
 
     return (
         <>
             <AnimatePresence>
-                {isOpen &&
+                {isVisible &&
                     <motion.div
                         initial={{ opacity: 1, x: '100vw' }}
                         animate={{ opacity: 1, x: 0 }}
@@ -62,7 +64,7 @@ const MobileMenu = () => {
                                     <button
                                         className='rounded-3xl bg-primary-trans py-1 px-2 cursor-pointer'
                                         onClick={() => {
-                                            setIsOpen(false);
+                                            setIsVisible(false);
                                         }}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +86,7 @@ const MobileMenu = () => {
                                                 <a
                                                     href={item.link}
                                                     className='block cursor-pointer subtitle-1-medium text-[#FEE3DC]'
-                                                    onClick={() => setIsOpen(false)}
+                                                    onClick={() => setIsVisible(false)}
                                                 >{item.title}</a>
                                             </li>
                                         ))}
@@ -109,7 +111,7 @@ const MobileMenu = () => {
                                     href={'#'}
                                     target='_blank'
                                     onClick={() => {
-                                        setIsOpen(false);
+                                        setIsVisible(false);
                                     }}
                                     className='rounded-3xl border-[1px] border-[#FEE3DC] py-1 px-4 cursor-pointer body-2-medium'
                                 >
@@ -119,7 +121,7 @@ const MobileMenu = () => {
                                     href={'#'}
                                     target='_blank'
                                     onClick={() => {
-                                        setIsOpen(false);
+                                        setIsVisible(false);
                                     }}
                                     className='rounded-3xl border-[1px] border-[#FEE3DC] py-1 px-4 cursor-pointer body-2-medium'
                                 >
@@ -129,7 +131,7 @@ const MobileMenu = () => {
                                     href={'#'}
                                     target='_blank'
                                     onClick={() => {
-                                        setIsOpen(false);
+                                        setIsVisible(false);
                                     }}
                                     className='rounded-3xl border-[1px] border-[#FEE3DC] py-1 px-4 cursor-pointer body-2-medium'
                                 >
@@ -145,4 +147,4 @@ const MobileMenu = () => {
     )
 }
 
-export default MobileMenu;
+export default ContactModal;

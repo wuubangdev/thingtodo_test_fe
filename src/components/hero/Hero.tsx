@@ -45,7 +45,7 @@ const Hero = () => {
                         </motion.video>
                         <motion.div
                             className='absolute bottom-4 right-6 flex items-center rounded-[41px]
-                            p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
+                            p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-30 group
                              hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
                             style={{
                                 translateY: videoTranslateY,

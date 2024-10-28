@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from "react";
 import LoadingState from "@/components/loading/LoadingState";
+import { MobileMenuContextProvider } from "@/components/context/MobileMenuContext";
+import MobileMenu from "@/components/navbar/MobileMenu";
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   const pathname = usePathname();
@@ -48,32 +50,35 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   return (
     <html lang="en">
       <body className="relative">
-        <AnimatePresence
-          // mode="wait"
-          initial={false}
-        >
-          {isLoading ?
-            (<motion.div
-              key={isLoading ? 'loading' : pathname}
-              initial={{ opacity: 1, y: 1000 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 1, y: -1000 }}
-              transition={{ duration: 1 }}
-            >
-              <LoadingState percent={percent} percentNumber={percentNumber} />
-            </motion.div>)
-            :
-            (<motion.div
-              key={isLoading ? 'loading' : pathname}
-              initial={{ opacity: 0.7, y: 1000 }}
-              animate={{ opacity: 1, y: 0 }}
-              // exit={{ opacity: 1, y: -1000 }}
-              transition={{ duration: 1.5 }}
-              style={{ position: 'absolute', top: 0, left: 0, right: 0 }}
-            >
-              {children}
-            </motion.div>)}
-        </AnimatePresence>
+        <MobileMenuContextProvider>
+          <AnimatePresence
+            // mode="wait"
+            initial={false}
+          >
+            {isLoading ?
+              (<motion.div
+                key={isLoading ? 'loading' : pathname}
+                initial={{ opacity: 1, y: 1000 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 1, y: -1000 }}
+                transition={{ duration: 1 }}
+              >
+                <LoadingState percent={percent} percentNumber={percentNumber} />
+              </motion.div>)
+              :
+              (<motion.div
+                key={isLoading ? 'loading' : pathname}
+                initial={{ opacity: 0.7, y: 1000 }}
+                animate={{ opacity: 1, y: 0 }}
+                // exit={{ opacity: 1, y: -1000 }}
+                transition={{ duration: 1.5 }}
+                style={{ position: 'absolute', top: 0, left: 0, right: 0 }}
+              >
+                {children}
+              </motion.div>)}
+          </AnimatePresence>
+          <MobileMenu />
+        </MobileMenuContextProvider>
       </body>
     </html>
   );
