@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContactContext } from '../context/ContactContext';
 import ContactInfo, { IContactModal } from './ContactInfo';
@@ -24,6 +24,15 @@ const contacts: IContactModal[] = [
 
 const ContactModal = () => {
     const { isContactOpen, setIsContactOpen } = useContactContext();
+
+    useEffect(() => {
+        if (isContactOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [isContactOpen])
+
     return (
         <>
             <AnimatePresence>
@@ -63,7 +72,7 @@ const ContactModal = () => {
                                             background: "url(/ourwork/noise.png)",
                                             backgroundPosition: 'center',
                                             backgroundSize: 'cover',
-                                            opacity: 0.2,
+                                            opacity: 0.1,
                                         }}
                                     >
                                     </div>
@@ -111,7 +120,6 @@ const ContactModal = () => {
                                         </div>
                                     </div>
                                 </div>
-
                             </motion.div>
                         </div>
                     </motion.div>
