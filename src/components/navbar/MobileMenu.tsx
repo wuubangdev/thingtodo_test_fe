@@ -46,7 +46,7 @@ const MobileMenu = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 1, x: '100vw' }}
                         transition={{ duration: 0.6 }}
-                        className='sticky inset-0 bg-primary z-40 pb-6 w-screen'
+                        className='fixed inset-0 bg-primary z-40 pb-6 w-screen'
                     >
 
                         <div className='text-white flex flex-col justify-between w-full h-screen pb-4'>

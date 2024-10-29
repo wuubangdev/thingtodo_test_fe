@@ -579,4 +579,33 @@ body {
 }
 
 
+@keyframes changeBackground {
+  0% {
+    background-color: unset;
+    border: 0.5px solid rgba(252, 252, 252, 1);
+  }
+
+  50% {
+    background-color: unset;
+    border-top: 0px solid rgba(252, 252, 252, 1);
+    border-left: 2px solid rgba(252, 252, 252, 1);
+    border-right: 2px solid rgba(252, 252, 252, 1);
+    border-bottom: 2px solid rgba(252, 252, 252, 1);
+  }
+
+  100% {
+    background-color: rgba(252, 252, 252, 1);
+  }
+}
+
+.change-background {
+  animation: changeBackground 0.7s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.delayed-hover {
+  transition-delay: 1s;
+  animation-delay: 1s;
+}
+
 /* globals.css */

@@ -1,13 +1,19 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { useContactContext } from '../context/ContactContext'
 
 const Footer = () => {
+    const { setIsContactOpen } = useContactContext();
     return (
         <>
             <div id='footer' className='bg-primary text-white md:flex hidden flex-col gap-60 px-6 pb-6'>
                 {/* Heading */}
-                <div className='border-b-[0.5px] border-white flex flex-wrap items-center gap-6 py-5 group cursor-pointer'>
+                <div
+                    className='border-b-[0.5px] border-white flex flex-wrap items-center gap-6 py-5 group cursor-pointer'
+                    onClick={() => setIsContactOpen(true)}
+                >
                     <span className='headline-4 custom-text-wrap'>LET&apos;S COLLAB</span>
                     <div className='min-w-[296px]'>
                         <div className='pt-4 flex items-center relative'>
@@ -53,7 +59,7 @@ const Footer = () => {
                     {/*  */}
                     <div className='flex flex-col gap-6'>
                         <div className='grid grid-cols-3'>
-                            <div className='w-full col-span-1'>
+                            <div className='w-[60%] col-span-1'>
                                 <Link href="/">
                                     <Image
                                         alt='footer-logo'

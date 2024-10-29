@@ -39,8 +39,17 @@ const config: Config = {
       screens: {
         '3xl': '1800px', // Thêm breakpoint 3xl cho màn hình 1800px
       },
+      animationDelay: { // Thêm giá trị cho delay
+        100: '0.1s',
+        300: '0.3s',
+        500: '0.5s',
+        700: '0.7s',
+        1000: '1s',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animation-delay')
+  ],
 };
 export default config;
