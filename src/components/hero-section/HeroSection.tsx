@@ -62,7 +62,7 @@ const HeroSection = () => {
                     </div>
                     <div className='flex flex-col justify-between text-primary'>
                         <div className='body-2-regular'>
-                            (SCROLL)
+                            {/* (SCROLL) */}
                         </div>
                         <div className='hero-description'>
                             Provide innovative, high-quality <br /> visual advertising solutions with <br /> quick times.

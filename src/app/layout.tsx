@@ -10,6 +10,7 @@ import { MobileMenuContextProvider } from "@/components/context/MobileMenuContex
 import MobileMenu from "@/components/navbar/MobileMenu";
 import { ContactContextProvider } from "@/components/context/ContactContext";
 import ContactModal from "@/components/modal-contact/ContactModal";
+import Head from "next/head";
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   const pathname = usePathname();
@@ -51,6 +52,9 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo/TTD-favicon.svg" type="image/svg+xml" />
+      </head>
       <body className="relative">
         <MobileMenuContextProvider>
           <ContactContextProvider>

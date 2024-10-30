@@ -58,7 +58,7 @@ const HeroTextTab = () => {
                             Provide innovative, high-quality <br /> visual advertising solutions with <br /> quick times.
                         </div>
                         <div className='text-custom-xl'>
-                            (SCROLL)
+                            {/* (SCROLL) */}
                         </div>
 
                     </div>

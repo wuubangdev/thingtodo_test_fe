@@ -75,9 +75,9 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                 />
                             }
                         </Link>
-                        <div className='font-Jakarta-sans font-normal xl:text-xl 2xl:text-2xl'>
+                        {/* <div className='font-Jakarta-sans font-normal xl:text-xl 2xl:text-2xl'>
                             {isPrimary ? '(Creative Agency)' : ''}
-                        </div>
+                        </div> */}
                     </div>
                     <div className='flex justify-between items-center'>
                         <Menu isPrimary={isPrimary} />

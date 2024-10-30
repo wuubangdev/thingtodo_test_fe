@@ -55,7 +55,7 @@ const HeroText = () => {
                     </div>
                     <div className=' text-primary flex-1 flex flex-col'>
                         <div className='text-custom-xl mt-6 mb-auto'>
-                            (SCROLL)
+                            {/* (SCROLL) */}
                         </div>
                         <div className='text-custom-content mt-24 font-medium sticky bottom-12'>
                             Provide innovative, high-quality <br /> visual advertising solutions with <br /> quick times.
