@@ -38,7 +38,7 @@ const services: IService[] = [
 
 const OurService = () => {
     return (
-        <div id='service'>
+        <div id='service' className='bg-bg-fc'>
             <div className='md:pb-28 pb-20'>
                 {/* Desktop */}
                 <div className='hidden md:grid grid-cols-2 pt-3 pb-4 px-6 items-end gap-6'>
