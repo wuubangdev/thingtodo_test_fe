@@ -56,7 +56,7 @@ const ContactModal = () => {
                                     duration: 0.5,
                                     ease: 'easeInOut'
                                 }}
-                                className='absolute right-0 top-0 bottom-0 md:w-[440px] w-full'
+                                className='absolute left-6 top-0 bottom-0 md:w-[440px] w-full'
                             >
                                 <div
                                     className='flex flex-col md:gap-6 xl:gap-20 text-[#fcfcfc] relative h-full md:rounded-tl-[32px] md:rounded-bl-[32px]'

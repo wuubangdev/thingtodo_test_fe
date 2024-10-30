@@ -65,9 +65,12 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                             >
                                 <Image
                                     alt='project-image'
-                                    src={'/ourwork/project_detail.svg'}
-                                    width={132}
-                                    height={132}
+                                    // src={'/ourwork/project_detail.svg'}
+                                    src={'/ourwork/comming.svg'}
+                                    // width={132}
+                                    width={114}
+                                    // height={132}
+                                    height={114}
                                     style={{
                                         width: '100%',
                                         height: 'auto'
@@ -76,9 +79,21 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                                     loading="lazy"
                                 />
                                 <div className='text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                    {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                                    </svg>
+                                    </svg> */}
+                                    <Image
+                                        alt='project-image'
+                                        // src={'/ourwork/arrow_icon.svg'}
+                                        src={'/ourwork/icon_comming.svg'}
+                                        width={32}
+                                        height={32}
+                                        style={{
+                                            width: '100%',
+                                            height: 'auto'
+                                        }}
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                             {/* Info */}

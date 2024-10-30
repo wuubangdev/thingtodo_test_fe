@@ -14,7 +14,7 @@ interface IProps {
 const ProjectCard = (props: IProps) => {
     const { image, description, title } = props.project;
     return (
-        <Link href="/projects/abc" className='w-full h-full'>
+        <Link href="#" className='w-full h-full'>
             <div className='w-full h-full overflow-hidden flex flex-col'>
                 <div className='group w-full flex-1 overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
                     <Image
@@ -39,12 +39,15 @@ const ProjectCard = (props: IProps) => {
                             >
                                 <Image
                                     alt='project-image'
-                                    src={'/ourwork/project_detail.svg'}
-                                    width={132}
-                                    height={132}
+                                    // src={'/ourwork/project_detail.svg'}
+                                    src={'/ourwork/comming.svg'}
+                                    // width={132}
+                                    // height={132}
+                                    width={114}
+                                    height={114}
                                     style={{
                                         width: '100%',
-                                        height: 'auto'
+                                        height: '100%'
                                     }}
                                     className='rotate-infinite'
                                     loading="lazy"
@@ -54,7 +57,8 @@ const ProjectCard = (props: IProps) => {
                                 >
                                     <Image
                                         alt='project-image'
-                                        src={'/ourwork/arrow_icon.svg'}
+                                        // src={'/ourwork/arrow_icon.svg'}
+                                        src={'/ourwork/icon_comming.svg'}
                                         width={32}
                                         height={32}
                                         style={{

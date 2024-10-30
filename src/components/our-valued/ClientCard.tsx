@@ -17,11 +17,7 @@ const ClientCard = (props: IClient) => {
                 src={logoDark}
                 width={198}
                 height={117}
-                style={{
-                    width: '100%',
-                    height: 'auto'
-                }}
-                className='group-hover:opacity-0 duration-500'
+                className='group-hover:opacity-0 duration-500 w-full h-auto 3xl:w-[80%]'
                 loading="lazy"
             />
             <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center group-hover:opacity-100 opacity-0 duration-500'>
@@ -30,10 +26,7 @@ const ClientCard = (props: IClient) => {
                     src={logoLight}
                     width={198}
                     height={117}
-                    style={{
-                        width: '100%',
-                        height: 'auto'
-                    }}
+                    className='w-full h-auto 3xl:w-[80%]'
                     loading="lazy"
                 />
             </div>
