@@ -66,7 +66,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
                   key={isLoading ? 'loading' : pathname}
                   initial={{ opacity: 1, y: 1000 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 1, y: -1000 }}
+                  // exit={{ opacity: 1, y: -1000 }}
                   transition={{ duration: 1 }}
                 >
                   <LoadingState percent={percent} percentNumber={percentNumber} />

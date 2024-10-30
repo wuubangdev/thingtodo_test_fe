@@ -19,21 +19,21 @@ const projects: IProjectCard[] = [
         description: 'Strip video: New flavor for Vinamilk’s Plain Yoghurt',
         title: 'Vinamilk'
     },
-    {
-        image: '/ourwork/media_content_4.svg',
-        description: 'Project details, 8-10 characters',
-        title: 'Huggies'
-    },
-    {
-        image: '/ourwork/media_content_5.svg',
-        description: 'Project details, 8-10 characters',
-        title: 'Huggies'
-    },
-    {
-        image: '/ourwork/media_content_6.svg',
-        description: 'Project details, 8-10 characters',
-        title: 'Huggies'
-    },
+    // {
+    //     image: '/ourwork/media_content_4.svg',
+    //     description: 'Project details, 8-10 characters',
+    //     title: 'Huggies'
+    // },
+    // {
+    //     image: '/ourwork/media_content_5.svg',
+    //     description: 'Project details, 8-10 characters',
+    //     title: 'Huggies'
+    // },
+    // {
+    //     image: '/ourwork/media_content_6.svg',
+    //     description: 'Project details, 8-10 characters',
+    //     title: 'Huggies'
+    // },
 ]
 
 const OurWork = () => {
