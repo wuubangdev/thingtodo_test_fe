@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import Menu from './Menu';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMobileMenuContext } from '../context/MobileMenuContext';
