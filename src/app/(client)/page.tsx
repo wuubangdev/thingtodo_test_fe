@@ -110,6 +110,7 @@ export default function Home() {
         <Footer />
       </div>
       <Script
+        id="json-ld-organization"
         strategy='lazyOnload'
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(idJsonObject) }} />
