@@ -7,7 +7,7 @@ const Menu = ({ isPrimary }: { isPrimary: boolean }) => {
         const element = document.getElementById(id);
         if (!element) return;
         window.scroll({
-            top: element.offsetTop + 600,
+            top: element.offsetTop,
             behavior: 'smooth'
         })
     };

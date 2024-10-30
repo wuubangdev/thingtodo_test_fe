@@ -105,7 +105,10 @@ const Footer = () => {
             {/* Mobile */}
             <div className='bg-primary text-white flex md:hidden flex-col gap-28 px-4 pb-6'>
                 {/* Heading */}
-                <div className='border-b-[0.5px] pt-12 pb-6  border-white flex items-end'>
+                <div
+                    className='border-b-[0.5px] pt-12 pb-6  border-white flex items-end'
+                    onClick={() => setIsContactOpen(true)}
+                >
                     <h4 className='title-2-medium'>LET&apos;S COLLAB</h4>
                     <div className=''>
                         <div className='pt-4 flex items-center relative'>

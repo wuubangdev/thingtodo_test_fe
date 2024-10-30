@@ -110,7 +110,7 @@ const MobileMenu = () => {
                             {/* Social */}
                             <div className='flex gap-4 px-4 flex-wrap'>
                                 <Link
-                                    href={'#'}
+                                    href={'https://www.tiktok.com/@tutudzui'}
                                     target='_blank'
                                     onClick={() => {
                                         setIsOpen(false);
@@ -120,7 +120,7 @@ const MobileMenu = () => {
                                     Tiktok
                                 </Link>
                                 <Link
-                                    href={'#'}
+                                    href={'https://www.instagram.com/thingtodo.agency/'}
                                     target='_blank'
                                     onClick={() => {
                                         setIsOpen(false);
@@ -130,7 +130,7 @@ const MobileMenu = () => {
                                     Instagram
                                 </Link>
                                 <Link
-                                    href={'#'}
+                                    href={'https://www.facebook.com/profile.php?id=61562599131360'}
                                     target='_blank'
                                     onClick={() => {
                                         setIsOpen(false);

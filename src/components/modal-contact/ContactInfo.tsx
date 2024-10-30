@@ -46,7 +46,7 @@ const ContactInfo = (props: IProps) => {
                 onMouseLeave={() => setIsHover(false)}
             >
                 <h1 className='subtitle-1-medium'>{description}</h1>
-                <div className={`relative duration-300 ${isHover ? "md:h-12 md:pt-2 md:pb-3 md:px-2 md:opacity-100" : "md:opacity-0 md:h-0 md:px-0 md:pt-0 md:pb-0 h-12 opacity-100 pt-2 pb-3 px-2"}`}>
+                <div className={`relative duration-300 ${isHover ? "h-12 pt-2 pb-3 px-2 opacity-100" : "md:opacity-0 md:h-0 md:px-0 md:pt-0 md:pb-0 h-12 opacity-100 pt-2 pb-3 px-2"}`}>
                     <Link
                         href={link}
                         target='_blank'

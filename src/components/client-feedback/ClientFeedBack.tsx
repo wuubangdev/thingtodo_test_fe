@@ -67,11 +67,18 @@ const ClientFeedBack: React.FC = () => {
                         onClick={() => sliderRef.current?.slickPrev()}
                     >
                         <div className='absolute right-0 -translate-x-1 scale-x-300'>
-                            <svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg
+                                className='text-white'
+                                width="10"
+                                height="21"
+                                viewBox="0 0 10 21"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_2060_990)">
                                     <path
                                         d="M-27.7681 9.93218V11.0994L-18.3675 20.5L-17.295 19.3959L-25.3076 11.4306V11.2886L10 11.2886V9.71136L-25.3076 9.71136V9.58517L-17.295 1.6041L-18.3675 0.5L-27.7681 9.93218Z"
-                                        fill="#FCFCFC" />
+                                        fill="#FCFCFC"
+                                    />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_2060_990">

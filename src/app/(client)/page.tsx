@@ -1,4 +1,4 @@
-// import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
+import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
 import Feature from "@/components/feature/Feature";
 import Footer from "@/components/footer/Footer";
 import HeroSection from "@/components/hero-section/HeroSection";
@@ -39,7 +39,7 @@ export default function Home() {
           }}
         >
           <OurValued />
-          {/* <ClientFeedBack /> */}
+          <ClientFeedBack />
         </div>
         <Footer />
       </div>

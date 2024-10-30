@@ -5,19 +5,19 @@ import Link from 'next/link'
 
 const projects: IProjectCard[] = [
     {
-        image: '/ourwork/media_content_6.svg',
-        description: 'Project details, 8-10 characters',
-        title: 'Huggies'
+        image: '/ourwork/media_content_1.svg',
+        description: 'FINO Project Tet Holiday 2025',
+        title: 'Vinamilk'
     },
     {
         image: '/ourwork/media_content_2.svg',
-        description: 'Project details, 8-10 characters',
-        title: 'Huggies'
+        description: 'Vinamilk’s yoghurt rebranding',
+        title: 'Vinamilk'
     },
     {
-        image: '/ourwork/media_content.svg',
-        description: 'Project details, 8-10 characters',
-        title: 'Huggies'
+        image: '/ourwork/media_content_3.gif',
+        description: 'Strip video: New flavor for Vinamilk’s Plain Yoghurt',
+        title: 'Vinamilk'
     },
     {
         image: '/ourwork/media_content_4.svg',

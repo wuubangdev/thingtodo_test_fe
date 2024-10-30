@@ -14,9 +14,9 @@ interface IProps {
 const ProjectCard = (props: IProps) => {
     const { image, description, title } = props.project;
     return (
-        <Link href="/projects/abc">
-            <div className='w-full overflow-hidden'>
-                <div className='group w-full overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
+        <Link href="/projects/abc" className='w-full h-full'>
+            <div className='w-full h-full overflow-hidden flex flex-col'>
+                <div className='group w-full flex-1 overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
                     <Image
                         alt='project-image'
                         src={image}
@@ -24,7 +24,8 @@ const ProjectCard = (props: IProps) => {
                         height={590}
                         style={{
                             width: '100%',
-                            height: 'auto'
+                            height: '100%',
+                            objectFit: 'cover'
                         }}
                         className='group-hover:scale-105 duration-500 rounded'
                         loading="lazy"
