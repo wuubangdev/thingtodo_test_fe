@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { IProjectCard } from './ProjectCardMobile';
-import { useState } from 'react';
 
 //Category: All, Brand strategy, Logo, Brand identity, Packaging, Website, Print Design, Motion, Campaign,
 //Sectors: All, Other, Beauty, Industrial, Construction, Communication, Education
