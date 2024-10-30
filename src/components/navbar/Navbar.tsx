@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import Menu from './Menu';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMobileMenuContext } from '../context/MobileMenuContext';
 import { useContactContext } from '../context/ContactContext';
 
 interface IStyleNav {
@@ -13,7 +12,6 @@ interface IStyleNav {
 const Navbar = ({ isPrimary }: IStyleNav) => {
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-    const { setIsOpen } = useMobileMenuContext();
     const { setIsContactOpen } = useContactContext();
     const navbarHeight = 40; // Đặt chiều cao của navbar, có thể tùy chỉnh
 
@@ -39,16 +37,17 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
     return (
         <>
             <div
+                className={`${isPrimary ? 'md:sticky' : ''}`}
                 style={{
-                    position: isPrimary ? 'sticky' : 'unset',
+
                     zIndex: 30,
-                    top: `${showNavbar ? "0" : "-83px"}`,
+                    top: `${showNavbar ? "0" : "-88px"}`,
                     transition: "top 1s ease"
                 }}
             >
                 {/* Desktop */}
                 <div
-                    className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-primary' : 'text-black'} bg-bg-fc/70  text-custom-xl py-5 px-6 gap-6`}
+                    className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-bg-fc bg-primary' : 'text-black bg-bg-fc/70'}   text-custom-xl py-5 px-6 gap-6`}
                     style={{
                         backdropFilter: 'blur(5px)'
                     }}
@@ -58,7 +57,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                             {isPrimary ?
                                 <Image
                                     alt='nav-logo'
-                                    src={'/logo/THINGTODO-TANGERINE.svg'}
+                                    src={'/logo/THINGTODO-WHITE.svg'}
                                     width={78}
                                     height={32}
                                     style={{ width: '100%', height: '100%' }}
@@ -105,44 +104,30 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                 </div>
                 {/* Mobile */}
                 <div className={`grid md:hidden  grid-cols-2 p-4  ${isPrimary ? 'text-white bg-primary' : 'text-black bg-white'}`}>
-                    <>
-                        <div className='flex items-center gap-6'>
-                            <Link href={'/'} className='h-full'>
-                                {isPrimary ?
-                                    <Image
-                                        alt=''
-                                        src={'/logo/THINGTODO-WHITE.svg'}
-                                        width={78}
-                                        height={32}
-                                        style={{ width: 'auto', height: '100%' }}
+                    <div className='flex items-center gap-6'>
+                        <Link href={'/'} className='h-10'>
+                            {isPrimary ?
+                                <Image
+                                    alt=''
+                                    src={'/logo/THINGTODO-WHITE.svg'}
+                                    width={78}
+                                    height={32}
+                                    style={{ width: 'auto', height: '100%' }}
 
-                                        loading="lazy"
-                                    />
-                                    :
-                                    <Image
-                                        alt='nav-logo'
-                                        src={'/logo/THINGTODO-BLACK.svg'}
-                                        width={78}
-                                        height={32}
-                                        style={{ width: 'auto', height: '100%' }}
-                                        loading="lazy"
-                                    />
-                                }
-                            </Link>
-                        </div>
-                        <div className='flex justify-end'>
-                            <div
-                                className='rounded-3xl bg-primary-trans py-1 px-4 cursor-pointer text-[#FEE3DC]'
-                                onClick={() => {
-                                    setIsOpen(true);
-                                }}
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-6 text-primary">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.499 8.248h15m-15 7.501h15" />
-                                </svg>
-                            </div>
-                        </div>
-                    </>
+                                    loading="lazy"
+                                />
+                                :
+                                <Image
+                                    alt='nav-logo'
+                                    src={'/logo/THINGTODO-BLACK.svg'}
+                                    width={78}
+                                    height={32}
+                                    style={{ width: 'auto', height: '40px' }}
+                                    loading="lazy"
+                                />
+                            }
+                        </Link>
+                    </div>
                 </div>
             </div>
         </>

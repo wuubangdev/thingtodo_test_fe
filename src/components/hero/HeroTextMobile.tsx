@@ -23,9 +23,6 @@ const HeroTextMobile = () => {
                         <p className='body-2-medium '>
                             Provide innovative, high-quality visual advertising solutions with quick times.
                         </p>
-                        <p className='body-3-regular pt-1'>
-                            {/* (SCROLL) */}
-                        </p>
                     </div>
                 </div>
             </div>

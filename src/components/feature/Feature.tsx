@@ -20,21 +20,21 @@ const Feature = () => {
             pauseOnHover={true}
             loop={0} // Số lần lặp lại. Sử dụng `0` để lặp vô hạn.
             style={{ cursor: 'pointer' }}
-            className='md:bg-primary bg-primary-trans pt-2 pb-2 px-4'
+            className='md:bg-[#FEE3DC] bg-primary-trans pt-2 pb-2 px-4'
         >
-            <div className='md:bg-primary bg-primary-trans md:text-white text-primary flex gap-2 pr-2'>
+            <div className='md:bg-[#FEE3DC] bg-primary-trans md:text-primary text-primary flex gap-2 pr-2'>
                 {duplicatedItems.map((item, index) => (
-                    <div key={index} className='flex gap-2 subtitle-3-medium items-center'>
+                    <div key={index} className='flex gap-2 subtitle-2-medium items-center'>
                         <p className='text-nowrap pb-1'>{item}</p>
                         <div className='md:block hidden'>
                             <Image
                                 alt='shaking'
-                                src={'/hero/Mobile_shaking.svg'}
+                                src={'/hero/mobile_feature_icon.svg'}
                                 width={17}
                                 height={17}
                                 style={{
-                                    width: "17px",
-                                    height: "17px"
+                                    width: "19px",
+                                    height: "19px"
                                 }}
                                 loading="lazy"
                             />
@@ -49,6 +49,7 @@ const Feature = () => {
                                     width: "100%",
                                     height: "auto"
                                 }}
+                                className='text-primary'
                                 loading="lazy"
                             />
                         </div>

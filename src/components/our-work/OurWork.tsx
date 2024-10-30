@@ -5,35 +5,35 @@ import Link from 'next/link'
 
 const projects: IProjectCard[] = [
     {
-        image: '/ourwork/media_content_1.svg',
-        description: 'FINO Project Tet Holiday 2025',
-        title: 'Vinamilk'
+        link: '/ourwork/w1.mp4',
+        description: 'Promotion CGI ',
+        title: 'Yo Milk'
     },
     {
-        image: '/ourwork/media_content_2.svg',
-        description: 'Vinamilk’s yoghurt rebranding',
-        title: 'Vinamilk'
+        link: '/ourwork/w2.svg',
+        description: 'Rebranding Campaign',
+        title: 'Probi'
     },
     {
-        image: '/ourwork/media_content_3.gif',
+        link: '/ourwork/w3.gif',
         description: 'Strip video: New flavor for Vinamilk’s Plain Yoghurt',
+        title: 'Sữa chua Vinamilk'
+    },
+    {
+        link: '/ourwork/w4.mp4',
+        description: 'iTVC “9 loại hạt hạt mới”',
+        title: 'Sữa hạt Vinamilk'
+    },
+    {
+        link: '/ourwork/w5.svg',
+        description: 'Rebranding Activation Booth',
+        title: 'Green Farm'
+    },
+    {
+        link: '/ourwork/w6.mp4',
+        description: 'Creative Idea and Production for Fresh Milk',
         title: 'Vinamilk'
     },
-    // {
-    //     image: '/ourwork/media_content_4.svg',
-    //     description: 'Project details, 8-10 characters',
-    //     title: 'Huggies'
-    // },
-    // {
-    //     image: '/ourwork/media_content_5.svg',
-    //     description: 'Project details, 8-10 characters',
-    //     title: 'Huggies'
-    // },
-    // {
-    //     image: '/ourwork/media_content_6.svg',
-    //     description: 'Project details, 8-10 characters',
-    //     title: 'Huggies'
-    // },
 ]
 
 const OurWork = () => {
@@ -59,6 +59,7 @@ const OurWork = () => {
                     <ProjectCard
                         key={index}
                         project={project}
+                        isRelease={true}
                     />
                 ))}
             </div>
@@ -66,7 +67,7 @@ const OurWork = () => {
                 {projects && projects.map((project, index) => (
                     <ProjectCardMobile
                         key={index}
-                        image={project.image}
+                        link={project.link}
                         description={project.description}
                         title={project.title}
                     />

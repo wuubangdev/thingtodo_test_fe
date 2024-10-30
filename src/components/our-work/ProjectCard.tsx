@@ -1,6 +1,8 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import { IProjectCard } from './ProjectCardMobile';
+import { useState } from 'react';
 
 //Category: All, Brand strategy, Logo, Brand identity, Packaging, Website, Print Design, Motion, Campaign,
 //Sectors: All, Other, Beauty, Industrial, Construction, Communication, Education
@@ -12,24 +14,42 @@ interface IProps {
 
 
 const ProjectCard = (props: IProps) => {
-    const { image, description, title } = props.project;
+    const { link, description, title } = props.project;
     return (
         <Link href="#" className='w-full h-full'>
             <div className='w-full h-full overflow-hidden flex flex-col'>
                 <div className='group w-full flex-1 overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
-                    <Image
-                        alt='project-image'
-                        src={image}
-                        width={684}
-                        height={590}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover'
-                        }}
-                        className='group-hover:scale-105 duration-500 rounded'
-                        loading="lazy"
-                    />
+                    {link.endsWith('.mp4')
+                        ?
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                            }}
+                            className='group-hover:scale-105 duration-500 rounded'
+                        >
+                            <source src={link} type="video/mp4" />
+                        </video>
+                        :
+                        <Image
+                            alt="project-image"
+                            src={link}
+                            width={684}
+                            height={590}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                            }}
+                            className='group-hover:scale-105 duration-500 rounded'
+                            loading="lazy"
+                        />
+                    }
+
                     <div className='absolute bg-[#131E29]/60 top-0 bottom-0 left-0 right-0 group-hover:opacity-100 opacity-0 duration-500 rounded overflow-hidden'>
                         <div className='flex flex-col'>
                             <div

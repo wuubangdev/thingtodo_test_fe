@@ -29,7 +29,7 @@ const HeroText = () => {
                         <div className='w-full lg:block md:hidden'>
                             <Image
                                 alt='shaking'
-                                src={'/hero/herotext_desk_or.svg'}
+                                src={'/hero/hero_text_white.svg'}
                                 width={124}
                                 height={124}
                                 style={{
