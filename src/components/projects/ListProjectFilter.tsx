@@ -4,7 +4,7 @@ import ProjectCard from '../our-work/ProjectCard'
 import ProjectCardMobile from '../our-work/ProjectCardMobile'
 
 export interface IProjectCard {
-    image: string,
+    link: string,
     title: string,
     description: string,
     category: string[],
@@ -13,42 +13,42 @@ export interface IProjectCard {
 
 const projects: IProjectCard[] = [
     {
-        image: '/ourwork/media_content_6.svg',
+        link: '/ourwork/media_content_6.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies',
         category: ['ALL'],
         sector: ['ALL'],
     },
     {
-        image: '/ourwork/media_content_2.svg',
+        link: '/ourwork/media_content_2.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies',
         category: ['LOGO'],
         sector: ['BEAUTY'],
     },
     {
-        image: '/ourwork/media_content.svg',
+        link: '/ourwork/media_content.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies',
         category: ['LOGO'],
         sector: ['EDUCATION'],
     },
     {
-        image: '/ourwork/media_content_4.svg',
+        link: '/ourwork/media_content_4.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies',
         category: ['WEBSITE'],
         sector: ['EDUCATION'],
     },
     {
-        image: '/ourwork/media_content_5.svg',
+        link: '/ourwork/media_content_5.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies',
         category: ['WEBSITE'],
         sector: ['ALL'],
     },
     {
-        image: '/ourwork/media_content_6.svg',
+        link: '/ourwork/media_content_6.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies',
         category: ['ALL'],
@@ -105,7 +105,7 @@ const ListProjectFilter = (props: IProps) => {
                 {listProject && listProject.map((project, index) => (
                     <ProjectCardMobile
                         key={index}
-                        image={project.image}
+                        link={project.link}
                         description={project.description}
                         title={project.title}
                     />
