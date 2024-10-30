@@ -104,7 +104,7 @@ const ContactModal = () => {
                                         </button>
                                     </div>
                                     {/* Content */}
-                                    <div className='flex flex-col justify-between flex-1'>
+                                    <div className='flex flex-col flex-1'>
                                         <div className='flex flex-col gap-10'>
                                             <h1 className='subtitle-1-regular'>
                                                 Let&apos;s collab!
@@ -112,9 +112,9 @@ const ContactModal = () => {
                                             <p className='body-2-regular'>
                                                 We&apos;re available from Monday <br />to Friday, 09:00 - 18:30
                                             </p>
-                                        </div>
-                                        <div className='flex flex-col gap-10'>
-                                            {contacts && contacts.map((contact) => <ContactInfo key={contact.id} contact={contact} />)}
+                                            <div className='flex flex-col gap-10'>
+                                                {contacts && contacts.map((contact) => <ContactInfo key={contact.id} contact={contact} />)}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
