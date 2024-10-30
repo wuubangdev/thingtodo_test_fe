@@ -1,4 +1,4 @@
-import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
+// import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
 import Feature from "@/components/feature/Feature";
 import Footer from "@/components/footer/Footer";
 import HeroSection from "@/components/hero-section/HeroSection";
@@ -6,7 +6,7 @@ import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import OurService from "@/components/our-service/OurService";
 import OurValued from "@/components/our-valued/OurValued";
-import OurWork from "@/components/our-work/OurWork";
+// import OurWork from "@/components/our-work/OurWork";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
