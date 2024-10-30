@@ -6,7 +6,7 @@ import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import OurService from "@/components/our-service/OurService";
 import OurValued from "@/components/our-valued/OurValued";
-// import OurWork from "@/components/our-work/OurWork";
+import OurWork from "@/components/our-work/OurWork";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="xl:block hidden">
           <Feature />
         </div>
-        {/* <OurWork /> */}
+        <OurWork />
         {/* How can we help you */}
         <OurService />
         <div
