@@ -77,7 +77,7 @@ const Footer = () => {
                                     <p className='body-3-regular'>
                                         <a href="https://maps.app.goo.gl/decEqRHp8WZq5zqp8"
                                             target='_blank'>
-                                            Block 3, Building TSA, 169/1 Võ Thị Sáu, Võ Thị Sáu, District 3, HCMC
+                                            3rd floor, TSA Building, 169/1 Vo Thi Sau Street, Vo Thi Sau Ward, District 3, HCMC
                                         </a>
                                     </p>
                                 </div>
@@ -133,7 +133,7 @@ const Footer = () => {
                         <div className='grid grid-cols-1 gap-8'>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Office</h5>
-                                <p className='text-sm ml-8'> <a href="https://maps.app.goo.gl/decEqRHp8WZq5zqp8" target='_blank'>Block 3, Building TSA, 169/1 Võ Thị Sáu, Võ Thị Sáu, District 3, HCMC</a> </p>
+                                <p className='text-sm ml-8'> <a href="https://maps.app.goo.gl/decEqRHp8WZq5zqp8" target='_blank'>3rd floor, TSA Building, 169/1 Vo Thi Sau Street, Vo Thi Sau Ward, District 3, HCMC</a> </p>
                             </div>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Email</h5>

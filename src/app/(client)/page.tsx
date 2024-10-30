@@ -25,7 +25,7 @@ export default function Home() {
         <div className="xl:block hidden">
           <Feature />
         </div>
-        <OurWork />
+        {/* <OurWork /> */}
         {/* How can we help you */}
         <OurService />
         <div
@@ -39,7 +39,7 @@ export default function Home() {
           }}
         >
           <OurValued />
-          <ClientFeedBack />
+          {/* <ClientFeedBack /> */}
         </div>
         <Footer />
       </div>

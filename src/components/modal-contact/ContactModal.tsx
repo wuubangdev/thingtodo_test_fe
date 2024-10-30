@@ -56,14 +56,12 @@ const ContactModal = () => {
                                     duration: 0.5,
                                     ease: 'easeInOut'
                                 }}
-                                className='absolute right-0 top-0 bottom-0 w-[440px]'
+                                className='absolute right-0 top-0 bottom-0 md:w-[440px] w-full'
                             >
                                 <div
-                                    className='flex flex-col gap-20 text-[#fcfcfc] relative h-full'
+                                    className='flex flex-col gap-20 text-[#fcfcfc] relative h-full md:rounded-tl-[32px] md:rounded-bl-[32px]'
                                     style={{
                                         padding: '32px 32px 40px 32px',
-                                        borderTopLeftRadius: 32,
-                                        borderBottomLeftRadius: 32,
                                         overflow: 'hidden'
                                     }}
                                 >

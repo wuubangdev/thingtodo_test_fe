@@ -39,21 +39,21 @@ const ContactInfo = (props: IProps) => {
                 {title}
             </h3>
             <div
-                className={`flex flex-col ${isHover ? 'gap-6' : ''} cursor-pointer w-full group duration-500 pb-6`}
+                className={`flex flex-col ${isHover ? 'md:gap-6' : 'md:gap-0'}  gap-6 cursor-pointer w-full group duration-500 pb-6`}
                 onMouseEnter={() => {
                     setIsHover(true)
                 }}
                 onMouseLeave={() => setIsHover(false)}
             >
                 <h1 className='subtitle-1-medium'>{description}</h1>
-                <div className={`relative duration-300 ${isHover ? "h-12 pt-2 pb-3 px-2 opacity-100" : "opacity-0 h-0 "}`}>
+                <div className={`relative duration-300 ${isHover ? "md:h-12 md:pt-2 md:pb-3 md:px-2 md:opacity-100" : "md:opacity-0 md:h-0 md:px-0 md:pt-0 md:pb-0 h-12 opacity-100 pt-2 pb-3 px-2"}`}>
                     <Link
                         href={link}
                         target='_blank'
                         className={
                             `absolute body-2-medium text-center top-0 w-full h-12 flex items-center justify-center gap-0
-                                                            left-0 pt-2 px-2 pb-3 opacity-0
-                                                            duration-200 ${isHover ? "change-background opacity-100 " : "bg-[rgba(252, 252, 252, 0.07)]"}`
+                                                            left-0 pt-2 px-2 pb-3 md:opacity-0 opacity-100 md:border-none border-[0.5px] border-bg-fc
+                                                            duration-200 ${isHover ? "change-background md:opacity-100 " : "bg-[rgba(252, 252, 252, 0.07)]"}`
                         }
                         style={{
                             borderRadius: 8,

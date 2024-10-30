@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useMobileMenuContext } from '../context/MobileMenuContext';
+import { useContactContext } from '../context/ContactContext';
 
 interface IMobileMenu {
     link: string;
@@ -36,6 +37,8 @@ const menuItems: IMobileMenu[] = [
 
 const MobileMenu = () => {
     const { isOpen, setIsOpen } = useMobileMenuContext();
+    const { setIsContactOpen } = useContactContext();
+
 
     return (
         <>
@@ -54,11 +57,12 @@ const MobileMenu = () => {
                             <div className='flex flex-col gap-4'>
                                 {/* Header */}
                                 <div className='p-4 flex items-center justify-end gap-4'>
-                                    <Link href={'/projects'}
+                                    <div
                                         className='rounded-3xl border-[1px] border-white py-1 px-4 cursor-pointer body-2-medium'
+                                        onClick={() => setIsContactOpen(true)}
                                     >
-                                        Start a project
-                                    </Link>
+                                        Let&apos;s collab
+                                    </div>
                                     <button
                                         className='rounded-3xl bg-primary-trans py-1 px-2 cursor-pointer'
                                         onClick={() => {

@@ -49,8 +49,8 @@ const ClientFeedBack: React.FC = () => {
 
     return (
         <div className='md:px-6 px-4 flex flex-col gap-12'>
-            <div className='border-b-[0.5px] pb-4 border-[#666D74] flex justify-between items-center'>
-                <div className='flex gap-12 items-center'>
+            <div className='border-b-[0.5px] pb-4 border-[#666D74] flex justify-between md:items-center items-end'>
+                <div className='flex gap-4 flex-col md:flex-row md:items-center items-start'>
                     <h1 className='body-2-medium text-white'>
                         CLIENT FEEDBACKS
                     </h1>
@@ -61,7 +61,7 @@ const ClientFeedBack: React.FC = () => {
                         </span>
                     </div>
                 </div>
-                <div className='flex gap-6 items-center'>
+                <div className='flex gap-6 md:items-center'>
                     <div
                         className='flex items-center group h-full cursor-pointer rotate-180 relative'
                         onClick={() => sliderRef.current?.slickPrev()}
