@@ -5,17 +5,17 @@ import ProjectCard from '../our-work/ProjectCard'
 
 const projects: IProjectCard[] = [
     {
-        image: '/ourwork/media_content.svg',
+        link: '/ourwork/media_content.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies'
     },
     {
-        image: '/ourwork/media_content_2.svg',
+        link: '/ourwork/media_content_2.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies'
     },
     {
-        image: '/ourwork/media_content_3.svg',
+        link: '/ourwork/media_content_3.svg',
         description: 'Project details, 8-10 characters',
         title: 'Huggies'
     },
@@ -42,7 +42,7 @@ const ProjectRelease = () => {
                         {projects && projects.map((project, index) => (
                             <ProjectCardMobile
                                 key={index}
-                                image={project.image}
+                                link={project.link}
                                 description={project.description}
                                 title={project.title}
                             />
