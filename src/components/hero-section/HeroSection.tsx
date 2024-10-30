@@ -20,7 +20,7 @@ const HeroSection = () => {
         <>
             {/* Large Desktop */}
             <div
-                className='hidden xl:flex flex-col pt-6 w-full bg-[#fcfcfc] h-[calc(100vh-83px)] mb-[60vh]'
+                className='hidden xl:flex flex-col pt-6 w-full bg-[#fcfcfc] h-[calc(100vh-88px)] mb-[60vh]'
             >
                 <HeroText />
                 <div className='grid grid-cols-2 px-6 pb-6 gap-6 flex-1 relative'>
