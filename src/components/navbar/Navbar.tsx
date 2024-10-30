@@ -35,7 +35,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
         return () => {
             window.removeEventListener('scroll', controlNavbar);
         };
-    }, [lastScrollY]);
+    }, [lastScrollY, controlNavbar]);
     return (
         <>
             <div
