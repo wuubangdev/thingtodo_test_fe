@@ -34,9 +34,8 @@ const MovingImage = ({ image }: { image: string }) => {
             const rect = hoverAreaRef.current.getBoundingClientRect();
             const x = e.clientX - rect.left; // Tọa độ X trong div
             const y = e.clientY - rect.top; // Tọa độ Y trong div
-
             // Cập nhật vị trí của hình ảnh
-            setPosition({ x: x - 210, y: y - 220 });
+            setPosition({ x: x - 210, y: y - 140 });
         }
     };
 
@@ -68,6 +67,7 @@ const MovingImage = ({ image }: { image: string }) => {
                 <motion.img
                     src={image} // Thay đường dẫn hình ảnh
                     alt="Moving Image"
+                    className='duration-200 ease-linear'
                     style={{
                         position: 'absolute',
                         width: '25vw',
@@ -76,12 +76,12 @@ const MovingImage = ({ image }: { image: string }) => {
                         translate: `${position.x}px ${position.y}px`, // Di chuyển theo tọa độ
                         zIndex: 999,
                     }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{
-                        duration: 0.4, // Thời gian cho toàn bộ chuyển động (1.5 giây)
-                        ease: "easeInOut" // Thêm kiểu easing nếu muốn
+                        opacity: { duration: 0.3 },
+                        translate: { duration: 0.005 },
                     }}
                 />
             )}
