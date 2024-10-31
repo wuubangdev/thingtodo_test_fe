@@ -79,18 +79,11 @@ const CardService = (props: IProps) => {
                 </div>
             </div>
             {/* Mobile */}
-            <div className='md:hidden sticky'
-                style={{
-                    top: `calc(0vh)`,
-                    marginBottom: `${5.25 * total - 5.25 * index - 5.25}rem`,
-                    zIndex: 1,
-                }}
-            >
+            <div className='md:hidden'>
                 <div
                     className=' px-4 flex flex-col gap-14 bg-bg-fc'
-
                 >
-                    <div className='flex pt-3 pb-6 gap-2 border-t-[1px]'>
+                    <div className='flex pt-3 pb-6 gap-2 border-t-[1px] sticky top-0 bg-bg-fc'>
                         <div className='subtitle-1-medium'>
                             (0{index + 1})
                         </div>
