@@ -1,16 +1,17 @@
 import React, { useRef, useState } from 'react'
 import HeroTextMobile from './HeroTextMobile'
-import { useScroll, useTransform, motion } from 'framer-motion';
+// import { useScroll, useTransform, motion } from 'framer-motion';
 import Feature from '../feature/Feature';
+import Image from 'next/image';
 
 
 const HeroMobile = () => {
-    const { scrollYProgress } = useScroll();
+    // const { scrollYProgress } = useScroll();
     const containerRef = useRef<HTMLDivElement>(null);
-    const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '16px']);
+    // const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '16px']);
     // const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
     // const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '130%', '130%']);
-    const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '40px']);
+    // const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '40px']);
 
 
     const [checkClick, setCheckClick] = useState<number>(1);
@@ -35,7 +36,7 @@ const HeroMobile = () => {
         >
             <HeroTextMobile />
             <div className='relative'>
-                <motion.video
+                {/* <motion.video
                     autoPlay
                     muted
                     loop
@@ -52,7 +53,14 @@ const HeroMobile = () => {
                     }}
                 >
                     <source src="/hero/1x1.mp4" type="video/mp4" />
-                </motion.video>
+                </motion.video> */}
+                <Image
+                    alt=''
+                    src={'/hero/gif/9x16.gif'}
+                    width={864}
+                    height={1536}
+                    className='w-full h-auto rounded-[40px] px-3' // Thêm lớp animation
+                />
                 <div
                     className='absolute bottom-4 right-4 flex items-center rounded-[41px]
                                      p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
