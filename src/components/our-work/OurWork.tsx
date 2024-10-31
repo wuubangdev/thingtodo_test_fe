@@ -21,7 +21,7 @@ const projects: IProjectCard[] = [
     },
     {
         link: '/ourwork/w4.mp4',
-        description: 'New &nbsp;9 Nuts&nbsp; TV commercial',
+        description: "New '9 Nuts' TV commercial",
         title: <span>Sữa hạt Vinamilk</span>
     },
     {
@@ -48,22 +48,22 @@ const projectMobile: IProjectCard[] = [
     },
     {
         link: '/ourwork/w3.gif',
-        description: 'Strip video: New flavor for Vinamilk’s Plain Yoghurt',
-        title: <span>Sữa chua <br /> Vinamilk</span>
+        description: 'iTVC: Blueberry Yoghurt',
+        title: <span>Sữa chua Vinamilk</span>
     },
     {
         link: '/ourwork/w4.mp4',
-        description: 'iTVC “9 loại hạt hạt mới”',
-        title: <span>Sữa hạt <br /> Vinamilk</span>
+        description: "New '9 Nuts' TV commercial",
+        title: <span>Sữa hạt Vinamilk</span>
     },
     {
         link: '/ourwork/w5.svg',
-        description: 'Rebranding Activation Booth',
+        description: 'Design Activation Booth',
         title: <span>Green Farm</span>
     },
     {
         link: '/ourwork/w6.mp4',
-        description: 'Creative Idea and Production for Fresh Milk',
+        description: 'Production for Fresh Milk',
         title: <span>Vinamilk</span>
     },
 ]
