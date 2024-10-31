@@ -67,7 +67,7 @@ const MovingImage = ({ image }: { image: string }) => {
                 <motion.img
                     src={image} // Thay đường dẫn hình ảnh
                     alt="Moving Image"
-                    className='duration-200 ease-linear'
+                    // className='duration-200 ease-linear'
                     style={{
                         position: 'absolute',
                         width: '25vw',
@@ -80,7 +80,7 @@ const MovingImage = ({ image }: { image: string }) => {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{
-                        opacity: { duration: 0.3 },
+                        opacity: { duration: 0 },
                         translate: { duration: 0.005 },
                     }}
                 />
