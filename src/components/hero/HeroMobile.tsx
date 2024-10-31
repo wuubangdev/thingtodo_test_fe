@@ -8,8 +8,8 @@ const HeroMobile = () => {
     const { scrollYProgress } = useScroll();
     const containerRef = useRef<HTMLDivElement>(null);
     const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '0px']);
-    const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
-    const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '130%', '130%']);
+    // const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
+    // const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '130%', '130%']);
     const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '0px']);
 
 
@@ -29,10 +29,46 @@ const HeroMobile = () => {
     return (
         <div
             ref={containerRef}
-            className='flex flex-col md:hidden bg-primary h-[calc(100vh-72px)] mb-[calc(130vh)] relative'
+            // className='flex flex-col md:hidden bg-primary h-[calc(100vh-72px)] mb-[calc(130vh)] relative'
+            className='flex flex-col md:hidden bg-primary relative gap-4'
+
         >
             <HeroTextMobile />
-            <div className='w-full relative top-[calc(-100vh-72px)]'>
+            <div className='relative'>
+                <motion.video
+                    autoPlay
+                    muted
+                    loop
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                        borderRadius: radius,
+                        objectFit: 'cover',
+                        padding: padding,
+                        border: 'none'
+                    }}
+                    transition={{
+                        ease: 'easeIn'
+                    }}
+                >
+                    <source src="/hero/1x1.mp4" type="video/mp4" />
+                </motion.video>
+                <div
+                    className='absolute bottom-4 right-4 flex items-center rounded-[41px]
+                                     p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
+                                     hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
+                    onClick={() => handleClick()}
+                >
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </div>
+                    <span className='group-hover:scale-100 scale-0 duration-500 origin-right text-white text-nowrap' >View this showcase</span>
+                </div>
+            </div>
+            <Feature />
+            {/* <div className='w-full relative top-[calc(-100vh-72px)]'>
                 <div className='relative w-full h-[270vh]'>
                     <div className='absolute top-0 left-0 w-full h-1/2 bg-primary -z-10'></div>
                     <div className='absolute top-0 left-0 w-full h-full bg-[#f8f8f8] -z-10'></div>
@@ -80,7 +116,7 @@ const HeroMobile = () => {
                         <Feature />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
