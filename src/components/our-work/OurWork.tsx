@@ -7,7 +7,7 @@ const projects: IProjectCard[] = [
     {
         link: '/ourwork/w1.mp4',
         description: 'Promotion CGI ',
-        title: <span>YoMilk</span>
+        title: <span>Yomilk</span>
     },
     {
         link: '/ourwork/w2.svg',
@@ -39,7 +39,7 @@ const projectMobile: IProjectCard[] = [
     {
         link: '/ourwork/w1.mp4',
         description: 'Promotion CGI ',
-        title: <span>YoMilk</span>
+        title: <span>Yomilk</span>
     },
     {
         link: '/ourwork/w2.svg',
@@ -73,7 +73,7 @@ const OurWork = () => {
             id='work'
             className='px-6 flex flex-col gap-20 pt-4 pb-40'
             style={{
-                background: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url(/ourwork/noise.png)",
+                background: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/ourwork/noise.png),url(/ourwork/noise.png)",
                 backgroundPosition: 'center',
                 backgroundColor: '#fcfcfc',
                 backdropFilter: 'blur(30px)',

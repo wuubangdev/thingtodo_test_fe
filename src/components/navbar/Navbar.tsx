@@ -46,7 +46,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
             >
                 {/* Desktop */}
                 <div
-                    className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-bg-fc bg-primary' : 'text-black bg-bg-fc/70'}   text-custom-xl py-5 px-6 gap-6`}
+                    className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-black bg-bg-fc/70' : 'text-black bg-bg-fc/70'}   text-custom-xl py-5 px-6 gap-6`}
                     style={{
                         backdropFilter: 'blur(5px)'
                     }}
@@ -56,19 +56,19 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                             {isPrimary ?
                                 <Image
                                     alt='nav-logo'
-                                    src={'/logo/THINGTODO-WHITE.svg'}
+                                    src={'/logo/THINGTODO-BLACK.svg'}
                                     width={78}
                                     height={32}
-                                    style={{ width: '100%', height: '100%' }}
+                                    style={{ width: '100%', height: 'auto' }}
                                     loading="lazy"
                                 />
                                 :
                                 <Image
                                     alt='nav-logo'
-                                    src={'/logo/THINGTODO-BLACK.svg'}
+                                    src={'/logo/THINGTODO-WHITE.svg'}
                                     width={78}
                                     height={32}
-                                    style={{ width: '100%', height: 'auto' }}
+                                    style={{ width: '100%', height: '100%' }}
                                     loading="lazy"
                                 />
                             }

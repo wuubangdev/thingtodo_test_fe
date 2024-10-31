@@ -9,10 +9,13 @@ const HeroMobile = () => {
     const { scrollY } = useScroll();
     const containerRef = useRef<HTMLDivElement>(null);
     const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '0px']);
-    const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.05], ['100%', '110%', '100vh']);
-    const translate = useTransform(scrollYProgress, [0, 0.05], ['0', '-20%']);
+    const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '200%', '260%', '260%']);
+    const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '130%', '130%']);
+    const translate = useTransform(scrollYProgress, [0, 0.04, 0.08], ['0px', '0px', '28px']);
+    const translateButton = useTransform(scrollYProgress, [0, 0.06, 0.08], ['0px', '60vh', '63vh']);
     const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '0px']);
     const containerHeight = containerRef.current?.offsetHeight || 0;
+
 
     // Sử dụng useTransform để giới hạn y trong khoảng chiều cao của container
     const yTransform = useTransform(
@@ -36,15 +39,15 @@ const HeroMobile = () => {
     return (
         <div
             ref={containerRef}
-            className='flex flex-col md:hidden bg-primary h-[calc(100vh-72px)] mb-[100vh]'
+            className='flex flex-col md:hidden bg-primary h-[calc(100vh-72px)] mb-[60vh]'
         >
             <HeroTextMobile />
             <motion.div className='w-full flex-1 flex flex-col relative'
                 style={{ y: yTransform }}
                 transition={{
                     type: "spring",
-                    damping: 10,
-                    stiffness: 10,
+                    damping: 20,
+                    stiffness: 200,
                 }}
             >
                 <div className='flex-1 relative'>
@@ -55,7 +58,7 @@ const HeroMobile = () => {
                             muted
                             loop
                             style={{
-                                width: '100%',
+                                width: videoWidth,
                                 height: videoHeight,
                                 translateY: translate,
                                 borderRadius: radius,
@@ -65,11 +68,10 @@ const HeroMobile = () => {
                             transition={{
                                 ease: 'easeIn'
                             }}
-                            className='sticky bottom-0 z-40'
+                            className='sticky bottom-0 z-10'
                         >
                             <source src="/hero/9x16.mp4" type="video/mp4" />
                         </motion.video>
-
                     </div>
                 </div>
                 <motion.div
@@ -77,7 +79,9 @@ const HeroMobile = () => {
                             p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
                              hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
                     onClick={() => handleClick()}
-
+                    style={{
+                        translateY: translateButton,
+                    }}
                 >
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

@@ -15,8 +15,8 @@ interface IProps {
 const ProjectCard = (props: IProps) => {
     const { link, description, title } = props.project;
     return (
-        <Link href="#" className='w-full h-full'>
-            <div className='w-full h-full overflow-hidden flex flex-col'>
+        <Link href="#" className='w-full h-full relative'>
+            <div className='w-full h-full overflow-hidden flex flex-col relative'>
                 <div className='group w-full flex-1 overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
                     {link.endsWith('.mp4')
                         ?
@@ -48,11 +48,10 @@ const ProjectCard = (props: IProps) => {
                             loading="lazy"
                         />
                     }
-
                     <div className='absolute bg-[#131E29]/60 top-0 bottom-0 left-0 right-0 group-hover:opacity-100 opacity-0 duration-500 rounded overflow-hidden'>
                         <div className='flex flex-col'>
                             <div
-                                className='absolute  bg-primary p-1 rounded-full  w-1/6 
+                                className='absolute bg-primary p-1 rounded-full  w-1/6 
                                 scale-0 group-hover:scale-100 duration-700 
                                 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
                             >
@@ -120,10 +119,11 @@ const ProjectCard = (props: IProps) => {
                         </div>
                     </div>
                 </div>
-                <div className='flex gap-4 w-full'>
-                    <h2 className='body-1-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
-                    <p className='body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
-                </div>
+
+            </div>
+            <div className='flex gap-4 w-full absolute left-0 -bottom-10'>
+                <h2 className='body-1-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
+                <p className='body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
             </div>
         </Link>
     )

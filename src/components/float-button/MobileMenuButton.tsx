@@ -20,8 +20,8 @@ const MobileMenuButton = () => {
             >
                 <svg className="absolute text-primary" width="52" height="40" viewBox="0 0 52 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="52" height="40" rx="20" fill="#FDC6B7" />
-                    <line x1="16" y1="17.25" x2="36" y2="17.25" stroke="#FA4616" stroke-width="1.5" />
-                    <line x1="16" y1="21.25" x2="36" y2="21.25" stroke="#FA4616" stroke-width="1.5" />
+                    <line x1="16" y1="17.25" x2="36" y2="17.25" stroke="#FA4616" strokeWidth="1.5" />
+                    <line x1="16" y1="21.25" x2="36" y2="21.25" stroke="#FA4616" strokeWidth="1.5" />
                 </svg>
 
             </div>

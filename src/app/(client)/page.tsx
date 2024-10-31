@@ -83,7 +83,7 @@ const idJsonObject = {
 export default function Home() {
   return (
     <>
-      <div className="bg-[#fcfcfc]">
+      <div className="bg-primary">
         <Navbar isPrimary={true} />
         {/* Hero section */}
         <Hero />

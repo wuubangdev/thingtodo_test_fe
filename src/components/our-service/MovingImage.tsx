@@ -36,7 +36,7 @@ const MovingImage = ({ image }: { image: string }) => {
             const y = e.clientY - rect.top; // Tọa độ Y trong div
 
             // Cập nhật vị trí của hình ảnh
-            setPosition({ x: x - 510, y: y - 400 });
+            setPosition({ x: x - 210, y: y - 220 });
         }
     };
 
@@ -80,7 +80,7 @@ const MovingImage = ({ image }: { image: string }) => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{
-                        duration: 1.5, // Thời gian cho toàn bộ chuyển động (1.5 giây)
+                        duration: 0.4, // Thời gian cho toàn bộ chuyển động (1.5 giây)
                         ease: "easeInOut" // Thêm kiểu easing nếu muốn
                     }}
                 />

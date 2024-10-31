@@ -117,19 +117,19 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                                     />
                                 </div>
                             </div>
-                            <div className='text-white p-4 absolute bottom-0'>
+                            {/* <div className='text-white p-4 absolute bottom-0'>
                                 <div className='flex flex-col gap-2'>
                                     <h3 className='text-[12px] font-medium'>Overview</h3>
                                     <p className='text-sm line-clamp-5'>Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.</p>
                                 </div>
 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
                 <div className='flex gap-4 w-full'>
                     <h2 className='body-2-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
-                    <p className='body-2-regular text-black-blur border-b-[1px] border-black-blur flex-1 flex items-star pt-1 pb-2'>{description}</p>
+                    <p className='body-2-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
                 </div>
             </div>
         </Link>
