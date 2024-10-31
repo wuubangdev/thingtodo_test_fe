@@ -19,7 +19,6 @@ interface IProps {
 
 const CardService = (props: IProps) => {
     const { index, service, total } = props;
-
     return (
         <>
             <div
@@ -80,40 +79,49 @@ const CardService = (props: IProps) => {
                 </div>
             </div>
             {/* Mobile */}
-            <div
-                className='md:hidden px-4 flex flex-col gap-14'
+            <div className='md:hidden sticky'
+                style={{
+                    top: `calc(0vh)`,
+                    marginBottom: `${5.25 * total - 5.25 * index - 5.25}rem`,
+                    zIndex: 1,
+                }}
             >
-                <div className='flex pt-3 pb-6 gap-2 border-t-[1px]'>
-                    <div className='subtitle-1-medium'>
-                        (0{index + 1})
+                <div
+                    className=' px-4 flex flex-col gap-14 bg-bg-fc'
+
+                >
+                    <div className='flex pt-3 pb-6 gap-2 border-t-[1px]'>
+                        <div className='subtitle-1-medium'>
+                            (0{index + 1})
+                        </div>
+                        <h2 className='subtitle-1-medium'>{service.title}</h2>
                     </div>
-                    <h2 className='subtitle-1-medium'>{service.title}</h2>
-                </div>
-                <div className='grid grid-cols-1 pb-20 gap-20'>
-                    <div>
-                        <Image
-                            alt='icon-service'
-                            src={service.image}
-                            width={240}
-                            height={240}
-                            style={{
-                                height: 'auto',
-                                width: '100%'
-                            }}
-                            className='md:hidden block'
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className='flex flex-col gap-3 pb-[120px]'>
-                        <p className='body-3-regular'>{service.description}</p>
-                        <ul>
-                            {service.subService && service.subService.map((item, index) => (
-                                <li key={index} className='border-b-[1px] py-4 flex items-center gap-2 '>
-                                    <p className='subtitle-3-medium text-[#959A9F]'>0{index + 1}</p>
-                                    <p className='subtitle-2-medium'>{item}</p>
-                                </li>
-                            ))}
-                        </ul>
+                    <div className='grid grid-cols-1 pb-20 gap-20'>
+                        <div>
+                            <Image
+                                alt='icon-service'
+                                src={service.image}
+                                width={240}
+                                height={240}
+                                style={{
+                                    height: 'auto',
+                                    width: '100%'
+                                }}
+                                className='md:hidden block'
+                                loading="lazy"
+                            />
+                        </div>
+                        <div className='flex flex-col gap-3 pb-[120px]'>
+                            <p className='body-3-regular'>{service.description}</p>
+                            <ul>
+                                {service.subService && service.subService.map((item, index) => (
+                                    <li key={index} className='border-b-[1px] py-4 flex items-center gap-2 '>
+                                        <p className='subtitle-3-medium text-[#959A9F]'>0{index + 1}</p>
+                                        <p className='subtitle-2-medium'>{item}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
