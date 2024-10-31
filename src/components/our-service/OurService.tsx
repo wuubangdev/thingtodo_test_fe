@@ -6,7 +6,7 @@ const services: IService[] = [
         id: 0,
         title: 'Digital Asset',
         icon: '/service/icon1.svg',
-        image: "/service/s1.svg",
+        image: "/service/s1.webp",
         description: 'Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.',
         subService: ['Social Media Asset', 'E-commerce Visual', 'Website Asset']
     },
@@ -14,7 +14,7 @@ const services: IService[] = [
         id: 1,
         title: 'Video Production',
         icon: '/service/icon2.svg',
-        image: "/service/s2.svg",
+        image: "/service/s2.webp",
         description: "Our video production services bring your brand's story to life through captivating visuals and compelling narratives.",
         subService: ['Commercial videos', 'Documentary videos', 'Corporate videos']
     },
@@ -22,7 +22,7 @@ const services: IService[] = [
         id: 2,
         title: 'Packaging',
         icon: '/service/icon3.svg',
-        image: "/service/s3.svg",
+        image: "/service/s3.webp",
         description: 'Our packaging design services create memorable brand experiences through innovative and visually stunning packaging solutions.',
         subService: ['Structural design', 'Branding integration', 'Sustainability solutions']
     },
@@ -30,7 +30,7 @@ const services: IService[] = [
         id: 3,
         title: 'CGI, VFX',
         icon: '/service/icon4.svg',
-        image: "/service/s4.svg",
+        image: "/service/s4.webp",
         description: 'Our CGI and VFX services bring your imagination to life, crafting stunning visuals that captivate audiences and elevate your brand.',
         subService: ['Character animation', 'Environmental effects', 'Product visualization']
     },
@@ -41,7 +41,7 @@ const servicesMobile: IService[] = [
         id: 0,
         title: 'Digital Asset',
         icon: '/service/icon1.svg',
-        image: "/service/s1.svg",
+        image: "/service/s1.webp",
         description: 'Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.',
         subService: ['Social Media Asset', 'E-commerce Visual', 'Website Asset']
     },
@@ -49,7 +49,7 @@ const servicesMobile: IService[] = [
         id: 1,
         title: 'Production',
         icon: '/service/icon2.svg',
-        image: "/service/s2.svg",
+        image: "/service/s2.webp",
         description: "Our video production services bring your brand's story to life through captivating visuals and compelling narratives.",
         subService: ['Commercial videos', 'Documentary videos', 'Corporate videos']
     },
@@ -57,7 +57,7 @@ const servicesMobile: IService[] = [
         id: 2,
         title: 'Packaging',
         icon: '/service/icon3.svg',
-        image: "/service/s3.svg",
+        image: "/service/s3.webp",
         description: 'Our packaging design services create memorable brand experiences through innovative and visually stunning packaging solutions.',
         subService: ['Structural design', 'Branding integration', 'Sustainability solutions']
     },
@@ -65,7 +65,7 @@ const servicesMobile: IService[] = [
         id: 3,
         title: 'CGI, VFX',
         icon: '/service/icon4.svg',
-        image: "/service/s4.svg",
+        image: "/service/s4.webp",
         description: 'Our CGI and VFX services bring your imagination to life, crafting stunning visuals that captivate audiences and elevate your brand.',
         subService: ['Character animation', 'Environmental effects', 'Product visualization']
     },
