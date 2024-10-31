@@ -22,7 +22,7 @@ const ContactInfo = (props: IProps) => {
             if (!isHover) {
                 setIsHover(true);
             }
-        }, 5000);
+        }, 500);
         return () => clearTimeout(timer);
     }, [isHover]);
     return (
