@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 
 export interface IProjectCard {
@@ -12,7 +12,7 @@ export interface IProjectCard {
 
 const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
     const { link, description, title } = props;
-    const cardRef = useRef<HTMLDivElement>(null);
+    // const cardRef = useRef<HTMLDivElement>(null);
     const [isHovered, setIsHovered] = useState(false);
 
     // useEffect(() => {
