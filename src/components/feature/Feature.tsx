@@ -5,7 +5,7 @@ import Marquee from 'react-fast-marquee'
 const items: string[] = [
     'KEY VISUAL',
     'PACKAGING',
-    'DIGITAL ASSETS',
+    'DIGITAL ASSET',
     'POSM',
     'TVC',
 ]

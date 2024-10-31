@@ -16,22 +16,22 @@ const projects: IProjectCard[] = [
     },
     {
         link: '/ourwork/w3.gif',
-        description: 'Strip video: New flavor for Vinamilk’s Plain Yoghurt',
+        description: 'iTVC: Blueberry Yoghurt',
         title: <span>Sữa chua Vinamilk</span>
     },
     {
         link: '/ourwork/w4.mp4',
-        description: 'iTVC “9 loại hạt hạt mới”',
+        description: 'New &nbsp;9 Nuts&nbsp; TV commercial',
         title: <span>Sữa hạt Vinamilk</span>
     },
     {
         link: '/ourwork/w5.svg',
-        description: 'Rebranding Activation Booth',
+        description: 'Design Activation Booth',
         title: <span>Green Farm</span>
     },
     {
         link: '/ourwork/w6.mp4',
-        description: 'Creative Idea and Production for Fresh Milk',
+        description: 'Production for Fresh Milk',
         title: <span>Vinamilk</span>
     },
 ]
@@ -73,9 +73,9 @@ const OurWork = () => {
             id='work'
             className='px-6 flex flex-col gap-20 pt-4 pb-40'
             style={{
-                background: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/ourwork/noise.png),url(/ourwork/noise.png)",
-                backgroundPosition: 'center',
-                backgroundColor: '#fcfcfc',
+                // background: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/ourwork/noise.png),url(/ourwork/noise.png)",
+                // backgroundPosition: 'center',
+                backgroundColor: '#f8f8f8',
                 backdropFilter: 'blur(30px)',
                 boxShadow: "0px 1px 2px 0px #FFFFFF80 inset",
             }}
