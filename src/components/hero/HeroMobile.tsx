@@ -1,14 +1,15 @@
 import React, { useRef, useState } from 'react'
 import HeroTextMobile from './HeroTextMobile'
-// import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion } from 'framer-motion';
 import Feature from '../feature/Feature';
 import Image from 'next/image';
+import ReactPlayer from 'react-player';
 
 
 const HeroMobile = () => {
-    // const { scrollYProgress } = useScroll();
+    const { scrollYProgress } = useScroll();
     const containerRef = useRef<HTMLDivElement>(null);
-    // const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '16px']);
+    const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '16px']);
     // const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
     // const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '130%', '130%']);
     // const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '40px']);
@@ -35,8 +36,16 @@ const HeroMobile = () => {
 
         >
             <HeroTextMobile />
-            <div className='relative'>
-                {/* <motion.video
+            <div className='px-4'>
+                <div className='relative'
+                    style={{
+                        position: 'relative',
+                        paddingTop: '100%', // Tỷ lệ khung hình 1:1
+                        borderRadius: '40px',
+                        overflow: 'hidden',
+                    }}
+                >
+                    {/* <motion.video
                     autoPlay
                     muted
                     loop
@@ -54,25 +63,29 @@ const HeroMobile = () => {
                 >
                     <source src="/hero/1x1.mp4" type="video/mp4" />
                 </motion.video> */}
-                <Image
-                    alt=''
-                    src={'/hero/gif/9x16.gif'}
-                    width={864}
-                    height={1536}
-                    className='w-full h-auto rounded-[40px] px-3' // Thêm lớp animation
-                />
-                <div
-                    className='absolute bottom-4 right-4 flex items-center rounded-[41px]
+                    <ReactPlayer
+                        url="https://ik.imagekit.io/rbzjuhmml/TTD/1x1.mp4?updatedAt=1730414500249" // Sử dụng URL trực tiếp mà không cần tham số không cần thiết
+                        playing={true}       // Tự động phát
+                        muted={true}         // Tắt âm thanh
+                        controls={false}     // Ẩn điều khiển
+                        loop={true}
+                        width="100%"
+                        height="100%"
+                        style={{ position: 'absolute', top: 0, left: 0 }}
+                    />
+                    <div
+                        className='absolute bottom-4 right-4 flex items-center justify-center rounded-[41px]
                                      p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
-                                     hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
-                    onClick={() => handleClick()}
-                >
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                        </svg>
+                                     hover:bg-black hover:w-[220px] w-10 h-10 duration-500 transition-all overflow-hidden'
+                        onClick={() => handleClick()}
+                    >
+                        <div className='absolute'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                        </div>
+                        <span className='group-hover:scale-100 scale-0 duration-500 origin-right text-white text-nowrap' >View this showcase</span>
                     </div>
-                    <span className='group-hover:scale-100 scale-0 duration-500 origin-right text-white text-nowrap' >View this showcase</span>
                 </div>
             </div>
             <Feature />
