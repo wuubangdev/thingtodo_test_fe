@@ -14,10 +14,16 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const { setIsContactOpen } = useContactContext();
     const navbarHeight = 40; // Đặt chiều cao của navbar, có thể tùy chỉnh
+    const [isSecondary, setIsSecondary] = useState(false);
 
     const controlNavbar = () => {
         const currentScrollY = window.scrollY;
-
+        if (currentScrollY >= 140) {
+            setIsSecondary(true)
+        }
+        if (currentScrollY < 140) {
+            setIsSecondary(false);
+        }
         if (Math.abs(currentScrollY - lastScrollY) >= navbarHeight) {
             if (currentScrollY > lastScrollY) {
                 setShowNavbar(false); // Cuộn xuống, ẩn navbar
@@ -39,6 +45,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
             <div
                 className={`${isPrimary ? 'md:sticky' : ''}`}
                 style={{
+
                     zIndex: 30,
                     top: `${showNavbar ? "0" : "-88px"}`,
                     transition: "top 1s ease"
@@ -46,14 +53,14 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
             >
                 {/* Desktop */}
                 <div
-                    className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-black bg-bg-fc/70' : 'text-black bg-bg-fc/70'}   text-custom-xl py-5 px-6 gap-6`}
+                    className={`hidden md:grid grid-cols-2 items-center ${isSecondary ? "text-black bg-bg-fc/70" : isPrimary ? 'text-bg-fc bg-primary' : 'text-black bg-bg-fc/70'}   text-custom-xl py-5 px-6 gap-6`}
                     style={{
                         backdropFilter: 'blur(5px)'
                     }}
                 >
                     <div className='flex items-center gap-6'>
                         <Link href={'/'} className='w-[115px] 2xl:w-[105] h-full'>
-                            {isPrimary ?
+                            {isSecondary ?
                                 <Image
                                     alt='nav-logo'
                                     src={'/logo/THINGTODO-BLACK.svg'}
@@ -63,14 +70,24 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                     loading="lazy"
                                 />
                                 :
-                                <Image
-                                    alt='nav-logo'
-                                    src={'/logo/THINGTODO-WHITE.svg'}
-                                    width={78}
-                                    height={32}
-                                    style={{ width: '100%', height: '100%' }}
-                                    loading="lazy"
-                                />
+                                isPrimary ?
+                                    <Image
+                                        alt='nav-logo'
+                                        src={'/logo/THINGTODO-WHITE.svg'}
+                                        width={78}
+                                        height={32}
+                                        style={{ width: '100%', height: '100%' }}
+                                        loading="lazy"
+                                    />
+                                    :
+                                    <Image
+                                        alt='nav-logo'
+                                        src={'/logo/THINGTODO-BLACK.svg'}
+                                        width={78}
+                                        height={32}
+                                        style={{ width: '100%', height: 'auto' }}
+                                        loading="lazy"
+                                    />
                             }
                         </Link>
                         {/* <div className='font-Jakarta-sans font-normal xl:text-xl 2xl:text-2xl'>
@@ -78,7 +95,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                         </div> */}
                     </div>
                     <div className='flex justify-between items-center'>
-                        <Menu isPrimary={isPrimary} />
+                        <Menu isPrimary={isPrimary} isSecondary={isSecondary} />
                         <div>
                             <div
                                 className='cursor-pointer group text-underline2'
