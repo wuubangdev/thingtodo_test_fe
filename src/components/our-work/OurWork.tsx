@@ -7,7 +7,7 @@ const projects: IProjectCard[] = [
     {
         link: '/ourwork/w1.mp4',
         description: 'Promotion CGI ',
-        title: 'Yo Milk'
+        title: 'YoMilk'
     },
     {
         link: '/ourwork/w2.svg',

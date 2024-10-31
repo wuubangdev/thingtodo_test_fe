@@ -56,12 +56,13 @@ const ContactModal = () => {
                                     duration: 0.5,
                                     ease: 'easeInOut'
                                 }}
-                                className='absolute left-6 md:right-0 md:left-auto top-0 bottom-0 md:w-[440px] w-full'
+                                className='absolute left-6 md:right-0 md:left-auto top-0 bottom-0 md:w-[440px] right-0'
                             >
                                 <div
-                                    className='flex flex-col md:gap-6 xl:gap-20 text-[#fcfcfc] relative h-full md:rounded-tl-[32px] md:rounded-bl-[32px]'
+                                    className='flex flex-col md:gap-6 xl:gap-20 text-[#fcfcfc] relative h-full md:rounded-tl-[32px] md:rounded-bl-[32px]
+                                        pt-4 px-4 pb-10 md:pt-8 mt:px-8 
+                                    '
                                     style={{
-                                        padding: '32px 32px 40px 32px',
                                         overflow: 'hidden'
                                     }}
                                 >
@@ -83,9 +84,9 @@ const ContactModal = () => {
                                     >
                                     </div>
                                     {/* Header */}
-                                    <div className='p-4 flex items-center justify-end gap-4'>
+                                    <div className='flex items-center justify-end gap-4'>
                                         <button
-                                            className='rounded-3xl p-2 cursor-pointer'
+                                            className='rounded-[20px] p-2 cursor-pointer w-[56px] h-10 md:w-auto md:h-auto flex flex-col justify-center items-center'
                                             style={{
                                                 backgroundColor: 'rgba(252, 252, 252, 0.07)',
                                             }}
@@ -104,12 +105,12 @@ const ContactModal = () => {
                                         </button>
                                     </div>
                                     {/* Content */}
-                                    <div className='flex flex-col flex-1 justify-end'>
+                                    <div className='flex flex-col flex-1 justify-end md:px-3 px-2'>
                                         <div className='flex flex-col gap-10 flex-1'>
-                                            <h1 className='subtitle-1-regular flex-1'>
+                                            <h1 className='subtitle-1-regular'>
                                                 Let&apos;s collab!
                                             </h1>
-                                            <p className='body-2-regular'>
+                                            <p className='body-2-regular mb-auto'>
                                                 We&apos;re available from Monday <br />to Friday, 09:00 - 18:30
                                             </p>
                                             <div className='flex flex-col gap-10'>
