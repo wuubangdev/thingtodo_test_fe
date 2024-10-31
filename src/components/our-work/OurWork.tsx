@@ -1,41 +1,72 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 import ProjectCardMobile, { IProjectCard } from './ProjectCardMobile'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 const projects: IProjectCard[] = [
     {
         link: '/ourwork/w1.mp4',
         description: 'Promotion CGI ',
-        title: 'YoMilk'
+        title: <span>YoMilk</span>
     },
     {
         link: '/ourwork/w2.svg',
         description: 'Rebranding Campaign',
-        title: 'Probi'
+        title: <span>Probi</span>
     },
     {
         link: '/ourwork/w3.gif',
         description: 'Strip video: New flavor for Vinamilk’s Plain Yoghurt',
-        title: 'Sữa chua Vinamilk'
+        title: <span>Sữa chua Vinamilk</span>
     },
     {
         link: '/ourwork/w4.mp4',
         description: 'iTVC “9 loại hạt hạt mới”',
-        title: 'Sữa hạt Vinamilk'
+        title: <span>Sữa hạt Vinamilk</span>
     },
     {
         link: '/ourwork/w5.svg',
         description: 'Rebranding Activation Booth',
-        title: 'Green Farm'
+        title: <span>Green Farm</span>
     },
     {
         link: '/ourwork/w6.mp4',
         description: 'Creative Idea and Production for Fresh Milk',
-        title: 'Vinamilk'
+        title: <span>Vinamilk</span>
     },
 ]
-
+const projectMobile: IProjectCard[] = [
+    {
+        link: '/ourwork/w1.mp4',
+        description: 'Promotion CGI ',
+        title: <span>YoMilk</span>
+    },
+    {
+        link: '/ourwork/w2.svg',
+        description: 'Rebranding Campaign',
+        title: <span>Probi</span>
+    },
+    {
+        link: '/ourwork/w3.gif',
+        description: 'Strip video: New flavor for Vinamilk’s Plain Yoghurt',
+        title: <span>Sữa chua <br /> Vinamilk</span>
+    },
+    {
+        link: '/ourwork/w4.mp4',
+        description: 'iTVC “9 loại hạt hạt mới”',
+        title: <span>Sữa hạt <br /> Vinamilk</span>
+    },
+    {
+        link: '/ourwork/w5.svg',
+        description: 'Rebranding Activation Booth',
+        title: <span>Green Farm</span>
+    },
+    {
+        link: '/ourwork/w6.mp4',
+        description: 'Creative Idea and Production for Fresh Milk',
+        title: <span>Vinamilk</span>
+    },
+]
 const OurWork = () => {
     return (
         <div
@@ -64,7 +95,7 @@ const OurWork = () => {
                 ))}
             </div>
             <div className='md:hidden grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-20 grid'>
-                {projects && projects.map((project, index) => (
+                {projectMobile && projectMobile.map((project, index) => (
                     <ProjectCardMobile
                         key={index}
                         link={project.link}
@@ -76,8 +107,8 @@ const OurWork = () => {
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div></div>
                 <div className='flex'>
-                    <Link
-                        href={'/projects'}
+                    {/* <Link
+                        href={'#'}
                         className='text-underline pb-1'
                     >
                         <div className='flex gap-4 items-center cursor-pointer'>
@@ -94,7 +125,7 @@ const OurWork = () => {
                             <span className='md:block hidden title-2-medium pb-3'>See all projects</span>
                             <span className='md:hidden block subtitle-1-medium flex-1 pb-2'>See all projects</span>
                         </div>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </div>

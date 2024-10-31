@@ -7,17 +7,17 @@ const projects: IProjectCard[] = [
     {
         link: '/ourwork/media_content.svg',
         description: 'Project details, 8-10 characters',
-        title: 'Huggies'
+        title: <span>Huggies</span>
     },
     {
         link: '/ourwork/media_content_2.svg',
         description: 'Project details, 8-10 characters',
-        title: 'Huggies'
+        title: <span>Huggies</span>
     },
     {
         link: '/ourwork/media_content_3.svg',
         description: 'Project details, 8-10 characters',
-        title: 'Huggies'
+        title: <span>Huggies</span>
     },
 ]
 

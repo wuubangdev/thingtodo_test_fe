@@ -15,10 +15,10 @@ const menuItems: IMobileMenu[] = [
         link: '/',
         title: 'Home',
     },
-    {
-        link: '#footer',
-        title: 'About us',
-    },
+    // {
+    //     link: '#footer',
+    //     title: 'About us',
+    // },
     {
         link: '#work',
         title: 'Work',
@@ -27,10 +27,10 @@ const menuItems: IMobileMenu[] = [
         link: '#service',
         title: 'Service',
     },
-    {
-        link: '#contact',
-        title: 'Contact',
-    },
+    // {
+    //     link: '#footer',
+    //     title: 'Contact',
+    // },
 ]
 
 
@@ -38,7 +38,12 @@ const menuItems: IMobileMenu[] = [
 const MobileMenu = () => {
     const { isOpen, setIsOpen } = useMobileMenuContext();
     const { setIsContactOpen } = useContactContext();
-
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
 
     return (
         <>
@@ -105,7 +110,17 @@ const MobileMenu = () => {
                                                         >{item.title}</a>
                                                     </li>
                                                 ))}
-
+                                                <li key={'footer'} className='pb-3 border-b-[0.5px] border-white text-4xl'>
+                                                    <a
+                                                        href={'#'}
+                                                        className='block cursor-pointer subtitle-1-medium text-[#FEE3DC]'
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            setIsOpen(false);
+                                                            scrollToBottom();
+                                                        }}
+                                                    >Contact</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>

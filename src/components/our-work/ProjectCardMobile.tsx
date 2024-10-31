@@ -1,11 +1,11 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 export interface IProjectCard {
     link: string;
-    title: string;
+    title: React.ReactElement;
     description: string;
 }
 
@@ -14,33 +14,38 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [isHovered, setIsHovered] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (cardRef.current) {
-                const rect = cardRef.current.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if (cardRef.current) {
+    //             const rect = cardRef.current.getBoundingClientRect();
+    //             const windowHeight = window.innerHeight;
 
-                // Kiểm tra nếu 50% component đã nằm trong viewport
-                if (rect.top <= windowHeight - rect.height / 2 && rect.bottom >= rect.height / 2) {
-                    setIsHovered(true); // Kích hoạt hiệu ứng hover
-                } else {
-                    setIsHovered(false); // Hủy bỏ hiệu ứng hover
-                }
-            }
-        };
+    //             // Kiểm tra nếu 50% component đã nằm trong viewport
+    //             if (rect.top <= windowHeight - rect.height / 2 && rect.bottom >= rect.height / 2) {
+    //                 setIsHovered(true); // Kích hoạt hiệu ứng hover
+    //             } else {
+    //                 setIsHovered(false); // Hủy bỏ hiệu ứng hover
+    //             }
+    //         }
+    //     };
 
-        // Gọi hàm để kiểm tra khi trang tải
-        handleScroll();
+    //     // Gọi hàm để kiểm tra khi trang tải
+    //     handleScroll();
 
-        window.addEventListener('scroll', handleScroll);
+    //     window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
     return (
-        <Link href="/projects/abc">
+        <Link href=""
+            onClick={(e) => {
+                e.preventDefault();
+                setIsHovered(!isHovered);
+            }}
+        >
             <div className='w-full'>
                 <div
                     ref={cardRef}
@@ -76,16 +81,19 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                             loading="lazy"
                         />
                     }
-                    {/* <div className={`absolute top-0 bottom-0 left-0 right-0 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+                    <div className={`absolute top-0 bottom-0 left-0 right-0 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
                         <div className='flex flex-col'>
                             <div
                                 className={`absolute bg-primary p-1 rounded-full w-1/3 scale-0 transition-transform duration-700 ${isHovered ? 'scale-100' : ''} top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3`}
                             >
                                 <Image
                                     alt='project-image'
-                                    src={'/ourwork/project_detail.svg'}
-                                    width={132}
-                                    height={132}
+                                    // src={'/ourwork/project_detail.svg'}
+                                    src={'/ourwork/comming.svg'}
+                                    // width={132}
+                                    // height={132}
+                                    width={114}
+                                    height={114}
                                     style={{
                                         width: '100%',
                                         height: 'auto'
@@ -97,7 +105,8 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
 
                                     <Image
                                         alt='project-image'
-                                        src={'/ourwork/arrow_icon.svg'}
+                                        // src={'/ourwork/arrow_icon.svg'}
+                                        src={'/ourwork/icon_comming.svg'}
                                         width={32}
                                         height={32}
                                         style={{
@@ -116,11 +125,11 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
 
                             </div>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
                 <div className='flex gap-4 w-full'>
                     <h2 className='body-2-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
-                    <p className='body-2-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
+                    <p className='body-2-regular text-black-blur border-b-[1px] border-black-blur flex-1 flex items-star pt-1 pb-2'>{description}</p>
                 </div>
             </div>
         </Link>

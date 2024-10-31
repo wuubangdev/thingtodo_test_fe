@@ -91,6 +91,9 @@ export default function Home() {
         <div className="xl:block hidden">
           <Feature />
         </div>
+        <div className="block md:hidden">
+          <Feature />
+        </div>
         <OurWork />
         {/* How can we help you */}
         <OurService />
