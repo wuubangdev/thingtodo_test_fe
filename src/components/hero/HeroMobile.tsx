@@ -29,12 +29,13 @@ const HeroMobile = () => {
     return (
         <div
             ref={containerRef}
-            className='flex flex-col md:hidden bg-primary h-[calc(100vh-72px)] mb-[calc(120vh)] relative'
+            className='flex flex-col md:hidden bg-primary h-[calc(100vh-72px)] mb-[calc(130vh)] relative'
         >
             <HeroTextMobile />
             <div className='w-full relative top-[calc(-100vh-72px)]'>
                 <div className='relative w-full h-[270vh]'>
-                    <div className='absolute top-0 left-0 w-full h-full bg-primary -z-10'></div>
+                    <div className='absolute top-0 left-0 w-full h-1/2 bg-primary -z-10'></div>
+                    <div className='absolute top-0 left-0 w-full h-full bg-[#f8f8f8] -z-10'></div>
                     <div className='text-white sticky top-0 h-[100vh] flex flex-col'>
                         <div className='flex-1 flex flex-col'>
                             <div className='flex-1 relative'>

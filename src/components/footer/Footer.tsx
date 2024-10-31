@@ -135,7 +135,7 @@ const Footer = () => {
                 <div className='flex md:hidden flex-col gap-28'>
                     <div className='grid grid-cols-1 gap-20'>
                         {/* <div className='subtitle-3-medium'>Visit us on <br /> Behance</div> */}
-                        <div className='w-full col-span-1'>
+                        <div className='w-full col-span-1 sticky top-4'>
                             <Image
                                 alt='footer-logo'
                                 src={'/logo/THINGTODO-WHITE.svg'}
@@ -145,14 +145,10 @@ const Footer = () => {
                                 loading="lazy"
                             />
                         </div>
-                        <div className='grid grid-cols-1 gap-8'>
+                        <div className='grid grid-cols-2 gap-8'>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Office</h5>
                                 <p className='text-sm ml-8'> <a href="https://maps.app.goo.gl/decEqRHp8WZq5zqp8" target='_blank'>3rd floor, TSA Building, 169/1 Vo Thi Sau Street, Vo Thi Sau Ward, District 3, HCMC</a> </p>
-                            </div>
-                            <div className='flex flex-col gap-3'>
-                                <h5 className='body-2-semibold'>Email</h5>
-                                <a href='mailto:contact@thingtodo.vn' className='text-sm ml-8'>contact@thingtodo.vn</a>
                             </div>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Social</h5>
@@ -164,8 +160,12 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className='flex flex-col gap-2'>
-                            <div className='subtitle-3-medium'>Connect us</div>
+                            <div className='subtitle-4-medium'>Connect us</div>
                             <div className='title-3-medium'><a target='_blank' href="tel:+84 966 080 411">+84 966 080 411</a></div>
+                        </div>
+                        <div className='flex flex-col gap-2'>
+                            <h5 className='subtitle-4-medium'>Email</h5>
+                            <a href='mailto:contact@thingtodo.vn' className='title-3-medium'>contact <br /> @thingtodo.vn</a>
                         </div>
                         <div className='text-sm'>
                             © 2024 Thingtodo Agency
