@@ -134,7 +134,7 @@ const Footer = () => {
                 {/* Content */}
                 <div className='flex md:hidden flex-col gap-28'>
                     <div className='grid grid-cols-1 gap-20'>
-                        <div className='subtitle-3-medium'>Visit us on <br /> Behance</div>
+                        {/* <div className='subtitle-3-medium'>Visit us on <br /> Behance</div> */}
                         <div className='w-full col-span-1'>
                             <Image
                                 alt='footer-logo'

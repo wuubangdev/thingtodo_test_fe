@@ -71,7 +71,7 @@ const OurWork = () => {
     return (
         <div
             id='work'
-            className='px-6 flex flex-col gap-20 pt-4 pb-40'
+            className='px-6 flex flex-col gap-20 pt-4 md:pb-40 pb-10'
             style={{
                 // background: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/ourwork/noise.png),url(/ourwork/noise.png)",
                 // backgroundPosition: 'center',

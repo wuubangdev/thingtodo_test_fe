@@ -69,11 +69,11 @@ const CardService = (props: IProps) => {
                         </div>
                     </div>
                     <div className='absolute w-full h-full top-0 left-0 right-0'>
-                        <div className='grid grid-cols-2 h-full'>
+                        <div className='grid grid-cols-1 h-full'>
                             <div>
                                 <MovingImage image={service.image} />
                             </div>
-                            <div></div>
+                            {/* <div></div> */}
                         </div>
                     </div>
                 </div>
