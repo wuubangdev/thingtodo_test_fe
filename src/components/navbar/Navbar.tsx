@@ -39,7 +39,6 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
             <div
                 className={`${isPrimary ? 'md:sticky' : ''}`}
                 style={{
-
                     zIndex: 30,
                     top: `${showNavbar ? "0" : "-88px"}`,
                     transition: "top 1s ease"
