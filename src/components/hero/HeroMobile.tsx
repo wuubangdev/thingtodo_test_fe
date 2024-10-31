@@ -6,21 +6,12 @@ import Feature from '../feature/Feature';
 
 const HeroMobile = () => {
     const { scrollYProgress } = useScroll();
-    const { scrollY } = useScroll();
     const containerRef = useRef<HTMLDivElement>(null);
     const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '0px']);
     const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
     const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '130%', '130%']);
     const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '0px']);
-    const containerHeight = containerRef.current?.offsetHeight || 0;
 
-
-    // Sử dụng useTransform để giới hạn y trong khoảng chiều cao của container
-    const yTransform = useTransform(
-        scrollY,
-        [0, containerHeight],
-        [0, containerHeight / 2] // Giảm giá trị này để làm cuộn chậm trong khoảng này
-    );
 
     const [checkClick, setCheckClick] = useState<number>(1);
 
