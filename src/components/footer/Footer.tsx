@@ -52,15 +52,27 @@ const Footer = () => {
                 {/* Content */}
                 <div className='flex flex-col gap-28'>
                     <div className='grid grid-cols-1 md:grid-cols-3'>
-                        <div className='subtitle-2-medium'>Visit us on <br />Behance</div>
+                        {/* <div className='subtitle-2-medium'>Visit us on <br />Behance</div> */}
+                        <div className='w-[90%] col-span-1'>
+                            <Link href="/">
+                                <Image
+                                    alt='footer-logo'
+                                    src={'/logo/THINGTODO-WHITE.svg'}
+                                    width={143}
+                                    height={60}
+                                    className='w-1/4 h-auto'
+                                    loading="lazy"
+                                />
+                            </Link>
+                        </div>
                         <div className='subtitle-2-medium'>Connect us</div>
-                        <div className='title-2-medium'><a href="tel:+84 966 080 411">+84 966 080 411</a></div>
+                        <div className='title-2-medium flex justify-end'><a href="tel:+84 966 080 411">+84 966 080 411</a></div>
                     </div>
                     {/*  */}
                     <div className='flex flex-col gap-6'>
                         <div className='grid grid-cols-3'>
                             <div className='w-[60%] col-span-1'>
-                                <Link href="/">
+                                {/* <Link href="/">
                                     <Image
                                         alt='footer-logo'
                                         src={'/logo/THINGTODO-WHITE.svg'}
@@ -69,7 +81,7 @@ const Footer = () => {
                                         className='w-1/4 h-auto'
                                         loading="lazy"
                                     />
-                                </Link>
+                                </Link> */}
                             </div>
                             <div className='col-span-2 grid grid-cols-7 gap-16 '>
                                 <div className='flex flex-col gap-3 col-span-3'>
