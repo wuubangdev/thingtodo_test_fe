@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import HeroTextMobile from './HeroTextMobile'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Feature from '../feature/Feature';
