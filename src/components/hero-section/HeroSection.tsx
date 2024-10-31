@@ -16,6 +16,11 @@ const HeroSection = () => {
     const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
     const featureHeight = useTransform(scrollYProgress, [0, 0.05], [43, 0]);
 
+    const handleClick = () => {
+        // Mở link trong tab mới
+        window.open('https://fb.watch/vyHzMqrSNM/', '_blank');
+    };
+
     return (
         <>
             {/* Large Desktop */}
@@ -51,6 +56,7 @@ const HeroSection = () => {
                                 translateY: translateYSearch,
                                 // background: 'black',
                             }}
+                            onClick={() => handleClick()}
                         >
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

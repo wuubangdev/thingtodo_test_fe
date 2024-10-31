@@ -70,8 +70,8 @@ const MovingImage = ({ image }: { image: string }) => {
                     alt="Moving Image"
                     style={{
                         position: 'absolute',
-                        width: '240px',
-                        height: '240px',
+                        width: '400px',
+                        height: '280px',
                         pointerEvents: 'none',
                         translate: `${position.x}px ${position.y}px`, // Di chuyển theo tọa độ
                         zIndex: 999,

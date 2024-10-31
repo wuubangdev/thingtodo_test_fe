@@ -94,8 +94,8 @@ const CardService = (props: IProps) => {
                             <Image
                                 alt='icon-service'
                                 src={service.image}
-                                width={240}
-                                height={240}
+                                width={400}
+                                height={280}
                                 style={{
                                     height: 'auto',
                                     width: '100%'

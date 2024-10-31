@@ -13,6 +13,12 @@ const Hero = () => {
     const padding = useTransform(scrollYProgress, [0, 0.08], ['16px', '0px']);
     const videoTranslateY = useTransform(scrollYProgress, [0, 0.08], ['0px', '43px']);
 
+
+    const handleClick = () => {
+        // Mở link trong tab mới
+        window.open('https://fb.watch/vyHzMqrSNM/', '_blank');
+    };
+
     return (
         <>
             {/* Desktop */}
@@ -49,6 +55,7 @@ const Hero = () => {
                                 translateY: videoTranslateY,
                                 // background: 'black',
                             }}
+                            onClick={() => handleClick()}
                         >
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
@@ -103,6 +110,7 @@ const Hero = () => {
                                 translateY: videoTranslateY,
                                 // background: 'black',
                             }}
+                            onClick={() => handleClick()}
                         >
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

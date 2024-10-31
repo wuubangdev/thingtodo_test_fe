@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import HeroTextMobile from './HeroTextMobile'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Feature from '../feature/Feature';
@@ -20,6 +20,19 @@ const HeroMobile = () => {
         [0, containerHeight],
         [0, containerHeight / 2] // Giảm giá trị này để làm cuộn chậm trong khoảng này
     );
+
+    const [checkClick, setCheckClick] = useState<number>(1);
+
+    const handleClick = () => {
+        // Mở link trong tab mới
+        if (checkClick === 1) {
+            setCheckClick(checkClick + 1);
+        }
+        if (checkClick === 2) {
+            setCheckClick(checkClick - 1);
+            window.open('https://fb.watch/vyHzMqrSNM/', '_blank');
+        }
+    };
     return (
         <div
             ref={containerRef}
@@ -63,6 +76,8 @@ const HeroMobile = () => {
                     className='absolute bottom-[76px] right-7 flex items-center rounded-[41px]
                             p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
                              hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
+                    onClick={() => handleClick()}
+
                 >
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
