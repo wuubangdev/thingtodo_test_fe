@@ -1,8 +1,9 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
-import ReactPlayer from 'react-player';
+import React, { Suspense, useState } from 'react';
+
+const ReactPlayer = React.lazy(() => import('react-player/lazy'));
 
 export interface IProjectCard {
     link: string;
@@ -51,7 +52,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                 <div
                     className={`mb-2 group w-full overflow-hidden relative cursor-pointer ${isHovered ? 'bg-black/30' : ''}`}
                 >
-                    {!link.endsWith('.svg')
+                    {(!link.endsWith('.svg') && !link.endsWith('.gif'))
                         ?
                         <div className='relative'
                             style={{
@@ -61,17 +62,18 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                                 overflow: 'hidden',
                             }}
                         >
-                            <ReactPlayer
-                                url={link} // Sử dụng URL trực tiếp mà không cần tham số không cần thiết
-                                playing={true}       // Tự động phát
-                                muted={true}         // Tắt âm thanh
-                                controls={false}     // Ẩn điều khiển
-                                loop={true}
-                                width="100%"
-                                height="100%"
-                                style={{ position: 'absolute', top: 0, left: 0 }}
-                            />
-
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <ReactPlayer
+                                    url={link} // Sử dụng URL trực tiếp mà không cần tham số không cần thiết
+                                    playing={true}       // Tự động phát
+                                    muted={true}         // Tắt âm thanh
+                                    controls={false}     // Ẩn điều khiển
+                                    loop={true}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ position: 'absolute', top: 0, left: 0 }}
+                                />
+                            </Suspense>
                         </div>
                         :
                         <Image

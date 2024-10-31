@@ -32,7 +32,6 @@ const HeroMobile = () => {
             ref={containerRef}
             // className='flex flex-col md:hidden bg-primary h-[calc(100vh-72px)] mb-[calc(130vh)] relative'
             className='flex flex-col md:hidden bg-primary relative gap-4'
-
         >
             <HeroTextMobile />
             <div className='px-4'>
