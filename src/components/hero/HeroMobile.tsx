@@ -13,7 +13,7 @@ const HeroMobile = () => {
     const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '130%', '130%']);
     const translate = useTransform(scrollYProgress, [0, 0.04, 0.08], ['0px', '0px', '32px']);
     const translateF = useTransform(scrollYProgress, [0, 0.04, 0.08], ['0px', '100px', '200px']);
-    const opacity = useTransform(scrollYProgress, [0, 0.01], ['1px', '0']);
+    const opacity = useTransform(scrollYProgress, [0, 0.001], ['1px', '0']);
     const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '0px']);
     const containerHeight = containerRef.current?.offsetHeight || 0;
 
