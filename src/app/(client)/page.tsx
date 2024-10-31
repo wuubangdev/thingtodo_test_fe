@@ -83,15 +83,12 @@ const idJsonObject = {
 export default function Home() {
   return (
     <>
-      <div className="bg-primary">
+      <div className="md:bg-primary">
         <Navbar isPrimary={true} />
         {/* Hero section */}
         <Hero />
         <HeroSection />
         <div className="xl:block hidden">
-          <Feature />
-        </div>
-        <div className="block md:hidden">
           <Feature />
         </div>
         <OurWork />

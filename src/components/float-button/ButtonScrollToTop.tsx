@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const ButtonScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
     const toggleVisibility = () => {
-        if (window.scrollY > 1000) {
+        if (window.scrollY > 1400) {
             setIsVisible(true);
         } else {
             setIsVisible(false);
