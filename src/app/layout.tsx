@@ -64,7 +64,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
       <body className="relative">
         <MobileMenuContextProvider>
           <ContactContextProvider>
-            <MobileMenuButton />
+            {!isLoading && <MobileMenuButton />}
             <AnimatePresence
               // mode="wait"
               initial={false}

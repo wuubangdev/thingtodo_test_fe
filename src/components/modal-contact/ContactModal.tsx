@@ -56,7 +56,7 @@ const ContactModal = () => {
                                     duration: 0.5,
                                     ease: 'easeInOut'
                                 }}
-                                className='absolute left-6 top-0 bottom-0 md:w-[440px] w-full'
+                                className='absolute left-6 md:right-0 md:left-auto top-0 bottom-0 md:w-[440px] w-full'
                             >
                                 <div
                                     className='flex flex-col md:gap-6 xl:gap-20 text-[#fcfcfc] relative h-full md:rounded-tl-[32px] md:rounded-bl-[32px]'
@@ -104,9 +104,9 @@ const ContactModal = () => {
                                         </button>
                                     </div>
                                     {/* Content */}
-                                    <div className='flex flex-col flex-1'>
-                                        <div className='flex flex-col gap-10'>
-                                            <h1 className='subtitle-1-regular'>
+                                    <div className='flex flex-col flex-1 justify-end'>
+                                        <div className='flex flex-col gap-10 flex-1'>
+                                            <h1 className='subtitle-1-regular flex-1'>
                                                 Let&apos;s collab!
                                             </h1>
                                             <p className='body-2-regular'>
