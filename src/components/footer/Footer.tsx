@@ -148,24 +148,27 @@ const Footer = () => {
                         <div className='grid grid-cols-2 gap-8'>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Office</h5>
-                                <p className='text-sm ml-8'> <a href="https://maps.app.goo.gl/decEqRHp8WZq5zqp8" target='_blank'>3rd floor, TSA Building, 169/1 Vo Thi Sau Street, Vo Thi Sau Ward, District 3, HCMC</a> </p>
+                                <p className='text-sm ml-4'> <a href="https://maps.app.goo.gl/decEqRHp8WZq5zqp8" target='_blank'>3rd floor, TSA Building, 169/1 Vo Thi Sau Street, Vo Thi Sau Ward, District 3, HCMC</a> </p>
                             </div>
                             <div className='flex flex-col gap-3'>
                                 <h5 className='body-2-semibold'>Social</h5>
                                 <ul className='body-3-regular'>
-                                    <li className='ml-8 cursor-pointer'><a target='_blank' href="https://www.instagram.com/thingtodo.agency/">Instagram</a></li>
-                                    <li className='ml-8 cursor-pointer'><a target='_blank' href="https://www.facebook.com/profile.php?id=61562599131360">Facebook</a></li>
-                                    <li className='ml-8 cursor-pointer'><a target='_blank' href="https://www.tiktok.com/@tutudzui">Tiktok</a></li>
+                                    <li className='ml-4 cursor-pointer'><a target='_blank' href="https://www.instagram.com/thingtodo.agency/">Instagram</a></li>
+                                    <li className='ml-4 cursor-pointer'><a target='_blank' href="https://www.facebook.com/profile.php?id=61562599131360">Facebook</a></li>
+                                    <li className='ml-4 cursor-pointer'><a target='_blank' href="https://www.tiktok.com/@tutudzui">Tiktok</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-2'>
-                            <div className='subtitle-4-medium'>Connect us</div>
-                            <div className='title-3-medium'><a target='_blank' href="tel:+84 966 080 411">+84 966 080 411</a></div>
-                        </div>
-                        <div className='flex flex-col gap-2'>
-                            <h5 className='subtitle-4-medium'>Email</h5>
-                            <a href='mailto:contact@thingtodo.vn' className='title-3-medium'>contact <br /> @thingtodo.vn</a>
+                        <div className='flex flex-col gap-6'>
+                            <div className='flex flex-col gap-2'>
+                                <div className='subtitle-4-medium'>Connect us</div>
+                                <div className='title-4-medium'><a target='_blank' href="tel:+84 966 080 411">+84 966 080 411</a></div>
+                            </div>
+                            <div className='flex flex-col gap-2'>
+                                <h5 className='subtitle-4-medium'>Email</h5>
+                                <a href='mailto:contact@thingtodo.vn' className='title-4-medium'>contact <br /> @thingtodo.vn</a>
+                            </div>
+
                         </div>
                         <div className='text-sm'>
                             © 2024 Thingtodo Agency
