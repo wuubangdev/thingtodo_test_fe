@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import HeroTextMobile from './HeroTextMobile'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Feature from '../feature/Feature';
-import Image from 'next/image';
 import ReactPlayer from 'react-player';
 
 
