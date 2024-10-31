@@ -36,7 +36,7 @@ const MovingImage = ({ image }: { image: string }) => {
             const y = e.clientY - rect.top; // Tọa độ Y trong div
 
             // Cập nhật vị trí của hình ảnh
-            setPosition({ x: x - 210, y: y - 220 });
+            setPosition({ x: x - 510, y: y - 400 });
         }
     };
 
@@ -70,8 +70,8 @@ const MovingImage = ({ image }: { image: string }) => {
                     alt="Moving Image"
                     style={{
                         position: 'absolute',
-                        width: '400px',
-                        height: '280px',
+                        width: '25vw',
+                        height: 'auto',
                         pointerEvents: 'none',
                         translate: `${position.x}px ${position.y}px`, // Di chuyển theo tọa độ
                         zIndex: 999,
