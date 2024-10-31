@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useRef, useState } from 'react';
+import ReactPlayer from 'react-player';
 
 export interface IProjectCard {
     link: string;
@@ -48,24 +49,30 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
         >
             <div className='w-full'>
                 <div
-                    ref={cardRef}
                     className={`mb-2 group w-full overflow-hidden relative cursor-pointer ${isHovered ? 'bg-black/30' : ''}`}
                 >
-                    {link.endsWith('.mp4')
+                    {!link.endsWith('.svg')
                         ?
-                        <video
-                            autoPlay
-                            muted
-                            loop
+                        <div className='relative'
                             style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
+                                position: 'relative',
+                                paddingTop: '100%', // Tỷ lệ khung hình 1:1
+                                // borderRadius: '40px',
+                                overflow: 'hidden',
                             }}
-                            className='group-hover:scale-105 duration-500 rounded'
                         >
-                            <source src={link} type="video/mp4" />
-                        </video>
+                            <ReactPlayer
+                                url={link} // Sử dụng URL trực tiếp mà không cần tham số không cần thiết
+                                playing={true}       // Tự động phát
+                                muted={true}         // Tắt âm thanh
+                                controls={false}     // Ẩn điều khiển
+                                loop={true}
+                                width="100%"
+                                height="100%"
+                                style={{ position: 'absolute', top: 0, left: 0 }}
+                            />
+
+                        </div>
                         :
                         <Image
                             alt="project-image"

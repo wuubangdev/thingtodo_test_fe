@@ -37,7 +37,7 @@ const projects: IProjectCard[] = [
 ]
 const projectMobile: IProjectCard[] = [
     {
-        link: '/ourwork/gif/w1.gif',
+        link: 'https://ik.imagekit.io/rbzjuhmml/TTD/w1.mp4?updatedAt=1730414531146',
         description: 'Promotion CGI ',
         title: <span>Yomilk</span>
     },
@@ -52,7 +52,7 @@ const projectMobile: IProjectCard[] = [
         title: <span>Sữa chua Vinamilk</span>
     },
     {
-        link: '/ourwork/gif/w4.gif',
+        link: 'https://ik.imagekit.io/rbzjuhmml/TTD/w4.mp4?updatedAt=1730414530821',
         description: "New '9 Nuts' TV commercial",
         title: <span>Sữa hạt Vinamilk</span>
     },
@@ -62,7 +62,7 @@ const projectMobile: IProjectCard[] = [
         title: <span>Green Farm</span>
     },
     {
-        link: '/ourwork/gif/w6.gif',
+        link: 'https://ik.imagekit.io/rbzjuhmml/TTD/w6.mp4?updatedAt=1730414531016',
         description: 'Production for Fresh Milk',
         title: <span>Vinamilk</span>
     },

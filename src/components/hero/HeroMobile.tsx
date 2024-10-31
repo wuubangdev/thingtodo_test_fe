@@ -1,14 +1,14 @@
 import React, { useRef, useState } from 'react'
 import HeroTextMobile from './HeroTextMobile'
-import { useScroll, useTransform, motion } from 'framer-motion';
+// import { useScroll, useTransform, motion } from 'framer-motion';
 import Feature from '../feature/Feature';
 import ReactPlayer from 'react-player';
 
 
 const HeroMobile = () => {
-    const { scrollYProgress } = useScroll();
+    // const { scrollYProgress } = useScroll();
     const containerRef = useRef<HTMLDivElement>(null);
-    const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '16px']);
+    // const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '16px']);
     // const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
     // const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '130%', '130%']);
     // const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '40px']);
