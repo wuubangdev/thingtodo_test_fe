@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: 'https://www.thingtodo.vn/',
       images: [
         {
-          url: 'https://raw.githubusercontent.com/wuubangdev/share-host-file/refs/heads/main/Open%20Graph.png',
+          url: 'https://github.com/bangkbdtvtcm/file/blob/main/Open%20Graph.png?raw=true',
           width: 1220,
           height: 633,
           alt: 'Thing to do'
@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
       site: '@thingtodo_agency',
       title: 'Thing to do',
       description: 'A create agency - Create awesome stuff together',
-      images: ['https://raw.githubusercontent.com/wuubangdev/share-host-file/refs/heads/main/Open%20Graph.png']
+      images: ['https://github.com/bangkbdtvtcm/file/blob/main/Open%20Graph.png?raw=true']
     },
   }
 }
@@ -44,7 +44,7 @@ const idJsonObject = {
   "name": "Thing to do",
   "image": {
     "@type": "ImageObject",
-    "url": "https://raw.githubusercontent.com/wuubangdev/share-host-file/refs/heads/main/Open%20Graph.png",
+    "url": "https://github.com/bangkbdtvtcm/file/blob/main/Open%20Graph.png?raw=true",
     "width": 1220,
     "height": 633
   },
