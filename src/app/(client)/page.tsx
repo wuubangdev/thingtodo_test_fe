@@ -86,7 +86,7 @@ export default function Home() {
     <>
       <div className="md:bg-primary">
         <Navbar isPrimary={true} />
-        <NavbarSecondary isPrimary={true} />
+        <NavbarSecondary />
         {/* Hero section */}
         <Hero />
         <HeroSection />

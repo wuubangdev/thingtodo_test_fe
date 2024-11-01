@@ -5,11 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useContactContext } from '../context/ContactContext';
 
-interface IStyleNav {
-    isPrimary: boolean;
-}
 
-const NavbarSecondary = ({ isPrimary }: IStyleNav) => {
+const NavbarSecondary = () => {
     const [showNavbar, setShowNavbar] = useState<boolean>(false);
     const [lastScrollY, setLastScrollY] = useState(0);
     const { setIsContactOpen } = useContactContext();
