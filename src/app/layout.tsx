@@ -24,7 +24,6 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   const containerHeight = containerRef.current?.offsetHeight || 0;
   const yTransform = useTransform(scrollY, [0, containerHeight], [0, containerHeight / 2]);
 
-
   useEffect(() => {
     if (pathname === '/') {
       const timer = setTimeout(() => {

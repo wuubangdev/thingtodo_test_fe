@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Menu from './Menu';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,68 +10,22 @@ interface IStyleNav {
 }
 
 const Navbar = ({ isPrimary }: IStyleNav) => {
-    const [showNavbar, setShowNavbar] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
     const { setIsContactOpen } = useContactContext();
-    const navbarHeight = 40; // Đặt chiều cao của navbar, có thể tùy chỉnh
-    const [isSecondary, setIsSecondary] = useState(false);
 
-    const controlNavbar = () => {
-        const currentScrollY = window.scrollY;
-        if (currentScrollY >= 1400) {
-            setIsSecondary(true)
-        }
-        if (currentScrollY < 1400) {
-            setIsSecondary(false);
-        }
-        if (Math.abs(currentScrollY - lastScrollY) >= navbarHeight) {
-            if (currentScrollY > lastScrollY) {
-                setShowNavbar(false); // Cuộn xuống, ẩn navbar
-            } else {
-                if (currentScrollY >= 1400) {
-                    setShowNavbar(true); // Cuộn lên, hiện navbar
-                }
-            }
-            setLastScrollY(currentScrollY); // Cập nhật lại vị trí cuộn cuối
-        }
-    };
 
-    useEffect(() => {
-        window.addEventListener('scroll', controlNavbar);
-        return () => {
-            window.removeEventListener('scroll', controlNavbar);
-        };
-    }, [lastScrollY, controlNavbar]);
     return (
         <>
-            <div
-                className={`${isPrimary ? 'md:sticky' : ''}`}
-                style={{
-
-                    zIndex: 30,
-                    top: `${showNavbar ? "0" : "-88px"}`,
-                    transition: "top 1s ease"
-                }}
-            >
+            <div>
                 {/* Desktop */}
                 <div
-                    className={`hidden md:grid grid-cols-2 items-center ${isSecondary ? "text-black bg-bg-fc/70" : isPrimary ? 'text-bg-fc bg-primary' : 'text-black bg-bg-fc/70'}   text-custom-xl py-5 px-6 gap-6`}
+                    className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-bg-fc bg-primary' : 'text-black bg-bg-fc/70'}   text-custom-xl py-5 px-6 gap-6`}
                     style={{
                         backdropFilter: 'blur(5px)'
                     }}
                 >
                     <div className='flex items-center gap-6'>
                         <Link href={'/'} className='w-[115px] 2xl:w-[105] h-full'>
-                            {isSecondary ?
-                                <Image
-                                    alt='nav-logo'
-                                    src={'/logo/THINGTODO-BLACK.svg'}
-                                    width={78}
-                                    height={32}
-                                    style={{ width: '100%', height: 'auto' }}
-                                    loading="lazy"
-                                />
-                                :
+                            {
                                 isPrimary ?
                                     <Image
                                         alt='nav-logo'
@@ -97,7 +51,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                         </div> */}
                     </div>
                     <div className='flex justify-between items-center'>
-                        <Menu isPrimary={isPrimary} isSecondary={isSecondary} />
+                        <Menu isPrimary={isPrimary} isSecondary={false} />
                         <div>
                             <div
                                 className='cursor-pointer group text-underline2'

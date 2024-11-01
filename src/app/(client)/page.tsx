@@ -4,6 +4,7 @@ import Footer from "@/components/footer/Footer";
 import HeroSection from "@/components/hero-section/HeroSection";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
+import NavbarSecondary from "@/components/navbar/NavbarSecondary";
 import OurService from "@/components/our-service/OurService";
 import OurValued from "@/components/our-valued/OurValued";
 import OurWork from "@/components/our-work/OurWork";
@@ -85,6 +86,7 @@ export default function Home() {
     <>
       <div className="md:bg-primary">
         <Navbar isPrimary={true} />
+        <NavbarSecondary isPrimary={true} />
         {/* Hero section */}
         <Hero />
         <HeroSection />
