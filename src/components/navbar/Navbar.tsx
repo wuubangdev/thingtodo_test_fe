@@ -18,17 +18,19 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
 
     const controlNavbar = () => {
         const currentScrollY = window.scrollY;
-        if (currentScrollY >= 140) {
+        if (currentScrollY >= 1400) {
             setIsSecondary(true)
         }
-        if (currentScrollY < 140) {
+        if (currentScrollY < 1400) {
             setIsSecondary(false);
         }
         if (Math.abs(currentScrollY - lastScrollY) >= navbarHeight) {
             if (currentScrollY > lastScrollY) {
                 setShowNavbar(false); // Cuộn xuống, ẩn navbar
             } else {
-                setShowNavbar(true); // Cuộn lên, hiện navbar
+                if (currentScrollY >= 1400) {
+                    setShowNavbar(true); // Cuộn lên, hiện navbar
+                }
             }
             setLastScrollY(currentScrollY); // Cập nhật lại vị trí cuộn cuối
         }

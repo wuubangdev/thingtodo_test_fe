@@ -52,7 +52,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                 <div
                     className={`mb-2 group w-full overflow-hidden relative cursor-pointer ${isHovered ? 'bg-black/30' : ''}`}
                 >
-                    {(!link.endsWith('.svg') && !link.endsWith('.gif'))
+                    {(!link.endsWith('.svg') && !link.endsWith('.gif') && !link.endsWith('raw=true'))
                         ?
                         <div className='relative'
                             style={{
