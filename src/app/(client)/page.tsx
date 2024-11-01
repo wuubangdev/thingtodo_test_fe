@@ -86,10 +86,10 @@ export default function Home() {
     <>
       <div className="md:bg-primary">
         <Navbar isPrimary={true} />
-        <NavbarSecondary />
         {/* Hero section */}
         <Hero />
         <HeroSection />
+        <NavbarSecondary />
         <div className="xl:block hidden">
           <Feature />
         </div>
