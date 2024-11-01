@@ -62,7 +62,7 @@ const HeroMobile = () => {
                     <source src="/hero/1x1.mp4" type="video/mp4" />
                 </motion.video> */}
                     <ReactPlayer
-                        url="https://www.youtube.com/embed/nGwYSqtv9uw?modestbranding=1&controls=0&rel=0" // Sử dụng URL trực tiếp mà không cần tham số không cần thiết
+                        url="https://www.youtube.com/embed/MhFGl3xp_4k?modestbranding=1&controls=0&rel=0" // Sử dụng URL trực tiếp mà không cần tham số không cần thiết
                         playing={true}       // Tự động phát
                         muted={true}         // Tắt âm thanh
                         controls={false}     // Ẩn điều khiển
