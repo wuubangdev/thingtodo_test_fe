@@ -1,11 +1,10 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import HeroTextTab from './HeroTextTab';
 import Feature from '../feature/Feature';
 
 const HeroTablet = () => {
     const { scrollYProgress } = useScroll();
-    const containerRef = useRef<HTMLDivElement>(null);
     const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '0px']);
     const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
     const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '100%', '100%']);

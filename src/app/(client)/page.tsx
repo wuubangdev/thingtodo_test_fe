@@ -4,7 +4,6 @@ import Footer from "@/components/footer/Footer";
 import HeroSection from "@/components/hero-section/HeroSection";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
-import NavbarSecondary from "@/components/navbar/NavbarSecondary";
 import OurService from "@/components/our-service/OurService";
 import OurValued from "@/components/our-valued/OurValued";
 import OurWork from "@/components/our-work/OurWork";
