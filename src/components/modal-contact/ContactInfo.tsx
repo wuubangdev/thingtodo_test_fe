@@ -14,8 +14,8 @@ interface IProps {
     contact: IContactModal;
 }
 const ContactInfo = (props: IProps) => {
-    const [isHover, setIsHover] = useState<boolean>(false);
     const { id, title, description, link, button } = props.contact
+    const [isHover, setIsHover] = useState<boolean>(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {

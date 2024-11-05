@@ -22,7 +22,7 @@ const CardService = (props: IProps) => {
     return (
         <>
             <div
-                className={`sticky bg-bg-fc md:block hidden`}
+                className={`sticky bg-bg-fc md:block hidden scroll-in`}
                 style={{
                     top: `calc(0vh + ${5.25 * index + 5.25}rem)`,
                     marginBottom: `${5.25 * total - 5.25 * index - 5.25}rem`,
@@ -83,13 +83,13 @@ const CardService = (props: IProps) => {
                 <div
                     className=' px-4 flex flex-col gap-14 bg-bg-fc'
                 >
-                    <div className='flex pt-3 pb-6 gap-2 border-t-[1px] sticky top-0 bg-bg-fc'>
+                    <div className='flex pt-3 pb-6 gap-2 border-t-[1px] sticky top-0 bg-bg-fc scroll-in'>
                         <div className='subtitle-1-medium'>
                             (0{index + 1})
                         </div>
                         <h2 className='subtitle-1-medium'>{service.title}</h2>
                     </div>
-                    <div className='grid grid-cols-1 pb-20 gap-20'>
+                    <div className='grid grid-cols-1 pb-20 gap-20 scroll-in'>
                         <div>
                             <Image
                                 alt='icon-service'
@@ -104,13 +104,14 @@ const CardService = (props: IProps) => {
                                 loading="lazy"
                             />
                         </div>
-                        <div className='flex flex-col gap-3 pb-[120px]'>
-                            <p className='body-3-regular'>{service.description}</p>
+                        <div className='flex flex-col gap-3 md:pb-[120px] pb-[80px]'>
+                            <p className='body-3-regular scroll-in'>{service.description}</p>
                             <ul>
                                 {service.subService && service.subService.map((item, index) => (
-                                    <li key={index} className='border-b-[1px] py-4 flex items-center gap-2 '>
+                                    <li key={index} className='border-b-[1px] py-4 flex items-center gap-2 scroll-in'>
                                         <p className='subtitle-3-medium text-[#959A9F]'>0{index + 1}</p>
-                                        <p className='subtitle-2-medium'>{item}</p>
+                                        <p className='subtitle-2-medium hidden md:block'>{item}</p>
+                                        <p className='subtitle-3-medium md:hidden block'>{item}</p>
                                     </li>
                                 ))}
                             </ul>

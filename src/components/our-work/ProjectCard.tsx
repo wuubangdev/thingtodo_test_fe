@@ -15,7 +15,7 @@ interface IProps {
 const ProjectCard = (props: IProps) => {
     const { link, description, title } = props.project;
     return (
-        <Link href="#" className='w-full h-full relative'>
+        <Link href="#" className='w-full h-full relative scroll-in'>
             <div className='w-full h-full overflow-hidden flex flex-col relative'>
                 <div className='group w-full flex-1 overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
                     {link.endsWith('.mp4')

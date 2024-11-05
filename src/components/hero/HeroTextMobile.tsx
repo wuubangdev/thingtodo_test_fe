@@ -5,7 +5,7 @@ const HeroTextMobile = () => {
     return (
         <>
             <div className='pt-12 pb-8'>
-                <div className='relative px-4'>
+                <div className='relative px-4 z-50'>
                     <div className='w-full'>
                         <Image
                             alt='hero-mobile-text'

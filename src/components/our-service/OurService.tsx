@@ -74,7 +74,7 @@ const servicesMobile: IService[] = [
 const OurService = () => {
     return (
         <div id='service' className='bg-bg-fc pt-4'>
-            <div className='md:pb-28 pb-20'>
+            <div className='md:pb-28 pb-20 scroll-in'>
                 {/* Desktop */}
                 <div className='hidden md:grid grid-cols-2 pt-3 pb-4 px-6 items-end gap-6'>
                     <div className='headline-4'>

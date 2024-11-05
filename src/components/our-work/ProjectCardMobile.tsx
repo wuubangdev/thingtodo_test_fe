@@ -13,33 +13,8 @@ export interface IProjectCard {
 
 const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
     const { link, description, title } = props;
-    // const cardRef = useRef<HTMLDivElement>(null);
     const [isHovered, setIsHovered] = useState(false);
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         if (cardRef.current) {
-    //             const rect = cardRef.current.getBoundingClientRect();
-    //             const windowHeight = window.innerHeight;
-
-    //             // Kiểm tra nếu 50% component đã nằm trong viewport
-    //             if (rect.top <= windowHeight - rect.height / 2 && rect.bottom >= rect.height / 2) {
-    //                 setIsHovered(true); // Kích hoạt hiệu ứng hover
-    //             } else {
-    //                 setIsHovered(false); // Hủy bỏ hiệu ứng hover
-    //             }
-    //         }
-    //     };
-
-    //     // Gọi hàm để kiểm tra khi trang tải
-    //     handleScroll();
-
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
 
     return (
         <Link href=""
@@ -48,33 +23,45 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                 setIsHovered(!isHovered);
             }}
         >
-            <div className='w-full'>
+            <div className='w-full scroll-in'>
                 <div
                     className={`mb-2 group w-full overflow-hidden relative cursor-pointer ${isHovered ? 'bg-black/30' : ''}`}
                 >
                     {(!link.endsWith('.svg') && !link.endsWith('.gif') && !link.endsWith('raw=true'))
                         ?
-                        <div className='relative'
+                        // <div
+                        //     style={{
+                        //         position: 'relative',
+                        //         paddingTop: '100%',
+                        //         overflow: 'hidden',
+                        //     }}
+                        // >
+                        //     <Suspense fallback={<div>Loading...</div>}>
+                        //         <ReactPlayer
+                        //             url={link}
+                        //             playing={true}
+                        //             muted={true}
+                        //             controls={false}
+                        //             loop={true}
+                        //             width="100%"
+                        //             height="100%"
+                        //             style={{ position: 'absolute', top: 0, left: 0 }}
+                        //         />
+                        //     </Suspense>
+                        // </div>
+                        <video
+                            autoPlay
+                            muted
+                            loop
                             style={{
-                                position: 'relative',
-                                paddingTop: '100%', // Tỷ lệ khung hình 1:1
-                                // borderRadius: '40px',
-                                overflow: 'hidden',
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
                             }}
+                            className='group-hover:scale-105 duration-500 rounded'
                         >
-                            <Suspense fallback={<div>Loading...</div>}>
-                                <ReactPlayer
-                                    url={link} // Sử dụng URL trực tiếp mà không cần tham số không cần thiết
-                                    playing={true}       // Tự động phát
-                                    muted={true}         // Tắt âm thanh
-                                    controls={false}     // Ẩn điều khiển
-                                    loop={true}
-                                    width="100%"
-                                    height="100%"
-                                    style={{ position: 'absolute', top: 0, left: 0 }}
-                                />
-                            </Suspense>
-                        </div>
+                            <source src={link} type="video/mp4" />
+                        </video>
                         :
                         <Image
                             alt="project-image"

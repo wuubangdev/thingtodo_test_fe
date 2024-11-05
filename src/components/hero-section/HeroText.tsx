@@ -13,8 +13,7 @@ const HeroText = () => {
                                 <li
                                     key={index}
                                     className='border-gradient cursor-pointer text-secondary 
-                                    subtitle-2-medium ring-button
-                                    '
+                                    subtitle-2-medium ring-button flex flex-col justify-center items-center'
                                     style={{
                                         background: '#FFEEEA99',
                                         backdropFilter: 'blur(5px)'

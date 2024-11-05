@@ -11,12 +11,12 @@ export interface IClient {
 const ClientCard = (props: IClient) => {
     const { logoDark, logoLight } = props;
     return (
-        <div className='w-full flex justify-center items-center relative group cursor-pointer'>
+        <div className='w-full flex justify-center items-center relative group cursor-pointer scroll-in'>
             <Image
                 alt='client-logo-frame'
                 src={logoDark}
-                width={198}
-                height={117}
+                width={135}
+                height={80}
                 className='group-hover:opacity-0 duration-500 w-full h-auto 3xl:w-[80%]'
                 loading="lazy"
             />

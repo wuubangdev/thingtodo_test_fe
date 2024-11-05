@@ -8,6 +8,24 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 1920px) {
+  html {
+    font-size: 1.2vw;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 1.4vw;
+  }
+}
+
+@media (min-width: 3840px) {
+  html {
+    font-size: 1.6vw;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,132 +39,132 @@ body {
 /* Body */
 .body-1-medium {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 1.625rem;
   text-align: left;
 }
 
 .body-1-regular {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-}
-
-
-.body-2-regular {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 20.7px;
+  line-height: 1.625rem;
   text-align: left;
 }
 
 .body-2-medium {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
-  line-height: 20.7px;
-  font-size: 18px;
+  line-height: 1.294rem;
+  font-size: 1.125rem;
+}
+
+
+.body-2-regular {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.294rem;
+  text-align: left;
 }
 
 .body-2-semibold {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 20.7px;
+  line-height: 1.294rem;
   text-align: left;
 }
 
 
 .body-2-bold {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
-  line-height: 20.7px;
+  line-height: 1.294rem;
   /* text-align: left; */
 }
 
 .body-3-light {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
-  line-height: 16.1px;
+  line-height: 1.006rem;
 }
 
 .body-3-regular {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 18.2px;
+  line-height: 1.138rem;
   text-align: left;
 }
 
 .body-3-medium {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
-  line-height: 16.1px;
+  line-height: 1.006rem;
   text-align: left;
 }
 
 .body-4-regular {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 13.8px;
+  line-height: 0.863rem;
   /* text-align: left; */
 }
 
 .body-4-medium {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
-  line-height: 13.8px;
+  line-height: 0.863rem;
   text-align: left;
 }
 
 .hero-description {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 500;
-  line-height: 32.2px;
+  line-height: 2.013;
   text-align: left;
 }
 
 /* Subtitle */
 .subtitle-1-medium {
   font-family: 'Archia', sans-serif;
-  font-size: 35px;
+  font-size: 2.188rem;
   font-weight: 500;
-  line-height: 35px;
+  line-height: 2.188rem;
   letter-spacing: -0.05em;
   text-align: left;
 }
 
 .subtitle-1-regular {
   font-family: 'Archia', sans-serif;
-  font-size: 35px;
+  font-size: 2.188rem;
   font-weight: 400;
-  line-height: 35px;
+  line-height: 2.188rem;
   letter-spacing: -0.05em;
 }
 
 .subtitle-2-regular {
   font-family: 'Archia', sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 1.75rem;
   letter-spacing: -0.05em;
   /* text-align: left; */
 }
 
 .subtitle-2-medium {
   font-family: 'Archia', sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 1.75rem;
   letter-spacing: -0.05em;
   /* text-align: left; */
 }
@@ -154,46 +172,45 @@ body {
 
 .subtitle-3-medium {
   font-family: 'Archia', sans-serif;
-  font-size: 23px;
+  font-size: 1.438rem;
   font-weight: 500;
-  line-height: 23px;
+  line-height: 1.438rem;
   letter-spacing: -0.05em;
   text-align: left;
 }
 
 .subtitle-4-medium {
   font-family: 'Archia', sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 1.25rem;
   letter-spacing: -0.05em;
   text-align: left;
 }
 
 .subtitle-3-semibold {
   font-family: 'Archia', sans-serif;
-  font-size: 23px;
+  font-size: 1.438rem;
   font-weight: 600;
-  line-height: 23px;
+  line-height: 1.438rem;
   letter-spacing: -0.05em;
   text-align: left;
 }
 
 .subtitle-3-regular {
   font-family: 'Archia', sans-serif;
-  font-size: 23px;
+  font-size: 1.438rem;
   font-weight: 400;
-  line-height: 23px;
+  line-height: 1.438rem;
   letter-spacing: -0.05em;
   text-align: left;
 }
 
 .subtitle-3-medium {
   font-family: 'Archia', sans-serif;
-  font-size: 23px;
-  font-size: 23px;
+  font-size: 1.438rem;
   font-weight: 500;
-  line-height: 23px;
+  line-height: 1.438rem;
   letter-spacing: -0.05em;
   text-align: left;
 
@@ -202,45 +219,45 @@ body {
 /* Title */
 .title-1-regular {
   font-family: 'Archia', sans-serif;
-  font-size: 69px;
+  font-size: 4.313rem;
   font-weight: 400;
-  line-height: 69px;
+  line-height: 4.313rem;
   letter-spacing: -0.05em;
   /* text-align: left; */
 }
 
 .title-1-medium {
   font-family: 'Archia', sans-serif;
-  font-size: 69px;
+  font-size: 4.313rem;
   font-weight: 500;
-  line-height: 69px;
+  line-height: 4.313rem;
   letter-spacing: -0.05em;
   /* text-align: left; */
 }
 
 .title-2-medium {
   font-family: 'Archia', sans-serif;
-  font-size: 55px;
+  font-size: 3.438rem;
   font-weight: 500;
-  line-height: 55px;
+  line-height: 3.438rem;
   letter-spacing: -0.07em;
   text-align: left;
 }
 
 .title-3-medium {
   font-family: 'Archia', sans-serif;
-  font-size: 44px;
+  font-size: 2.75rem;
   font-weight: 500;
-  line-height: 44px;
+  line-height: 2.75rem;
   letter-spacing: -0.05em;
   text-align: left;
 }
 
 .title-4-medium {
   font-family: 'Archia', sans-serif;
-  font-size: 34px;
+  font-size: 2.125rem;
   font-weight: 500;
-  line-height: 34px;
+  line-height: 2.125rem;
   letter-spacing: -0.05em;
   text-align: left;
 }
@@ -248,7 +265,7 @@ body {
 /* Heading */
 .headline-4 {
   font-family: 'Archia', sans-serif;
-  font-size: 107px;
+  font-size: 6.688rem;
   font-weight: 500;
   line-height: 6.6875rem;
   letter-spacing: -0.05em;
@@ -473,41 +490,26 @@ body {
     transform: rotate(-17deg);
   }
 
-  /* 10% {
-    transform: rotate(-14deg);
-  } */
 
   20% {
     transform: rotate(-13deg);
   }
 
-  /* 30% {
-    transform: rotate(-15deg);
-  } */
 
   40% {
     transform: rotate(-16deg);
   }
 
-  /* 50% {
-    transform: rotate(-14deg);
-  } */
 
   60% {
     transform: rotate(-14deg);
   }
 
-  /* 70% {
-    transform: rotate(-14deg);
-  } */
 
   80% {
     transform: rotate(-16deg);
   }
 
-  /* 90% {
-    transform: rotate(-15deg);
-  } */
 
   100% {
     transform: rotate(-15deg);
@@ -523,33 +525,20 @@ body {
     transform: rotate(-2deg);
   }
 
-  /* 20% {
-    transform: rotate(2deg);
-  } */
 
   30% {
     transform: rotate(2deg);
   }
 
-  /* 40% {
-    transform: rotate(1deg);
-  } */
 
   50% {
     transform: rotate(-1deg);
   }
 
-  /* 60% {
-    transform: rotate(-1deg);
-  } */
 
   70% {
     transform: rotate(1deg);
   }
-
-  /* 80% {
-    transform: rotate(-1deg);
-  } */
 
   90% {
     transform: rotate(-1deg);
@@ -587,9 +576,7 @@ body {
 
 .custom-text-wrap {
   white-space: normal;
-  /* Cho phép xuống dòng */
   word-wrap: break-word;
-  /* Cho phép ngắt từ khi cần */
 }
 
 .motion-div {
@@ -636,6 +623,29 @@ body {
   }
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.scroll-in {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.scroll-in-bot {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
+}
 
 
 /* globals.css */

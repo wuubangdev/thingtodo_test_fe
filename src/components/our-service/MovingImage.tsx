@@ -26,6 +26,7 @@ const MovingImage = ({ image }: { image: string }) => {
     //     setIsHovered(false); // Đặt trạng thái hover là false
     // };
     const hoverAreaRef = useRef<HTMLDivElement | null>(null);
+    const imageRef = useRef<HTMLImageElement | null>(null);
     const [position, setPosition] = useState({ x: 0, y: 0 }); // Lưu trữ vị trí hình ảnh
     const [isHovered, setIsHovered] = useState(false); // Kiểm tra trạng thái hover
 
@@ -35,7 +36,9 @@ const MovingImage = ({ image }: { image: string }) => {
             const x = e.clientX - rect.left; // Tọa độ X trong div
             const y = e.clientY - rect.top; // Tọa độ Y trong div
             // Cập nhật vị trí của hình ảnh
-            setPosition({ x: x - 210, y: y - 140 });
+            if (imageRef.current) {
+                setPosition({ x: x - imageRef.current?.offsetWidth / 2, y: y - imageRef.current.offsetHeight / 2 });
+            }
         }
     };
 
@@ -57,7 +60,6 @@ const MovingImage = ({ image }: { image: string }) => {
             onMouseLeave={handleMouseLeave}
             style={{
                 position: 'relative',
-                // border: '2px solid #000', 
                 width: '100%',
                 height: '100%',
                 cursor: 'pointer',
@@ -65,15 +67,16 @@ const MovingImage = ({ image }: { image: string }) => {
         >
             {isHovered && (
                 <motion.img
-                    src={image} // Thay đường dẫn hình ảnh
+                    ref={imageRef}
+                    src={image}
                     alt="Moving Image"
-                    // className='duration-200 ease-linear'
+                    className='duration-300 ease-out'
                     style={{
                         position: 'absolute',
                         width: '25vw',
                         height: 'auto',
                         pointerEvents: 'none',
-                        translate: `${position.x}px ${position.y}px`, // Di chuyển theo tọa độ
+                        translate: `${position.x}px ${position.y}px`,
                         zIndex: 999,
                     }}
                     initial={{ opacity: 0, scale: 0 }}
@@ -81,7 +84,8 @@ const MovingImage = ({ image }: { image: string }) => {
                     exit={{ opacity: 0 }}
                     transition={{
                         opacity: { duration: 0 },
-                        translate: { duration: 0.005 },
+                        translate: { duration: 0.0005 },
+
                     }}
                 />
             )}

@@ -11,6 +11,7 @@ import MobileMenu from "@/components/navbar/MobileMenu";
 import { ContactContextProvider } from "@/components/context/ContactContext";
 import ContactModal from "@/components/modal-contact/ContactModal";
 import MobileMenuButton from "@/components/float-button/MobileMenuButton";
+import NavbarSecondary from "@/components/navbar/NavbarSecondary";
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   const pathname = usePathname();
@@ -42,11 +43,16 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         }
 
         // Optional: handle special cases
-        if (prev === 19 || prev === 29 || prev === 59 || prev === 99 || prev === 100) {
+        if (prev === 19 || prev === 29 || prev === 59 || prev === 89 || prev === 100) {
+          if (prev === 89) {
+            setPercentNumber(99);
+            setPercent(99)
+            return;
+          }
           setPercentNumber(prev);
           setPercent(prev)
         }
-      }, 30);
+      }, 20);
       return () => {
         clearTimeout(timer);
         clearInterval(interval);
@@ -63,7 +69,10 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
       <body className="relative">
         <MobileMenuContextProvider>
           <ContactContextProvider>
-            {!isLoading && <MobileMenuButton />}
+            {!isLoading &&
+              <MobileMenuButton />
+            }
+
             <AnimatePresence
               // mode="wait"
               initial={false}

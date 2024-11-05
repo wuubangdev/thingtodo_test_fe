@@ -80,7 +80,7 @@ const OurWork = () => {
                 boxShadow: "0px 1px 2px 0px #FFFFFF80 inset",
             }}
         >
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 items-end flex-wrap pt-6 md:pt-[53px]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 items-end flex-wrap pt-6 md:pt-[53px] scroll-in'>
                 <h1 className='md:block hidden headline-4'>OUR WORKS</h1>
                 <h1 className='md:hidden block title-2-medium'>OUR WORKS</h1>
                 <h3 className='subtitle-2-regular text-[#666D74]'>Selected projects <br /> 2022-2024</h3>
@@ -94,7 +94,7 @@ const OurWork = () => {
                     />
                 ))}
             </div>
-            <div className='md:hidden grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-20 grid'>
+            <div className='md:hidden grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10 grid'>
                 {projectMobile && projectMobile.map((project, index) => (
                     <ProjectCardMobile
                         key={index}

@@ -58,7 +58,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                 onClick={() => setIsContactOpen(true)}
                             >
                                 <div className='pb-2 pt-2 body-2-medium flex flex-nowrap gap-2 items-center'>
-                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500 2xl:text-2xl xl:text-xl'>Let&apos;s collab</span>
+                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500'>Let&apos;s collab</span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"

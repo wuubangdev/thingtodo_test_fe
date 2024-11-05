@@ -5,7 +5,7 @@ const LoadingState = ({ percent, percentNumber }: { percent: number; percentNumb
         <>
             <div className='md:flex hidden w-screen h-screen items-center justify-center'>
                 <div
-                    className='flex justify-center items-center'
+                    className='flex justify-center items-center duration-700 ease-in-out'
                     style={{
                         width: percent <= 99 ? percent * 10 : '100vw',
                         height: percent <= 99 ? percent * 10 : '100vh',

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useMobileMenuContext } from '../context/MobileMenuContext';
-import { useContactContext } from '../context/ContactContext';
 
 interface IMobileMenu {
     link: string;
@@ -37,7 +36,6 @@ const menuItems: IMobileMenu[] = [
 
 const MobileMenu = () => {
     const { isOpen, setIsOpen } = useMobileMenuContext();
-    const { setIsContactOpen } = useContactContext();
     function scrollToBottom() {
         window.scrollTo({
             top: document.body.scrollHeight,
@@ -54,50 +52,25 @@ const MobileMenu = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 1 }}
                         transition={{
-                            duration: 0.6,
+                            duration: 0.3,
                             ease: 'easeInOut'
                         }}
                         className='fixed inset-0 bg-black/80 z-40'
                     >
                         <div className='relative h-full'>
                             <motion.div
-                                initial={{ opacity: 1, x: '440px' }}
-                                animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 1, x: '440px' }}
+                                initial={{ opacity: 0, x: '240px', y: '-40%' }}
+                                animate={{ opacity: 1, x: 0, y: '0%' }}
+                                exit={{ opacity: 0, x: '240px', y: '-40%' }}
                                 transition={{
-                                    duration: 0.5,
+                                    duration: 0.3,
                                     ease: 'easeInOut'
                                 }}
                                 className='absolute left-6 top-0 bottom-0 right-0 md:w-[440px] bg-primary'
                             >
                                 <div className='text-white flex flex-col justify-between w-full h-screen pb-4'>
                                     {/* Header & Menu Part */}
-                                    <div className='flex flex-col gap-4'>
-                                        {/* Header */}
-                                        <div className='p-4 flex items-center justify-end gap-4'>
-                                            <div
-                                                className='rounded-3xl border-[1px] border-white py-1 px-4 cursor-pointer body-2-medium'
-                                                onClick={() => setIsContactOpen(true)}
-                                            >
-                                                Let&apos;s collab
-                                            </div>
-                                            <button
-                                                className='rounded-[40px] bg-primary-trans p-4 cursor-pointer 
-                                                relative flex h-10 w-[52px] flex-col justify-center items-center gap-1'
-                                                onClick={() => {
-                                                    setIsOpen(false);
-                                                }}
-                                            >
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    strokeWidth="1.5"
-                                                    stroke="currentColor"
-                                                    className="size-6 absolute text-primary">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                                </svg>
-                                            </button>
-                                        </div>
+                                    <div className='flex flex-col gap-4 pt-28'>
                                         {/* Menu */}
                                         <div className='px-4'>
                                             <ul className='flex flex-col gap-4'>
