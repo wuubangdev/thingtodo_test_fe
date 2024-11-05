@@ -63,12 +63,12 @@ const ContactModal = () => {
                                         pt-4 px-4 pb-10 md:pt-8 mt:px-8 
                                     '
                                     style={{
-                                        overflow: 'hidden'
+                                        overflow: 'hidden',
                                     }}
                                 >
                                     <div className='absolute inset-0 -z-10'
                                         style={{
-                                            background: "url(/ourwork/noise.png)",
+                                            background: "url(https://github.com/bangkbdtvtcm/file/blob/main/noise.png?raw=true)",
                                             backgroundPosition: 'center',
                                             backgroundSize: 'cover',
                                             opacity: 0.1,
