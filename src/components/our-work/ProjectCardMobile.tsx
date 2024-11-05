@@ -1,9 +1,8 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { Suspense, useState } from 'react';
+import React, { useState } from 'react';
 
-const ReactPlayer = React.lazy(() => import('react-player/lazy'));
 
 export interface IProjectCard {
     link: string;
