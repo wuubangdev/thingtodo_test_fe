@@ -22,7 +22,7 @@ const MobileMenuButton = () => {
 
 
     return (
-        <div className='fixed top-4 right-4 z-50 md:hidden'>
+        <div className='fixed top-4 right-4 z-50 lg:hidden'>
             <div className='flex items-top justify-end gap-4'>
                 <div
                     className={`group rounded-3xl ${isOpen ? "translate-x-0 opacity-100" : "translate-x-96 opacity-0"} flex justify-center ${isHover ? 'pl-6 pr-4' : 'px-4'} items-center duration-300 border-[1px] border-white py-1 px-4 cursor-pointer body-2-medium`}

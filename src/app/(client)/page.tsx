@@ -89,7 +89,6 @@ export default function Home() {
         {/* Hero section */}
         <Hero />
         <HeroSection />
-        <NavbarSecondary />
         <div className="xl:block hidden">
           <Feature />
         </div>

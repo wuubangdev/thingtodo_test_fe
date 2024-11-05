@@ -85,7 +85,7 @@ const OurService = () => {
                     </div>
                 </div>
                 {/* Mobile */}
-                <div className='grid md:hidden grid-cols-1 md:grid-cols-2 pt-6 pb-6 px-4 items-end gap-6'>
+                <div className='grid md:hidden grid-cols-1 md:grid-cols-2 pt-6 pb-6 px-4 items-end gap-6 sticky top-0'>
                     <div className='title-2-medium'>
                         HOW CAN WE  HELP YOU?
                     </div>

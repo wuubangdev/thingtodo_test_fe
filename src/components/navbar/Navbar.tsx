@@ -18,7 +18,7 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
             <div>
                 {/* Desktop */}
                 <div
-                    className={`hidden md:grid grid-cols-2 items-center ${isPrimary ? 'text-bg-fc bg-primary' : 'text-black bg-bg-fc/70'}   text-custom-xl py-5 px-6 gap-6`}
+                    className={`hidden lg:grid grid-cols-2 items-center ${isPrimary ? 'text-bg-fc bg-primary' : 'text-black bg-bg-fc/70'}   text-custom-xl py-5 px-6 gap-6`}
                     style={{
                         backdropFilter: 'blur(5px)'
                     }}
@@ -46,36 +46,31 @@ const Navbar = ({ isPrimary }: IStyleNav) => {
                                     />
                             }
                         </Link>
-                        {/* <div className='font-Jakarta-sans font-normal xl:text-xl 2xl:text-2xl'>
-                            {isPrimary ? '(Creative Agency)' : ''}
-                        </div> */}
                     </div>
                     <div className='flex justify-between items-center'>
                         <Menu isPrimary={isPrimary} isSecondary={false} />
-                        <div>
-                            <div
-                                className='cursor-pointer group text-underline2'
-                                onClick={() => setIsContactOpen(true)}
-                            >
-                                <div className='pb-2 pt-2 body-2-medium flex flex-nowrap gap-2 items-center'>
-                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500'>Let&apos;s collab</span>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        strokeWidth="1.5"
-                                        stroke="currentColor"
-                                        className="size-5 group-hover:scale-100 scale-0 duration-500 rotate-180"
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-                                    </svg>
-                                </div>
+                        <div
+                            className='cursor-pointer group text-underline2'
+                            onClick={() => setIsContactOpen(true)}
+                        >
+                            <div className='pb-2 body-2-medium flex flex-nowrap gap-2 items-center'>
+                                <span className='translate-x-6 group-hover:translate-x-0 duration-500'>Let&apos;s collab</span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="size-5 group-hover:scale-100 scale-0 duration-500 rotate-180"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
                 {/* Mobile */}
-                <div className={`grid md:hidden  grid-cols-2 p-4  ${isPrimary ? 'text-white bg-primary' : 'text-black bg-white'}`}>
+                <div className={`grid lg:hidden  grid-cols-2 p-4  ${isPrimary ? 'text-white bg-primary' : 'text-black bg-white'}`}>
                     <div className='flex items-center gap-6'>
                         <Link href={'/'} className='h-10'>
                             {isPrimary ?

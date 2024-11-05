@@ -22,7 +22,7 @@ const CardService = (props: IProps) => {
     return (
         <>
             <div
-                className={`sticky bg-bg-fc md:block hidden scroll-in`}
+                className={`sticky bg-bg-fc lg:block hidden scroll-in`}
                 style={{
                     top: `calc(0vh + ${5.25 * index + 5.25}rem)`,
                     marginBottom: `${5.25 * total - 5.25 * index - 5.25}rem`,
@@ -33,7 +33,7 @@ const CardService = (props: IProps) => {
                 <div
                     className={`px-6 relative`}
                 >
-                    <div className='grid grid-cols-1 md:grid-cols-2 pt-3 pb-6 gap-6 border-t-[1px] '>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 pt-3 pb-6 gap-6 border-t-[1px] '>
                         <div className='title-3-medium'>
                             (0{index + 1})
                         </div>
@@ -48,12 +48,12 @@ const CardService = (props: IProps) => {
                                     height: '70%',
                                     width: 'auto'
                                 }}
-                                className='md:block hidden'
+                                className='lg:block hidden'
                                 loading="lazy"
                             />
                         </div>
                     </div>
-                    <div className='grid grid-cols-1 md:grid-cols-2 pt-3 pb-6 gap-6'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 pt-3 pb-6 gap-6'>
                         <div>
                         </div>
                         <div className='flex flex-col gap-3 pb-[120px]'>
@@ -79,11 +79,11 @@ const CardService = (props: IProps) => {
                 </div>
             </div>
             {/* Mobile */}
-            <div className='md:hidden'>
+            <div className='lg:hidden'>
                 <div
                     className=' px-4 flex flex-col gap-14 bg-bg-fc'
                 >
-                    <div className='flex pt-3 pb-6 gap-2 border-t-[1px] sticky top-0 bg-bg-fc scroll-in'>
+                    <div className='flex pt-3 pb-6 gap-2 border-t-[1px] sticky top-0 bg-bg-fc scroll-in z-20'>
                         <div className='subtitle-1-medium'>
                             (0{index + 1})
                         </div>
@@ -100,18 +100,18 @@ const CardService = (props: IProps) => {
                                     height: 'auto',
                                     width: '100%'
                                 }}
-                                className='md:hidden block'
+                                className='lg:hidden block'
                                 loading="lazy"
                             />
                         </div>
-                        <div className='flex flex-col gap-3 md:pb-[120px] pb-[80px]'>
+                        <div className='flex flex-col gap-3 lg:pb-[120px] pb-[80px]'>
                             <p className='body-3-regular scroll-in'>{service.description}</p>
                             <ul>
                                 {service.subService && service.subService.map((item, index) => (
                                     <li key={index} className='border-b-[1px] py-4 flex items-center gap-2 scroll-in'>
                                         <p className='subtitle-3-medium text-[#959A9F]'>0{index + 1}</p>
-                                        <p className='subtitle-2-medium hidden md:block'>{item}</p>
-                                        <p className='subtitle-3-medium md:hidden block'>{item}</p>
+                                        <p className='subtitle-2-medium hidden lg:block'>{item}</p>
+                                        <p className='subtitle-3-medium lg:hidden block'>{item}</p>
                                     </li>
                                 ))}
                             </ul>

@@ -11,11 +11,7 @@ const HeroMobile = () => {
     const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
     const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '100%', '100%']);
     const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '0px']);
-
-
     const [checkClick, setCheckClick] = useState<number>(1);
-
-
     const handleClick = () => {
         if (checkClick === 1) {
             setCheckClick(2);
@@ -28,7 +24,6 @@ const HeroMobile = () => {
     return (
         <div
             ref={containerRef}
-            // className='flex flex-col md:hidden bg-primary h-[calc(100vh-72px)] mb-[calc(130vh)] relative'
             className='flex flex-col md:hidden bg-primary relative gap-4'
         >
             <HeroTextMobile />

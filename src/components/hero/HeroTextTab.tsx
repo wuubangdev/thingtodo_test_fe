@@ -6,7 +6,7 @@ const HeroTextTab = () => {
     return (
         <>
             <div className='py-3'>
-                <div className='relative px-6 lg:pb-6 h-[84vh] flex flex-col'>
+                <div className='relative px-6 lg:pb-6 flex flex-col gap-4'>
                     <div className='absolute left-0 right-0 -top-6'>
                         <ul className='flex justify-between w-full px-4 '>
                             {list && list.map((item, index) => (
@@ -26,25 +26,12 @@ const HeroTextTab = () => {
                         </ul>
                     </div>
                     <div>
-                        <div className='w-full lg:block md:hidden'>
-                            <Image
-                                alt='shaking'
-                                src={'/hero/herotext_desk_or.svg'}
-                                width={124}
-                                height={124}
-                                style={{
-                                    width: "100%",
-                                    height: "auto"
-                                }}
-                                loading="lazy"
-                            />
-                        </div>
                         <div className='w-full lg:hidden md:block'>
                             <Image
                                 alt='shaking'
-                                src={'/hero/herotext_tab_or.svg'}
-                                width={124}
-                                height={124}
+                                src={'/hero/herotext_tab_white.svg'}
+                                width={717}
+                                height={368}
                                 style={{
                                     width: "100%",
                                     height: "auto"
@@ -53,14 +40,10 @@ const HeroTextTab = () => {
                             />
                         </div>
                     </div>
-                    <div className=' text-primary flex-1 mt-7 flex justify-between'>
+                    <div className=' text-white flex-1 mt-7 mb-8'>
                         <div className='text-custom-content font-medium'>
                             Provide innovative, high-quality <br /> visual advertising solutions with <br /> quick times.
                         </div>
-                        <div className='text-custom-xl'>
-                            {/* (SCROLL) */}
-                        </div>
-
                     </div>
                 </div>
             </div>

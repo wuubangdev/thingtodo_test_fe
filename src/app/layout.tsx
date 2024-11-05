@@ -70,7 +70,11 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         <MobileMenuContextProvider>
           <ContactContextProvider>
             {!isLoading &&
-              <MobileMenuButton />
+              <>
+                <MobileMenuButton />
+                <NavbarSecondary />
+              </>
+
             }
 
             <AnimatePresence

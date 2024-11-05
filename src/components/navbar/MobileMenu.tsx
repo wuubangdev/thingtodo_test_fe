@@ -66,7 +66,7 @@ const MobileMenu = () => {
                                     duration: 0.3,
                                     ease: 'easeInOut'
                                 }}
-                                className='absolute left-6 top-0 bottom-0 right-0 md:w-[440px] bg-primary'
+                                className='absolute left-6 md:left-auto top-0 bottom-0 right-0 md:w-[440px] bg-primary'
                             >
                                 <div className='text-white flex flex-col justify-between w-full h-screen pb-4'>
                                     {/* Header & Menu Part */}

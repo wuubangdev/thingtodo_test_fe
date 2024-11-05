@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import HeroTextTab from './HeroTextTab';
 import Feature from '../feature/Feature';
 
 const HeroTablet = () => {
     const { scrollYProgress } = useScroll();
-    const videoWidthTab = useTransform(scrollYProgress, [0, 0.08], ['400px', '805px']);
-    const videoRadius = useTransform(scrollYProgress, [0, 0.04], ['120px', '0px']);
-    const padding = useTransform(scrollYProgress, [0, 0.08], ['16px', '0px']);
-    const videoTranslateY = useTransform(scrollYProgress, [0, 0.08], ['0px', '43px']);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '0px']);
+    const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
+    const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '100%', '100%']);
+    const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '0px']);
 
 
     const handleClick = () => {
@@ -17,57 +18,56 @@ const HeroTablet = () => {
     };
     return (
         <div
-            className='lg:hidden md:block hidden xl:hidden pt-6 pb-[43px] w-full relative bg-primary'
+            className='lg:hidden md:block hidden xl:hidden pt-6 w-full relative bg-primary'
             style={{ height: 'auto' }}
         >
             <HeroTextTab />
-            <div className='sticky w-full bottom-0  '
-            >
-                {/* Tablet */}
-                <div className='relative w-full'>
-                    <motion.video
-                        className='z-20'
-                        autoPlay
-                        muted
-                        loop
-                        style={{
-                            width: '100%',
-                            height: videoWidthTab,
-                            borderRadius: videoRadius,
-                            objectFit: 'cover',
-                            padding: padding,
-                            translateY: videoTranslateY,
-                        }}
-                    >
-                        <source src="/hero/1x1.mp4" type="video/mp4" />
-
-                    </motion.video>
-                    <motion.div
-                        className='absolute bottom-4 right-6 flex items-center rounded-[41px]
-                            p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
-                             hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
-                        style={{
-                            translateY: videoTranslateY,
-                            // background: 'black',
-                        }}
-                        onClick={() => handleClick()}
-                    >
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                            </svg>
+            <div className='w-full'>
+                <div className='relative w-full h-[200vh]'>
+                    <div className='text-white sticky top-0 h-[100vh] flex flex-col'>
+                        <div className='flex-1 flex flex-col'>
+                            <div className='flex-1 relative'>
+                                <div className='absolute w-full h-full'
+                                >
+                                    <motion.video
+                                        autoPlay
+                                        muted
+                                        loop
+                                        style={{
+                                            width: videoWidth,
+                                            height: videoHeight,
+                                            borderRadius: radius,
+                                            objectFit: 'cover',
+                                            padding: padding,
+                                            position: 'absolute',
+                                            top: '0',
+                                            border: 'none'
+                                        }}
+                                        transition={{
+                                            ease: 'easeIn'
+                                        }}
+                                    >
+                                        <source src="/hero/9x16_3MB.mp4" type="video/mp4" />
+                                    </motion.video>
+                                </div>
+                                <div
+                                    className='absolute bottom-6 right-6 flex items-center rounded-[41px]
+                                     p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
+                                     hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
+                                    onClick={() => handleClick()}
+                                >
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                        </svg>
+                                    </div>
+                                    <span className='group-hover:scale-100 scale-0 duration-500 origin-right text-white text-nowrap' >View this showcase</span>
+                                </div>
+                            </div>
+                            <Feature />
                         </div>
-                        <span className='group-hover:scale-100 scale-0 duration-500 origin-right text-white text-nowrap' >View this showcase</span>
-                    </motion.div>
+                    </div>
                 </div>
-                <motion.div
-                    className='w-full'
-                    style={{
-                        translateY: videoTranslateY,
-                    }}
-                >
-                    <Feature />
-                </motion.div>
             </div>
         </div>
     )

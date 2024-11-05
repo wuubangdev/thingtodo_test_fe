@@ -29,20 +29,7 @@ const HeroText = () => {
                         <div className='w-full lg:block md:hidden'>
                             <Image
                                 alt='shaking'
-                                src={'/hero/herotext_desk_or.svg'}
-                                width={124}
-                                height={124}
-                                style={{
-                                    width: "100%",
-                                    height: "auto"
-                                }}
-                                loading="lazy"
-                            />
-                        </div>
-                        <div className='w-full lg:hidden md:block'>
-                            <Image
-                                alt='shaking'
-                                src={'/hero/herotext_tab_or.svg'}
+                                src={'/hero/hero_text_white.svg'}
                                 width={124}
                                 height={124}
                                 style={{
@@ -53,7 +40,7 @@ const HeroText = () => {
                             />
                         </div>
                     </div>
-                    <div className=' text-primary flex-1 flex flex-col'>
+                    <div className=' text-white flex-1 flex flex-col'>
                         <div className='text-custom-xl mt-6 mb-auto'>
                             {/* (SCROLL) */}
                         </div>

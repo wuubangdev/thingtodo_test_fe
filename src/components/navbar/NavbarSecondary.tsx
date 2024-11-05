@@ -10,24 +10,22 @@ const NavbarSecondary = () => {
     const [showNavbar, setShowNavbar] = useState<boolean>(false);
     const [lastScrollY, setLastScrollY] = useState(0);
     const { setIsContactOpen } = useContactContext();
-    const navbarHeight = 88;
-
+    const navbarHeight = 40;
     const controlNavbar = () => {
         const currentScrollY = window.scrollY;
-        if (Math.abs(currentScrollY - lastScrollY) >= navbarHeight) {
-            if (currentScrollY > lastScrollY) {
-                setShowNavbar(false);
-            } else {
-                if (currentScrollY >= 2000) {
-                    setShowNavbar(true);
+        if (currentScrollY >= 1200) {
+            if (Math.abs(currentScrollY - lastScrollY) >= navbarHeight) {
+                if (currentScrollY > lastScrollY) {
+                    setShowNavbar(true); // Show navbar when scrolling up
                 } else {
-                    setShowNavbar(false);
+                    setShowNavbar(false); // Hide navbar when scrolling down
                 }
+                setLastScrollY(currentScrollY);
             }
-            setLastScrollY(currentScrollY);
+        } else {
+            setShowNavbar(false); // Hide navbar if scroll is less than 1600px
         }
     };
-
     useEffect(() => {
         window.addEventListener('scroll', controlNavbar);
         return () => {
@@ -37,17 +35,16 @@ const NavbarSecondary = () => {
     return (
         <>
             <div
-                className={`${showNavbar ? "opacity-100" : "opacity-0"}`}
+                className={`${showNavbar ? "opacity-100" : "opacity-0"} w-full fixed`}
                 style={{
-                    position: 'sticky',
-                    zIndex: 30,
-                    top: `${showNavbar ? "0" : "-100px"}`,
-                    transition: "top 1s ease"
+                    zIndex: 60,
+                    top: `${showNavbar ? "0" : "-88px"}`,
+                    transition: '1s ease',
                 }}
             >
                 {/* Desktop */}
                 <div
-                    className={`hidden md:grid grid-cols-2 items-center  text-black bg-bg-fc/70 text-custom-xl py-5 px-6 gap-6`}
+                    className={`hidden lg:grid grid-cols-2 items-center  text-black bg-bg-fc/70 text-custom-xl py-5 px-6 gap-6`}
                     style={{
                         backdropFilter: 'blur(5px)'
                     }}
@@ -75,8 +72,8 @@ const NavbarSecondary = () => {
                                 className='cursor-pointer group text-underline2'
                                 onClick={() => setIsContactOpen(true)}
                             >
-                                <div className='pb-2 pt-2 body-2-medium flex flex-nowrap gap-2 items-center'>
-                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500 2xl:text-2xl xl:text-xl'>Let&apos;s collab</span>
+                                <div className='pb-2 body-2-medium flex flex-nowrap gap-2 items-center'>
+                                    <span className='translate-x-6 group-hover:translate-x-0 duration-500 body-2-medium'>Let&apos;s collab</span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"

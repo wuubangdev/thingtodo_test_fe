@@ -77,7 +77,7 @@ const MovingImage = ({ image }: { image: string }) => {
                         height: 'auto',
                         pointerEvents: 'none',
                         translate: `${position.x}px ${position.y}px`,
-                        zIndex: 999,
+                        zIndex: 10,
                     }}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
