@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import MovingImage from './MovingImage';
 
@@ -22,7 +21,7 @@ const CardService = (props: IProps) => {
     return (
         <>
             <div
-                className={`sticky bg-bg-fc lg:block hidden scroll-in`}
+                className={`sticky bg-bg-fc lg:block hidden`}
                 style={{
                     top: `calc(0vh + ${5.25 * index + 5.25}rem)`,
                     marginBottom: `${5.25 * total - 5.25 * index - 5.25}rem`,

@@ -1,3 +1,5 @@
+'use client'
+import ScrollAnimationWrapper from '@/app/hooks/ScrollAnimationWrapper';
 import Image from 'next/image';
 import React from 'react';
 
@@ -11,26 +13,28 @@ export interface IClient {
 const ClientCard = (props: IClient) => {
     const { logoDark, logoLight } = props;
     return (
-        <div className='w-full flex justify-center items-center relative group cursor-pointer scroll-in'>
-            <Image
-                alt='client-logo-frame'
-                src={logoDark}
-                width={135}
-                height={80}
-                className='group-hover:opacity-0 duration-500 w-full h-auto 3xl:w-[80%]'
-                loading="lazy"
-            />
-            <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center group-hover:opacity-100 opacity-0 duration-500'>
+        <ScrollAnimationWrapper>
+            <div className='w-full flex justify-center items-center relative group cursor-pointer scroll-in'>
                 <Image
                     alt='client-logo-frame'
-                    src={logoLight}
-                    width={198}
-                    height={117}
-                    className='w-full h-auto 3xl:w-[80%]'
+                    src={logoDark}
+                    width={135}
+                    height={80}
+                    className='group-hover:opacity-0 duration-500 w-full h-auto 3xl:w-[80%]'
                     loading="lazy"
                 />
+                <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center group-hover:opacity-100 opacity-0 duration-500'>
+                    <Image
+                        alt='client-logo-frame'
+                        src={logoLight}
+                        width={198}
+                        height={117}
+                        className='w-full h-auto 3xl:w-[80%]'
+                        loading="lazy"
+                    />
+                </div>
             </div>
-        </div>
+        </ScrollAnimationWrapper>
     )
 }
 
