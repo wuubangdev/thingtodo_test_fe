@@ -449,7 +449,6 @@ body {
 /* Rotate */
 .rotate-infinite {
   animation: rotate 15s linear infinite;
-  animation-delay: 5s;
 }
 
 
@@ -463,25 +462,6 @@ body {
   }
 }
 
-/* Move to top */
-.move-top-infinite {
-  animation: move-top 2s linear infinite;
-}
-
-
-@keyframes move-top {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(8px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
 
 /*  */
 

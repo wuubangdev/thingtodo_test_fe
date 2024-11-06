@@ -1,20 +1,16 @@
 'use client'
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
-
 const MovingImage = ({ image }: { image: string }) => {
     const hoverAreaRef = useRef<HTMLDivElement | null>(null);
     const imageRef = useRef<HTMLImageElement | null>(null);
-    const [position, setPosition] = useState({ x: 0, y: 0 }); // Lưu trữ vị trí hình ảnh
-    const [isHovered, setIsHovered] = useState(false); // Kiểm tra trạng thái hover
-
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [isHovered, setIsHovered] = useState(false);
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (hoverAreaRef.current) {
             const rect = hoverAreaRef.current.getBoundingClientRect();
-            const x = e.clientX - rect.left; // Tọa độ X trong div
-            const y = e.clientY - rect.top; // Tọa độ Y trong div
-
-            // Cập nhật vị trí của hình ảnh
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
             if (imageRef.current) {
                 setPosition({
                     x: x - imageRef.current?.offsetWidth / 2,
@@ -23,15 +19,12 @@ const MovingImage = ({ image }: { image: string }) => {
             }
         }
     };
-
     const handleMouseEnter = () => {
-        setIsHovered(true); // Đặt trạng thái hover là true
+        setIsHovered(true);
     };
-
     const handleMouseLeave = () => {
-        setIsHovered(false); // Đặt trạng thái hover là false
+        setIsHovered(false);
     };
-
     return (
         <div
             ref={hoverAreaRef}
