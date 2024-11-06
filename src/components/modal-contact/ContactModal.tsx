@@ -78,7 +78,7 @@ const ContactModal = () => {
                                     <div className='absolute inset-0 -z-20'
                                         style={{
                                             background:
-                                                "linear-gradient(0deg, rgba(252, 252, 252, 0.07), rgba(252, 252, 252, 0.07)),linear-gradient(170.8deg, rgba(242, 72, 34, 0) 31.99%, rgba(242, 72, 34, 0.5) 110.95%),linear-gradient(171.83deg, rgba(242, 72, 34, 0.05) 88.8%, rgba(242, 72, 34, 0.5) 109.82%)",
+                                                "linear-gradient(0deg, rgba(252, 252, 252, 0.07), rgba(252, 252, 252, 0.07)),linear-gradient(170.8deg, rgba(242, 72, 34, 0) 31.99%, rgba(242, 72, 34, 0.7) 110.95%),linear-gradient(171.83deg, rgba(242, 72, 34, 0.25) 88.8%, rgba(242, 72, 34, 0.5) 109.82%)",
                                             backdropFilter: "blur(80px)",
                                         }}
                                     >
