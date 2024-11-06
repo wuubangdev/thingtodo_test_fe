@@ -46,6 +46,9 @@ const ContactModal = () => {
                             ease: 'easeInOut'
                         }}
                         className='fixed inset-0 bg-black/80'
+                        style={{
+                            zIndex: 80
+                        }}
                     >
                         <div className='relative h-full'>
                             <motion.div
