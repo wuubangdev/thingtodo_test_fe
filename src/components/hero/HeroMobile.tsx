@@ -52,7 +52,7 @@ const HeroMobile = () => {
                                             ease: 'easeIn'
                                         }}
                                     >
-                                        <source src="/hero/9x16_3MB.mp4" type="video/mp4" />
+                                        <source src="https://ttdasset.s3.ap-southeast-1.amazonaws.com/9x16_3MB.mp4" type="video/mp4" />
                                     </motion.video>
                                 </div>
                                 <div
