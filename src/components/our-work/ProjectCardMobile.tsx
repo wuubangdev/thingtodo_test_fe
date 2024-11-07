@@ -50,6 +50,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                         // </div>
                         <video
                             autoPlay
+                            playsInline
                             muted
                             loop
                             style={{
