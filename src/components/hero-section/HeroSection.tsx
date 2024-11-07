@@ -25,8 +25,9 @@ const HeroSection = () => {
         <>
             {/* Large Desktop */}
             <div
-                className='hidden xl:flex flex-col pt-6 w-full bg-primary h-[calc(100vh-88px)] mb-[60vh]'
+                className='hidden xl:flex flex-col pt-6 w-full bg-primary h-[calc(100vh-88px)] mb-[60vh] relative'
             >
+                <div className='absolute w-full h-[60vh] bg-primary bottom-[-60vh] left-0'></div>
                 <HeroText />
                 <div className='grid grid-cols-2 px-6 pb-6 gap-6 flex-1 relative'>
                     <div className='absolute w-full h-full'>
@@ -46,7 +47,7 @@ const HeroSection = () => {
                                 translateY: translateY,
                             }}
                         >
-                            <source src="/hero/16x9.mp4" type="video/mp4" />
+                            <source src="https://ttdasset.s3.ap-southeast-1.amazonaws.com/16x9.mp4" type="video/mp4" />
                         </motion.video>
                         <motion.div
                             className='absolute bottom-4 right-6 flex items-center rounded-[41px]

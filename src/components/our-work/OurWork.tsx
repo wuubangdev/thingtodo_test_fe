@@ -7,64 +7,64 @@ import ScrollAnimationWrapper from '@/app/hooks/ScrollAnimationWrapper'
 
 const projects: IProjectCard[] = [
     {
-        link: '/ourwork/w1.mp4',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w1.mp4',
         description: 'Promotion CGI ',
         title: <span>Yomilk</span>
     },
     {
-        link: '/ourwork/w2.svg',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w2.svg',
         description: 'Rebranding Campaign',
         title: <span>Probi</span>
     },
     {
-        link: '/ourwork/w3.gif',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w3.gif',
         description: 'iTVC: Blueberry Yoghurt',
         title: <span>Sữa chua Vinamilk</span>
     },
     {
-        link: '/ourwork/w4.mp4',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w4.mp4',
         description: "New '9 Nuts' TV commercial",
         title: <span>Sữa hạt Vinamilk</span>
     },
     {
-        link: '/ourwork/w5.svg',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w5.svg',
         description: 'Design Activation Booth',
         title: <span>Green Farm</span>
     },
     {
-        link: '/ourwork/w6.mp4',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w6.mp4',
         description: 'Production for Fresh Milk',
         title: <span>Vinamilk</span>
     },
 ]
 const projectMobile: IProjectCard[] = [
     {
-        link: 'https://ik.imagekit.io/rbzjuhmml/TTD/w1.mp4?updatedAt=1730414531146',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w1.mp4',
         description: 'Promotion CGI ',
         title: <span>Yomilk</span>
     },
     {
-        link: '/ourwork/w2.svg',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w2.svg',
         description: 'Rebranding Campaign',
         title: <span>Probi</span>
     },
     {
-        link: '/ourwork/w3.gif',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w3.gif',
         description: 'iTVC: Blueberry Yoghurt',
         title: <span>Sữa chua Vinamilk</span>
     },
     {
-        link: 'https://github.com/bangkbdtvtcm/file/blob/main/w4.gif?raw=true',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w4.mp4',
         description: "New '9 Nuts' TV commercial",
         title: <span>Sữa hạt Vinamilk</span>
     },
     {
-        link: '/ourwork/w5.svg',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w5.svg',
         description: 'Design Activation Booth',
         title: <span>Green Farm</span>
     },
     {
-        link: 'https://github.com/bangkbdtvtcm/file/blob/main/w6.gif?raw=true',
+        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w6.mp4',
         description: 'Production for Fresh Milk',
         title: <span>Vinamilk</span>
     },
