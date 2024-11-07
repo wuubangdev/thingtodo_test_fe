@@ -34,19 +34,35 @@ const ProjectCard = (props: IProps) => {
                             <source src={link} type="video/mp4" />
                         </video>
                         :
-                        <Image
-                            alt="project-image"
-                            src={link}
-                            width={684}
-                            height={590}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                            }}
-                            className='group-hover:scale-105 duration-500 rounded'
-                            loading="lazy"
-                        />
+                        link.endsWith('.gif') ?
+                            <Image
+                                alt="project-image"
+                                src={link}
+                                width={684}
+                                height={590}
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                }}
+                                className='group-hover:scale-105 duration-500 rounded'
+                                loading="lazy"
+                                unoptimized
+                            />
+                            :
+                            <Image
+                                alt="project-image"
+                                src={link}
+                                width={684}
+                                height={590}
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                }}
+                                className='group-hover:scale-105 duration-500 rounded'
+                                loading="lazy"
+                            />
                     }
                     <div className='absolute bg-[#131E29]/60 top-0 bottom-0 left-0 right-0 group-hover:opacity-100 opacity-0 duration-500 rounded overflow-hidden'>
                         <div className='flex flex-col w-full h-full'>
