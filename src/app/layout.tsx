@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import LoadingState from "@/components/loading/LoadingState";
 import { MobileMenuContextProvider } from "@/components/context/MobileMenuContext";
 import MobileMenu from "@/components/navbar/MobileMenu";
@@ -13,16 +13,15 @@ import ContactModal from "@/components/modal-contact/ContactModal";
 import MobileMenuButton from "@/components/float-button/MobileMenuButton";
 import NavbarSecondary from "@/components/navbar/NavbarSecondary";
 
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const pathname = usePathname();
   const [isLoading, setIsLoading] = useState(true);
-  const [percent, setPercent] = useState(0);
-  const [percentNumber, setPercentNumber] = useState(0);
+  const [loadingState, setLoadingState] = useState({ percent: 0, percentNumber: 0 });
   const { scrollY } = useScroll();
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Chuyển đổi yTransform từ 0 đến 100% chiều cao container
-  const containerHeight = containerRef.current?.offsetHeight || 0;
+  // Tính toán yTransform
+  const containerHeight = useMemo(() => containerRef.current?.offsetHeight || 0, [scrollY]);
   const yTransform = useTransform(scrollY, [0, containerHeight], [0, containerHeight / 2]);
 
   useEffect(() => {
@@ -31,28 +30,21 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         setIsLoading(false);
       }, 3500);
       let prev = 0; // Initialize prev
+
       const interval = setInterval(() => {
         if (prev < 100) {
           prev++; // Increment prev by 1
-          // setPercent(prev)
+          // Điều chỉnh percent
+          if ([19, 29, 59, 89, 100].includes(prev)) {
+            setLoadingState(prev === 89 ? { percent: 99, percentNumber: 99 } : { percent: prev, percentNumber: prev });
+          }
         }
 
-        // If prev reaches 100, clear the interval
         if (prev === 100) {
           clearInterval(interval);
         }
-
-        // Optional: handle special cases
-        if (prev === 19 || prev === 29 || prev === 59 || prev === 89 || prev === 100) {
-          if (prev === 89) {
-            setPercentNumber(99);
-            setPercent(99)
-            return;
-          }
-          setPercentNumber(prev);
-          setPercent(prev)
-        }
       }, 20);
+
       return () => {
         clearTimeout(timer);
         clearInterval(interval);
@@ -69,41 +61,32 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
       <body className="relative">
         <MobileMenuContextProvider>
           <ContactContextProvider>
-            {!isLoading &&
-              <>
-                <MobileMenuButton />
-                <NavbarSecondary />
-              </>
+            {!isLoading && <>
+              <MobileMenuButton />
+              <NavbarSecondary />
+            </>}
 
-            }
-
-            <AnimatePresence
-              // mode="wait"
-              initial={false}
-            >
+            <AnimatePresence initial={false}>
               {isLoading ?
                 (<motion.div
-                  key={isLoading ? 'loading' : pathname}
+                  key="loading"
                   initial={{ opacity: 1, y: 1000 }}
                   animate={{ opacity: 1, y: 0 }}
-                  // exit={{ opacity: 1, y: -1000 }}
                   transition={{ duration: 1 }}
                 >
-                  <LoadingState percent={percent} percentNumber={percentNumber} />
+                  <LoadingState percent={loadingState.percent} percentNumber={loadingState.percentNumber} />
                 </motion.div>)
                 :
                 (<motion.div
-                  key={isLoading ? 'loading' : pathname}
+                  key={pathname}
                   initial={{ opacity: 0.7, y: 1000 }}
                   animate={{ opacity: 1, y: 0 }}
-                  // exit={{ opacity: 1, y: -1000 }}
                   transition={{
                     duration: 1.5,
                     type: "spring",
-                    stiffness: 100,
-                    damping: 20, // Điều chỉnh damping để thay đổi độ "ease-in"
-                    // Có thể sử dụng cubicBezier để tạo các hiệu ứng khác
-                    ease: [0.25, 0.1, 0.25, 1] // Ease-in effect
+                    stiffness: 80,
+                    damping: 30,
+                    ease: [0.25, 0.1, 0.25, 1],
                   }}
                   style={{ position: 'absolute', top: 0, left: 0, right: 0, y: yTransform }}
                 >

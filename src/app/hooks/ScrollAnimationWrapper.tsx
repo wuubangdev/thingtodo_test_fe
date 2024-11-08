@@ -31,10 +31,10 @@ const ScrollAnimationWrapper: React.FC<ScrollAnimationWrapperProps> = ({ childre
     return (
         <motion.div
             ref={elementRef}  // Gán ref vào phần tử
-            initial={{ opacity: 0, x: -80 }}  // Bắt đầu ẩn và dịch chuyển
+            initial={{ opacity: 1, x: -420 }}  // Bắt đầu ẩn và dịch chuyển
             animate={{
                 opacity: isInView ? 1 : 0,  // Khi cuộn vào, opacity = 1
-                x: isInView ? 0 : -80,       // Di chuyển về vị trí ban đầu
+                x: isInView ? 1 : -420,       // Di chuyển về vị trí ban đầu
             }}
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
