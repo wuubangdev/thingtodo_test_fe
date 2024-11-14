@@ -25,7 +25,7 @@ const HeroSection = () => {
         <>
             {/* Large Desktop */}
             <div
-                className='hidden xl:flex flex-col pt-6 w-full bg-primary h-[calc(100vh-132px)] mb-[60vh] relative'
+                className='hidden xl:flex flex-col pt-6 w-full bg-primary h-[calc(100vh-88px)] mb-[60vh] relative'
             >
                 <div className='absolute w-full h-[60vh] bg-primary bottom-[-60vh] left-0'></div>
                 <HeroText />
