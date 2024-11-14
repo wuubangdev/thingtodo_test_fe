@@ -4,7 +4,6 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   return (
     <div>
       {children}
-      <ButtonScrollToTop />
     </div>
   );
 }

@@ -28,11 +28,12 @@ const ButtonScrollToTop = () => {
     return (
         <>
             {isVisible &&
-                <div className='bottom-6'
+                <div
                     style={{
                         zIndex: 9999,
-                        position: 'sticky',
-                        marginTop: '-40px'
+                        position: 'fixed',
+                        bottom: 24,
+                        right: 24,
                     }}
                 >
                     <div className=' flex justify-end'>

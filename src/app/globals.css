@@ -8,6 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 1024x) {
+  html {
+    font-size: 1.2vw;
+  }
+}
+
 @media (min-width: 1920px) {
   html {
     font-size: 1.2vw;
@@ -16,13 +22,13 @@ html {
 
 @media (min-width: 2560px) {
   html {
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
 }
 
 @media (min-width: 3840px) {
   html {
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
 }
 

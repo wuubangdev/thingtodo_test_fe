@@ -8,32 +8,32 @@ import useMediaQuery from '@/app/hooks/useMediaQuery'
 // Dữ liệu chung cho cả mobile và desktop
 const projects = [
     {
-        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w1.mp4',
+        link: 'https://d1joa7262dhhfa.cloudfront.net/web/w1.webm',
         description: 'Promotion CGI ',
         title: <span>Yomilk</span>,
     },
     {
-        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w2.svg',
+        link: 'https://d1joa7262dhhfa.cloudfront.net/web/w2.webp',
         description: 'Rebranding Campaign',
         title: <span>Probi</span>,
     },
     {
-        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w3.gif',
+        link: 'https://d1joa7262dhhfa.cloudfront.net/web/w3.webm',
         description: 'iTVC: Blueberry Yoghurt',
         title: <span>Sữa chua Vinamilk</span>,
     },
     {
-        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w4.mp4',
+        link: 'https://d1joa7262dhhfa.cloudfront.net/web/w4.webm',
         description: "New '9 Nuts' TV commercial",
         title: <span>Sữa hạt Vinamilk</span>,
     },
     {
-        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w5.svg',
+        link: 'https://d1joa7262dhhfa.cloudfront.net/web/w5.webp',
         description: 'Design Activation Booth',
         title: <span>Green Farm</span>,
     },
     {
-        link: 'https://ttdasset.s3.ap-southeast-1.amazonaws.com/w6.mp4',
+        link: 'https://d1joa7262dhhfa.cloudfront.net/web/w6.webm',
         description: 'Production for Fresh Milk',
         title: <span>Vinamilk</span>,
     },

@@ -12,6 +12,7 @@ import { ContactContextProvider } from "@/components/context/ContactContext";
 import ContactModal from "@/components/modal-contact/ContactModal";
 import MobileMenuButton from "@/components/float-button/MobileMenuButton";
 import NavbarSecondary from "@/components/navbar/NavbarSecondary";
+import ButtonScrollToTop from "@/components/float-button/ButtonScrollToTop";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const pathname = usePathname();
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </AnimatePresence>
             <MobileMenu />
             <ContactModal />
+            <ButtonScrollToTop />
           </ContactContextProvider>
         </MobileMenuContextProvider>
       </body>

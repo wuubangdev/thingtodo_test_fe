@@ -18,7 +18,7 @@ const ProjectCard = (props: IProps) => {
         <Link href="#" className='w-full h-full relative scroll-in'>
             <div className='w-full h-full overflow-hidden flex flex-col relative'>
                 <div className='group w-full flex-1 overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
-                    {link.endsWith('.mp4')
+                    {link.endsWith('.webm')
                         ?
                         <video
                             autoPlay
@@ -31,38 +31,22 @@ const ProjectCard = (props: IProps) => {
                             }}
                             className='group-hover:scale-105 duration-500 rounded'
                         >
-                            <source src={link} type="video/mp4" />
+                            <source src={link} type="video/webm" />
                         </video>
                         :
-                        link.endsWith('.gif') ?
-                            <Image
-                                alt="project-image"
-                                src={link}
-                                width={684}
-                                height={590}
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                }}
-                                className='group-hover:scale-105 duration-500 rounded'
-                                loading="lazy"
-                                unoptimized
-                            />
-                            :
-                            <Image
-                                alt="project-image"
-                                src={link}
-                                width={684}
-                                height={590}
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                }}
-                                className='group-hover:scale-105 duration-500 rounded'
-                                loading="lazy"
-                            />
+                        <Image
+                            alt="project-image"
+                            src={link}
+                            width={684}
+                            height={590}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                            }}
+                            className='group-hover:scale-105 duration-500 rounded'
+                            loading="lazy"
+                        />
                     }
                     <div className='absolute bg-[#131E29]/60 top-0 bottom-0 left-0 right-0 group-hover:opacity-100 opacity-0 duration-500 rounded overflow-hidden'>
                         <div className='flex flex-col w-full h-full'>

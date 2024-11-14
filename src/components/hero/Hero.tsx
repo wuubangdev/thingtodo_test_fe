@@ -44,7 +44,7 @@ const Hero = () => {
                                 translateY: videoTranslateY
                             }}
                         >
-                            <source src="https://ttdasset.s3.ap-southeast-1.amazonaws.com/16x9.mp4" type="video/mp4" />
+                            <source src="https://d1joa7262dhhfa.cloudfront.net/web/1411_16x9.webm" type="video/webm" />
                         </motion.video>
                         <motion.div
                             className='absolute bottom-4 right-6 flex items-center rounded-[41px]

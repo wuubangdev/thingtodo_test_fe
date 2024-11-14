@@ -20,7 +20,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = ({ link, description, title })
 
     const renderContent = () => {
         // Kiểm tra loại tệp tin
-        if (link.endsWith('.svg') || link.endsWith('.gif') || link.endsWith('raw=true')) {
+        if (link.endsWith('.webp')) {
             return (
                 <Image
                     alt="project-image"

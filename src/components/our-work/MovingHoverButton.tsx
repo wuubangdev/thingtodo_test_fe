@@ -20,13 +20,13 @@ const MovingHoverButton = () => {
 
             // Giới hạn vị trí X và Y của ảnh sao cho không vượt quá biên của vùng chứa
             const limitedX = Math.min(
-                Math.max(x - imageRect.width / 2, 0), // Không vượt qua trái
-                rect.width - imageRect.width // Không vượt qua phải
+                Math.max(x - imageRect.width / 2, rect.width * 0.25), // Không vượt qua trái
+                rect.width - imageRect.width - rect.height * 0.25// Không vượt qua phải
             );
 
             const limitedY = Math.min(
-                Math.max(y - imageRect.height / 2, 0), // Không vượt qua trên
-                rect.height - imageRect.height // Không vượt qua dưới
+                Math.max(y - imageRect.height / 2, rect.height * 0.25), // Không vượt qua trên
+                rect.height - imageRect.height - rect.height * 0.25// Không vượt qua dưới
             );
 
             // Cập nhật vị trí của hình ảnh
@@ -63,7 +63,7 @@ const MovingHoverButton = () => {
             {isHovered && (
                 <motion.div
                     ref={imageRef}
-                    className="duration-300 ease-out absolute bg-primary p-1 rounded-full w-1/4"
+                    className="duration-300 ease-out absolute bg-primary p-1 rounded-full w-1/6"
                     style={{
                         height: 'auto',
                         pointerEvents: 'none',
@@ -86,13 +86,13 @@ const MovingHoverButton = () => {
                         opacity: { duration: 0.2 },
                         x: {
                             type: 'spring',
-                            stiffness: 500,
+                            stiffness: 200,
                             damping: 15,
                             restDelta: 0.01,
                         },
                         y: {
                             type: 'spring',
-                            stiffness: 500,
+                            stiffness: 200,
                             damping: 15,
                             restDelta: 0.01,
                         },
@@ -117,8 +117,8 @@ const MovingHoverButton = () => {
                             <Image
                                 alt='project-image'
                                 src={'/ourwork/icon_comming.svg'}
-                                width={42}
-                                height={42}
+                                width={62}
+                                height={62}
                                 style={{
                                     width: '100%',
                                     height: 'auto',

@@ -56,7 +56,7 @@ const Footer = () => {
                     <ScrollAnimationWrapper>
                         <div className='grid grid-cols-1 md:grid-cols-3'>
                             {/* <div className='subtitle-2-medium'>Visit us on <br />Behance</div> */}
-                            <div className='w-[90%] col-span-1 '>
+                            <div className='w-[60%] col-span-1 '>
                                 <Link href="/">
                                     <Image
                                         alt='footer-logo'
@@ -70,7 +70,7 @@ const Footer = () => {
                             </div>
                             <div className='subtitle-2-medium  md:hidden'>Connect us</div>
                             <div className='title-2-medium flex justify-end md:hidden '><a href="tel:+84 966 080 411">+84 966 080 411</a></div>
-                            <div className='md:flex flex-col justify-start col-span-2'>
+                            <div className='md:flex flex-col lg:grid grid-cols-2 justify-start col-span-2'>
                                 <div className='subtitle-2-medium '>Connect us</div>
                                 <div className='title-2-medium '><a href="tel:+84 966 080 411">+84 966 080 411</a></div>
                             </div>

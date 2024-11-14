@@ -7,7 +7,7 @@ import HeroText from './HeroText';
 const HeroSection = () => {
     const { scrollYProgress } = useScroll();
     const videoWidth = useTransform(scrollYProgress, [0, 0.05], ['50%', '100%']);
-    const videoRadius = useTransform(scrollYProgress, [0, 0.05], ['240px', '0px']);
+    const videoRadius = useTransform(scrollYProgress, [0, 0.05], ['280px', '0px']);
     const videoHeight = useTransform(scrollYProgress, [0, 0.05], ['100%', '200%']);
     const translateY = useTransform(scrollYProgress, [0, 0.05], ['0%', '70%']);
     const videoPadding = useTransform(scrollYProgress, [0, 0.05], [16, 0]);
@@ -25,7 +25,7 @@ const HeroSection = () => {
         <>
             {/* Large Desktop */}
             <div
-                className='hidden xl:flex flex-col pt-6 w-full bg-primary h-[calc(100vh-88px)] mb-[60vh] relative'
+                className='hidden xl:flex flex-col pt-6 w-full bg-primary h-[calc(100vh-132px)] mb-[60vh] relative'
             >
                 <div className='absolute w-full h-[60vh] bg-primary bottom-[-60vh] left-0'></div>
                 <HeroText />
@@ -47,7 +47,7 @@ const HeroSection = () => {
                                 translateY: translateY,
                             }}
                         >
-                            <source src="https://ttdasset.s3.ap-southeast-1.amazonaws.com/16x9.mp4" type="video/mp4" />
+                            <source src="https://d1joa7262dhhfa.cloudfront.net/web/1411_16x9.webm" type="video/webm" />
                         </motion.video>
                         <motion.div
                             className='absolute bottom-4 right-6 flex items-center rounded-[41px]

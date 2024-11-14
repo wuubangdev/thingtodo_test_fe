@@ -1,30 +1,50 @@
 'use client'
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useRef, useState } from 'react';
-const MovingImage = ({ image }: { image: string }) => {
+
+const MovingHoverImage = ({ image }: { image: string }) => {
     const hoverAreaRef = useRef<HTMLDivElement | null>(null);
-    const imageRef = useRef<HTMLImageElement | null>(null);
+    const imageRef = useRef<HTMLDivElement | null>(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
+
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (hoverAreaRef.current) {
+        if (hoverAreaRef.current && imageRef.current) {
             const rect = hoverAreaRef.current.getBoundingClientRect();
+            const imageRect = imageRef.current.getBoundingClientRect();
+
+            // Tính toán vị trí chuột trong vùng chứa
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            if (imageRef.current) {
-                setPosition({
-                    x: x - imageRef.current?.offsetWidth / 2,
-                    y: y - imageRef.current.offsetHeight / 2,
-                });
-            }
+
+            // Giới hạn vị trí X và Y của ảnh sao cho không vượt quá biên của vùng chứa
+            const limitedX = Math.min(
+                Math.max(x - imageRect.width / 2, 0), // Không vượt qua trái
+                rect.width - imageRect.width // Không vượt qua phải
+            );
+
+            const limitedY = Math.min(
+                Math.max(y - imageRect.height / 2, 0), // Không vượt qua trên
+                rect.height - imageRect.height // Không vượt qua dưới
+            );
+
+            // Cập nhật vị trí của hình ảnh
+            setPosition({
+                x: limitedX,
+                y: limitedY,
+            });
         }
     };
+
     const handleMouseEnter = () => {
         setIsHovered(true);
     };
+
     const handleMouseLeave = () => {
         setIsHovered(false);
     };
+
     return (
         <div
             ref={hoverAreaRef}
@@ -37,26 +57,23 @@ const MovingImage = ({ image }: { image: string }) => {
                 width: '100%',
                 height: '100%',
                 cursor: 'pointer',
+                overflow: 'hidden', // Đảm bảo nội dung không vượt qua vùng chứa
             }}
         >
             {isHovered && (
-                <motion.img
+                <motion.div
                     ref={imageRef}
-                    src={image}
-                    alt="Moving Image"
-                    className="duration-300 ease-out"
+                    className="duration-300 ease-out absolute w-[25vw]"
                     style={{
-                        position: 'absolute',
-                        width: '25vw',
                         height: 'auto',
                         pointerEvents: 'none',
                         zIndex: 10,
                     }}
                     initial={{
                         opacity: 0,
-                        scale: 0,
-                        x: position.y,
-                        y: position.y
+                        scale: 1,
+                        x: position.x,
+                        y: position.y,
                     }}
                     animate={{
                         opacity: 1,
@@ -80,10 +97,27 @@ const MovingImage = ({ image }: { image: string }) => {
                             restDelta: 0.01,
                         },
                     }}
-                />
+                >
+                    <div
+                        className='relative w-full'
+                    >
+                        <Image
+                            alt='project-image'
+                            src={image}
+                            width={400}
+                            height={280}
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }}
+                            // className='rotate-infinite'
+                            loading="lazy"
+                        />
+                    </div>
+                </motion.div>
             )}
         </div>
     );
 };
 
-export default MovingImage;
+export default MovingHoverImage;
