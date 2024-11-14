@@ -31,7 +31,7 @@ const ContactInfo = (props: IProps) => {
                 className='body-2-regular flex gap-[10px] items-center'
             >
                 <span
-                    className='body-2-medium flex items-center justify-center opacity-60 p-2 w-8 h-8 rounded-[20px] border-[0.5px] border-bg-fc'
+                    className='body-2-medium flex items-center justify-center opacity-60 p-2 w-8 h-8 rounded-full border-[0.5px] border-bg-fc'
                     style={{
                         backgroundColor: 'rgba(252, 252, 252, 0.07)'
                     }}
@@ -45,19 +45,16 @@ const ContactInfo = (props: IProps) => {
                 }}
                 onMouseLeave={() => setIsHover(false)}
             >
-                <h1 className='subtitle-1-medium'>{description}</h1>
+                <h1 className='subtitle-2-medium'>{description}</h1>
                 <div className={`relative duration-300 ${isHover ? "h-12 pt-2 pb-3 px-2 opacity-100" : "md:opacity-0 md:h-0 md:px-0 md:pt-0 md:pb-0 h-12 opacity-100 pt-2 pb-3 px-2"}`}>
                     <Link
                         href={link}
                         target='_blank'
                         className={
-                            `absolute body-2-medium text-center top-0 w-full h-12 flex items-center justify-center gap-0
-                                                            left-0 pt-2 px-2 pb-3 md:opacity-0 opacity-100 md:border-none border-[0.5px] border-bg-fc
+                            `absolute body-2-medium text-center top-0 w-full h-12 flex items-center justify-center gap-0 rounded-lg lg:rounded-2xl
+                                                            left-0 pt-1 px-2 pb-2 md:opacity-0 opacity-100 md:border-none border-[0.5px] border-bg-fc
                                                             duration-200 ${isHover ? "change-background md:opacity-100 " : "bg-[rgba(252, 252, 252, 0.07)]"}`
                         }
-                        style={{
-                            borderRadius: 8,
-                        }}
                     >
                         <span className={`${isHover ? "text-black -translate-x-2 font-semibold delayed-hover duration-300" : "text-white translate-x-1"} `}>{button}</span>
                         <svg

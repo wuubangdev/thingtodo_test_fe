@@ -89,7 +89,7 @@ const ContactModal = () => {
                                     {/* Header */}
                                     <div className='flex items-center justify-end gap-4'>
                                         <button
-                                            className='rounded-[20px] p-2 cursor-pointer w-[56px] h-10 md:w-auto md:h-auto flex flex-col justify-center items-center'
+                                            className='rounded-[20px] lg:rounded-full p-2 cursor-pointer w-[56px] h-10 md:w-auto md:h-auto flex flex-col justify-center items-center'
                                             style={{
                                                 backgroundColor: 'rgba(252, 252, 252, 0.07)',
                                             }}
