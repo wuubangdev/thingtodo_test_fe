@@ -26,7 +26,7 @@ const ContactInfo = (props: IProps) => {
         return () => clearTimeout(timer);
     }, [isHover]);
     return (
-        <div className='border-b-[1px] border-bg-fc/10 2xl:pb-6 pb-3 flex flex-col 2xl:gap-6 gap-3'>
+        <div className='border-b-[1px] border-bg-fc/10 flex flex-col 2xl:gap-6 gap-3'>
             <h3
                 className='body-2-regular flex gap-[10px] items-center'
             >
@@ -39,7 +39,7 @@ const ContactInfo = (props: IProps) => {
                 {title}
             </h3>
             <div
-                className={`flex flex-col ${isHover ? 'md:gap-6' : 'md:gap-0'}  gap-6 cursor-pointer w-full group duration-500 pb-3 2xl:pb-6`}
+                className={`flex flex-col ${isHover ? 'md:gap-6' : 'md:gap-0'}  gap-6 cursor-pointer w-full group duration-500 pb-6 2xl:pb-12`}
                 onMouseEnter={() => {
                     setIsHover(true)
                 }}
@@ -64,9 +64,6 @@ const ContactInfo = (props: IProps) => {
                             <path d="M12.3849 3.15981L12.3848 3.17702L1.60128 13.9609L2.61103 14.9706L12.893 4.68832L13.3806 5.20189L12.3689 6.21362L12.3263 14.3514L13.6768 14.3443L13.7354 3.15274L12.3849 3.15981Z" fill="#131E29" />
                         </svg>
                     </Link>
-                    <div
-                        className='absolute -bottom-14 -left-1 w-full h-14 lg:block hidden'
-                    ></div>
                 </div>
             </div>
         </div>

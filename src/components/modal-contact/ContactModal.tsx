@@ -117,7 +117,11 @@ const ContactModal = () => {
                                                 We&apos;re available from Monday <br />to Friday, 09:00 - 18:30
                                             </p>
                                             <div className='flex flex-col gap-10'>
-                                                {contacts && contacts.map((contact) => <ContactInfo key={contact.id} contact={contact} />)}
+                                                {contacts.map((contact, index) => (
+                                                    <div key={`contact-${index}`} className={`z-${20 + index * 20}`}>
+                                                        <ContactInfo contact={contact} />
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
                                     </div>
