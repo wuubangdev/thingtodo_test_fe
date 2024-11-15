@@ -584,6 +584,10 @@ body {
   animation-delay: 0.3s;
 }
 
+.change-background-desk {
+  animation: changeBackground 0.5s ease-in-out forwards;
+}
+
 .delayed-hover {
   transition-delay: 1s;
   animation-delay: 1s;

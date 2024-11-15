@@ -57,7 +57,7 @@ const HeroMobile = () => {
                                     </motion.video>
                                 </div>
                                 <div
-                                    className='absolute bottom-6 right-6 flex items-center rounded-[41px]
+                                    className='absolute bottom-6 right-6 flex items-center rounded-full
                                      p-4 gap-2 text-white bg-black-blur cursor-pointer border-3-regular z-50 group
                                      hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
                                     onClick={() => handleClick()}
