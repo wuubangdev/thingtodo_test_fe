@@ -6,7 +6,7 @@ import { IProjectCard } from './OurWork';
 
 const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
     const [isHovered, setIsHovered] = useState(false);
-    const { link, linkMobile, category, description, sector, title } = props;
+    const { link, linkMobile, description, title } = props;
 
     // Sử dụng useCallback để tránh re-render không cần thiết
     const handleOnClick = useCallback((e: React.MouseEvent) => {
