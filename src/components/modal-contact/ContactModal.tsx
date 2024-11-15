@@ -87,7 +87,7 @@ const ContactModal = () => {
                                     >
                                     </div>
                                     {/* Header */}
-                                    <div className='flex items-center justify-end gap-4'>
+                                    <div className='flex items-center justify-end gap-4 z-30'>
                                         <button
                                             className='rounded-[20px] lg:rounded-full p-2 cursor-pointer w-[56px] h-10 md:w-auto md:h-auto flex flex-col justify-center items-center'
                                             style={{
@@ -108,7 +108,7 @@ const ContactModal = () => {
                                         </button>
                                     </div>
                                     {/* Content */}
-                                    <div className='flex flex-col flex-1 justify-end md:px-3 px-2'>
+                                    <div className='sticky bottom-0 flex flex-col justify-end md:px-3 px-2 z-10'>
                                         <div className='flex flex-col gap-10 flex-1'>
                                             <h1 className='subtitle-1-regular'>
                                                 Let&apos;s collab!
