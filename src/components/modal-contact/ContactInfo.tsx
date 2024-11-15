@@ -65,7 +65,7 @@ const ContactInfo = (props: IProps) => {
                         </svg>
                     </Link>
                     <div
-                        className='absolute -bottom-12 w-full h-6 2xl:block hidden'
+                        className='absolute -bottom-14 -left-1 w-full h-14 lg:block hidden'
                     ></div>
                 </div>
             </div>
