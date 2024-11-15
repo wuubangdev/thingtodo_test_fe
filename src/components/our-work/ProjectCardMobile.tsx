@@ -2,16 +2,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useCallback } from 'react';
+import { IProjectCard } from './OurWork';
 
-export interface IProjectCard {
-    link: string;
-    linkMobile: string;
-    title: React.ReactElement;
-    description: string;
-}
-
-const ProjectCardMobile: React.FC<IProjectCard> = ({ link, linkMobile, description, title }) => {
+const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
     const [isHovered, setIsHovered] = useState(false);
+    const { link, linkMobile, category, description, sector, title } = props;
 
     // Sử dụng useCallback để tránh re-render không cần thiết
     const handleOnClick = useCallback((e: React.MouseEvent) => {

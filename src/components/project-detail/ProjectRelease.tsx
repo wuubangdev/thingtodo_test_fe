@@ -1,26 +1,33 @@
 import React from 'react'
-import ProjectCardMobile, { IProjectCard } from '../our-work/ProjectCardMobile'
+import ProjectCardMobile from '../our-work/ProjectCardMobile'
 import Link from 'next/link'
 import ProjectCard from '../our-work/ProjectCard'
+import { IProjectCard } from '../our-work/OurWork'
 
 const projects: IProjectCard[] = [
     {
         link: '/ourwork/media_content.svg',
         linkMobile: '/ourwork/media_content.svg',
         description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>
+        title: <span>Huggies</span>,
+        category: ['ALL'],
+        sector: ['ALL'],
     },
     {
         link: '/ourwork/media_content_2.svg',
         linkMobile: '/ourwork/media_content_2.svg',
         description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>
+        title: <span>Huggies</span>,
+        category: ['ALL'],
+        sector: ['ALL'],
     },
     {
         link: '/ourwork/media_content_3.svg',
         linkMobile: '/ourwork/media_content_3.svg',
         description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>
+        title: <span>Huggies</span>,
+        category: ['ALL'],
+        sector: ['ALL'],
     },
 ]
 
@@ -49,6 +56,8 @@ const ProjectRelease = () => {
                                 linkMobile={project.linkMobile}
                                 description={project.description}
                                 title={project.title}
+                                category={project.category}
+                                sector={project.sector}
                             />
                         ))}
                     </div>

@@ -2,18 +2,13 @@
 import React, { useEffect, useState } from 'react'
 import ProjectCard from '../our-work/ProjectCard'
 import ProjectCardMobile from '../our-work/ProjectCardMobile'
+import { IProjectCard } from '../our-work/OurWork'
 
-export interface IProjectCard {
-    link: string,
-    title: React.ReactElement,
-    description: string,
-    category: string[],
-    sector: string[],
-}
 
 const projects: IProjectCard[] = [
     {
         link: '/ourwork/media_content_6.svg',
+        linkMobile: '',
         description: 'Project details, 8-10 characters',
         title: <span>Huggies</span>,
         category: ['ALL'],
@@ -21,6 +16,7 @@ const projects: IProjectCard[] = [
     },
     {
         link: '/ourwork/media_content_2.svg',
+        linkMobile: '',
         description: 'Project details, 8-10 characters',
         title: <span>Huggies</span>,
         category: ['LOGO'],
@@ -28,6 +24,7 @@ const projects: IProjectCard[] = [
     },
     {
         link: '/ourwork/media_content.svg',
+        linkMobile: '',
         description: 'Project details, 8-10 characters',
         title: <span>Huggies</span>,
         category: ['LOGO'],
@@ -35,6 +32,7 @@ const projects: IProjectCard[] = [
     },
     {
         link: '/ourwork/media_content_4.svg',
+        linkMobile: '',
         description: 'Project details, 8-10 characters',
         title: <span>Huggies</span>,
         category: ['WEBSITE'],
@@ -42,6 +40,7 @@ const projects: IProjectCard[] = [
     },
     {
         link: '/ourwork/media_content_5.svg',
+        linkMobile: '',
         description: 'Project details, 8-10 characters',
         title: <span>Huggies</span>,
         category: ['WEBSITE'],
@@ -49,6 +48,7 @@ const projects: IProjectCard[] = [
     },
     {
         link: '/ourwork/media_content_6.svg',
+        linkMobile: '',
         description: 'Project details, 8-10 characters',
         title: <span>Huggies</span>,
         category: ['ALL'],
@@ -106,8 +106,11 @@ const ListProjectFilter = (props: IProps) => {
                     <ProjectCardMobile
                         key={index}
                         link={project.link}
+                        linkMobile=''
                         description={project.description}
                         title={project.title}
+                        category={project.category}
+                        sector={project.sector}
                     />
                 ))}
             </div>

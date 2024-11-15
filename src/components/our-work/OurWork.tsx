@@ -5,43 +5,62 @@ import ProjectCardMobile from './ProjectCardMobile'
 import ScrollAnimationWrapper from '@/app/hooks/ScrollAnimationWrapper'
 import useMediaQuery from '@/app/hooks/useMediaQuery'
 
-// Dữ liệu chung cho cả mobile và desktop
+export interface IProjectCard {
+    link: string;
+    linkMobile: string;
+    title: React.ReactElement;
+    description: string;
+    category: string[],
+    sector: string[],
+}
 const projects = [
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w1.webm',
         linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/w1.mp4',
         description: 'Promotion CGI ',
         title: <span>Yomilk</span>,
+        category: ['ALL'],
+        sector: ['ALL'],
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w2.webp',
         linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/web/w2.webp',
         description: 'Rebranding Campaign',
         title: <span>Probi</span>,
+        category: ['ALL'],
+        sector: ['ALL'],
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w3.webm',
         linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/w3.mp4',
         description: 'iTVC: Blueberry Yoghurt',
         title: <span>Sữa chua Vinamilk</span>,
+        category: ['ALL'],
+        sector: ['ALL'],
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w4.webm',
         linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/w4.mp4',
         description: "New '9 Nuts' TV commercial",
         title: <span>Sữa hạt Vinamilk</span>,
+        category: ['ALL'],
+        sector: ['ALL'],
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w5.webp',
         linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/web/w5.webp',
         description: 'Design Activation Booth',
         title: <span>Green Farm</span>,
+        category: ['ALL'],
+        sector: ['ALL'],
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w6.webm',
         linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/w6.mp4',
         description: 'Production for Fresh Milk',
         title: <span>Vinamilk</span>,
+        category: ['ALL'],
+        sector: ['ALL'],
     },
 ]
 
@@ -58,6 +77,8 @@ const OurWork = () => {
                         linkMobile={project.linkMobile}
                         description={project.description}
                         title={project.title}
+                        category={project.category}
+                        sector={project.sector}
                     />
                 ) : (
                     <ProjectCard project={project} isRelease={true} />
