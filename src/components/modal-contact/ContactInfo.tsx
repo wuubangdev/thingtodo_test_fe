@@ -69,7 +69,7 @@ const ContactInfo = (props: IProps) => {
                                 ?
                                 "text-black -translate-x-2 font-semibold duration-700"
                                 :
-                                "text-white translate-x-1"
+                                "text-white translate-x-1 duration-700"
                             }`}>{button}</span>
                         <svg
                             className={`${isHover && isMobile ? "opacity-100 delayed-hover scale-100" : isHover ? "opacity-100 scale-100" : 'scale-0 opacity-0'} duration-500 `}
