@@ -5,11 +5,12 @@ import React, { useState, useCallback } from 'react';
 
 export interface IProjectCard {
     link: string;
+    linkMobile: string;
     title: React.ReactElement;
     description: string;
 }
 
-const ProjectCardMobile: React.FC<IProjectCard> = ({ link, description, title }) => {
+const ProjectCardMobile: React.FC<IProjectCard> = ({ link, linkMobile, description, title }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     // Sử dụng useCallback để tránh re-render không cần thiết
@@ -24,7 +25,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = ({ link, description, title })
             return (
                 <Image
                     alt="project-image"
-                    src={link}
+                    src={linkMobile}
                     width={684}
                     height={590}
                     className="group-hover:scale-105 duration-500 rounded"
@@ -50,7 +51,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = ({ link, description, title })
                     objectFit: 'cover',
                 }}
             >
-                <source src={link} type="video/mp4" />
+                <source src={linkMobile} type="video/mp4" />
             </video>
         );
     };

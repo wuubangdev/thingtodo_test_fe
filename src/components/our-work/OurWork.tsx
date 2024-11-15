@@ -9,31 +9,37 @@ import useMediaQuery from '@/app/hooks/useMediaQuery'
 const projects = [
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w1.webm',
+        linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/w1.mp4',
         description: 'Promotion CGI ',
         title: <span>Yomilk</span>,
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w2.webp',
+        linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/web/w2.webp',
         description: 'Rebranding Campaign',
         title: <span>Probi</span>,
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w3.webm',
+        linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/w3.mp4',
         description: 'iTVC: Blueberry Yoghurt',
         title: <span>Sữa chua Vinamilk</span>,
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w4.webm',
+        linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/w4.mp4',
         description: "New '9 Nuts' TV commercial",
         title: <span>Sữa hạt Vinamilk</span>,
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w5.webp',
+        linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/web/w5.webp',
         description: 'Design Activation Booth',
         title: <span>Green Farm</span>,
     },
     {
         link: 'https://d1joa7262dhhfa.cloudfront.net/web/w6.webm',
+        linkMobile: 'https://d1joa7262dhhfa.cloudfront.net/w6.mp4',
         description: 'Production for Fresh Milk',
         title: <span>Vinamilk</span>,
     },
@@ -49,6 +55,7 @@ const OurWork = () => {
                 {isMobile ? (
                     <ProjectCardMobile
                         link={project.link}
+                        linkMobile={project.linkMobile}
                         description={project.description}
                         title={project.title}
                     />
@@ -78,7 +85,7 @@ const OurWork = () => {
             </ScrollAnimationWrapper>
 
             {/* Render các project cho cả desktop và mobile */}
-            <div className={isMobile ? 'grid-cols-1 grid' : 'md:grid-cols-2 hidden md:grid gap-x-6 gap-y-20'}>
+            <div className={isMobile ? 'grid-cols-1 grid gap-y-10' : 'md:grid-cols-2 hidden md:grid gap-x-6 gap-y-20'}>
                 {renderProjects}
             </div>
 

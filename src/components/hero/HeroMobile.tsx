@@ -53,7 +53,7 @@ const HeroMobile = () => {
                                             ease: 'easeIn'
                                         }}
                                     >
-                                        <source src="https://d1joa7262dhhfa.cloudfront.net/web/1411_9x16.webm" type="video/webm" />
+                                        <source src="https://d1joa7262dhhfa.cloudfront.net/web/1411_9x16.mp4" type="video/mp4" />
                                     </motion.video>
                                 </div>
                                 <div
