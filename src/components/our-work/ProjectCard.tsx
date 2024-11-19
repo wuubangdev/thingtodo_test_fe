@@ -15,7 +15,7 @@ interface IProps {
 const ProjectCard = (props: IProps) => {
     const { link, description, title } = props.project;
     return (
-        <Link href="#" className='w-full h-full relative scroll-in'>
+        <Link href="#" className='w-full h-full relative block scroll-in'>
             <div className='w-full h-full overflow-hidden flex flex-col relative'>
                 <div className='group w-full flex-1 overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
                     {link.endsWith('.webm')
@@ -80,11 +80,10 @@ const ProjectCard = (props: IProps) => {
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div className='flex gap-4 w-full absolute left-0 -bottom-10'>
-                <h2 className='body-1-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
-                <p className='body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
+            <div className='absolute flex gap-4 left-0 right-0 -bottom-10'>
+                <h2 className='block text-nowrap body-1-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
+                <p className='block text-nowrap body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
             </div>
         </Link>
     )
