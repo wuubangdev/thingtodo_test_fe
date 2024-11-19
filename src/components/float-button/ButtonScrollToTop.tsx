@@ -32,9 +32,8 @@ const ButtonScrollToTop = () => {
                     style={{
                         zIndex: 9999,
                         position: 'fixed',
-                        bottom: 24,
-                        right: 24,
                     }}
+                    className='md:bottom-6 md:right-6 bottom-4 right-4'
                 >
                     <div className=' flex justify-end'>
                         <div
