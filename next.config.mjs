@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'd1joa7262dhhfa.cloudfront.net',
+                hostname: 'ttdasset.s3.ap-southeast-1.amazonaws.com',
                 pathname: '/**',
             },
         ],

@@ -3,21 +3,14 @@ import ScrollAnimationWrapper from '@/app/hooks/ScrollAnimationWrapper';
 import Image from 'next/image';
 import React from 'react';
 
-export interface IClient {
-    id: string;
-    title: string;
-    logoDark: string;
-    logoLight: string;
-}
-
 const ClientCard = (props: IClient) => {
-    const { logoDark, logoLight } = props;
+    const { logo, logoHover } = props;
     return (
         <ScrollAnimationWrapper>
             <div className='w-full flex justify-center items-center relative group cursor-pointer scroll-in'>
                 <Image
                     alt='client-logo-frame'
-                    src={logoDark}
+                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${logo}`}
                     width={135}
                     height={80}
                     className='group-hover:opacity-0 duration-500 w-full h-auto 3xl:w-[80%]'
@@ -26,7 +19,7 @@ const ClientCard = (props: IClient) => {
                 <div className='absolute top-0 left-0 w-full h-full flex justify-center items-center group-hover:opacity-100 opacity-0 duration-500'>
                     <Image
                         alt='client-logo-frame'
-                        src={logoLight}
+                        src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${logoHover}`}
                         width={198}
                         height={117}
                         className='w-full h-auto 3xl:w-[80%]'

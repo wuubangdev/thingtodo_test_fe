@@ -8,17 +8,17 @@ import { IProjectCard } from './OurWork';
 
 interface IProps {
     isRelease?: boolean;
-    project: IProjectCard;
+    project: IProject;
 }
 
 
 const ProjectCard = (props: IProps) => {
-    const { link, description, title } = props.project;
+    const { mainMedia, title } = props.project;
     return (
         <Link href="#" className='w-full h-full relative block scroll-in'>
             <div className='w-full h-full overflow-hidden flex flex-col relative'>
                 <div className='group w-full flex-1 overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
-                    {link.endsWith('.webm')
+                    {mainMedia.endsWith('.webm') || mainMedia.endsWith('.mp4')
                         ?
                         <video
                             autoPlay
@@ -31,12 +31,13 @@ const ProjectCard = (props: IProps) => {
                             }}
                             className='group-hover:scale-105 duration-500 rounded'
                         >
-                            <source src={link} type="video/webm" />
+                            <source src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${mainMedia}`} type="video/webm" />
+                            <source src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${mainMedia}`} type="video/mp4" />
                         </video>
                         :
                         <Image
                             alt="project-image"
-                            src={link}
+                            src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${mainMedia}`}
                             width={684}
                             height={590}
                             style={{
@@ -83,7 +84,7 @@ const ProjectCard = (props: IProps) => {
             </div>
             <div className='absolute flex gap-4 left-0 right-0 -bottom-10'>
                 <h2 className='block text-nowrap body-1-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
-                <p className='block text-nowrap body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{description}</p>
+                <p className='block text-nowrap body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{title}</p>
             </div>
         </Link>
     )

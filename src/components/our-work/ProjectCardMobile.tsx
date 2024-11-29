@@ -2,11 +2,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useCallback } from 'react';
-import { IProjectCard } from './OurWork';
 
-const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
+interface IProps {
+    project: IProject
+}
+
+const ProjectCardMobile: React.FC<IProps> = (props) => {
     const [isHovered, setIsHovered] = useState(false);
-    const { link, linkMobile, description, title } = props;
+    const { project } = props;
 
     // Sử dụng useCallback để tránh re-render không cần thiết
     const handleOnClick = useCallback((e: React.MouseEvent) => {
@@ -16,11 +19,11 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
 
     const renderContent = () => {
         // Kiểm tra loại tệp tin
-        if (link.endsWith('.webp')) {
+        if (project.mainMedia.endsWith('.webp')) {
             return (
                 <Image
                     alt="project-image"
-                    src={linkMobile}
+                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${project.mainMedia}`}
                     width={684}
                     height={590}
                     className="group-hover:scale-105 duration-500 rounded"
@@ -47,7 +50,7 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                     objectFit: 'cover',
                 }}
             >
-                <source src={linkMobile} type="video/mp4" />
+                <source src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${project.mainMedia}`} type="video/mp4" />
             </video>
         );
     };
@@ -97,9 +100,9 @@ const ProjectCardMobile: React.FC<IProjectCard> = (props) => {
                     </div>
                 </div>
                 <div className="flex gap-4 w-full">
-                    <h2 className="body-2-medium text-black border-b-[1px] border-black gap-4 pb-2">{title}</h2>
+                    <h2 className="body-2-medium text-black border-b-[1px] border-black gap-4 pb-2">{project.title}</h2>
                     <p className="body-2-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2">
-                        {description}
+                        {project.title}
                     </p>
                 </div>
             </div>

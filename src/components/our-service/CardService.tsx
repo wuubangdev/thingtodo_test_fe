@@ -2,15 +2,6 @@ import Image from 'next/image';
 // import MovingImage from './MovingImage';
 import MovingHoverButton from './MovingHoverImage';
 
-export interface IService {
-    id: number;
-    title: string;
-    icon: string;
-    image: string;
-    description: string;
-    subService: string[];
-}
-
 interface IProps {
     service: IService;
     index: number;
@@ -41,7 +32,7 @@ const CardService = (props: IProps) => {
                             <h2 className='title-3-medium'>{service.title}</h2>
                             <Image
                                 alt='icon-service'
-                                src={service.icon}
+                                src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${service.icon}`}
                                 width={28}
                                 height={28}
                                 style={{
@@ -71,10 +62,8 @@ const CardService = (props: IProps) => {
                     <div className='absolute w-full h-full top-0 left-0 right-0'>
                         <div className='grid grid-cols-2 h-full'>
                             <div>
-                                {/* <MovingImage image={service.image} /> */}
-                                <MovingHoverButton image={service.image} />
+                                <MovingHoverButton image={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${service.serviceImage[0]}`} />
                             </div>
-                            {/* <div></div> */}
                         </div>
                     </div>
                 </div>
@@ -94,7 +83,7 @@ const CardService = (props: IProps) => {
                         <div>
                             <Image
                                 alt='icon-service'
-                                src={service.image}
+                                src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${service.serviceImage[0]}`}
                                 width={400}
                                 height={280}
                                 style={{

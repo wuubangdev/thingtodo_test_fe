@@ -1,4 +1,5 @@
 // import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
+import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
 import Feature from "@/components/feature/Feature";
 import Footer from "@/components/footer/Footer";
 import HeroSection from "@/components/hero-section/HeroSection";
@@ -91,6 +92,19 @@ export default async function Home() {
     url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/catalogs/1`,
     method: "GET",
   })
+  const projectRes = await sendRequest<IResultPaginate<IProject>>({
+    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects?page=1&size=10`,
+    method: "GET",
+  })
+  const servicesRes = await sendRequest<IResultPaginate<IService>>({
+    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/services?page=1&size=10`,
+    method: "GET",
+  })
+  const clientRes = await sendRequest<IResultPaginate<IClient>>({
+    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/valued?page=1&size=100`,
+    method: "GET",
+  })
+
 
   return (
     <>
@@ -102,9 +116,9 @@ export default async function Home() {
         <div className="xl:block hidden">
           <Feature />
         </div>
-        <OurWork />
+        <OurWork projects={projectRes.data?.result!} />
         {/* How can we help you */}
-        <OurService />
+        <OurService services={servicesRes.data?.result!} />
         <div
           className="py-20 flex flex-col gap-40"
           style={{
@@ -115,8 +129,8 @@ export default async function Home() {
             backgroundRepeat: 'no-repeat'
           }}
         >
-          <OurValued />
-          {/* <ClientFeedBack /> */}
+          <OurValued clients={clientRes.data?.result!} />
+          <ClientFeedBack />
         </div>
         <Footer catalog={catalogRes.data!} />
       </div>

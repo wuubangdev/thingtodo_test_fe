@@ -50,4 +50,47 @@ declare global {
         addressLink: string;
         phone: string;
     }
+    interface Product {
+        id: number;
+        title: string;
+        fileList: string[];
+    }
+
+    interface Client {
+        id: number;
+        clientName: string;
+        clientLogo: string;
+        clientCompany: string;
+        position: string;
+        feedback: string;
+    }
+
+    interface IProject {
+        id: number;
+        title: string;
+        overView: string;
+        year: number;
+        sector: string[];
+        category: string[];
+        customerSegments: number;
+        automationFlow: number;
+        increaseQuantity: number;
+        productList: Product[];
+        mainMedia: string;
+        clients: Client[];
+    }
+    interface IService {
+        id: number;
+        title: string;
+        icon: string;
+        description: string;
+        subService: string[];
+        serviceImage: string[];
+    }
+    interface IClient {
+        id: number;
+        name: string;
+        logo: string;
+        logoHover: string;
+    }
 }
