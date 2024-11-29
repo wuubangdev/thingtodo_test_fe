@@ -2,34 +2,14 @@
 'use client'
 import { useRef, useState } from 'react';
 import Slider, { Settings } from "react-slick";
-import FeedbackCard, { IFeedback } from './FeedbackCard';
+import FeedbackCard from './FeedbackCard';
 
-const feedbacks: IFeedback[] = [
-    {
-        id: '1',
-        title: 'Working with Thing to do has been a perfect experience. Their team is expertise and attention to detail have resulted in packaging that truly represents our brand.',
-        clientLogo: '/feedback/LogoVNM.svg',
-        client: {
-            clientAvatar: '/feedback/NDA_Avatar.svg',
-            clientName: 'Ngo Duc Anh',
-            clientDescription: 'Brand Manager',
-        }
-    },
-    {
-        id: '2',
-        title: 'The packaging design created by Thing to do perfectly captures our brand essence and has exceeded our expectations. It is the perfect match for our target audience.',
-        clientLogo: '/feedback/Logohuggues.svg',
-        client: {
-            clientAvatar: '/feedback/HAD_Avatar.svg',
-            clientName: 'Ha Anh Duc',
-            clientDescription: 'Marketing Director',
-        }
-    }
-];
+interface IProps {
+    clientFeedback: IClientFeedback[]
+}
 
-const ClientFeedBack: React.FC = () => {
+const ClientFeedBack: React.FC<IProps> = ({ clientFeedback }) => {
     const [currentPage, setCurrentPage] = useState<number>(1);
-    // const [fade, setFade] = useState<boolean>(true); // Thêm trạng thái fade
     const sliderRef = useRef<Slider | null>(null);
 
     const settings: Settings = {
@@ -40,10 +20,8 @@ const ClientFeedBack: React.FC = () => {
         speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // beforeChange: () => setFade(false), // Khi bắt đầu chuyển đổi, đặt fade về false
         afterChange: (current: number) => {
             setCurrentPage(current + 1);
-            // setFade(true); // Khi kết thúc chuyển đổi, đặt fade về true
         },
     };
 
@@ -57,7 +35,7 @@ const ClientFeedBack: React.FC = () => {
                     <div className='text-white body-2-bold'>
                         {currentPage <= 9 ? `0${currentPage}` : currentPage}
                         <span className='body-2-regular text-[#80868B]'>
-                            /{feedbacks.length <= 9 ? `0${feedbacks.length}` : feedbacks.length}
+                            /{clientFeedback.length <= 9 ? `0${clientFeedback.length}` : clientFeedback.length}
                         </span>
                     </div>
                 </div>
@@ -140,16 +118,11 @@ const ClientFeedBack: React.FC = () => {
             </div>
             <div>
                 <Slider ref={sliderRef} {...settings} className='flex duration-500'>
-                    {feedbacks.map((feedback) => (
-                        // <div key={feedback.id} className={`slide ${fade ? 'fade-in' : 'fade-out'}`}>
+                    {clientFeedback.map((feedback) => (
                         <FeedbackCard
                             key={feedback.id}
-                            id={feedback.id}
-                            title={feedback.title}
-                            clientLogo={feedback.clientLogo}
-                            client={feedback.client}
+                            clientFeedback={feedback}
                         />
-                        // </div>
                     ))}
                 </Slider>
             </div>

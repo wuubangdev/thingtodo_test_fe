@@ -93,4 +93,13 @@ declare global {
         logo: string;
         logoHover: string;
     }
+    interface IClientFeedback {
+        id: number;
+        clientName: string;
+        clientLogo: string;
+        clientCompany: string;
+        position: string;
+        feedback: string;
+    }
+
 }

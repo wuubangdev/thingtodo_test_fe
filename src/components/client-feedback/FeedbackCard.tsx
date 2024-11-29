@@ -1,37 +1,31 @@
 import Image from 'next/image';
 import React from 'react';
 
-export interface IFeedback {
-    id: string;
-    title: string;
-    clientLogo: string;
-    client: {
-        clientAvatar: string;
-        clientName: string;
-        clientDescription: string;
-    }
+export interface IProps {
+    clientFeedback: IClientFeedback;
 }
 
-const FeedbackCard = (props: IFeedback) => {
-    const { title, clientLogo, client } = props;
+const FeedbackCard = (props: IProps) => {
+    const { clientFeedback } = props;
     return (
         <>
             {/* Desktop */}
-            <div className='hidden md:flex flex-col mx-5  text-[#FCFCFC] h-[80vh]'>
-                <div className='flex flex-1 flex-col pb-6 border-b-[1px] border-[#666D74]'>
-                    <div className='lg:pr-[352px] pr-0 flex-1'>
+            <div className='hidden md:flex flex-col mx-5  text-[#FCFCFC] h-[90vh]'>
+                <div className='flex flex-1 flex-col pb-6'>
+                    <div className='xl:pr-[352px] pr-0 flex-1'>
                         <p className='title-1-regular'>
-                            &quot;{title}
-                            &quot;
+                            {/* &quot; */}
+                            {clientFeedback.feedback}
+                            {/* &quot; */}
                         </p>
                     </div>
-                    <div className='w-full flex justify-between items-center'>
+                    <div className='w-full flex justify-between items-center mt-6 border-b-[1px] border-[#666D74]'>
                         {/* Client logo */}
                         <div className='flex items-center gap-8'>
                             <div>
                                 <Image
                                     alt='feedback-logo'
-                                    src={clientLogo}
+                                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientLogo}`}
                                     width={143}
                                     height={60}
                                     className='h-full w-auto'
@@ -57,7 +51,7 @@ const FeedbackCard = (props: IFeedback) => {
                             <div className='h-full'>
                                 <Image
                                     alt='feedback-logo'
-                                    src={client.clientAvatar}
+                                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientCompany}`}
                                     width={48}
                                     height={48}
                                     className='w-auto h-full rounded-[40px] scale-120'
@@ -65,8 +59,8 @@ const FeedbackCard = (props: IFeedback) => {
                                 />
                             </div>
                             <div className='flex flex-col gap-1'>
-                                <h2 className='body-2-semibold'>{client.clientName}</h2>
-                                <p className='body-3-light'>{client.clientDescription}</p>
+                                <h2 className='body-2-semibold'>{clientFeedback.clientName}</h2>
+                                <p className='body-3-light'>{clientFeedback.position}</p>
                             </div>
                         </div>
                     </div>
@@ -77,7 +71,7 @@ const FeedbackCard = (props: IFeedback) => {
                 <div className='flex flex-col gap-28 pb-6 border-b-[1px] border-[#666D74] border-dashed'>
                     <div className=''>
                         <p className='subtitle-1-regular'>
-                            &quot;{title}
+                            &quot;{clientFeedback.feedback}
                             &quot;
                         </p>
                     </div>
@@ -86,7 +80,7 @@ const FeedbackCard = (props: IFeedback) => {
                         <div>
                             <Image
                                 alt='feedback-logo'
-                                src={clientLogo}
+                                src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientLogo}`}
                                 width={143}
                                 height={60}
                                 className='h-full w-auto'
@@ -98,7 +92,7 @@ const FeedbackCard = (props: IFeedback) => {
                             <div className='h-full'>
                                 <Image
                                     alt='feedback-logo'
-                                    src={client.clientAvatar}
+                                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientCompany}`}
                                     width={48}
                                     height={48}
                                     className='w-auto h-full rounded-[40px] scale-120'
@@ -106,8 +100,8 @@ const FeedbackCard = (props: IFeedback) => {
                                 />
                             </div>
                             <div className='flex flex-col gap-1'>
-                                <h2 className='body-2-semibold'>{client.clientName}</h2>
-                                <p className='body-3-light'>{client.clientDescription}</p>
+                                <h2 className='body-2-semibold'>{clientFeedback.clientName}</h2>
+                                <p className='body-3-light'>{clientFeedback.position}</p>
                             </div>
                         </div>
                     </div>

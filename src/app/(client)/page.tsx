@@ -104,6 +104,10 @@ export default async function Home() {
     url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/valued?page=1&size=100`,
     method: "GET",
   })
+  const feedBackRes = await sendRequest<IResultPaginate<IClientFeedback>>({
+    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/clients?page=1&size=100`,
+    method: "GET",
+  })
 
 
   return (
@@ -130,7 +134,7 @@ export default async function Home() {
           }}
         >
           <OurValued clients={clientRes.data?.result!} />
-          <ClientFeedBack />
+          <ClientFeedBack clientFeedback={feedBackRes.data?.result!} />
         </div>
         <Footer catalog={catalogRes.data!} />
       </div>
