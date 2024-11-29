@@ -3,13 +3,13 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import HeroTextTab from './HeroTextTab';
 import Feature from '../feature/Feature';
 
-const HeroTablet = () => {
+const HeroTablet = (props: { hero: IHero }) => {
+    const { hero } = props;
     const { scrollYProgress } = useScroll();
     const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '0px']);
     const videoHeight = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['40%', '100%', '100%', '100%']);
     const videoWidth = useTransform(scrollYProgress, [0, 0.03, 0.08, 0.2], ['100%', '100%', '100%', '100%']);
     const radius = useTransform(scrollYProgress, [0, 0.03], ['40px', '0px']);
-
 
     const handleClick = () => {
         // Mở link trong tab mới
@@ -20,7 +20,7 @@ const HeroTablet = () => {
             className='lg:hidden md:block hidden xl:hidden pt-6 w-full relative bg-primary'
             style={{ height: 'auto' }}
         >
-            <HeroTextTab />
+            <HeroTextTab hero={hero} />
             <div className='w-full'>
                 <div className='relative w-full h-[200vh]'>
                     <div className='text-white sticky top-0 h-[100vh] flex flex-col'>
@@ -46,7 +46,7 @@ const HeroTablet = () => {
                                             ease: 'easeIn'
                                         }}
                                     >
-                                        <source src="https://d1joa7262dhhfa.cloudfront.net/web/1411_9x16.webm" type="video/webm" />
+                                        <source src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${hero.videoTablet}`} type="video/webm" />
                                     </motion.video>
                                 </div>
                                 <div

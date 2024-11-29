@@ -2,7 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 const list: string[] = ['Create', 'Make', 'Build', 'Design',]
 
-const HeroText = () => {
+const HeroText = (props: { hero: IHero }) => {
+    const { hero } = props;
     return (
         <>
             <div className='py-3'>
@@ -45,7 +46,7 @@ const HeroText = () => {
                             {/* (SCROLL) */}
                         </div>
                         <div className='text-custom-content mt-24 font-medium sticky bottom-12'>
-                            Provide innovative, high-quality <br /> visual advertising solutions with <br /> quick times.
+                            {hero.description}
                         </div>
                     </div>
                 </div>

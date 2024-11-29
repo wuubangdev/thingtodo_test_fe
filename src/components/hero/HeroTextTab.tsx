@@ -2,7 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 const list: string[] = ['Create', 'Make', 'Build', 'Design',]
 
-const HeroTextTab = () => {
+const HeroTextTab = (props: { hero: IHero }) => {
+    const { hero } = props;
     return (
         <>
             <div className='py-3'>
@@ -42,7 +43,7 @@ const HeroTextTab = () => {
                     </div>
                     <div className=' text-white flex-1 mt-7 mb-8'>
                         <div className='text-custom-content font-medium'>
-                            Provide innovative, high-quality <br /> visual advertising solutions with <br /> quick times.
+                            {hero.description}
                         </div>
                     </div>
                 </div>

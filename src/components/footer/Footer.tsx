@@ -5,7 +5,8 @@ import React from 'react'
 import { useContactContext } from '../context/ContactContext'
 import ScrollAnimationWrapper from '@/app/hooks/ScrollAnimationWrapper'
 
-const Footer = () => {
+const Footer = (props: { catalog: ICatalog }) => {
+    const { catalog } = props;
     const { setIsContactOpen } = useContactContext();
     return (
         <>
@@ -69,10 +70,10 @@ const Footer = () => {
                                 </Link>
                             </div>
                             <div className='subtitle-2-medium  md:hidden'>Connect us</div>
-                            <div className='title-2-medium flex justify-end md:hidden '><a href="tel:+84 966 080 411">+84 966 080 411</a></div>
+                            <div className='title-2-medium flex justify-end md:hidden '><a href={`tel:${catalog.phone}`}>{catalog.phone}</a></div>
                             <div className='md:flex flex-col lg:grid grid-cols-2 justify-start col-span-2'>
                                 <div className='subtitle-2-medium '>Connect us</div>
-                                <div className='title-2-medium '><a href="tel:+84 966 080 411">+84 966 080 411</a></div>
+                                <div className='title-2-medium '><a href={`tel:${catalog.phone}`}>{catalog.phone}</a></div>
                             </div>
                         </div>
                     </ScrollAnimationWrapper>
@@ -96,22 +97,22 @@ const Footer = () => {
                                     <div className='flex flex-col gap-3 col-span-3'>
                                         <h5 className='body-2-semibold'>Office</h5>
                                         <p className='body-3-regular'>
-                                            <a href="https://maps.app.goo.gl/decEqRHp8WZq5zqp8"
+                                            <a href={`${catalog.addressLink}`}
                                                 target='_blank'>
-                                                3rd floor, TSA Building, 169/1 Vo Thi Sau Street, Vo Thi Sau Ward, District 3, HCMC
+                                                {catalog.address}
                                             </a>
                                         </p>
                                     </div>
                                     <div className='flex flex-col gap-3 col-span-2'>
                                         <h5 className='body-2-semibold'>Email</h5>
-                                        <a href='mailto:contact@thingtodo.vn' className='body-3-regular'>contact@thingtodo.vn</a>
+                                        <a href={`mailto:${catalog.addressLink}`} className='body-3-regular'>contact@thingtodo.vn</a>
                                     </div>
                                     <div className='flex flex-col gap-3 col-span-2'>
                                         <h5 className='body-2-semibold'>Social</h5>
                                         <ul className='text-custom-xl'>
-                                            <li className='body-3-regular'><a target='_blank' href="https://www.instagram.com/thingtodo.agency/">Instagram</a></li>
-                                            <li className='body-3-regular'><a target='_blank' href="https://www.facebook.com/profile.php?id=61562599131360">Facebook</a></li>
-                                            <li className='body-3-regular'><a target='_blank' href="https://www.tiktok.com/@tutudzui">Tiktok</a></li>
+                                            <li className='body-3-regular'><a target='_blank' href={`${catalog.instagramLink}`}>Instagram</a></li>
+                                            <li className='body-3-regular'><a target='_blank' href={`${catalog.facebookLink}`}>Facebook</a></li>
+                                            <li className='body-3-regular'><a target='_blank' href={`${catalog.facebookLink}`}>Tiktok</a></li>
                                         </ul>
                                     </div>
                                 </div>

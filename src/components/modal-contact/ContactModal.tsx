@@ -1,37 +1,56 @@
 'use client'
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useContactContext } from '../context/ContactContext';
 import ContactInfo, { IContactModal } from './ContactInfo';
+import { sendRequest } from '@/utils/api';
+import { features } from 'process';
 
 
-const contacts: IContactModal[] = [
-    {
-        id: '1',
-        title: 'Phone number/Zalo',
-        description: <span>+84 966 080 411</span>,
-        link: 'tel:+84 966 080 411',
-        button: 'Call us'
-    },
-    {
-        id: '2',
-        title: 'Email',
-        description: <span>contact <br />@thingtodo.vn</span>,
-        link: 'mailto:contact@thingtodo.vn',
-        button: 'Send mail'
-    },
-]
+
 
 const ContactModal = () => {
     const { isContactOpen, setIsContactOpen } = useContactContext();
+    const [catalog, setCatalog] = useState<ICatalog>();
 
+    const contacts: IContactModal[] = [
+        {
+            id: '1',
+            title: 'Phone number/Zalo',
+            description: <span>{catalog?.phone}</span>,
+            link: `tel:${catalog?.phone}`,
+            button: 'Call us'
+        },
+        {
+            id: '2',
+            title: 'Email',
+            description: <span>contact <br />@thingtodo.vn</span>,
+            link: 'mailto:contact@thingtodo.vn',
+            button: 'Send mail'
+        },
+    ]
+
+
+    const fetchData = async () => {
+        const catalogRes = await sendRequest<IBackendRes<ICatalog>>({
+            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/catalogs/1`,
+            method: "GET",
+        })
+        if (catalogRes.statusCode === 200) {
+            setCatalog(catalogRes.data);
+        }
+    }
     useEffect(() => {
         if (isContactOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'auto';
         }
-    }, [isContactOpen])
+    }, [isContactOpen]);
+
+    useEffect(() => {
+        fetchData();
+    }, [])
 
     return (
         <>

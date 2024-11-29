@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 
-const HeroTextMobile = () => {
+const HeroTextMobile = (props: { hero: IHero }) => {
+    const { hero } = props;
     return (
         <>
             <div className='pt-12 pb-8'>
@@ -21,7 +22,7 @@ const HeroTextMobile = () => {
                     </div>
                     <div className='flex justify-between text-[#FDC6B7] mt-10'>
                         <p className='body-2-medium '>
-                            Provide innovative, high-quality visual advertising solutions with quick times.
+                            {hero.description}
                         </p>
                     </div>
                 </div>

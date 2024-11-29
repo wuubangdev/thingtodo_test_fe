@@ -5,7 +5,8 @@ import Feature from '../feature/Feature';
 import HeroMobile from './HeroMobile';
 import HeroTablet from './HeroTablet';
 
-const Hero = () => {
+const Hero = (props: { hero: IHero }) => {
+    const { hero } = props;
     const { scrollYProgress } = useScroll();
     const videoWidth = useTransform(scrollYProgress, [0, 0.09], ['50%', '100%']);
     const videoRadius = useTransform(scrollYProgress, [0, 0.04], ['120px', '0px']);
@@ -25,7 +26,7 @@ const Hero = () => {
                 className='hidden xl:hidden lg:block sm:hidden pt-6 pb-[43px] w-full relative bg-primary'
                 style={{ height: 'auto' }}
             >
-                <HeroText />
+                <HeroText hero={hero} />
                 <div className='flex flex-col justify-end items-end sticky bottom-0'
                 >
                     {/* Desktop */}
@@ -44,7 +45,7 @@ const Hero = () => {
                                 translateY: videoTranslateY
                             }}
                         >
-                            <source src="https://d1joa7262dhhfa.cloudfront.net/web/1411_16x9.webm" type="video/webm" />
+                            <source src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${hero.videoDesktop}`} type="video/webm" />
                         </motion.video>
                         <motion.div
                             className='absolute bottom-4 right-6 flex items-center rounded-[41px]
@@ -75,9 +76,9 @@ const Hero = () => {
                 </div>
             </div>
             {/* Tablet */}
-            <HeroTablet />
+            <HeroTablet hero={hero} />
             {/* Mobile */}
-            <HeroMobile />
+            <HeroMobile hero={hero} />
         </>
     );
 }

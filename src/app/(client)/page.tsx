@@ -7,6 +7,7 @@ import Navbar from "@/components/navbar/Navbar";
 import OurService from "@/components/our-service/OurService";
 import OurValued from "@/components/our-valued/OurValued";
 import OurWork from "@/components/our-work/OurWork";
+import { sendRequest } from "@/utils/api";
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -80,14 +81,24 @@ const idJsonObject = {
   }
 }
 
-export default function Home() {
+export default async function Home() {
+
+  const heroRes = await sendRequest<IBackendRes<IHero>>({
+    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/heros/1`,
+    method: "GET",
+  })
+  const catalogRes = await sendRequest<IBackendRes<ICatalog>>({
+    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/catalogs/1`,
+    method: "GET",
+  })
+
   return (
     <>
       <div>
         <Navbar isPrimary={true} />
         {/* Hero section */}
-        <Hero />
-        <HeroSection />
+        <Hero hero={heroRes.data!} />
+        <HeroSection hero={heroRes.data!} />
         <div className="xl:block hidden">
           <Feature />
         </div>
@@ -107,7 +118,7 @@ export default function Home() {
           <OurValued />
           {/* <ClientFeedBack /> */}
         </div>
-        <Footer />
+        <Footer catalog={catalogRes.data!} />
       </div>
       <Script
         id="json-ld-organization"

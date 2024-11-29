@@ -4,7 +4,8 @@ import Feature from '../feature/Feature';
 import HeroText from './HeroText';
 // import { useEffect, useRef, useState } from 'react';
 
-const HeroSection = () => {
+const HeroSection = (props: { hero: IHero }) => {
+    const { hero } = props;
     const { scrollYProgress } = useScroll();
     const videoWidth = useTransform(scrollYProgress, [0, 0.05], ['50%', '100%']);
     const videoRadius = useTransform(scrollYProgress, [0, 0.05], ['280px', '0px']);

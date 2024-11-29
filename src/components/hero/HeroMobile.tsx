@@ -4,7 +4,8 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import Feature from '../feature/Feature';
 
 
-const HeroMobile = () => {
+const HeroMobile = (props: { hero: IHero }) => {
+    const { hero } = props;
     const { scrollYProgress } = useScroll();
     const containerRef = useRef<HTMLDivElement>(null);
     const padding = useTransform(scrollYProgress, [0, 0.02], ['16px', '0px']);
@@ -26,7 +27,7 @@ const HeroMobile = () => {
             ref={containerRef}
             className='flex flex-col md:hidden bg-primary relative gap-4'
         >
-            <HeroTextMobile />
+            <HeroTextMobile hero={hero} />
             <div className='w-full'>
                 <div className='relative w-full h-[200vh]'>
                     <div className='text-white sticky top-0 h-[100vh] flex flex-col'>
@@ -54,7 +55,7 @@ const HeroMobile = () => {
                                             ease: 'easeIn'
                                         }}
                                     >
-                                        <source src="https://d1joa7262dhhfa.cloudfront.net/web/1411_9x16.mp4" type="video/mp4" />
+                                        <source src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${hero.videoMobile}`} type="video/webm" />
                                     </motion.video>
                                 </div>
                                 <div
