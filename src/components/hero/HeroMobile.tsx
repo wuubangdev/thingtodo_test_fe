@@ -38,7 +38,7 @@ const HeroMobile = (props: { hero: IHero }) => {
                                     <motion.video
                                         autoPlay
                                         playsInline
-                                        webkit-playsinline
+                                        webkit-playsinline="true"
                                         muted
                                         loop
                                         style={{

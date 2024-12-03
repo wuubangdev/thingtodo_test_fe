@@ -95,12 +95,13 @@ declare global {
         logoHover: string;
     }
     interface IClientFeedback {
-        id: number;
-        clientName: string;
-        clientLogo: string;
-        clientCompany: string;
-        position: string;
-        feedback: string;
+        id: number,
+        clientName: string,
+        clientCompanyLogo: string,
+        clientAvatar: string,
+        clientCompany: string,
+        position: string,
+        feedback: string,
     }
 
 }

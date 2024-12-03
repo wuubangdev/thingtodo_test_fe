@@ -25,7 +25,7 @@ const FeedbackCard = (props: IProps) => {
                             <div>
                                 <Image
                                     alt='feedback-logo'
-                                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientLogo}`}
+                                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientCompanyLogo}`}
                                     width={143}
                                     height={60}
                                     className='h-full w-auto'
@@ -48,16 +48,14 @@ const FeedbackCard = (props: IProps) => {
                         </div>
                         {/* Client info */}
                         <div className='flex gap-6'>
-                            <div className='h-full'>
-                                <Image
-                                    alt='feedback-logo'
-                                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientCompany}`}
-                                    width={48}
-                                    height={48}
-                                    className='w-auto h-full rounded-[40px] scale-120'
-                                    loading="lazy"
-                                />
-                            </div>
+                            <Image
+                                alt='feedback-logo'
+                                src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientAvatar}`}
+                                width={48}
+                                height={48}
+                                className='w-auto h-full rounded-full'
+                                loading="lazy"
+                            />
                             <div className='flex flex-col gap-1'>
                                 <h2 className='body-2-semibold'>{clientFeedback.clientName}</h2>
                                 <p className='body-3-light'>{clientFeedback.position}</p>
@@ -80,7 +78,7 @@ const FeedbackCard = (props: IProps) => {
                         <div>
                             <Image
                                 alt='feedback-logo'
-                                src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientLogo}`}
+                                src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientCompanyLogo}`}
                                 width={143}
                                 height={60}
                                 className='h-full w-auto'
@@ -92,7 +90,7 @@ const FeedbackCard = (props: IProps) => {
                             <div className='h-full'>
                                 <Image
                                     alt='feedback-logo'
-                                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientCompany}`}
+                                    src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${clientFeedback.clientAvatar}`}
                                     width={48}
                                     height={48}
                                     className='w-auto h-full rounded-[40px] scale-120'

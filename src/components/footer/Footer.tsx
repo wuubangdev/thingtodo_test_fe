@@ -105,7 +105,7 @@ const Footer = (props: { catalog: ICatalog }) => {
                                     </div>
                                     <div className='flex flex-col gap-3 col-span-2'>
                                         <h5 className='body-2-semibold'>Email</h5>
-                                        <a href={`mailto:${catalog.addressLink}`} className='body-3-regular'>{catalog.gmail}</a>
+                                        <a href={`mailto:${catalog.gmail}`} className='body-3-regular'>{catalog.gmail}</a>
                                     </div>
                                     <div className='flex flex-col gap-3 col-span-2'>
                                         <h5 className='body-2-semibold'>Social</h5>

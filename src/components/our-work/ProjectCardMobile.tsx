@@ -40,7 +40,7 @@ const ProjectCardMobile: React.FC<IProps> = (props) => {
             <video
                 autoPlay
                 playsInline
-                webkit-playsinline
+                webkit-playsinline="true"
                 muted
                 loop
                 className="group-hover:scale-105 duration-500 rounded"
