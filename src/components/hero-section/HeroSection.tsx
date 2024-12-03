@@ -2,7 +2,6 @@
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Feature from '../feature/Feature';
 import HeroText from './HeroText';
-// import { useEffect, useRef, useState } from 'react';
 
 const HeroSection = (props: { hero: IHero }) => {
     const { hero } = props;
@@ -18,13 +17,11 @@ const HeroSection = (props: { hero: IHero }) => {
     const featureHeight = useTransform(scrollYProgress, [0, 0.05], [43, 0]);
 
     const handleClick = () => {
-        // Mở link trong tab mới
         window.open('https://fb.watch/vyHzMqrSNM/', '_blank');
     };
 
     return (
         <>
-            {/* Large Desktop */}
             <div
                 className='hidden xl:flex flex-col pt-6 w-full bg-primary h-[calc(100vh-88px)] mb-[60vh] relative'
             >
@@ -48,7 +45,7 @@ const HeroSection = (props: { hero: IHero }) => {
                                 translateY: translateY,
                             }}
                         >
-                            <source src="https://d1joa7262dhhfa.cloudfront.net/web/1411_16x9.webm" type="video/webm" />
+                            <source src={`${process.env.NEXT_PUBLIC_RESOURCE_URL}/${hero.videoDesktop}`} type="video/webm" />
                         </motion.video>
                         <motion.div
                             className='absolute bottom-4 right-6 flex items-center rounded-[41px]
@@ -56,7 +53,6 @@ const HeroSection = (props: { hero: IHero }) => {
                              hover:bg-black w-14 hover:w-[220px] duration-500 transition-all overflow-hidden'
                             style={{
                                 translateY: translateYSearch,
-                                // background: 'black',
                             }}
                             onClick={() => handleClick()}
                         >
@@ -70,7 +66,6 @@ const HeroSection = (props: { hero: IHero }) => {
                     </div>
                     <div className='flex flex-col justify-between text-bg-fc'>
                         <div className='body-2-regular'>
-                            {/* (SCROLL) */}
                         </div>
                         <div className='hero-description'>
                             Provide innovative, high-quality <br /> visual advertising solutions with <br /> quick times.

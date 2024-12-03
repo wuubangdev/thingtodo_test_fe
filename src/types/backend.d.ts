@@ -49,6 +49,7 @@ declare global {
         address: string;
         addressLink: string;
         phone: string;
+        gmail: string;
     }
     interface Product {
         id: number;

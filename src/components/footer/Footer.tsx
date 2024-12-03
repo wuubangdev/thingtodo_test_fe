@@ -1,9 +1,9 @@
 'use client'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { useContactContext } from '../context/ContactContext'
-import ScrollAnimationWrapper from '@/app/hooks/ScrollAnimationWrapper'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useContactContext } from '../context/ContactContext';
+import ScrollAnimationWrapper from '@/app/hooks/ScrollAnimationWrapper';
 
 const Footer = (props: { catalog: ICatalog }) => {
     const { catalog } = props;
@@ -105,7 +105,7 @@ const Footer = (props: { catalog: ICatalog }) => {
                                     </div>
                                     <div className='flex flex-col gap-3 col-span-2'>
                                         <h5 className='body-2-semibold'>Email</h5>
-                                        <a href={`mailto:${catalog.addressLink}`} className='body-3-regular'>contact@thingtodo.vn</a>
+                                        <a href={`mailto:${catalog.addressLink}`} className='body-3-regular'>{catalog.gmail}</a>
                                     </div>
                                     <div className='flex flex-col gap-3 col-span-2'>
                                         <h5 className='body-2-semibold'>Social</h5>
