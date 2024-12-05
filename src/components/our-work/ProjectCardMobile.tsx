@@ -56,7 +56,7 @@ const ProjectCardMobile: React.FC<IProps> = (props) => {
     };
 
     return (
-        <Link href="#" onClick={handleOnClick}>
+        <Link href={`/projects/${project.id}`} onClick={handleOnClick}>
             <div className="w-full scroll-in">
                 <div
                     className={`mb-2 group w-full overflow-hidden relative cursor-pointer ${isHovered ? 'bg-black/30' : ''}`}

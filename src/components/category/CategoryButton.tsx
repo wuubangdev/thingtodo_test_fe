@@ -20,16 +20,6 @@ const CategoryButton = (props: ICategoryButton) => {
             <span className='body-3-medium'>
                 {title}
             </span>
-            {variant === 'Packaging' &&
-                <Image
-                    alt='icon'
-                    src={'/project/star.svg'}
-                    width={16}
-                    height={16}
-                    style={{ height: '80%', width: 'auto' }}
-                    loading="lazy"
-                />
-            }
         </div>
     )
 }

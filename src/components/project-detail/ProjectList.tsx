@@ -1,117 +1,67 @@
-import Image from 'next/image';
 import React from 'react'
+import RenderMedia from '../reuse/RenderMedia';
 
-interface IProjectData {
-    image1: string;
-    image2: string;
-    image3: string;
-    image4: string;
-    image5: string;
-    descript1: string;
-    descript2: string;
+interface IProps {
+    projectData: Product[];
 }
-const projectData: IProjectData = {
-    image1: '/project/media_content1.svg',
-    image2: '/project/media_content2.svg',
-    image3: '/project/media_content3.svg',
-    image4: '/project/media_content4.svg',
-    image5: '/project/media_content5.svg',
-    descript1: 'Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.',
-    descript2: 'Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.'
-}
-const ProjectList = () => {
-    return (
-        <>
-            {projectData &&
-                <div className='border-b-[1px] border-dashed border-[#666D74] pb-10 flex flex-col md:gap-16 gap-6'>
-                    {/* Product 1 & 2 */}
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                        <div>
-                            <Image
-                                alt='project-image-item'
-                                className='rounded'
-                                src={projectData.image2}
-                                width={444}
-                                height={600}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto'
-                                }}
-                                loading="lazy"
-                            />
-                        </div>
-                        <div>
-                            <Image
-                                alt='project-image-item'
-                                className='rounded'
-                                src={projectData.image3}
-                                width={444}
-                                height={600}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto'
-                                }}
-                                loading="lazy"
-                            />
-                        </div>
+
+
+const renderProductList: React.FC<Product> = ({ id, title, fileList }) => {
+    if (fileList.length === 1) {
+        return (
+            <div key={id} className='flex flex-col gap-6'>
+                <div className='grid grid-cols-1'>
+                    <RenderMedia media={fileList[0]} />
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
+                    <div><p className='body-2-regular'>{title}</p></div>
+                    <div></div>
+                </div>
+            </div>
+        )
+    }
+    if (fileList.length === 2) {
+        return (
+            <div key={id} className='flex flex-col gap-6'>
+                <div className='grid grid-cols-2 justify-end'>
+                    {fileList && fileList.map((item, index) => (
+                        <RenderMedia key={index} media={item} />
+                    ))}
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
+                    <div><p className='body-2-regular'>{title}</p></div>
+                    <div></div>
+                </div>
+            </div>
+        )
+    }
+    if (fileList.length === 3) {
+        return (
+            <div key={id} className='flex flex-col gap-6'>
+                <div className='grid grid-cols-1 gap-6'>
+                    <div className='grid grid-cols-2 gap-6'>
+                        <RenderMedia media={fileList[0]} />
+                        <RenderMedia media={fileList[1]} />
                     </div>
-                    {/* Product 3 */}
-                    <div className='w-full md:w-[80%]'>
-                        <Image
-                            alt='project-image-item'
-                            className='rounded'
-                            src={projectData.image4}
-                            width={658}
-                            height={600}
-                            style={{
-                                width: '100%',
-                                height: 'auto'
-                            }}
-                            loading="lazy"
-                        />
-                    </div>
-                    {/* Description 1 */}
-                    <div className='grid grid-cols-1 md:grid-cols-2'>
-                        <div><p className='body-2-regular'>{projectData.descript1}</p></div>
-                        <div></div>
-                    </div>
-                    {/* Product 4 */}
-                    <div className='flex justify-end w-full md:w-[80%]'>
-                        <Image
-                            alt='project-image-item'
-                            className='rounded'
-                            src={projectData.image5}
-                            width={658}
-                            height={600}
-                            style={{
-                                width: '100%',
-                                height: 'auto'
-                            }}
-                            loading="lazy"
-                        />
-                    </div>
-                    {/* Product 5 */}
-                    <div className='flex justify-end'>
-                        <Image
-                            alt='project-image-item'
-                            className='rounded'
-                            src={projectData.image1}
-                            width={658}
-                            height={600}
-                            style={{
-                                width: '100%',
-                                height: 'auto'
-                            }}
-                            loading="lazy"
-                        />
-                    </div>
-                    {/* Description 2 */}
-                    <div className='grid grid-cols-1 md:grid-cols-2'>
-                        <div><p className='body-2-regular'>{projectData.descript1}</p></div>
-                        <div></div>
+                    <div className='grid grid-cols-1'>
+                        <RenderMedia media={fileList[2]} />
                     </div>
                 </div>
-            }
+                <div className='grid grid-cols-1 md:grid-cols-2'>
+                    <div><p className='body-2-regular'>{title}</p></div>
+                    <div></div>
+                </div>
+            </div>
+        )
+    }
+}
+
+const ProjectList: React.FC<IProps> = ({ projectData }) => {
+    return (
+        <>
+            {projectData && projectData.map(item => (
+                renderProductList({ title: item.title, fileList: item.fileList, id: item.id })
+            ))}
         </>
     )
 }

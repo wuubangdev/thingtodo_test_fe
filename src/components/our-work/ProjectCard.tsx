@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import MovingHoverButton from './MovingHoverButton';
-import { IProjectCard } from './OurWork';
 
 //Category: All, Brand strategy, Logo, Brand identity, Packaging, Website, Print Design, Motion, Campaign,
 //Sectors: All, Other, Beauty, Industrial, Construction, Communication, Education
@@ -13,9 +12,9 @@ interface IProps {
 
 
 const ProjectCard = (props: IProps) => {
-    const { mainMedia, title, subTitle } = props.project;
+    const { mainMedia, title, subTitle, id } = props.project;
     return (
-        <Link href="#" className='w-full h-full relative block scroll-in'>
+        <Link href={`/projects/${id}`} className='w-full h-full relative block scroll-in'>
             <div className='w-full h-full overflow-hidden flex flex-col relative'>
                 <div className='group w-full flex-1 overflow-hidden relative cursor-pointer lg:mb-2 rounded'>
                     {mainMedia.endsWith('.webm') || mainMedia.endsWith('.mp4')

@@ -2,36 +2,12 @@ import React from 'react'
 import ProjectCardMobile from '../our-work/ProjectCardMobile'
 import Link from 'next/link'
 import ProjectCard from '../our-work/ProjectCard'
-import { IProjectCard } from '../our-work/OurWork'
 
-const projects: IProjectCard[] = [
-    {
-        link: '/ourwork/media_content.svg',
-        linkMobile: '/ourwork/media_content.svg',
-        description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>,
-        category: ['ALL'],
-        sector: ['ALL'],
-    },
-    {
-        link: '/ourwork/media_content_2.svg',
-        linkMobile: '/ourwork/media_content_2.svg',
-        description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>,
-        category: ['ALL'],
-        sector: ['ALL'],
-    },
-    {
-        link: '/ourwork/media_content_3.svg',
-        linkMobile: '/ourwork/media_content_3.svg',
-        description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>,
-        category: ['ALL'],
-        sector: ['ALL'],
-    },
-]
+interface IProps {
+    projects: IProject[];
+}
 
-const ProjectRelease = () => {
+const ProjectRelease: React.FC<IProps> = ({ projects }) => {
     return (
         <div className='pt-12 pb-40 relative'>
             <div className='px-6 flex flex-col gap-6'>
@@ -52,12 +28,7 @@ const ProjectRelease = () => {
                         {projects && projects.map((project, index) => (
                             <ProjectCardMobile
                                 key={index}
-                                link={project.link}
-                                linkMobile={project.linkMobile}
-                                description={project.description}
-                                title={project.title}
-                                category={project.category}
-                                sector={project.sector}
+                                project={project}
                             />
                         ))}
                     </div>

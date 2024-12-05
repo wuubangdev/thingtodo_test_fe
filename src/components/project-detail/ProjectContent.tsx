@@ -2,7 +2,11 @@ import Link from 'next/link';
 import React from 'react'
 import ProjectList from './ProjectList';
 
-const ProjectContent = () => {
+interface IProps {
+    project: IProject;
+}
+
+const ProjectContent: React.FC<IProps> = ({ project }) => {
     return (
         <div className='flex flex-col gap-16 pt-10'>
             {/* Back */}
@@ -24,8 +28,8 @@ const ProjectContent = () => {
                 </Link>
             </div>
             <div className='flex flex-col gap-20'>
-                <h1 className='title-1-medium md:block hidden'>Project details from 8 to 10 characters</h1>
-                <ProjectList />
+                <h1 className='title-1-medium md:block hidden'>{project.subTitle}</h1>
+                <ProjectList projectData={project.productList} />
             </div>
         </div>
     )
