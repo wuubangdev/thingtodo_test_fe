@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
 import ProjectContent from '@/components/project-detail/ProjectContent';
 import ProjectInfo from '@/components/project-detail/ProjectInfo';
 import ProjectRelease from '@/components/project-detail/ProjectRelease';
 import { Metadata } from 'next';
 import { sendRequest } from '@/utils/api';
+import ModalNextProject from '@/components/reuse/ModalNextProject';
 
 export const metadata: Metadata = {
     title: "Project Detail",
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
+
     const resProject = await sendRequest<IBackendRes<IProject>>({
         url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects/${params.slug}`,
         method: "GET",
@@ -25,6 +26,16 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
             sort: 'id,desc',
         },
     })
+    const resAllProjects = await sendRequest<IResultPaginate<IProject>>({
+        url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects`,
+        method: "GET",
+        queryParams: {
+            page: 1,
+            size: 100,
+            sort: 'id,desc',
+        },
+    })
+
     return (
         <div
             className='bg-white'
@@ -43,44 +54,9 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
                         <div className='md:col-span-1'>
                         </div>
                         <div className='md:col-span-2 flex md:gap-6 flex-col md:flex-row md:items-end'>
-                            <div>
-                                <div className='hidden md:flex'>
-                                    <Link
-                                        href={'/projects'}
-                                        className='py-3 items-center gap-4 title-2-medium hidden md:flex text-underline'
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24"
-                                            strokeWidth="1.5"
-                                            stroke="currentColor"
-                                            className="size-12 rotate-180"
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-                                        </svg>
-                                        <span className='pb-1'>Next Project</span>
-                                    </Link>
-                                </div>
-                                <Link
-                                    href={'/projects'}
-                                    className='py-3 flex items-center flex-nowrap gap-4 md:hidden subtitle-1-medium text-underline'
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24"
-                                        strokeWidth="1.5"
-                                        stroke="currentColor"
-                                        className="size-12 rotate-180"
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-                                    </svg>
-                                    <div>
-                                        Next Project
-                                    </div>
-                                </Link>
-                            </div>
+                            <ModalNextProject project={resProject.data!} projects={resAllProjects.data?.result!} />
                             <div className='subtitle-3-regular md:py-3 pl-16 md:pl-0 text-[#666D74]'>
-                                Project details, 8-10 <br />characters
+                                {resProject.data?.subTitle}
                             </div>
                         </div>
                     </div>
