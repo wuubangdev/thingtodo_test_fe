@@ -80,7 +80,6 @@ const ClientFeedBack: React.FC<IProps> = ({ clientFeedback }) => {
                             </svg>
                         </div>
                     </div>
-
                     <div
                         className='flex items-center group h-full cursor-pointer relative'
                         onClick={() => sliderRef.current?.slickNext()}

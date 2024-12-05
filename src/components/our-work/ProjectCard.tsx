@@ -13,7 +13,7 @@ interface IProps {
 
 
 const ProjectCard = (props: IProps) => {
-    const { mainMedia, title } = props.project;
+    const { mainMedia, title, subTitle } = props.project;
     return (
         <Link href="#" className='w-full h-full relative block scroll-in'>
             <div className='w-full h-full overflow-hidden flex flex-col relative'>
@@ -84,7 +84,7 @@ const ProjectCard = (props: IProps) => {
             </div>
             <div className='absolute flex gap-4 left-0 right-0 -bottom-10'>
                 <h2 className='block text-nowrap body-1-medium text-black border-b-[1px] border-black gap-4 pb-2'>{title}</h2>
-                <p className='block text-nowrap body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{title}</p>
+                <p className='block text-nowrap body-1-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2'>{subTitle}</p>
             </div>
         </Link>
     )

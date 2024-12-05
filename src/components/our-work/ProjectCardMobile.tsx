@@ -102,7 +102,7 @@ const ProjectCardMobile: React.FC<IProps> = (props) => {
                 <div className="flex gap-4 w-full">
                     <h2 className="body-2-medium text-black border-b-[1px] border-black gap-4 pb-2">{project.title}</h2>
                     <p className="body-2-regular text-black-blur border-b-[1px] border-black-blur flex-1 pb-2">
-                        {project.title}
+                        {project.subTitle}
                     </p>
                 </div>
             </div>

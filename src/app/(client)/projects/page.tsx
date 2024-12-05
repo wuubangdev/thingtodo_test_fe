@@ -1,4 +1,5 @@
 import ContentProject from '@/components/projects/ContentProject';
+import { sendRequest } from '@/utils/api';
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -8,7 +9,13 @@ export const metadata: Metadata = {
 };
 
 
-const ProjectPage = () => {
+const ProjectPage = async () => {
+
+    const projectRes = await sendRequest<IResultPaginate<IProject>>({
+        url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects?page=1&size=10`,
+        method: "GET",
+    })
+
     return (
         <div className='md:pt-20 pt-7 pb-28 flex flex-col md:gap-28 gap-10 bg-white'>
             <div className='px-5 flex justify-between items-end'>
@@ -16,9 +23,8 @@ const ProjectPage = () => {
                 <h1 className='title-2-medium md:hidden block text-black'>Selected projects <br /> 2022-2024</h1>
                 <h3 className='md:block hidden body-2-regular'>(SCROLL)</h3>
             </div>
-            <ContentProject />
+            <ContentProject projects={projectRes.data?.result!} />
         </div>
-        // <Loading />
     )
 }
 

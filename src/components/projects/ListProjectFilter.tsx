@@ -2,68 +2,19 @@
 import React, { useEffect, useState } from 'react'
 import ProjectCard from '../our-work/ProjectCard'
 import ProjectCardMobile from '../our-work/ProjectCardMobile'
-import { IProjectCard } from '../our-work/OurWork'
 
-
-const projects: IProjectCard[] = [
-    {
-        link: '/ourwork/media_content_6.svg',
-        linkMobile: '',
-        description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>,
-        category: ['ALL'],
-        sector: ['ALL'],
-    },
-    {
-        link: '/ourwork/media_content_2.svg',
-        linkMobile: '',
-        description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>,
-        category: ['LOGO'],
-        sector: ['BEAUTY'],
-    },
-    {
-        link: '/ourwork/media_content.svg',
-        linkMobile: '',
-        description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>,
-        category: ['LOGO'],
-        sector: ['EDUCATION'],
-    },
-    {
-        link: '/ourwork/media_content_4.svg',
-        linkMobile: '',
-        description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>,
-        category: ['WEBSITE'],
-        sector: ['EDUCATION'],
-    },
-    {
-        link: '/ourwork/media_content_5.svg',
-        linkMobile: '',
-        description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>,
-        category: ['WEBSITE'],
-        sector: ['ALL'],
-    },
-    {
-        link: '/ourwork/media_content_6.svg',
-        linkMobile: '',
-        description: 'Project details, 8-10 characters',
-        title: <span>Huggies</span>,
-        category: ['ALL'],
-        sector: ['EDUCATION'],
-    },
-]
 
 interface IProps {
     categoryValue: string,
     sectorValue: string,
+    projects: IProject[];
 }
 
 const ListProjectFilter = (props: IProps) => {
-    const { categoryValue, sectorValue } = props;
-    const [listProject, setListProject] = useState<IProjectCard[] | null>(null);
+    const { categoryValue, sectorValue, projects } = props;
+    const [listProject, setListProject] = useState<IProject[] | null>(null);
+
+    console.log(projects);
 
     const FilterProjects = (categoryValue: string, sectorValue: string) => {
         if (categoryValue === 'ALL' && sectorValue === 'ALL') {
@@ -105,12 +56,7 @@ const ListProjectFilter = (props: IProps) => {
                 {listProject && listProject.map((project, index) => (
                     <ProjectCardMobile
                         key={index}
-                        link={project.link}
-                        linkMobile=''
-                        description={project.description}
-                        title={project.title}
-                        category={project.category}
-                        sector={project.sector}
+                        project={project}
                     />
                 ))}
             </div>

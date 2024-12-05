@@ -57,73 +57,77 @@ const ModalFilterProject = (props: IProps) => {
     }
 
     const handleMouseEnterCate = () => {
-        setIsShowCategorySelect(true); // Đặt trạng thái hover là true
+        setIsShowCategorySelect(true);
     };
 
     const handleMouseLeaveCate = () => {
-        setIsShowCategorySelect(false); // Đặt trạng thái hover là false
+        setIsShowCategorySelect(false);
     };
 
     const handleMouseEnterSector = () => {
-        setIsShowSectorSelect(true); // Đặt trạng thái hover là true
+        setIsShowSectorSelect(true);
     };
 
     const handleMouseLeaveSector = () => {
-        setIsShowSectorSelect(false); // Đặt trạng thái hover là false
+        setIsShowSectorSelect(false);
     };
 
     return (
         <div className='px-6 sticky top-0 w-full bg-bg-fc z-20'>
-            <div className='relative grid grid-cols-1 md:grid-cols-2 md:gap-6 gap-2 border-b-[1px] border-solid border-[#b8b8b8]'>
+            <div className='relative grid grid-cols-1 md:grid-cols-2 md:gap-6 gap-2 border-b-[1px] border-solid border-[#b8b8b8] pb-12'>
                 {/* Desktop */}
-                <div
-                    className='hidden gap-2 md:flex cursor-pointer select-none pt-2 pb-4 '
-                    onClick={() => setIsShowCategorySelect(!isShowCategorySelect)}
-                    onMouseEnter={handleMouseEnterCate}
-                    onMouseLeave={handleMouseLeaveCate}
-                >
-                    <div className='subtitle-2-regular'>
-                        Category
-                    </div>
-                    <div className='subtitle-2-medium'>
-                        ({getCategogyTitle(categoryValue)})
-                    </div>
+                <div className='relative'>
                     <div
-                        className={`subtitle-2-medium flex items-center mt-1 ${isShowCategorySelect ? 'rotate-180' : ''} duration-500`}
+                        className='hidden gap-2 md:flex cursor-pointer select-none pt-2 pb-4 absolute'
+                        onClick={() => setIsShowCategorySelect(!isShowCategorySelect)}
+                        onMouseEnter={handleMouseEnterCate}
+                        onMouseLeave={handleMouseLeaveCate}
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </div>
-                    {isShowCategorySelect &&
-                        <div className='absolute top-12 flex flex-col items-start z-10 subtitle-3-regular'
-                            style={{
-                                borderBottomRightRadius: 4,
-                                borderBottomLeftRadius: 4,
-                                overflow: 'hidden',
-                                boxShadow: "0px 5px 5.3px 0px #0000000D",
-                                minWidth: "280px",
-                            }}
-                        >
-                            {categories && categories.map((item, index) => (
-                                <button
-                                    key={index}
-                                    className='px-2 pb-4 pt-2 border-b-[0.5px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer'
-                                    onClick={() => setCategoryValue(item.value)}
-                                    style={{
-                                        background: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(/ourwork/noise.png)",
-                                        backgroundPosition: 'center',
-                                        backgroundColor: 'rgba(252, 252, 252, 0.6)',
-                                        backdropFilter: 'blur(20px)',
-                                        boxShadow: "0px 5px 5.3px 0px #0000000D",
-                                        fontWeight: categoryValue === item.value ? "500" : "400",
-                                    }}
-                                >
-                                    {item.title}
-                                </button>
-                            ))}
+                        <div className='subtitle-2-regular'>
+                            Category
                         </div>
-                    }
+                        <div className='subtitle-2-medium'>
+                            ({getCategogyTitle(categoryValue)})
+                        </div>
+                        <div
+                            className={`subtitle-2-medium flex items-center mt-1 ${isShowCategorySelect ? 'rotate-180' : ''} duration-500`}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        {isShowCategorySelect &&
+                            <div className='absolute top-12 flex flex-col items-start z-10 subtitle-3-regular'
+                                style={{
+                                    borderBottomRightRadius: 4,
+                                    borderBottomLeftRadius: 4,
+                                    overflow: 'hidden',
+                                    boxShadow: "0px 5px 5.3px 0px #0000000D",
+                                    left: 0,
+                                    right: 0,
+                                    minWidth: 280,
+                                }}
+                            >
+                                {categories && categories.map((item, index) => (
+                                    <button
+                                        key={index}
+                                        className='px-2 pb-4 pt-2 border-b-[0.5px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer'
+                                        onClick={() => setCategoryValue(item.value)}
+                                        style={{
+                                            background: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(/ourwork/noise.png)",
+                                            backgroundPosition: 'center',
+                                            backgroundColor: 'rgba(252, 252, 252, 0.6)',
+                                            backdropFilter: 'blur(20px)',
+                                            boxShadow: "0px 5px 5.3px 0px #0000000D",
+                                            fontWeight: categoryValue === item.value ? "500" : "400",
+                                        }}
+                                    >
+                                        {item.title}
+                                    </button>
+                                ))}
+                            </div>
+                        }
+                    </div>
                 </div>
                 {/* Mobile */}
                 <div
@@ -162,54 +166,58 @@ const ModalFilterProject = (props: IProps) => {
                     }
                 </div>
                 {/* Desktop */}
-                <div
-                    className='hidden md:flex gap-2 select-none pt-2 pb-4 cursor-pointer'
-                    onClick={() => setIsShowSectorSelect(!isShowSectorSelect)}
-                    onMouseEnter={handleMouseEnterSector}
-                    onMouseLeave={handleMouseLeaveSector}
-                >
-                    <div className='subtitle-2-regular'>
-                        Sectors
-                    </div>
-                    <div className='subtitle-2-medium'>
-                        ({getSectorTitle(sectorValue)})
-                    </div>
+                <div className='relative'>
                     <div
-                        className={`subtitle-2-medium flex items-center mt-1 ${isShowSectorSelect ? 'rotate-180' : ''} duration-500`}
+                        className='hidden md:flex gap-2 select-none pt-2 pb-4 cursor-pointer absolute'
+                        onClick={() => setIsShowSectorSelect(!isShowSectorSelect)}
+                        onMouseEnter={handleMouseEnterSector}
+                        onMouseLeave={handleMouseLeaveSector}
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </div>
-                    {isShowSectorSelect &&
-                        <div className='absolute top-12 flex flex-col items-start z-10 subtitle-3-regular'
-                            style={{
-                                borderBottomRightRadius: 4,
-                                borderBottomLeftRadius: 4,
-                                overflow: 'hidden',
-                                boxShadow: "0px 5px 5.3px 0px #0000000D",
-                                minWidth: "280px",
-                            }}
-                        >
-                            {sectors && sectors.map((item, index) => (
-                                <button
-                                    key={index}
-                                    className='px-2 pb-2 pt-4 border-b-[1px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer'
-                                    onClick={() => setSectorValue(item.value)}
-                                    style={{
-                                        background: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(/ourwork/noise.png)",
-                                        backgroundPosition: 'center',
-                                        backgroundColor: 'rgba(252, 252, 252, 0.6)',
-                                        backdropFilter: 'blur(20px)',
-                                        boxShadow: "0px 5px 5.3px 0px #0000000D",
-                                        fontWeight: sectorValue === item.value ? "500" : "400",
-                                    }}
-                                >
-                                    {item.title}
-                                </button>
-                            ))}
+                        <div className='subtitle-2-regular'>
+                            Sectors
                         </div>
-                    }
+                        <div className='subtitle-2-medium'>
+                            ({getSectorTitle(sectorValue)})
+                        </div>
+                        <div
+                            className={`subtitle-2-medium flex items-center mt-1 ${isShowSectorSelect ? 'rotate-180' : ''} duration-500`}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        {isShowSectorSelect &&
+                            <div className='absolute top-12 flex flex-col items-start z-10 subtitle-3-regular'
+                                style={{
+                                    borderBottomRightRadius: 4,
+                                    borderBottomLeftRadius: 4,
+                                    overflow: 'hidden',
+                                    boxShadow: "0px 5px 5.3px 0px #0000000D",
+                                    left: 0,
+                                    right: 0,
+                                    minWidth: 280,
+                                }}
+                            >
+                                {sectors && sectors.map((item, index) => (
+                                    <button
+                                        key={index}
+                                        className='px-2 pb-2 pt-4 border-b-[1px] border-solid w-full text-left border-[#b8b8b8] cursor-pointer'
+                                        onClick={() => setSectorValue(item.value)}
+                                        style={{
+                                            background: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(/ourwork/noise.png)",
+                                            backgroundPosition: 'center',
+                                            backgroundColor: 'rgba(252, 252, 252, 0.6)',
+                                            backdropFilter: 'blur(20px)',
+                                            boxShadow: "0px 5px 5.3px 0px #0000000D",
+                                            fontWeight: sectorValue === item.value ? "500" : "400",
+                                        }}
+                                    >
+                                        {item.title}
+                                    </button>
+                                ))}
+                            </div>
+                        }
+                    </div>
                 </div>
                 {/* Mobile */}
                 <div

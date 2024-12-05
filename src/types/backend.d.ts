@@ -69,6 +69,7 @@ declare global {
     interface IProject {
         id: number;
         title: string;
+        subTitle: string;
         overView: string;
         year: number;
         sector: string[];
