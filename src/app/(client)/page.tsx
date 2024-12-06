@@ -87,26 +87,44 @@ export default async function Home() {
   const heroRes = await sendRequest<IBackendRes<IHero>>({
     url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/heros/1`,
     method: "GET",
+    nextOption: {
+      next: { tags: ['heroes'] }
+    }
   })
   const catalogRes = await sendRequest<IBackendRes<ICatalog>>({
     url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/catalogs/1`,
     method: "GET",
+    nextOption: {
+      next: { tags: ['catalogs'] }
+    }
   })
   const projectRes = await sendRequest<IResultPaginate<IProject>>({
     url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects?page=1&size=10`,
     method: "GET",
+    nextOption: {
+      next: { tags: ['projects'] }
+    }
   })
   const servicesRes = await sendRequest<IResultPaginate<IService>>({
     url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/services?page=1&size=10`,
     method: "GET",
+    nextOption: {
+      next: { tags: ['services'] }
+    }
   })
   const clientRes = await sendRequest<IResultPaginate<IClient>>({
     url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/valued?page=1&size=100`,
     method: "GET",
+    nextOption: {
+      next: { tags: ['clients'] }
+    }
   })
   const feedBackRes = await sendRequest<IResultPaginate<IClientFeedback>>({
     url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/clients?page=1&size=100`,
     method: "GET",
+    nextOption: {
+      next: { tags: ['feedbacks'] }
+    }
   })
 
 

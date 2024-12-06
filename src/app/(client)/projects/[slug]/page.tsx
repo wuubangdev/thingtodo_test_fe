@@ -16,6 +16,9 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
     const resProject = await sendRequest<IBackendRes<IProject>>({
         url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects/${params.slug}`,
         method: "GET",
+        nextOption: {
+            next: { tags: ['project'] }
+        }
     })
     const resProjects = await sendRequest<IResultPaginate<IProject>>({
         url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects`,
@@ -25,6 +28,9 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
             size: 3,
             sort: 'id,desc',
         },
+        nextOption: {
+            next: { tags: ['project-release'] }
+        }
     })
     const resAllProjects = await sendRequest<IResultPaginate<IProject>>({
         url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects`,
@@ -34,6 +40,9 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
             size: 100,
             sort: 'id,desc',
         },
+        nextOption: {
+            next: { tags: ['projects'] }
+        }
     })
 
     return (

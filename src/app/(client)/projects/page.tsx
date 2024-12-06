@@ -14,6 +14,9 @@ const ProjectPage = async () => {
     const projectRes = await sendRequest<IResultPaginate<IProject>>({
         url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects?page=1&size=10`,
         method: "GET",
+        nextOption: {
+            next: { tags: ['projects'] }
+        }
     })
 
     return (
