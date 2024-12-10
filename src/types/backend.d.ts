@@ -3,14 +3,15 @@ export { };
 declare global {
 
     interface IRequest {
-        url: string;
-        method: string;
-        body?: { [key: string]: any };
-        queryParams?: any;
-        useCredentials?: boolean;
-        headers?: any;
-        nextOption?: any;
+        url: string; // API endpoint
+        method: "GET" | "POST" | "PUT" | "DELETE" | "PATCH" | "HEAD" | "OPTIONS"; // Restrict to valid HTTP methods
+        body?: Record<string, unknown>; // Use Record type for key-value pairs
+        queryParams?: Record<string, string | number | boolean>; // Strongly type query parameters
+        useCredentials?: boolean; // Whether to include credentials
+        headers?: Record<string, string>; // HTTP headers as key-value pairs
+        nextOption?: Omit<RequestInit, "headers" | "body" | "method">; // Additional fetch options, excluding already defined fields
     }
+
 
     interface IBackendRes<T> {
         error?: string | string[];

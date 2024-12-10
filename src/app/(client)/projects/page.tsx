@@ -26,7 +26,7 @@ const ProjectPage = async () => {
                 <h1 className='title-2-medium md:hidden block text-black'>Selected projects <br /> 2022-2024</h1>
                 <h3 className='md:block hidden body-2-regular'>(SCROLL)</h3>
             </div>
-            <ContentProject projects={projectRes.data?.result!} />
+            {projectRes?.data?.result && <ContentProject projects={projectRes.data.result} />}
         </div>
     )
 }

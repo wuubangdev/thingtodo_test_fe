@@ -4,10 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useContactContext } from '../context/ContactContext';
 import ContactInfo, { IContactModal } from './ContactInfo';
 import { sendRequest } from '@/utils/api';
-import { features } from 'process';
-
-
-
 
 const ContactModal = () => {
     const { isContactOpen, setIsContactOpen } = useContactContext();

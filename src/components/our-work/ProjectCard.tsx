@@ -13,7 +13,7 @@ interface IProps {
 
 const ProjectCard = (props: IProps) => {
     const { mainMedia, title, subTitle, id } = props.project;
-    const { project, isRelease } = props
+    const { project } = props
     return (
         <Link href={`/projects/${id}`} className='w-full h-full relative block scroll-in'>
             <div className='w-full h-full overflow-hidden flex flex-col relative'>

@@ -133,14 +133,13 @@ export default async function Home() {
       <div>
         <Navbar isPrimary={true} />
         {/* Hero section */}
-        <Hero hero={heroRes.data!} />
-        <HeroSection hero={heroRes.data!} />
+        {heroRes.data && <Hero hero={heroRes.data} />}
+        {heroRes.data && <HeroSection hero={heroRes.data} />}
         <div className="xl:block hidden">
           <Feature />
         </div>
-        <OurWork projects={projectRes.data?.result!} />
-        {/* How can we help you */}
-        <OurService services={servicesRes.data?.result!} />
+        {projectRes?.data?.result && <OurWork projects={projectRes.data.result} />}
+        {servicesRes?.data?.result && <OurService services={servicesRes.data.result} />}
         <div
           className="py-20 flex flex-col gap-40"
           style={{
@@ -151,10 +150,10 @@ export default async function Home() {
             backgroundRepeat: 'no-repeat'
           }}
         >
-          <OurValued clients={clientRes.data?.result!} />
-          <ClientFeedBack clientFeedback={feedBackRes.data?.result!} />
+          {clientRes?.data?.result && <OurValued clients={clientRes.data.result} />}
+          {feedBackRes?.data?.result && <ClientFeedBack clientFeedback={feedBackRes.data.result!} />}
         </div>
-        <Footer catalog={catalogRes.data!} />
+        {catalogRes?.data && <Footer catalog={catalogRes.data} />}
       </div>
       <Script
         id="json-ld-organization"

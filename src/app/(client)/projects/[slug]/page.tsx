@@ -52,10 +52,11 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
             <div className='flex flex-col gap-20 pb-20'>
                 <div className='grid grid-cols-1 md:grid-cols-3 md:gap-28 px-6'>
                     <div className='md:col-span-1'>
-                        <ProjectInfo project={resProject.data!} />
+                        {resProject?.data && <ProjectInfo project={resProject.data} />}
                     </div>
                     <div className='md:col-span-2'>
-                        <ProjectContent project={resProject.data!} />
+                        {resProject?.data && <ProjectContent project={resProject.data} />}
+
                     </div>
                 </div>
                 <div>
@@ -63,15 +64,20 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
                         <div className='md:col-span-1'>
                         </div>
                         <div className='md:col-span-2 flex md:gap-6 flex-col md:flex-row md:items-end'>
-                            <ModalNextProject project={resProject.data!} projects={resAllProjects.data?.result!} />
+                            {resAllProjects?.data?.result && resProject?.data &&
+                                <ModalNextProject project={resProject.data} projects={resAllProjects.data.result} />
+                            }
+
                             <div className='subtitle-3-regular md:py-3 pl-16 md:pl-0 text-[#666D74]'>
-                                {resProject.data?.subTitle}
+                                {resProject?.data?.subTitle}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <ProjectRelease projects={resProjects.data?.result!} />
+            {resProjects?.data?.result &&
+                <ProjectRelease projects={resProjects.data.result} />
+            }
         </div>
     )
 }
