@@ -29,7 +29,7 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
             sort: 'id,desc',
         },
         nextOption: {
-            next: { tags: ['project-release'] }
+            next: { tags: ['projects'] }
         }
     })
     const resAllProjects = await sendRequest<IResultPaginate<IProject>>({

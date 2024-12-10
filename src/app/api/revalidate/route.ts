@@ -1,24 +1,30 @@
 import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
-const allowedOrigins = [process.env.NEXT_PUBLIC_ADMIN_URL]; // Danh sách các domain được phép
+const allowedOrigins = [process.env.NEXT_PUBLIC_ADMIN_URL, "http://localhost:5173"];
 
 // Hàm xử lý CORS header
-function setCorsHeaders(response: NextResponse): NextResponse {
-    response.headers.set('Access-Control-Allow-Origin', allowedOrigins[0]!); //
-    response.headers.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
-    response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+function setCorsHeaders(response: NextResponse, origin: string | null): NextResponse {
+    if (origin && allowedOrigins.includes(origin)) {
+        response.headers.set("Access-Control-Allow-Origin", origin);
+    } else {
+        response.headers.set("Access-Control-Allow-Origin", "null");
+    }
+    response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
+    response.headers.set("Access-Control-Allow-Headers", "Content-Type");
     return response;
 }
 
 // Hàm xử lý OPTIONS request (preflight)
-export async function OPTIONS(): Promise<NextResponse> {
+export async function OPTIONS(request: NextRequest): Promise<NextResponse> {
+    const origin = request.headers.get("origin");
     const response = new NextResponse(null, { status: 204 });
-    return setCorsHeaders(response);
+    return setCorsHeaders(response, origin);
 }
 
 // Xử lý POST request
 export async function POST(request: NextRequest): Promise<NextResponse> {
+    const origin = request.headers.get("origin"); // Lấy Origin từ header
     const secret = request.nextUrl.searchParams.get("secret");
     const tag = request.nextUrl.searchParams.get("tag");
 
@@ -35,5 +41,5 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     revalidateTag(tag);
 
     const response = NextResponse.json({ revalidate: true, now: Date.now() });
-    return setCorsHeaders(response);
+    return setCorsHeaders(response, origin);
 }
