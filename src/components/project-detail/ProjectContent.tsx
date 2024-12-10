@@ -28,8 +28,11 @@ const ProjectContent: React.FC<IProps> = ({ project }) => {
                 </Link>
             </div>
             <div className='flex flex-col gap-20'>
-                <h1 className='title-1-medium md:block hidden'>{project.subTitle}</h1>
-                <ProjectList projectData={project.productList} />
+                <h1 className='title-1-medium md:block hidden'>{project.headingDetail}</h1>
+                <div className='flex flex-col gap-16'>
+                    <h2 className='body-2-regular'>{project.subTitleDetail}</h2>
+                    <ProjectList projectData={project.productList} />
+                </div>
             </div>
         </div>
     )

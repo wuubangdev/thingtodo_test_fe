@@ -20,7 +20,7 @@ const ProjectRelease: React.FC<IProps> = ({ projects }) => {
                             <ProjectCard
                                 key={index}
                                 project={project}
-                                isRelease={true}
+                                isRelease={false}
                             />
                         ))}
                     </div>

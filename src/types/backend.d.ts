@@ -70,6 +70,8 @@ declare global {
         id: number;
         title: string;
         subTitle: string;
+        subTitleDetail: string;
+        headingDetail: string;
         overView: string;
         year: number;
         sector: string[];

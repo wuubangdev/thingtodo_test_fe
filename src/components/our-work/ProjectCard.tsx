@@ -13,6 +13,7 @@ interface IProps {
 
 const ProjectCard = (props: IProps) => {
     const { mainMedia, title, subTitle, id } = props.project;
+    const { project, isRelease } = props
     return (
         <Link href={`/projects/${id}`} className='w-full h-full relative block scroll-in'>
             <div className='w-full h-full overflow-hidden flex flex-col relative'>
@@ -52,25 +53,25 @@ const ProjectCard = (props: IProps) => {
                         <div className='flex flex-col w-full h-full'>
                             <MovingHoverButton />
                             {/* Info */}
-                            {!props.isRelease &&
+                            {props.isRelease &&
                                 <div className='grid grid-cols-2 gap-6 text-white p-4 absolute bottom-0'>
                                     <div className='flex flex-col gap-2'>
                                         <h3 className='text-[12px] font-medium'>Overview</h3>
-                                        <p className='text-sm line-clamp-5'>Our 2D and 3D graphic design services create visually stunning digital assets that bring your brand to life, from captivating logos to immersive animations.</p>
+                                        <p className='text-sm line-clamp-5'>{project.overView}</p>
                                     </div>
                                     <div>
                                         <h3 className='text-[12px] font-medium'>Result</h3>
                                         <div className='grid grid-cols-3 gap-2'>
                                             <div className='border-b-[1px] pb-1 border-dotted border-white'>
-                                                <h1 className='text-2xl font-Archia font-semibold'>23+</h1>
+                                                <h1 className='text-2xl font-Archia font-semibold'>{project.customerSegments}+</h1>
                                                 <p className='text-[12px]'>Customer Segments</p>
                                             </div>
                                             <div className='border-b-[1px] pb-1 border-dotted border-white'>
-                                                <h1 className='text-2xl font-Archia font-semibold'>55+</h1>
+                                                <h1 className='text-2xl font-Archia font-semibold'>{project.automationFlow}+</h1>
                                                 <p className='text-[12px]'>Automation flow</p>
                                             </div>
                                             <div className='border-b-[1px] pb-1 border-dotted border-white'>
-                                                <h1 className='text-2xl font-Archia font-semibold'>400%</h1>
+                                                <h1 className='text-2xl font-Archia font-semibold'>{project.increaseQuantity}%</h1>
                                                 <p className='text-[12px]'>Increase quantity of sampling broadcast</p>
                                             </div>
                                         </div>
