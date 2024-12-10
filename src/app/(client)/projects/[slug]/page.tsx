@@ -17,7 +17,7 @@ const ProjectDetailPage = async ({ params }: { params: { slug: string } }) => {
         url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects/${params.slug}`,
         method: "GET",
         nextOption: {
-            next: { tags: ['project'] }
+            next: { tags: ['projects'] }
         }
     })
     const resProjects = await sendRequest<IResultPaginate<IProject>>({

@@ -14,8 +14,6 @@ const ListProjectFilter = (props: IProps) => {
     const { categoryValue, sectorValue, projects } = props;
     const [listProject, setListProject] = useState<IProject[] | null>(null);
 
-    console.log(projects);
-
     const FilterProjects = (categoryValue: string, sectorValue: string) => {
         if (categoryValue === 'ALL' && sectorValue === 'ALL') {
             return projects;
