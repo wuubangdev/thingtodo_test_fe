@@ -1,7 +1,7 @@
 import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
-const allowedOrigins = [process.env.NEXT_PUBLIC_ADMIN_URL, "http://localhost:5173"];
+const allowedOrigins = [process.env.NEXT_PUBLIC_ADMIN_URL, "http://localhost:5173", "http://localhost:4173"];
 
 // Hàm xử lý CORS header
 function setCorsHeaders(response: NextResponse, origin: string | null): NextResponse {
