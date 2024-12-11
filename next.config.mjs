@@ -9,6 +9,9 @@ const nextConfig = {
             },
         ],
     },
+    experimental: {
+        isrFlushToDisk: true,
+    },
 };
 
 export default nextConfig;
