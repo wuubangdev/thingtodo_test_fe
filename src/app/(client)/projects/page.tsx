@@ -15,7 +15,7 @@ const ProjectPage = async () => {
         url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects?page=1&size=10`,
         method: "GET",
         nextOption: {
-            next: { tags: ['projects'] }
+            next: { tags: ['projects'], revalidate: 10 }
         }
     })
 

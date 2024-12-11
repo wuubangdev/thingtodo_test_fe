@@ -1,4 +1,3 @@
-// import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
 import ClientFeedBack from "@/components/client-feedback/ClientFeedBack";
 import Feature from "@/components/feature/Feature";
 import Footer from "@/components/footer/Footer";
@@ -83,58 +82,64 @@ const idJsonObject = {
 }
 
 export default async function Home() {
-
-  const heroRes = await sendRequest<IBackendRes<IHero>>({
-    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/heros/1`,
-    method: "GET",
-    nextOption: {
-      next: { tags: ['heroes'] }
-    }
-  })
-  const catalogRes = await sendRequest<IBackendRes<ICatalog>>({
-    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/catalogs/1`,
-    method: "GET",
-    nextOption: {
-      next: { tags: ['catalogs'] }
-    }
-  })
-  const projectRes = await sendRequest<IResultPaginate<IProject>>({
-    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects?page=1&size=10`,
-    method: "GET",
-    nextOption: {
-      next: { tags: ['projects'] }
-    }
-  })
-  const servicesRes = await sendRequest<IResultPaginate<IService>>({
-    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/services?page=1&size=10`,
-    method: "GET",
-    nextOption: {
-      next: { tags: ['services'] }
-    }
-  })
-  const clientRes = await sendRequest<IResultPaginate<IClient>>({
-    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/valued?page=1&size=100`,
-    method: "GET",
-    nextOption: {
-      next: { tags: ['clients'] }
-    }
-  })
-  const feedBackRes = await sendRequest<IResultPaginate<IClientFeedback>>({
-    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/clients?page=1&size=100`,
-    method: "GET",
-    nextOption: {
-      next: { tags: ['feedbacks'] }
-    }
-  })
-
+  const [heroRes, catalogRes, projectRes, servicesRes, clientRes, feedBackRes] = await Promise.all([
+    sendRequest<IBackendRes<IHero>>({
+      url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/heros/1`,
+      method: "GET",
+      nextOption: {
+        next: { tags: ['heroes'], revalidate: 10 }
+      }
+    }),
+    sendRequest<IBackendRes<ICatalog>>({
+      url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/catalogs/1`,
+      method: "GET",
+      nextOption: {
+        next: { tags: ['catalogs'], revalidate: 10 }
+      }
+    }),
+    sendRequest<IResultPaginate<IProject>>({
+      url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/projects`,
+      method: "GET",
+      queryParams: {
+        page: 1,
+        size: 30,
+        sort: 'id,desc',
+      },
+      nextOption: {
+        next: { tags: ['projects'], revalidate: 10 }
+      }
+    }),
+    sendRequest<IResultPaginate<IService>>({
+      url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/services?page=1&size=10`,
+      method: "GET",
+      nextOption: {
+        next: { tags: ['services'], revalidate: 10 }
+      }
+    }),
+    sendRequest<IResultPaginate<IClient>>({
+      url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/valued?page=1&size=100`,
+      method: "GET",
+      nextOption: {
+        next: { tags: ['clients'], revalidate: 10 }
+      }
+    }),
+    sendRequest<IResultPaginate<IClientFeedback>>({
+      url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/clients?page=1&size=100`,
+      method: "GET",
+      nextOption: {
+        next: { tags: ['feedbacks'], revalidate: 10 }
+      }
+    })
+  ]);
 
   return (
     <>
       <div>
         <Navbar isPrimary={true} />
+
         {/* Hero section */}
-        {heroRes.data && <Hero hero={heroRes.data} />}
-        {heroRes.data && <HeroSection hero={heroRes.data} />}
+        {heroRes?.data && <Hero hero={heroRes.data} />}
+        {heroRes?.data && <HeroSection hero={heroRes.data} />}
         <div className="xl:block hidden">
           <Feature />
         </div>
@@ -153,8 +158,10 @@ export default async function Home() {
           {clientRes?.data?.result && <OurValued clients={clientRes.data.result} />}
           {feedBackRes?.data?.result && <ClientFeedBack clientFeedback={feedBackRes.data.result!} />}
         </div>
+
         {catalogRes?.data && <Footer catalog={catalogRes.data} />}
       </div>
+      {/* JSON-LD for SEO */}
       <Script
         id="json-ld-organization"
         strategy='lazyOnload'
