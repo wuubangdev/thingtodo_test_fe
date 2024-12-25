@@ -1,7 +1,6 @@
 export { };
 
 declare global {
-
     interface IRequest {
         url: string; // API endpoint
         method: "GET" | "POST" | "PUT" | "DELETE" | "PATCH" | "HEAD" | "OPTIONS"; // Restrict to valid HTTP methods
@@ -11,15 +10,12 @@ declare global {
         headers?: Record<string, string>; // HTTP headers as key-value pairs
         nextOption?: Omit<RequestInit, "headers" | "body" | "method">; // Additional fetch options, excluding already defined fields
     }
-
-
     interface IBackendRes<T> {
         error?: string | string[];
         message: string;
         statusCode: number | string;
         data?: T;
     }
-
     interface IResultPaginate<T> {
         error?: string | string[];
         message: string;
@@ -34,7 +30,6 @@ declare global {
             result: T[]
         }
     }
-
     interface IHero {
         id: number,
         description: string;
@@ -57,7 +52,6 @@ declare global {
         title: string;
         fileList: string[];
     }
-
     interface Client {
         id: number;
         clientName: string;
@@ -66,7 +60,6 @@ declare global {
         position: string;
         feedback: string;
     }
-
     interface IProject {
         id: number;
         title: string;
@@ -107,5 +100,4 @@ declare global {
         position: string,
         feedback: string,
     }
-
 }

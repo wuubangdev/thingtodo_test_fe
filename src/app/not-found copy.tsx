@@ -1,21 +1,10 @@
 // app/404.tsx
-'use client'
+
 import NavbarError from '@/components/navbar/NavbarError';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 const Custom404 = () => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prevCount) => (prevCount === 3 ? 0 : prevCount + 1));
-    }, 800);
-
-    return () => clearInterval(interval); // Cleanup interval
-  }, []);
-
   return (
     <div className='w-full h-screen overflow-hidden bg-[#131E29]'>
       <NavbarError />
@@ -35,7 +24,7 @@ const Custom404 = () => {
                 src={'/error/vector_hover_0.svg'}
                 width={325}
                 height={325}
-                className={`w-full h-auto object-content ${count === 0 ? "opacity-100" : "opacity-0"} duration-300`} // Thêm lớp animation
+                className='w-full h-auto object-content opacity-0 hover:opacity-100 duration-300' // Thêm lớp animation
               />
             </div>
           </div>
@@ -53,7 +42,7 @@ const Custom404 = () => {
                 src={'/error/vector_hover_1.svg'}
                 width={325}
                 height={325}
-                className={`w-full h-auto object-content duration-300 ${count === 1 ? "opacity-100" : "opacity-0"}`} // Thêm lớp animation
+                className='w-full h-auto object-content opacity-100 hover:opacity-100 duration-300' // Thêm lớp animation
               />
             </div>
           </div>
@@ -71,7 +60,7 @@ const Custom404 = () => {
                 src={'/error/vector_hover_2.svg'}
                 width={325}
                 height={325}
-                className={`w-full h-auto object-content duration-300 ${count === 2 ? "opacity-100" : "opacity-0"}`} // Thêm lớp animation
+                className='w-full h-auto object-content opacity-0 hover:opacity-100 duration-300 ' // Thêm lớp animation
               />
             </div>
           </div>
@@ -89,7 +78,7 @@ const Custom404 = () => {
                 src={'/error/vector_hover_3.svg'}
                 width={325}
                 height={325}
-                className={`w-full h-auto object-content duration-300 ${count === 3 ? "opacity-100" : "opacity-0"}`} // Thêm lớp animation
+                className='w-full h-auto object-content opacity-0 hover:opacity-100 duration-300' // Thêm lớp animation
               />
             </div>
           </div>
