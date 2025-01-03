@@ -1,5 +1,6 @@
+"use client"
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import ProjectList from './ProjectList';
 
 interface IProps {
@@ -7,6 +8,14 @@ interface IProps {
 }
 
 const ProjectContent: React.FC<IProps> = ({ project }) => {
+    const divRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (divRef.current) {
+            divRef.current.innerHTML = project.documentDetails;
+        }
+    }, []);
+
     return (
         <div className='flex flex-col gap-16 pt-10'>
             {/* Back */}
@@ -31,6 +40,7 @@ const ProjectContent: React.FC<IProps> = ({ project }) => {
                 <h1 className='title-1-medium md:block hidden'>{project.headingDetail}</h1>
                 <div className='flex flex-col gap-16'>
                     <h2 className='body-2-regular'>{project.subTitleDetail}</h2>
+                    <div ref={divRef}></div>
                     <ProjectList projectData={project.productList} />
                 </div>
             </div>

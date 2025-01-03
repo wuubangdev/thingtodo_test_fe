@@ -76,6 +76,7 @@ declare global {
         productList: Product[];
         mainMedia: string;
         clients: Client[];
+        documentDetails: string;
     }
     interface IService {
         id: number;
