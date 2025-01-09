@@ -1,4 +1,5 @@
-import React from 'react'
+{/* S3: Show project */ }
+import React from 'react';
 
 const ShowProject = () => {
     return (

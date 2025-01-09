@@ -1,4 +1,5 @@
-import React from 'react'
+{/* S4: Process */ }
+import React from 'react';
 
 const Process = () => {
     return (

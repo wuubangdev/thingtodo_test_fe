@@ -1,4 +1,5 @@
-import React from 'react'
+{/* S6: Comparison */ }
+import React from 'react';
 
 const Comparison = () => {
     return (

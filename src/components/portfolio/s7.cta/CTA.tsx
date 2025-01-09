@@ -1,4 +1,5 @@
-import React from 'react'
+{/* S7: CTA */ }
+import React from 'react';
 
 const CTA = () => {
     return (
