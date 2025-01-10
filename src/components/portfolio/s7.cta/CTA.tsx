@@ -3,7 +3,7 @@ import React from 'react';
 
 const CTA = () => {
     return (
-        <div>CTA</div>
+        <div className='bg-cyan-600 h-screen'>CTA</div>
     )
 }
 

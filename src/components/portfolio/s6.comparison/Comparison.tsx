@@ -3,7 +3,7 @@ import React from 'react';
 
 const Comparison = () => {
     return (
-        <div>Comparison</div>
+        <div className='bg-amber-600 h-screen'>Comparison</div>
     )
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 
 const AiGenerateAndCGI = () => {
     return (
-        <div>AiGenerateAndCGI</div>
+        <div className='bg-slate-500 h-screen'>AiGenerateAndCGI</div>
     )
 }
 

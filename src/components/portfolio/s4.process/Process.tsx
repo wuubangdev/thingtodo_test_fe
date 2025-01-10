@@ -3,7 +3,7 @@ import React from 'react';
 
 const Process = () => {
     return (
-        <div>Process</div>
+        <div className='bg-purple-600 h-screen'>Process</div>
     )
 }
 
