@@ -6,14 +6,16 @@ import ProjectOther from './ProjectOther';
 
 const ShowProject = () => {
     return (
-        <div className='p-[200px] flex flex-col gap-14'>
-            <h1 className='portfolio-text-subheading text-center'>
-                Project
-                <br />
-                “Oách xà lách”
-            </h1>
-            <ProjectTet />
-            <ProjectNoel />
+        <div>
+            <div className='pt-[200px] px-[200px] pb-14 flex flex-col gap-14'>
+                <h1 className='portfolio-text-subheading text-center'>
+                    Project
+                    <br />
+                    “Oách xà lách”
+                </h1>
+                <ProjectTet />
+                <ProjectNoel />
+            </div>
             <ProjectOther />
         </div>
     )
