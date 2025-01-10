@@ -2,6 +2,7 @@
 import React from 'react';
 import ProjectTet from './ProjectTet';
 import ProjectNoel from './ProjectNoel';
+import ProjectOther from './ProjectOther';
 
 const ShowProject = () => {
     return (
@@ -13,6 +14,7 @@ const ShowProject = () => {
             </h1>
             <ProjectTet />
             <ProjectNoel />
+            <ProjectOther />
         </div>
     )
 }

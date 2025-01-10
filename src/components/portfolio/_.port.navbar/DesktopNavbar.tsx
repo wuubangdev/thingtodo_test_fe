@@ -5,7 +5,7 @@ import CustomButton from '../custom.components/CustomButton';
 const DesktopNavbar = () => {
     return (
         <div
-            className='w-full px-8 py-4 flex items-center fixed top-0'
+            className='w-full px-8 py-4 flex items-center fixed top-0 z-50'
             style={{
                 background: "rgba(255,255,255,0.6)",
                 backdropFilter: "blur(5px)"

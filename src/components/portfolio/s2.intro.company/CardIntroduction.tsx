@@ -7,13 +7,8 @@ interface ICardIntroduction {
 
 const CardIntroduction: React.FC<ICardIntroduction> = () => {
     return (
-        <div
-            className='w-full bg-blue-700'
-            style={{
-                paddingTop: "100%"
-            }}
-        >
-
+        <div className="w-full bg-blue-500 rounded-[3rem]">
+            <div className="pt-[120%]"></div>
         </div>
     )
 }
