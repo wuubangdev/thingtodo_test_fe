@@ -1,6 +1,7 @@
 import LandingPage from '@/components/portfolio/LandingPage';
 import { Metadata } from 'next';
 import React from 'react';
+import "./portfolio.css"
 
 export const metadata: Metadata = {
     title: "Present",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 const PortfolioPage = () => {
 
     return (
-        <div>
+        <div className='bg-[#fcfcfc]'>
             <LandingPage />
             <div className='h-screen'></div>
         </div>

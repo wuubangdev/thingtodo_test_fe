@@ -8,6 +8,7 @@ import Process from './s4.process/Process';
 import AiGenerateAndCGI from './s5.cgi.ai.generate/AiGenerateAndCGI';
 import Comparison from './s6.comparison/Comparison';
 import CTA from './s7.cta/CTA';
+import DesktopNavbar from './_.port.navbar/DesktopNavbar';
 
 export default function LandingPage() {
     // Define types for refs
@@ -31,8 +32,9 @@ export default function LandingPage() {
     return (
         <div>
             {/* Pass scroll logic to Progress */}
-            <Progress scrollToSection={scrollToSection} />
+            {/* <Progress scrollToSection={scrollToSection} /> */}
             <div>
+                <div><DesktopNavbar /></div>
                 <div ref={sectionsRefs[0]}>
                     <ShowTagline />
                 </div>

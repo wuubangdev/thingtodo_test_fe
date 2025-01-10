@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+.portfolio-text-button {
+    font-family: "Arimo", serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 115%;
+}
+
+.portfolio-text-heading {
+    color: #131E29;
+    text-align: center;
+    font-family: "Arimo", serif;
+    font-size: 10.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    letter-spacing: -0.735rem;
+}
+
+.portfolio-text-subheading {
+    color: #131E29;
+    font-family: "Arimo", serif;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 80px */
+    letter-spacing: -0.3px;
+}
+
+.portfolio-text-description {
+    color: #3F3F3F;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+}
+
+.portfolio-project-title {
+    color: #131E29;
+    font-family: Arimo;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 28px */
+    letter-spacing: -0.088px;
+}
+
+.portfolio-project-desc {
+    color: #3F3F3F;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.625rem;
+    text-align: left;
+}
