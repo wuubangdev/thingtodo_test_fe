@@ -24,7 +24,7 @@ const NextArrow = (props: CustomArrowProps) => {
             }}
         >
             <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_2060_992)">
+                <g clipPath="url(#clip0_2060_992)">
                     <path
                         d="M0.231857 9.93218V11.0994L9.63249 20.5L10.705 19.3959L2.69242 11.4306V11.2886L18 11.2886V9.71136L2.69242 9.71136V9.58517L10.705 1.6041L9.63249 0.5L0.231857 9.93218Z"
                         fill="#FCFCFC" />
@@ -60,7 +60,7 @@ const PrevArrow = (props: CustomArrowProps) => {
             }}
         >
             <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_2060_996)">
+                <g clipPath="url(#clip0_2060_996)">
                     <path
                         d="M27.7681 9.93218V11.0994L18.3675 20.5L17.295 19.3959L25.3076 11.4306V11.2886L10 11.2886V9.71136L25.3076 9.71136V9.58517L17.295 1.6041L18.3675 0.5L27.7681 9.93218Z"
                         fill="#FCFCFC" />
