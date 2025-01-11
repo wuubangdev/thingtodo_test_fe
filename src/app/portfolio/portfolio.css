@@ -69,3 +69,22 @@
     /* 20px */
     letter-spacing: 0.063rem;
 }
+
+.body-1-bold {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 130%;
+    text-align: left;
+}
+
+.portfolio-process-item {
+    color: #131E29;
+    font-family: "Arimo", serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50%;
+    /* 24px */
+    letter-spacing: -0.21rem;
+}
