@@ -10,11 +10,11 @@ const Process = () => {
         >
             <h1 className=' portfolio-text-subheading'>Nhanh. Nhưng chắc</h1>
             <div className='flex justify-center flex-col items-center'>
-                <p className='body-1-bold'>
+                <span className='body-1-bold text-center'>
                     <span>Process nhanh gọn. </span> &nbsp;
                     <span className='text-[rgba(88,88,88,0.70)]'>Nhưng từng bước đều được trau chuốt tỉ mỉ để mỗi sản <br />
                         phẩm ra đời không chỉ đúng hạn mà còn đạt chất lượng vượt mong đợi!</span>
-                </p>
+                </span>
             </div>
             <div className='flex flex-col justify-center items-center gap-14'>
                 <div className='flex flex-col justify-center items-center gap-12'>

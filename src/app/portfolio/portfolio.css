@@ -75,7 +75,6 @@
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 130%;
-    text-align: left;
 }
 
 .portfolio-process-item {
@@ -103,11 +102,33 @@
 
 .portfolio-cgi-footer {
     color: #959A9F;
-    text-align: center;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
     /* 26px */
+}
+
+.portfolio-compo-heading {
+    color: #FCFCFC;
+    text-align: center;
+    font-family: "Arimo", serif;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    /* 64.4px */
+    letter-spacing: -0.175rem;
+}
+
+.portfolio-compo-value {
+    color: #FCFCFC;
+    font-family: "Arimo", serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    /* 36.8px */
+    letter-spacing: -0.1rem;
 }
