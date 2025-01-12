@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider, { CustomArrowProps, Settings } from 'react-slick';
-import CarouselItem from './CarouselItem';
+import CarouselItem, { ICarouselItem } from './CarouselItem';
 
 const NextArrow = (props: CustomArrowProps) => {
     return (
@@ -117,21 +117,19 @@ var settings: Settings = {
 
 const ProjectCarousel = () => {
 
+    const list: ICarouselItem[] = [
+        { title: 'Vacation time!', link: '/portfo_access/projects/other/project1.webp' },
+        { title: 'Great Light', link: '/portfo_access/projects/other/project2.webp' },
+        { title: 'Tân Sửu đủ đầy', link: '/portfo_access/projects/other/project3.webp' },
+        { title: 'Probi New Year', link: '/portfo_access/projects/other/project4.webp' },
+    ]
+
     return (
         <div className="slider-container w-full">
             <Slider {...settings}>
-                <div className='w-1/4 '>
-                    <CarouselItem title='Probi New Year' />
-
-                </div>
-                <div className='w-1/4 '>
-                    <CarouselItem title='Great Light' />
-
-                </div>
-                <div className='w-1/4 '>
-                    <CarouselItem title='Tân Sửu đủ đầy' />
-
-                </div>
+                {list && list.map((item, i) => <div className='w-1/4 '>
+                    <CarouselItem title={item.title} link={item.link} />
+                </div>)}
             </Slider>
         </div>
     )

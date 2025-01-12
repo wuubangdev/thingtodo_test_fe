@@ -7,15 +7,15 @@ const IntroCompany = () => {
             <div className='h-screen -mt-[50vh] pt-14 relative '>
                 <div className='flex justify-center'>
                     <div className='w-1/3'>
-                        <CardIntroduction />
+                        <CardIntroduction link='/portfo_access/tagline/image0.webp' />
                     </div>
                 </div>
                 <div className='flex justify-between w-full absolute bottom-0'>
                     <div className='w-1/3 -ml-16'>
-                        <CardIntroduction />
+                        <CardIntroduction link='/portfo_access/tagline/image1.webp' />
                     </div>
                     <div className='w-1/3 -mr-16'>
-                        <CardIntroduction />
+                        <CardIntroduction link='/portfo_access/tagline/image2.webp' />
                     </div>
                 </div>
             </div>

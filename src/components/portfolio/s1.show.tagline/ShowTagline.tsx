@@ -7,14 +7,14 @@ const ShowTagline = () => {
         <div id='#section1'
             className='h-[150vh]'
             style={{
-                background: "linear-gradient(180deg, #FCFCFC 0%, #D6D6D6 100%)",
+                background: "linear-gradient(180deg, #601FEB 0%, #A369EE 27.99%, #BAF2C9 68.6%, #75D3C6 105.91%)",
             }}
         >
             <div
                 className='h-[100vh] flex items-end justify-center pb-14'
             >
-                <div className='flex flex-col gap-14 justify-center items-center'>
-                    <h1 className='portfolio-text-heading'>
+                <div className='flex flex-col gap-14 justify-center items-center text-[#fcfcfc]'>
+                    <h1 className='portfolio-text-heading '>
                         Kem ngonnn <br /> Game on!
                     </h1>
                     <div className='portfolio-text-description'>

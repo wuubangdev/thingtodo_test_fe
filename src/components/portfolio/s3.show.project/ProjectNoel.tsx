@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 interface IProjectInfo {
@@ -17,15 +18,33 @@ const ProjectNoel: React.FC<IProjectInfo> = ({ }) => {
             </div>
             {/* Access */}
             <div className='grid grid-cols-2 gap-3'>
-                <div className='bg-blue-600 rounded-[2rem] pt-[150%]'>
-
+                <div className='w-full rounded-[2rem]'>
+                    <Image
+                        alt='project-tet-1'
+                        src={'/portfo_access/projects/noel1.webp'}
+                        width={514}
+                        height={771}
+                        className='w-full'
+                    />
                 </div>
                 <div className='grid grid-cols-1 gap-3'>
-                    <div className='bg-blue-600 rounded-[2rem] pt-[50%]'>
-
+                    <div className='rounded-[2rem]'>
+                        <Image
+                            alt='project-tet-1'
+                            src={'/portfo_access/projects/noel2.webp'}
+                            width={514}
+                            height={379}
+                            className='w-full'
+                        />
                     </div>
-                    <div className='bg-blue-600 rounded-[2rem] pt-[50%]'>
-
+                    <div className='rounded-[2rem]'>
+                        <Image
+                            alt='project-tet-1'
+                            src={'/portfo_access/projects/noel3.webp'}
+                            width={514}
+                            height={379}
+                            className='w-full'
+                        />
                     </div>
                 </div>
             </div>

@@ -12,8 +12,7 @@ const CustomButton: React.FC<ICustomButton> = ({ contentLeft, contentRight, back
     return (
         <div
             className='portfolio-text-button flex px-[20px] py-[10px] justify-center 
-            items-center rounded-[32px] border-[1px] border-solid border-[#131E29]
-            cursor-pointer'
+            items-center rounded-[32px] cursor-pointer'
             style={{
                 background: background === "black" ? "#131E29" : "#fcfcfc",
                 color: background === "black" ? "#fcfcfc" : "#131E29",
