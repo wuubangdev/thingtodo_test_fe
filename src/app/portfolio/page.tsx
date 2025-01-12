@@ -15,7 +15,6 @@ const PortfolioPage = () => {
     return (
         <div className='bg-[#fcfcfc]'>
             <LandingPage />
-            <div className='h-screen'></div>
         </div>
     )
 }

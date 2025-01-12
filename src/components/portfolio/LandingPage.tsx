@@ -9,6 +9,7 @@ import AiGenerateAndCGI from './s5.cgi.ai.generate/AiGenerateAndCGI';
 import Comparison from './s6.comparison/Comparison';
 import CTA from './s7.cta/CTA';
 import DesktopNavbar from './_.port.navbar/DesktopNavbar';
+import PortFooter from './s8.footer/PortFooter';
 
 export default function LandingPage() {
     // Define types for refs
@@ -30,7 +31,7 @@ export default function LandingPage() {
     };
 
     return (
-        <div>
+        <div className='overflow-x-hidden'>
             {/* Pass scroll logic to Progress */}
             {/* <Progress scrollToSection={scrollToSection} /> */}
             <div>
@@ -55,6 +56,9 @@ export default function LandingPage() {
                 </div>
                 <div ref={sectionsRefs[6]}>
                     <CTA />
+                </div>
+                <div ref={sectionsRefs[7]}>
+                    <PortFooter />
                 </div>
             </div>
         </div>
