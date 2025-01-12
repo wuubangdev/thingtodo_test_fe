@@ -2,7 +2,7 @@ import React from 'react'
 
 const TopComparisonHeading = () => {
     return (
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center text-[#fcfcfc]'>
             <span className='portfolio-compo-heading'>Lợi thế khi</span>
             <span
                 className='portfolio-compo-heading'

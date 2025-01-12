@@ -1,5 +1,6 @@
 import React from 'react'
 import CardIntroduction from './CardIntroduction';
+import Image from 'next/image';
 
 const IntroCompany = () => {
     return (
@@ -21,14 +22,37 @@ const IntroCompany = () => {
             </div>
             <div className='flex justify-center'>
                 <div className='portfolio-text-subheading'>
-                    Hãy để sự sáng tạo 🏵️ kết hợp <br />
-                    cùng công nghệ,&nbsp;
-                    <span className='text-[#a3a3a3]'>
-                        tạo nên <br />
-                        những sản phẩm truyền thông <br />
-                        tuyệt vời, nhanh chóng và phù <br />
-                        hợp mọi nền tảng.
-                    </span>
+                    <div className='flex'>
+                        <div>Hãy để sự sáng tạo</div>
+                        <div className='flex items-center h-full scale-125 mx-2'>
+                            <Image
+                                alt='intro-1'
+                                src={'/portfo_access/introduction/intro1.webp'}
+                                width={79}
+                                height={79}
+                                className='h-full'
+                            />
+                        </div>
+                        <div>kết hợp</div>
+                    </div>
+                    <div>cùng công nghệ, <span className='text-[#a3a3a3]'>tạo nên</span></div>
+                    <div className='text-[#a3a3a3]'>
+                        <div>những sản phẩm truyền thông</div>
+                        <div className='flex'>
+                            <div>tuyệt vời</div>
+                            <div className='flex items-center h-full scale-125 mx-2'>
+                                <Image
+                                    alt='intro-2'
+                                    src={'/portfo_access/introduction/intro2.webp'}
+                                    width={49}
+                                    height={90}
+                                    className='w-full'
+                                />
+                            </div>
+                            <div>, nhanh chóng và</div>
+                        </div>
+                        <div>phù hợp mọi nền tảng.</div>
+                    </div>
                 </div>
             </div>
         </div>

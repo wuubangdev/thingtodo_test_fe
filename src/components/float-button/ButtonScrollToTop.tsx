@@ -37,7 +37,9 @@ const ButtonScrollToTop = () => {
                 >
                     <div className=' flex justify-end'>
                         <div
-                            className='rounded-[50%] bg-black text-white p-3 hover:text-primary cursor-pointer duration-500 bg-black/70 mr-6'
+                            className='rounded-[50%] bg-black text-white p-3 hover:text-primary 
+                            border-[1px] border-solid border-white
+                            cursor-pointer duration-500 bg-black/70 mr-6'
                             onClick={() => { scrollToTop() }}
                         >
                             <svg

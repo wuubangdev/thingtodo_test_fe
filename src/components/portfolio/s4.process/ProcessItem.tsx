@@ -11,7 +11,8 @@ const ProcessItem: React.FC<IProcessItem> = ({ title, id, paddingX }) => {
         <div className='flex justify-center items-center py-6'
             style={{
                 borderRadius: '2.813rem',
-                background: 'rgba(149, 154, 159, 0.80)',
+                background: '#fcfcfc',
+                borderBottom: '1px solid #000',
                 paddingLeft: paddingX,
                 paddingRight: paddingX,
             }}

@@ -127,7 +127,7 @@ const ProjectCarousel = () => {
     return (
         <div className="slider-container w-full">
             <Slider {...settings}>
-                {list && list.map((item, i) => <div className='w-1/4 '>
+                {list && list.map((item, i) => <div key={i} className='w-1/4 '>
                     <CarouselItem title={item.title} link={item.link} />
                 </div>)}
             </Slider>

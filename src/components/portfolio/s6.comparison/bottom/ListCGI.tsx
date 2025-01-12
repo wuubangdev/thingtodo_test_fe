@@ -11,18 +11,23 @@ const Label: React.FC<ILabel> = ({ labelType }) => {
                 ?
                 <div className='flex gap-2'>
                     <div className=''>
-                        <div className='w-full'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64" fill="none">
-                                <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="#666D74" />
-                            </svg>
-                        </div>
-                        <div className='text-[#fcfcfc] relative -top-10 w-full text-center'>CGI</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64" fill="none">
+                            <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="url(#paint0_linear_3127_152)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_3127_152" x1="69.9485" y1="92.91" x2="69.9485" y2="-0.219728" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FBBD37" />
+                                    <stop offset="0.54654" stop-color="#D0FFCA" />
+                                    <stop offset="1" stop-color="#28BAF5" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div className='text-[#131E29] relative -top-10 w-full text-center'>CGI</div>
                     </div>
                     <div className='w-full'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64" fill="none">
-                            <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="#131E29" />
+                            <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="#9EFEFD" />
                         </svg>
-                        <div className='text-[#fcfcfc] relative -top-10 w-full text-center'>AI</div>
+                        <div className='text-[#131E29] relative -top-10 w-full text-center'>AI</div>
                     </div>
                 </div>
                 :
@@ -31,20 +36,25 @@ const Label: React.FC<ILabel> = ({ labelType }) => {
                     <div className='flex gap-2'>
                         <div className='w-full'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64" fill="none">
-                                <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="#131E29" />
+                                <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="#9EFEFD" />
                             </svg>
-                            <div className='text-[#fcfcfc] relative -top-10 w-full text-center'>AI</div>
+                            <div className='text-[#131E29] relative -top-10 w-full text-center'>AI</div>
                         </div>
                     </div>
                     :
                     <div className='flex gap-2'>
                         <div className=''>
-                            <div className='w-full'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64" fill="none">
-                                    <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="#666D74" />
-                                </svg>
-                            </div>
-                            <div className='text-[#fcfcfc] relative -top-10 w-full text-center'>CGI</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64" fill="none">
+                                <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="url(#paint0_linear_3127_152)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_3127_152" x1="69.9485" y1="92.91" x2="69.9485" y2="-0.219728" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FBBD37" />
+                                        <stop offset="0.54654" stop-color="#D0FFCA" />
+                                        <stop offset="1" stop-color="#28BAF5" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div className='text-[#131E29] relative -top-10 w-full text-center'>CGI</div>
                         </div>
                     </div>
             }

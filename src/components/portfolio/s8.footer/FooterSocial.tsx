@@ -11,7 +11,7 @@ const FooterSocial = () => {
             <div className='flex flex-col items-center gap-8'>
                 {/* Heading */}
                 <div className='flex flex-col items-center gap-4'>
-                    <div className='portfolio-compo-heading'>
+                    <div className='portfolio-compo-heading portfolio-text-gradient w-full'>
                         Thank you.
                     </div>
                     <span className='portfolio-footer-description text-center'>
@@ -60,25 +60,29 @@ const FooterSocial = () => {
                         }}
                     >
                         <div className='py-3'>Kết nối qua email</div>
-                        <Image
-                            alt=''
-                            src={'/portfo_access/footer/kem1.svg'}
-                            width={81}
-                            height={70}
-                            className='h-full'
-                        />
+                        <div className='flex items-center h-full scale-220'>
+                            <Image
+                                alt=''
+                                src={'/portfo_access/footer/kem1.svg'}
+                                width={31}
+                                height={32}
+                                className='h-full'
+                            />
+                        </div>
                     </div>
                     <div
                         className='px-8 flex gap-5 items-center rounded-[56px] border-[1px] border-solid portfolio-footer-btn'
                     >
                         <div className='py-3 text-[#fcfcfc]'>Kết nối qua SĐT</div>
-                        <Image
-                            alt=''
-                            src={'/portfo_access/footer/kem2.svg'}
-                            width={81}
-                            height={70}
-                            className='h-full'
-                        />
+                        <div className='flex items-center h-full scale-125'>
+                            <Image
+                                alt=''
+                                src={'/portfo_access/footer/kem2.webp'}
+                                width={31}
+                                height={32}
+                                className='h-full'
+                            />
+                        </div>
                     </div>
                 </div>
                 {/* Ads */}
