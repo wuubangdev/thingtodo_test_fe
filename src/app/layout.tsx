@@ -7,6 +7,7 @@ import MobileMenu from "@/components/navbar/MobileMenu";
 import { ContactContextProvider } from "@/components/context/ContactContext";
 import ContactModal from "@/components/modal-contact/ContactModal";
 import ButtonScrollToTop from "@/components/float-button/ButtonScrollToTop";
+import { CursorVariantContextProvider } from "@/components/context/CursorVariantContext";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -17,7 +18,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="relative">
         <MobileMenuContextProvider>
           <ContactContextProvider>
-            {children}
+            <CursorVariantContextProvider>
+              {children}
+            </CursorVariantContextProvider>
             <MobileMenu />
             <ContactModal />
             <ButtonScrollToTop />

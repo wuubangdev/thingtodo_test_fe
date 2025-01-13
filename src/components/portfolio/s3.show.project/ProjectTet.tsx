@@ -1,3 +1,4 @@
+import { useCursorVariantContext } from '@/components/context/CursorVariantContext';
 import Image from 'next/image';
 import React from 'react'
 
@@ -6,6 +7,9 @@ interface IProjectInfo {
 }
 
 const ProjectTet: React.FC<IProjectInfo> = ({ }) => {
+    const { setCursorVariant } = useCursorVariantContext();
+    const enterPic = () => setCursorVariant('picture');
+    const leavePic = () => setCursorVariant('default');
     return (
         <div className='flex flex-col gap-12'>
             {/* Project info */}
@@ -22,7 +26,10 @@ const ProjectTet: React.FC<IProjectInfo> = ({ }) => {
                         src={'/portfo_access/projects/tet1.webp'}
                         width={1040}
                         height={686}
-                        className='w-full'
+                        className='w-full h-auto'
+                        onMouseOver={() => enterPic()}
+                        onMouseLeave={() => leavePic()}
+                        style={{ cursor: 'none' }}
                     />
                 </div>
                 <div className='grid grid-cols-2 gap-3'>
@@ -32,7 +39,10 @@ const ProjectTet: React.FC<IProjectInfo> = ({ }) => {
                             src={'/portfo_access/projects/tet2.webp'}
                             width={514}
                             height={344}
-                            className='w-full'
+                            className='w-full h-auto'
+                            onMouseOver={() => enterPic()}
+                            onMouseLeave={() => leavePic()}
+                            style={{ cursor: 'none' }}
                         />
                     </div>
                     <div className='rounded-[2rem]'>
@@ -41,7 +51,10 @@ const ProjectTet: React.FC<IProjectInfo> = ({ }) => {
                             src={'/portfo_access/projects/tet3.webp'}
                             width={514}
                             height={344}
-                            className='w-full'
+                            className='w-full h-auto'
+                            onMouseOver={() => enterPic()}
+                            onMouseLeave={() => leavePic()}
+                            style={{ cursor: 'none' }}
                         />
                     </div>
                 </div>

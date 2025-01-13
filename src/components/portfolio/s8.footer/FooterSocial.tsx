@@ -53,7 +53,8 @@ const FooterSocial = () => {
             <div className='flex flex-col gap-14'>
                 {/* Contac button */}
                 <div className='flex items-center gap-7'>
-                    <div
+                    <Link
+                        href={"mailto:contact@thingtodo.vn"}
                         className='bg-[#9EFEFD] px-8 flex gap-5 items-center rounded-[56px] portfolio-footer-btn '
                         style={{
                             boxShadow: '0px 0px 2.1px 0px #FFF, 0px 0px 21.9px 0px rgba(255, 255, 255, 0.25), 0px 10px 37.7px 0px rgba(255, 255, 255, 0.25)'
@@ -69,8 +70,9 @@ const FooterSocial = () => {
                                 className='h-full'
                             />
                         </div>
-                    </div>
-                    <div
+                    </Link>
+                    <Link
+                        href={"tel:+84 966 080 411"}
                         className='px-8 flex gap-5 items-center rounded-[56px] border-[1px] border-solid portfolio-footer-btn'
                     >
                         <div className='py-3 text-[#fcfcfc]'>Kết nối qua SĐT</div>
@@ -83,7 +85,7 @@ const FooterSocial = () => {
                                 className='h-full'
                             />
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 {/* Ads */}
                 <div className='portfolio-footer-ads w-full pt-3 border-t-[0.5px] border-[rgba(102, 109, 116, 0.30)] flex justify-center gap-[10px]'>

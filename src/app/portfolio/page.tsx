@@ -4,7 +4,6 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./portfolio.css";
-
 export const metadata: Metadata = {
     title: "Present",
     description: "Thingtodo present",
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 const PortfolioPage = () => {
 
     return (
-        <div className='bg-[#fcfcfc]'>
+        <div>
             <LandingPage />
         </div>
     )

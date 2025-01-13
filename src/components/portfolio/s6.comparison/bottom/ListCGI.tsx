@@ -15,9 +15,9 @@ const Label: React.FC<ILabel> = ({ labelType }) => {
                             <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="url(#paint0_linear_3127_152)" />
                             <defs>
                                 <linearGradient id="paint0_linear_3127_152" x1="69.9485" y1="92.91" x2="69.9485" y2="-0.219728" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#FBBD37" />
-                                    <stop offset="0.54654" stop-color="#D0FFCA" />
-                                    <stop offset="1" stop-color="#28BAF5" />
+                                    <stop stopColor="#FBBD37" />
+                                    <stop offset="0.54654" stopColor="#D0FFCA" />
+                                    <stop offset="1" stopColor="#28BAF5" />
                                 </linearGradient>
                             </defs>
                         </svg>
@@ -48,9 +48,9 @@ const Label: React.FC<ILabel> = ({ labelType }) => {
                                 <path d="M0 -0.219727H48V50.7803L24 63.7803L0 50.7803V-0.219727Z" fill="url(#paint0_linear_3127_152)" />
                                 <defs>
                                     <linearGradient id="paint0_linear_3127_152" x1="69.9485" y1="92.91" x2="69.9485" y2="-0.219728" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#FBBD37" />
-                                        <stop offset="0.54654" stop-color="#D0FFCA" />
-                                        <stop offset="1" stop-color="#28BAF5" />
+                                        <stop stopColor="#FBBD37" />
+                                        <stop offset="0.54654" stopColor="#D0FFCA" />
+                                        <stop offset="1" stopColor="#28BAF5" />
                                     </linearGradient>
                                 </defs>
                             </svg>

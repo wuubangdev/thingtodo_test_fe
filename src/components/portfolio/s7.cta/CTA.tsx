@@ -4,20 +4,23 @@ import Marquee from 'react-fast-marquee';
 import PortCTA from './PortCTA';
 
 const CTA = () => {
+
     return (
-        <div className='bg-[#9EFEFD]'>
-            <Marquee
-                speed={100}
-                direction='left'
-                pauseOnHover={true}
-                loop={0}
-                style={{ cursor: 'pointer' }}
-            >
-                <PortCTA />
-                <PortCTA />
-                <PortCTA />
-            </Marquee>
-            <div className='w-full'>
+        <div className='flex flex-col'>
+            <div className='bg-[#9EFEFD]'>
+                <Marquee
+                    speed={100}
+                    direction='left'
+                    pauseOnHover={true}
+                    loop={0}
+                    style={{ cursor: 'pointer' }}
+                >
+                    <PortCTA />
+                    <PortCTA />
+                    <PortCTA />
+                </Marquee>
+            </div>
+            <div className='w-screen relative -z-10'>
                 <video
                     className='w-full'
                     autoPlay

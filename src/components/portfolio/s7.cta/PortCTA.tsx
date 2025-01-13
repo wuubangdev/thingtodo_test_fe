@@ -1,9 +1,20 @@
+import { useCursorVariantContext } from '@/components/context/CursorVariantContext';
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 
 const PortCTA = () => {
+    const { setCursorVariant } = useCursorVariantContext();
+    const enterContact = () => setCursorVariant('contact');
+    const leaveContact = () => setCursorVariant('default');
     return (
-        <div className='px-5 flex gap-5 portfolio-cta-marquee'>
+        <Link
+            href={"mailto:contact@thingtodo.vn"}
+            className='px-5 flex gap-5 portfolio-cta-marquee'
+            onMouseOver={() => enterContact()}
+            onMouseLeave={() => leaveContact()}
+            style={{ cursor: 'none' }}
+        >
             <span className='py-5'>Chốt liền.</span>
             <Image
                 alt=''
@@ -20,7 +31,7 @@ const PortCTA = () => {
                 height={139}
                 className='h-[120%]'
             />
-        </div>
+        </Link>
     )
 }
 
